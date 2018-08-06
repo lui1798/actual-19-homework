@@ -44,3 +44,10 @@ git add .
 git commit -m "first commit"
 git push 
 ```
+## 3.Pycharm如何拉取和提交代码
+配置git： 菜单settings-version control-git 填入git程序路径，点测试出版本号就成功。
+
+拉代码：菜单：VCS-CHECKOUT FORM VERSION CTL 填入https://github.com/51reboot/actual-19-homework.git 拉取  linux有文件夹权限问题
+
+提交代码：1.点git小对号 commit或 ctrl+k 提交到本地  2.点击菜单-vcs-git-push 提交到github
+
