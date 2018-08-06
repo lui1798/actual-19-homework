@@ -54,6 +54,7 @@ while True:
         print('请输入一个0-100的数字.')
     elif target == randomNum:
         print('猜对了,randomNum=', randomNum);
+	break
     elif target < randomNum:
         print('猜小了')
     else:
