@@ -5,17 +5,17 @@
 # @File    : guest.py
 import random
 
-Answer=27
-Tries=6
-print('<<<<<<<游戏开始>>>>>>>>')
+Answer = random.randint(0, 100)
+Tries = 6
+print('<<<<<<<猜数字游戏开始>>>>>>>>')
 while Tries > 0:
-    Guest=random.randint(0,100)
+    Guest = int(input("请输入一个数字:"))
     if Guest > Answer:
-        print(Guest,"猜大了")
-    if Guest < Answer:
-        print(Guest,"猜小了")
-    if Guest == Answer:
-        print(Guest,"猜对了!!!!!!!!!")
+        print(Guest, "猜大了，还剩{}次机会".format(Tries-1))
+    elif Guest < Answer:
+        print(Guest, "猜小了，还剩{}次机会".format(Tries-1))
+    else:
+        print(Guest, "猜对了!!!!!!!!!")
         break
-    Tries = Tries - 1
-print('<<<<<<<游戏结束>>>>>>>>')
+    Tries -= 1
+print('<<<<<<<猜数字游戏结束>>>>>>>>')
