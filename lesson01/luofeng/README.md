@@ -1,5 +1,5 @@
 ### 猜数执行结果
-'''
+```
 $ python guess_num.py
 
 Please enter a number within 100：12
@@ -15,9 +15,9 @@ Please enter a number within 100：45
 Please enter a number within 100：34
 不对哟，太小了，数字是82，还有0机会，加油。
 太遗憾了，机会已用完，下次再来。
-'''
+```
 ### 乘法表执行结果
-'''
+```
 长方形
 1 x 1 = 1	1 x 2 = 2	1 x 3 = 3	1 x 4 = 4	1 x 5 = 5	1 x 6 = 6	1 x 7 = 7	1 x 8 = 8	1 x 9 = 9
 2 x 1 = 2	2 x 2 = 4	2 x 3 = 6	2 x 4 = 8	2 x 5 = 10	2 x 6 = 12	2 x 7 = 14	2 x 8 = 16	2 x 9 = 18
@@ -39,4 +39,4 @@ Please enter a number within 100：34
 7 x 1 = 7 7 x 2 = 14 7 x 3 = 21 7 x 4 = 28 7 x 5 = 35 7 x 6 = 42 7 x 7 = 49
 8 x 1 = 8 8 x 2 = 16 8 x 3 = 24 8 x 4 = 32 8 x 5 = 40 8 x 6 = 48 8 x 7 = 56 8 x 8 = 64
 9 x 1 = 9 9 x 2 = 18 9 x 3 = 27 9 x 4 = 36 9 x 5 = 45 9 x 6 = 54 9 x 7 = 63 9 x 8 = 72 9 x 9 = 81
-'''
+```
