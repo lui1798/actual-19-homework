@@ -26,6 +26,7 @@ if not os.path.exists(user_file):
     with open(user_file, 'w') as f:
         pass
 
+
 # 定义一个所有用户函数,这里还是用函数吧,一次次输入的实在头疼
 
 
