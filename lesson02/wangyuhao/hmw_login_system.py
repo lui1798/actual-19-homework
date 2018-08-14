@@ -13,8 +13,11 @@ count = 3
 
 # 定义输出格式
 func_tup = ('所有用户', '用户增加', '用户删除', '用户更改', '用户查询', '用户退出')
-user_out_str = "{:20}\t{:20}\t{:20}\t{:20}"
-user_title_str = user_out_str.format("用户编号", "用户名", "联系方式", "家庭住址")
+user_out_str = "|{:^20}\t|{:^20}\t|{:^20}\t|{:^20}|"
+user_title_str = user_out_str.format("ID", "Name", "Tel", "Address")
+table_title_str = "USER-INFO".center(len(user_title_str) + 6, '*')
+line_iter_str = '+' + '-' * (len(user_title_str) + 4) + '+'
+user_title_str = user_out_str.format("ID", "Name", "Tel", "Address") + '\n' + line_iter_str
 
 # 初始化文件,判断文件是否存在,不存在就创建
 user_file = "user.txt"
@@ -34,11 +37,14 @@ def print_all_user():
     :return:
     '''
     if os.path.getsize(user_file):
+        print(table_title_str)
+        print(line_iter_str)
         print(user_title_str)
         with open(user_file, 'r') as f:
             for line in f:
                 uid, name, tel, add = line.strip().split(' ')
                 print(user_out_str.format(uid, name, tel, add).strip())
+                print(line_iter_str)
     else:
         print("当前用户信息没有任何用户信息!")
 
@@ -83,6 +89,7 @@ def del_user():
     2/将不包含所删除的用户以外的所有用户信息,重新写入到一个新的文件中
     3/将老用户文件删除
     4/将新文件重命名为用户文件
+    (另外一种方式,读取所有用户到内存中,用 list.remove方法将用户删除,然后写入到文件中,这种方式虽然代码精简,但是如果用户量大会相当消耗内存)
     :return:
     '''
     print_all_user()
@@ -94,7 +101,7 @@ def del_user():
             uid_list.append(uid)
     while True:
         del_id = input("请输入你要删除的用户编号(Q/q返回上一层):")
-        if del_id.lower() == 'q':
+        if del_id.strip().lower() == 'q':
             break
         elif int(del_id) in uid_list:
             # 先备份文件,将文件中包含这个用户的行不打印到另外一个文件
@@ -136,7 +143,7 @@ def search_user():
 def update_user():
     '''
     更改用户信息
-    1/ 与删除用户信息 方式不同
+    1/ 与删除用户信息 方式不同(删除用户侧重于文件操作了)
     2/ 先将用户信息备份
     3/ 将所有用户信息从内存中全部读取到内存中,存放为一个列表
     4/ 修改所需要修改的用户,将修改好的列表从新组装数据,放入到文件中
