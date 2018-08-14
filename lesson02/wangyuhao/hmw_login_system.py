@@ -3,27 +3,29 @@
 # Time          : 2018/8/12 下午6:20
 # Author        : Yuhao.Wang
 # FileName      : hmw_login_system.py
-# Description   : 
+# Description   :
 #
 import os
 import datetime
 import shutil
-admin_info = ('admin','123')
+admin_info = ('admin', '123')
 count = 3
 
-#定义输出格式
-func_tup = ('所有用户','用户增加','用户删除','用户更改','用户查询','用户退出')
+# 定义输出格式
+func_tup = ('所有用户', '用户增加', '用户删除', '用户更改', '用户查询', '用户退出')
 user_out_str = "{:20}\t{:20}\t{:20}\t{:20}"
-user_title_str = user_out_str.format("用户编号","用户名","联系方式","家庭住址")
+user_title_str = user_out_str.format("用户编号", "用户名", "联系方式", "家庭住址")
 
 # 初始化文件,判断文件是否存在,不存在就创建
 user_file = "user.txt"
 user_file_temp = "user_temp.txt"
 if not os.path.exists(user_file):
-    with open(user_file,'w') as f:
+    with open(user_file, 'w') as f:
         pass
 
 # 定义一个所有用户函数,这里还是用函数吧,一次次输入的实在头疼
+
+
 def print_all_user():
     '''
     打印所有用户信息:
@@ -49,7 +51,8 @@ def add_user():
     :return:
     '''
     while True:
-        user_add_info = input("请输入您所要添加的用户名,联系方式,家庭住址,这[3]项之间以空格分割(q/Q返回上一层):").strip()
+        user_add_info = input(
+            "请输入您所要添加的用户名,联系方式,家庭住址,这[3]项之间以空格分割(q/Q返回上一层):").strip()
         if user_add_info.lower() == 'q':
             break
         elif len(user_add_info.split(' ')) != 3:
@@ -60,17 +63,19 @@ def add_user():
             uid = 0
             with open(user_file, 'r') as f:
                 for line in f:
-                    if line.split(' ')[0] != '' and int(line.split(' ')[0]) >= uid:
+                    if line.split(' ')[0] != '' and int(
+                            line.split(' ')[0]) >= uid:
                         uid = int(line.split(' ')[0]) + 1
                         print(uid)
                     else:
                         print(line.strip(' ')[0])
             # 组装数据写入文件
             with open(user_file, 'a') as f:
-                f.write("%s %s" %(uid,user_add_info+'\n'))
+                f.write("%s %s" % (uid, user_add_info + '\n'))
                 f.flush()
                 print("用户添加成功!")
                 print_all_user()
+
 
 def del_user():
     '''
@@ -94,18 +99,19 @@ def del_user():
         elif int(del_id) in uid_list:
             # 先备份文件,将文件中包含这个用户的行不打印到另外一个文件
             user_file_bak = "user.txt.bak.%s" % datetime.datetime.now().strftime('%Y%m%d%H%M%S')
-            shutil.copy(user_file,user_file_bak)
-            with open(user_file,'r') as src_f:
-                with open(user_file_temp,'a') as des_f:
+            shutil.copy(user_file, user_file_bak)
+            with open(user_file, 'r') as src_f:
+                with open(user_file_temp, 'a') as des_f:
                     for line in src_f:
                         if line.split(' ')[0] != del_id and line.strip() != '':
                             des_f.write(line)
-            os.rename(user_file,"file_to_del")
-            os.rename(user_file_temp,user_file)
+            os.rename(user_file, "file_to_del")
+            os.rename(user_file_temp, user_file)
             print_all_user()
         else:
             print("所要删除的用户不存在!")
             continue
+
 
 def search_user():
     '''
@@ -118,11 +124,11 @@ def search_user():
         key = input("请输入你所要搜索的关键字(按Q/q返回上一层): ")
         if key.lower() != 'q':
             print(user_title_str)
-            with open(user_file,'r') as f:
+            with open(user_file, 'r') as f:
                 for line in f:
                     if key in line:
                         uid, name, tel, addr = line.strip().split(' ')
-                        print(user_out_str.format(uid,name,tel,addr))
+                        print(user_out_str.format(uid, name, tel, addr))
         else:
             break
 
@@ -150,9 +156,15 @@ def update_user():
                 if list_temp[0] == update_key:
                     idx = all_user_lsit.index(list_temp)
                     print("所要修改的原信息为:")
-                    print(user_out_str.format(list_temp[0],list_temp[1],list_temp[2],list_temp[3]))
+                    print(
+                        user_out_str.format(
+                            list_temp[0],
+                            list_temp[1],
+                            list_temp[2],
+                            list_temp[3]))
                     while True:
-                        user_info = input("请输入你要修改的选项序号:1.用户名 2.联系方式 3.家庭住址 4.重新填写该用户信息(Q/q退出): ")
+                        user_info = input(
+                            "请输入你要修改的选项序号:1.用户名 2.联系方式 3.家庭住址 4.重新填写该用户信息(Q/q退出): ")
                         if user_info.strip() == '1':
                             name = input("请输入新用户名:")
                             all_user_lsit[idx][1] = name
@@ -166,24 +178,29 @@ def update_user():
                             all_user_lsit[idx][3] = addr
                             break
                         elif user_info.strip() == '4':
-                            user_all_info = input("请输入您所要修改的用户名,联系方式,家庭住址,这[3]项之间以空格分割:").strip()
+                            user_all_info = input(
+                                "请输入您所要修改的用户名,联系方式,家庭住址,这[3]项之间以空格分割:").strip()
                             user_all_info_list = user_all_info.split(' ')
                             if len(user_all_info_list) == 3:
                                 all_user_lsit[idx] = user_all_info_list
-                                print(user_out_str.format(all_user_lsit[idx][0],all_user_lsit[idx][1],all_user_lsit[idx][2],all_user_lsit[idx][3]))
+                                print(
+                                    user_out_str.format(
+                                        all_user_lsit[idx][0],
+                                        all_user_lsit[idx][1],
+                                        all_user_lsit[idx][2],
+                                        all_user_lsit[idx][3]))
                                 break
                             else:
                                 print("输入错误!")
                     user_file_bak = "user.txt.bak.%s" % datetime.datetime.now().strftime('%Y%m%d%H%M%S')
                     shutil.copy(user_file, user_file_bak)
-                    with open(user_file,'w') as f:
+                    with open(user_file, 'w') as f:
                         for line in all_user_lsit:
                             line_str = " ".join(line)
-                            f.write(line_str+'\n')
+                            f.write(line_str + '\n')
                     print_all_user()
                 else:
                     print("输入的用户编号不存在!")
-
 
         else:
             break
@@ -191,18 +208,21 @@ def update_user():
 
 # login
 while count > 0:
-    print("用户管理系统登录".center(100,'*'))
+    print("用户管理系统登录".center(100, '*'))
     admin_name = input("管理员用户名:").strip()
     admin_pass = input("管理员密码:").strip()
     # 判断用户名密码
     if admin_name == admin_info[0] and admin_pass == admin_info[1]:
         print("欢迎你,%s,用户导航栏:" % admin_name)
-        for i,j in enumerate(func_tup):
-            print("{:>20}.{}".format(i+1,j))
+        for i, j in enumerate(func_tup):
+            print("{:>20}.{}".format(i + 1, j))
         # 用户登录成功,根据选项开始进入操作页面
         op = 0
         while op != 6:
-            op = int(input("请输入你的操作序号:"))
+            try:
+                op = int(input("请输入你的操作序号:"))
+            except ValueError as e:
+                pass
             # 判断用户输入
             if op == 1:
                 print("正在进入 [ %s ] 页面:" % func_tup[op - 1])
@@ -216,7 +236,6 @@ while count > 0:
                     print("没有可以删除的用户!")
                 else:
                     del_user()
-
             elif op == 4:
                 print("正在进入 [ %s ] 页面:" % func_tup[op - 1])
                 update_user()
