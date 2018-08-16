@@ -1,6 +1,7 @@
 import pickle
 import os
 
+
 class User:
     """用户信息"""
     def __init__(self, id, name, age, address):
@@ -9,26 +10,87 @@ class User:
         self.age = age
         self.address = address
 
+class UserService(object):
 
-pageSize = 20
+    __instance = None
 
-userList = []
-if os.path.exists('userList') > 0:
-    with open('userList', 'rb') as f:
-        userList = pickle.load(f)
+    __userList = []
 
-userNameList = []
+    __maxID = 0
 
-if os.path.exists('userNameList'):
-    with open('userNameList', 'rb') as f:
-        userNameList = pickle.load(f)
+    __pageSize = 20
 
-maxID = 0
-if os.path.exists('maxID') > 0:
-    with open('maxID', 'rb') as f:
-        maxID = pickle.load(f)
+    __userNameList = []
 
-print(userList, userNameList, maxID)
+    def __init__(self, name):
+        self.name = name
+
+        if os.path.exists('userList') > 0:
+            with open('userList', 'rb') as f:
+                self.__userList = pickle.load(f)
+
+        if os.path.exists('userNameList'):
+            with open('userNameList', 'rb') as f:
+                self.__userNameList = pickle.load(f)
+        if os.path.exists('maxID') > 0:
+            with open('maxID', 'rb') as f:
+                self.__maxID = pickle.load(f)
+
+    @classmethod
+    def get_instance(cls):
+        if cls.__instance:
+            return cls.__instance
+        else:
+            obj = cls('userservice')
+            cls.__instance = obj
+            return obj
+
+    def add(self, name, age, address):
+        self.__maxID += 1
+        user = User(self.__maxID, name, age, address)
+        self.__userNameList.append(name)
+        self.__userList.append(user)
+        print('##################添加成功##################')
+
+    def delete(self, userid):
+        for user in self.__userList:
+            if user.id == userid:
+                self.__userList.remove(user)
+                self.__userNameList.remove(user.name)
+                break
+        print('##################删除成功##################')
+
+    def update(self, userid, name, age, address):
+        for user in self.__userList:
+            if user.id == userid:
+                user.name = name
+                user.age = age
+                user.address = address
+                break
+        print('##################修改成功##################')
+
+    def find(self, pageno):
+        return self.__userList[(pageno - 1) * self.__pageSize: pageno * self.__pageSize]
+
+    def search(self, searchname):
+        results = []
+        for user in self.__userList:
+            if user.name.count(searchname) > 0:
+                results.append(user)
+        return results
+
+    def save(self):
+        with open('userList', 'wb') as f:
+            pickle.dump(self.__userList, f)
+        with open('userNameList', 'wb') as f:
+            pickle.dump(self.__userNameList, f)
+        with open('maxID', 'wb') as f:
+            pickle.dump(self.__maxID, f)
+
+    def existsname(self, name):
+       return self.__userNameList.count(name) > 0
+
+userservice = UserService.get_instance()
 
 print('#########################################')
 print('#                                       #')
@@ -68,7 +130,7 @@ while True:
             if len(name) < 1:
                 print('用户名不能为空')
                 continue
-            if userNameList.count(name) > 0:
+            if userservice.existsname(name):
                 print('用户名已经存在')
                 continue
             if not age.isdigit() or int(age) < 1 or int(age) > 80:
@@ -77,36 +139,25 @@ while True:
             if len(address) < 1:
                 print('地址不能为空')
                 continue
-            maxID += 1
-            userNameList.append(name)
-            user = User(maxID, name, int(age), address)
-            userList.append(user)
-            print('##################添加成功##################')
+            userservice.add(name, int(age), address)
         elif option == '2':
-            userIDStr = input('请输入用户编号:').strip()
-
-            if not userIDStr.isdigit():
+            useridstr = input('请输入用户编号:').strip()
+            if not useridstr.isdigit():
                 print('输入错误')
-
-            userID = int(userIDStr)
-            for user in userList:
-                if user.id == userID:
-                    userList.remove(user)
-                    userNameList.remove(user.name)
-                    break
-            print('##################删除成功##################')
+            userid = int(useridstr)
+            userservice.delete(userid)
         elif option == '3':
-            userIDStr = input('请输入用户编号:').strip()
+            useridstr = input('请输入用户编号:').strip()
             name = input('请输入姓名[非空]:').strip()
             age = input('请输入年龄[1-80]:').strip()
             address = input('请输入住址[非空]:').strip()
-            if not userIDStr.isdigit():
+            if not useridstr.isdigit():
                 print('用户编号输入错误')
 
             if len(name) < 1:
                 print('用户名不能为空')
                 continue
-            if userNameList.count(name) > 0:
+            if userservice.existsname(name):
                 print('用户名已经存在')
                 continue
             if not age.isdigit() or int(age) < 1 or int(age) > 80:
@@ -116,28 +167,28 @@ while True:
                 print('地址不能为空')
                 continue
 
-            userID = int(userIDStr)
-            for user in userList:
-                if user.id == userID:
-                    user.name = name
-                    user.age = age
-                    user.address = address
-                    break
-            print('##################修改成功##################')
+            userid = int(useridstr)
+            userservice.update(userid, name, age, address)
         elif option == '4':
 
             while True:
-                pageNoStr = input('请输入页码:').strip()
-                if not pageNoStr.isdigit():
-                    print('请输入正确的数字')
-                pageNo = int(pageNoStr)
+                pagenostr = input('请输入页码[输入-1返回上一级]:').strip()
 
-                if pageNo < 1:
-                    print('请输入大于1的页码')
+                if pagenostr == '-1':
+                    break
+
+                if not pagenostr.isdigit():
+                    print('请输入正确的数字')
+                pageno = int(pagenostr)
+
+                if pageno < 1:
+                    break
+
+                results = userservice.find(pageno)
                 print('－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－')
                 print('| {:<10} | {:<10} | {:<10} | {:<10} |'.format('编号', '姓名', '年龄', '住址'))
                 print('－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－')
-                for user in userList[(pageNo - 1) * pageSize: pageNo * pageSize]:
+                for user in results:
                     print('| {:<10}  | {:<10} | {:<10}  | {:<10} |'.format(user.id, user.name, user.age, user.address))
                     print('－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－')
         elif option == '5':
@@ -145,19 +196,14 @@ while True:
 
             if len(searchName) == 0:
                 print('搜索名称不能为空')
+
+            results = userservice.search(searchName)
             print('| {:<10} | {:<10} | {:<10} | {:<10} |'.format('编号', '姓名', '年龄', '住址'))
-            for user in userList:
-                if user.name.count(searchName) > 0:
-                    print('| {:<10}  | {:<10} | {:<10}  | {:<10} |'.format(user.id, user.name, user.age, user.address))
-                    print('－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－')
-            print('##################搜索成功##################')
+            for user in results:
+                print('| {:<10}  | {:<10} | {:<10}  | {:<10} |'.format(user.id, user.name, user.age, user.address))
+                print('－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－')
         else:
-            with open('userList', 'wb') as f:
-                pickle.dump(userList, f)
-            with open('userNameList', 'wb') as f:
-                pickle.dump(userNameList, f)
-            with open('maxID', 'wb') as f:
-                pickle.dump(maxID, f)
+            userservice.save()
 
 
 
