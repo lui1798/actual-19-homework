@@ -1,0 +1,12 @@
+1,testuser1,21,131xxxxxxxx,beijing
+2,testuser2,22,131xxxxxxxx,beijing
+3,testuser3,23,131xxxxxxxx,beijing
+4,testuser4,21,131xxxxxxxx,beijing
+6,testuser6,22,131xxxxxxxx,beijing
+7,testuser7,22,131xxxxxxxx,beijing
+8,testuser8,22,131xxxxxxxx,beijing
+9,testuser9,22,131xxxxxxxx,beijing
+10,testuser10,28,130xxxxxxxx,tianjin
+11,testuser11,25,132xxxxxxxx,guangzhou
+12,testuser13,28,139xxxxxxxx,nanjing
+13,testuser14,24,131xxxxxxxx,shanghai
