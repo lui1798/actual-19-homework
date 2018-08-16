@@ -9,8 +9,8 @@ exit    退出系统
 
 """
 #####################################################################
-userlist = []  ##userlist:存放系统数据
-s = ''  ##用于临时存储从userlist.txt读取的每一行数据
+userlist = []       ##userlist:存放系统数据
+s = ''              ##用于临时存储从userlist.txt读取的每一行数据
 ###读取userlist.txt中的用户信息，存储到userlist中###
 with open("./userlist.txt", "r") as f:
     while True:
@@ -29,11 +29,11 @@ while True:
     print("\033[34m\"exit\" (:to quit)\033[0m")
     op = input('\033[34m please input action: \033[0m')
     if op == 'list':
-        print("--------------------------------------")
-        print(" id\t    name\t   age\t tel\t address\t")
+        print("------------------------------------------------------------")
+        print("id\tname\tage\ttel\taddress\t".expandtabs(12))
         for u in userlist:
-            print(u.replace(" ", "\t"))
-        print("--------------------------------------")
+            print(u.replace(" ", "\t" ).expandtabs(12))
+        print("------------------------------------------------------------")
     elif op == 'add':
         max_index = 0
         for x in userlist:
