@@ -32,12 +32,12 @@ while 1:
         print('=' * 80)
         while 1:
             print('''
-         Please enter an action
+         Please enter an action:
          1、"insert": insert a record.
          2、"select": select someone message.
          3、"update": update someone message.
          4、"delete": delete someone message.
-	 5、"show": show all message.
+         5、"show": show all message.
          6、"quit": quit this system.
                 ''')
             action = input('Please enter your action: ')
