@@ -10,6 +10,7 @@ userlist = [
     [2, 'li', 20, '13755544544', 'xian'],
     [3, 'wang', 20, '13734534678', 'shanghai'],
     [5, 'he', 20, '13534562356', 'hebei'],
+    [5, 'he', 20, '13534562356', 'hebei'],
 ]
 
 # 定义初始输入错误次数为0次
@@ -33,9 +34,36 @@ while count < 3:
                         print('\033[33m目前用户信息列表为空，请选择其它操作！\033[0m')
                     # 如果用户信息列表不为空时，进行格式化输出
                     else:
-                        print('\033[4;34m' + 'id' + ' ' * 3 + 'name' + ' ' * 6 + 'age' + ' ' * 2 + 'tel' + ' ' * 12 + 'address' + ' ' * 13 + '\033[0m')
-                        for x in userlist:
-                            print('\033[34m{0:<5}{1:<10}{2:<5}{3:<15}{4:<20}\033[0m'.format(x[0], x[1], x[2], x[3], x[4]))
+                        # 显示方法分显示所有与分页显示，分页显示用户需输入每页记录数及要查看的页数
+                        list_method = input('\033[32m请输分查看用户信息列表的方式[total page]：\033[0m')
+                        if list_method == 'totle':
+                            print('\033[4;34m' + 'id' + ' ' * 3 + 'name' + ' ' * 6 + 'age' + ' ' * 2 + 'tel' + ' ' * 12 + 'address' + ' ' * 13 + '\033[0m')
+                            for x in userlist:
+                                print('\033[34m{0:<5}{1:<10}{2:<5}{3:<15}{4:<20}\033[0m'.format(x[0], x[1], x[2], x[3],x[4]))
+                        elif list_method == 'page':
+                            per = int(input('\033[32m请输入每页包含的记录数：\033[0m'))
+                            pg = int(input('\033[32m请输入你要查看的页码：\033[0m'))
+                            if pg > 0 and per > 0:
+                                # 根据列表长度与每页的记录取余结果判断总页数，余数为0时，总页数等于整除数，否则需加1
+                                s = len(userlist) % per
+                                if s == 0:
+                                    totle_pg = len(userlist) // per
+                                else:
+                                    totle_pg = len(userlist) // per + 1
+                            else:
+                                print('\033[31m你输入存在错误！\033[0m')
+                                continue
+
+                            if pg <= totle_pg:
+                                print('\033[4;34m' + 'id' + ' ' * 3 + 'name' + ' ' * 6 + 'age' + ' ' * 2 + 'tel' + ' ' * 12 + 'address' + ' ' * 13 + '\033[0m')
+                                for x in userlist[per * (pg - 1):per * pg]:
+                                    print('\033[34m{0:<5}{1:<10}{2:<5}{3:<15}{4:<20}\033[0m'.format(x[0], x[1], x[2],x[3], x[4]))
+                            else:
+                                print('\033[31m你输入页码超出范围，最大页数为{}！\033[0m'.format(totle_pg))
+                        else:
+                            print('\033[31m你输入有误！\033[0m')
+                            continue
+
 
                 # 当用户输入add时，对用户信息列表进行增加操作
                 elif op == 'add':
@@ -104,7 +132,7 @@ while count < 3:
                     exit()
                 else:
                     print('\033[31m你输入的操作方式不存在！请重输！\033[0m')
-                    break
+                    continue
 
             print('\033[31m你输入的密码有误！\033[0m')
             count += 1
