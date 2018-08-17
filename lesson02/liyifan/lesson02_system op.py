@@ -65,10 +65,21 @@ while True:
         # delete操作命令行：1> 输入序号删除信息
         elif op == '2':
             id_del = int(input('del which one ：'))
+            a = 0
             for x in user_info:
                 if x[0] == id_del:
                     user_info.remove(x)
-            print('''\033[34mDel Over,your information del.\033[0\n''')
+                    a = 1
+            while True:
+                if a == 0:
+                    print("\033[31m输入错误，您的删除序号不存在\033[0m")
+                    break
+                if a ==1 :
+                    print('''\033[34m
+                    *****************************
+                    Del Over,your information del.
+                    *****************************\033[0\n''')
+                    break
             input(go_on)
 
         # find操作命令行：1> 输入查询关键词；2> 遍历寻找匹配；3>输出匹配行
