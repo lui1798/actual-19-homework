@@ -66,7 +66,12 @@ Please enter select name: xianwen<br>
          6、"quit": quit this system.
 
 Please enter your action: show<br>
-[[1, 'caozhi', 25, '0419', 'liaoyang'], [2, 'emmby', 25, '010', 'beijing'], [3, 'xiaozhi', 25, '0429', 'huludao'], [5, 'xuwei', 50, '029', 'xian'], [8, 'pushu', 45, '010', 'beijing'], [9, 'xianwen', 26, '13900888800', 'beijing']]<br>
+[1, 'caozhi', 25, '0419', 'liaoyang']<br>
+[2, 'emmby', 25, '010', 'beijing']<br>
+[3, 'xiaozhi', 25, '0429', 'huludao']<br>
+[5, 'xuwei', 50, '029', 'xian']<br>
+[8, 'pushu', 45, '010', 'beijing']<br>
+[9, 'xianwen', 26, '13900888800', 'beijing']<br>
 
          Please enter an action:
          1、"insert": insert a record.
@@ -104,7 +109,11 @@ Please enter delete student id: 9<br>
          6、"quit": quit this system.
 
 Please enter your action: show<br>
-[[1, 'caozhi', 25, '0419', 'liaoyang'], [2, 'emmby', 25, '010', 'beijing'], [3, 'xiaozhi', 25, '0429', 'huludao'], [5, 'xuwei', 50, '029', 'xian'], [8, 'pushu', 45, '010', 'beijing']]<br>
+[1, 'caozhi', 25, '0419', 'liaoyang']<br>
+[2, 'emmby', 25, '010', 'beijing']<br>
+[3, 'xiaozhi', 25, '0429', 'huludao']<br>
+[5, 'xuwei', 50, '029', 'xian']<br>
+[8, 'pushu', 45, '010', 'beijing']<br>
 
          Please enter an action:
          1、"insert": insert a record.
