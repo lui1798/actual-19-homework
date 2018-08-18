@@ -38,6 +38,7 @@ while True:
     else:
         print('输入错误，请重新输入')
 while True:
+    # 在输入指令之前，你需要先提示都有些什么指令
     op = input('请输入指令：')
     if op == 'add':
         while True:
@@ -128,24 +129,3 @@ while True:
             print('输入有误，请输入正确的员工编号或姓名')
     elif op == 'exit':
         break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
