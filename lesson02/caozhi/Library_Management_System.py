@@ -33,6 +33,7 @@ userinfo = [
 
 while 1:
     login()
+
     if user_name == usermessage[0] and password == usermessage[1]:
         print('\033[32m login success \033[0m')
         print('=' * 80)
@@ -48,6 +49,7 @@ while 1:
                 ''')
             # 输入对用户信息的操作 按数据库逻辑实现,id 为主键
             action = input('Please enter your action: ')
+
             if action == 'insert':
                 insert_id = userinfo[-1][0] + 1
                 insert_name = input('Please enter add name: ')
@@ -56,6 +58,7 @@ while 1:
                 insert_add = input('Please enter add address: ')
                 userinfo.append([insert_id, insert_name, insert_age, insert_tel, insert_add])
                 print(userinfo[-1])
+
             elif action == 'select':
                 select_name = input('Please enter select name: ')
                 select_flag = 0
@@ -65,6 +68,7 @@ while 1:
                         select_flag = 1
                 if select_flag == 0:
                     print('Sorry, record empty')
+
             elif action == 'update':
                 update_id = int(input('Please enter update student id: '))
                 update_flag = 0
@@ -82,6 +86,7 @@ while 1:
                     j += 1
                 if update_flag == 0:
                     print('Sorry, record empty')
+
             elif action == 'delete':
                 delete_id = int(input('Please enter delete student id: '))
                 n = 0
@@ -93,14 +98,18 @@ while 1:
                     n += 1
                 if delete_flag == 0:
                     print('Sorry, record empty')
+
             elif action == 'show':
                 for x in userinfo:
                     print(x)
+
             elif action == 'quit':
                 print('Exit success')
                 exit(0)
+
             else:
                 print('Your action is illegal')
+
     else:
         count -= 1
         with open('/home/caozhi/file', 'w') as f:
