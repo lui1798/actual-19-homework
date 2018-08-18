@@ -1,5 +1,5 @@
 #####################   图书馆用户信息管理系统     ######################<br>
-#######################################################################<br>
+######################################################################<br>
 
 =======================================================================<br>
 Welcome to come Liaoning Project Technology University library management system<br>
@@ -17,7 +17,7 @@ Please contact super manager!<br>
 [caozhi@vm-201808032303 caozhi]$ python Library_Management_System.py<br>
 =======================================================================<br>
 Welcome to come Liaoning Project Technology University library management system<br>
-================================================================================<br>
+=======================================================================<br>
 Please contact super manager!<br>
 [caozhi@vm-201808032303 caozhi]$ echo 3 > /home/caozhi/file<br>
 [caozhi@vm-201808032303 caozhi]$ python Library_Management_System.py<br>
@@ -28,7 +28,7 @@ Welcome to come Liaoning Project Technology University library management system
  Please enter your password: playbook<br>
  login success<br>
 
-================================================================================
+==========================================================================
 
          Please enter an action:
          1、"insert": insert a record.
