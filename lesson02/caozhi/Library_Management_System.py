@@ -3,6 +3,7 @@
 # author emmby,2018-08-15 version:1.3
 # 图书馆信息管理系统
 
+# 登陆函数，并判断是否失败超过3次，写入到文件
 def login():
     global user_name, password, count
     with open('/home/caozhi/file', 'r') as f:
@@ -12,12 +13,16 @@ def login():
         exit(1)
     user_name = input('\033[33m Please enter your user_name: \033[0m')
     password = input('\033[33m Please enter your password: \033[0m')
+
 print('=' * 80, end='')
 print('''
 \033[31mWelcome to come Liaoning Project Technology University library management system \033[0m
 ''', end='')
 print('=' * 80)
+
+# 管理员用户和密码
 usermessage = ('admin', 'playbook')
+# 用户信息
 userinfo = [
     [1, 'caozhi', 25, '0419', 'liaoyang'],
     [2, 'emmby', 25, '010', 'beijing'],
@@ -25,6 +30,7 @@ userinfo = [
     [5, 'xuwei', 50, '029', 'xian'],
     [8, 'pushu', 45, '010', 'beijing'],
 ]
+
 while 1:
     login()
     if user_name == usermessage[0] and password == usermessage[1]:
@@ -40,6 +46,7 @@ while 1:
          5、"show": show all message.
          6、"quit": quit this system.
                 ''')
+            # 输入对用户信息的操作 按数据库逻辑实现,id 为主键
             action = input('Please enter your action: ')
             if action == 'insert':
                 insert_id = userinfo[-1][0] + 1
