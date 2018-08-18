@@ -41,7 +41,6 @@ while True:
                 NewId=max(uid)+1                  #从上边的遍历结果中找出最大值 加1  定义为NewId
                 newuser_list.append(0,NewId)      #把新输入的用户加上编号
                 userinfo.append(newuser_list)
-
 # ______________________________________________________________________________________________________________________________________________________
 
         elif op == 'delete':                    #如果用户执行删除操作
@@ -55,20 +54,24 @@ while True:
             print(userinfo)
             uid = input("请输入要更新的用户编号：")
             for x in userinfo:
-                if x[0] ==int(uid)
-                    userinfo[uid]=
+                if x[0] ==int(uid):
+                    newuser=input("请输入新的用户信息，以空格分隔")
+                    newuser_list=newuser.split(' ')
+                    newuser_list[0]=int(uid)
+                    userinfo.append(newuser_list)
+                    print(userinfo)
 
-        elif op == 'list':
-            pass
-        elif op == 'find':
-            '''
-            find 1
-            find monkey2
-            '''
-        elif op == 'exit':
-            print("-------退出信息-----------")
-            break
-        else:
-            print("invalid op.")
-    else:
-    #     print("login failed.")
+    #     elif op == 'list':
+    #         pass
+    #     elif op == 'find':
+    #         '''
+    #         find 1
+    #         find monkey2
+    #         '''
+    #     elif op == 'exit':
+    #         print("-------退出信息-----------")
+    #         break
+    #     else:
+    #         print("invalid op.")
+     else:
+        print("login failed.")
