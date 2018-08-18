@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# author emmby,2018-08-15 version:2.1
+# author emmby,2018-08-15 version:2.3
 # 图书馆信息管理系统
 
 # 登陆函数，并判断是否失败超过3次，写入到文件
@@ -17,7 +17,7 @@ def login():
 
 # 管理员用户和密码
 usermessage = ('admin', 'playbook')
-# 用户信息
+# 用户信息，id，姓名，年龄，电话，籍贯
 userinfo = [
     [1, 'caozhi', 25, '0419', 'liaoyang'],
     [2, 'emmby', 25, '010', 'beijing'],
