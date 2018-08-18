@@ -94,7 +94,8 @@ while 1:
                 if delete_flag == 0:
                     print('Sorry, record empty')
             elif action == 'show':
-                print(userinfo)
+                for x in userinfo:
+                    print(x)
             elif action == 'quit':
                 print('Exit success')
                 exit(0)
