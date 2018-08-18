@@ -5,7 +5,7 @@
 ==============================================================================
 Welcome to come Liaoning Project Technology University library management system
 ==============================================================================
- Please enter your user_name: name
+ Please enter your user_name: name<br>
  Please enter your password: passwd
 login error, you have 2 left choice
  Please enter your user_name: who
