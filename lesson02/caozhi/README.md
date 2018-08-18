@@ -1,10 +1,9 @@
+#####################   图书馆用户信息管理系统     ######################<br>
+#######################################################################<br>
 
-#####################   图书馆用户信息管理系统     ############################
-################################################################################
-
-==============================================================================
-Welcome to come Liaoning Project Technology University library management system
-==============================================================================
+=======================================================================<br>
+Welcome to come Liaoning Project Technology University library management system<br>
+=======================================================================<br>
  Please enter your user_name: name<br>
  Please enter your password: passwd<br>
 login error, you have 2 left choice<br>
@@ -16,15 +15,15 @@ login error, you have 1 left choice<br>
 login error, you have 0 left choice<br>
 Please contact super manager!<br>
 [caozhi@vm-201808032303 caozhi]$ python Library_Management_System.py<br>
-================================================================================
-Welcome to come Liaoning Project Technology University library management system
-================================================================================
+=======================================================================<br>
+Welcome to come Liaoning Project Technology University library management system<br>
+================================================================================<br>
 Please contact super manager!<br>
 [caozhi@vm-201808032303 caozhi]$ echo 3 > /home/caozhi/file<br>
 [caozhi@vm-201808032303 caozhi]$ python Library_Management_System.py<br>
-================================================================================
-Welcome to come Liaoning Project Technology University library management system
-================================================================================
+========================================================================<br>
+Welcome to come Liaoning Project Technology University library management system<br>
+========================================================================<br>
  Please enter your user_name: admin<br>
  Please enter your password: playbook<br>
  login success<br>
