@@ -7,4 +7,14 @@ for i in l:
     count.append(a)
 b=dict(zip(lei,count))
 print(b)
-print(dict(zip(lei,count)))
+
+
+
+# fd=open('/etc/passwd')
+# a=0
+# for line in fd:
+#     # print (line[-6:])
+#     if  line[-6:].strip() == 'false':
+#         a+=1
+# print (a)
+# fd.close()
