@@ -1,6 +1,23 @@
 import pickle
 import os
 import time
+import csv
+
+
+class ExcelUtil(object):
+
+    @staticmethod
+    def exportCSV(location, columnnames, datas):
+        csvfile = None
+        try:
+            open(location + DateUtil.getstrfmt('%Y-%m-%d') + '.csv', 'w')
+            writer = csv.writer(csvfile, dialect='excel')
+            writer.writerow(columnnames)
+            writer.writerows(datas)
+        finally:
+            if csvfile is not None:
+                csvfile.close()
+
 
 
 class DateUtil(object):
@@ -115,6 +132,21 @@ class UserService(object):
         with open('database', 'wb') as f:
             pickle.dump(dic, f)
 
+    def exportCSV(self):
+        if len(self.__userList) > 0:
+            csvfile = None
+            try:
+                with open(DateUtil.getstrfmt('%Y-%m-%d') + '.csv', 'w') as csvfile:
+                    writer = csv.writer(csvfile)
+                    writer.writerow(['编号', '姓名', '年龄', '住址'])
+                    for u in self.__userList:
+                        writer.writerow([u.id, u.name, u.age, u.address])
+                print('导出CSV成功')
+            finally:
+                if csvfile is not None:
+                    csvfile.close()
+        else:
+            print('暂无数据')
     def existsname(self, name):
        return self.__userNameList.count(name) > 0
 
@@ -122,7 +154,7 @@ userservice = UserService.get_instance()
 
 print('#########################################')
 print('#                                       #')
-print('#        欢迎登录51reboot人员管理系统       #')
+print('#        欢迎登录51reboot人员管理系统   #')
 print('#                                       #')
 print('#########################################')
 while True:
@@ -138,18 +170,19 @@ while True:
 
     print('#########################################')
     print('#                                       #')
-    print('#        请选择编号:                      #')
-    print('#        [1]添加                         #')
-    print('#        [2]删除                         #')
-    print('#        [3]修改                         #')
-    print('#        [4]查询                         #')
-    print('#        [5]搜索                         #')
-    print('#        [6]退出                         #')
-    print('#        [7]保存                         #')
+    print('#        请选择编号:                    #')
+    print('#        [1]添加                        #')
+    print('#        [2]删除                        #')
+    print('#        [3]修改                        #')
+    print('#        [4]查询                        #')
+    print('#        [5]搜索                        #')
+    print('#        [6]退出                        #')
+    print('#        [7]保存                        #')
+    print('#        [8]导出CSV                     #')
     print('#########################################')
     while True:
         option = input('请选择编号:')
-        if not option.isdigit() or int(option) > 7 or int(option) < 1:
+        if not option.isdigit() or int(option) > 8 or int(option) < 1:
             print('编号输入错误,请重新输入')
             continue
         if option == '6':
@@ -234,6 +267,8 @@ while True:
             for user in results:
                 print('| {:<10}  | {:<10} | {:<10}  | {:<10} |'.format(user.id, user.name, user.age, user.address))
                 print('－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－')
+        elif option == '8':
+            userservice.exportCSV()
         else:
             userservice.save()
 
