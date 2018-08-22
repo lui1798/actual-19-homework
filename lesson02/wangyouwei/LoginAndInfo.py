@@ -57,8 +57,9 @@ while login_flag == 'on':
                 u'---------------------用户信息-------------------------\nid       name        tel             address ')  # \n是打印回车
             try:
                 with open(pwd + '/' + 'persistence.db', 'r') as f:
-                    data=f.read()
-                    print(type(data))
+                    data=f.readline()
+                    for i in data:
+                        print(i)
                     membuf = json.loads(data)
                     print(type(membuf))
 
