@@ -8,7 +8,7 @@ import time
 import json
 
 fd2 = open('./time.txt')
-beforeTime = json.load(fd2)  # 读取上次执行的时间
+beforeTime = json.load(fd2)  # 读取三次错误输入密码时间
 fd2.close()
 
 nowTime = datetime.datetime.now().strftime('%F %T')  # 获取当前时间
@@ -84,10 +84,13 @@ if workTime > 24:
                         print("\033[31m 用户ID不存在\033[0m")
                 elif op == "list":
                     if len(userInfo) == 0:
-                        userFile = open('./user.txt')
-                        userFileJson = userFile.read()
-                        userInfo = json.loads(userFileJson)  # 读取上次保存的用户信息
-                        userFile.close()
+                        try:
+                            userFile = open('./user.txt')
+                            userFileJson = userFile.read()
+                            userInfo = json.loads(userFileJson)  # 读取上次保存的用户信息
+                            userFile.close()
+                        except FileNotFoundError:
+                            print("No such file or directory")
                     for i in ['name', 'age', 'tel', 'address', 'UserID']:
                         print("{:<15}".format(i), end=' ')
                     print('')
