@@ -31,8 +31,15 @@ while True:
 
     elif operation == 'add':
 
-        ''''不太会，先空着'''
-        pass
+        user_num = 0
+        # 获取最后一行数据的id
+        for user in userinfo:
+            if user_num < int(user[0]):
+                user_num = int(user[0])
+        user_info = input('Please input user information: ')
+        # 添加新增行
+        userinfo.append(str(user_num + 1) + ' ' + user_info)
+        print('add success!')
 
     elif operation == 'update':
         # 输入要更新user的id
