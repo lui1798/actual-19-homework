@@ -7,9 +7,12 @@ import datetime
 import time
 import json
 
-fd2 = open('./time.txt')
-beforeTime = json.load(fd2)  # 读取三次错误输入密码时间
-fd2.close()
+try:
+    fd2 = open('./time.txt')
+    beforeTime = json.load(fd2)  # 读取错误输入密码时间
+    fd2.close()
+except FileNotFoundError:
+    beforeTime = "1971-01-01 00:00:00"
 
 nowTime = datetime.datetime.now().strftime('%F %T')  # 获取当前时间
 
