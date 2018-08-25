@@ -252,5 +252,5 @@ if lockinfo['lock_time'] == 0 or lockinfo['lock_time'] < cur_time:
     fl.close()
     print('\033[31m你输入错误已经超过3次！请过段时间再试！\033[0m')
 else:
-    print('\033[31m由于你之前输入错误超3次，还处于被锁定！锁定终止时间为：{}\033[0m'.format(lockinfo['lock_time'].strftime('%Y-%m-%d %H:%M:%S')))
+    print('\033[31m由于你之前输入错误超3次，还处于被锁定！锁定终止时间为：{}\033[0m'.format(lockinfo['lock_time']))
 
