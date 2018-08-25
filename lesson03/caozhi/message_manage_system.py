@@ -18,7 +18,7 @@ try:
     with open('message', 'rb') as a:
         userinfo = pickle.load(a)
 except FileNotFoundError as fff:
-    print(fff,'管理员用户文件异常')
+    print(fff,'用户信息文件异常')
     exit(1)
 
 # usermessage = {'name': 'admin', 'passwd': 'playbook', 'count': 3, 'lasttime': 1535080972.4686918}
