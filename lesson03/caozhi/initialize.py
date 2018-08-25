@@ -13,7 +13,8 @@ print(userinfo,type(userinfo))
 for i in userinfo:
     print(i)
 d = dict(name='admin', passwd='playbook', count=3, lasttime=1535080972.4686918)
-#pickle.dumps(d)
+print(pickle.dumps(d))
+print(d)
 #with open('file','rb') as f:
 #    print(pickle.load(f))
 with open('file','wb') as f:
