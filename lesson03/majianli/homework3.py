@@ -27,10 +27,25 @@ def empyt():
         f.truncate()
 #list
 def list():
+    begin = 0
+    increment = 3
+    end = begin + increment
     res = readfile()
+    user_list = []
     for i in res:
         i = json.loads(i)
-        print(i["id"], i["name"], i["tel"], i["age"], i["address"])
+        user_list.append(i)
+    while True:
+        for i in user_list[begin:end]:
+            print(i["id"], i["name"], i["tel"], i["age"], i["address"])
+        b = input('继续看按d：')
+        if b == 'd':
+            begin = end
+            end = begin + increment
+            if begin > len(user_list):
+                break
+            continue
+
 
 #add
 def add():
@@ -149,6 +164,17 @@ def log_in():
                     else:
                         print('管理员登陆成功')
                 while True:
+                    info = '''
+* * * * * * * * * * * * * * * *
+*      1:查看全部用户          *
+*      2：添加用户             *
+*      3：查找用户             *
+*      4：删除用户             *
+*      5：跟新用户             *
+*      exit：退出系统          *
+* * * * * * * * * * * * * * * *
+                    '''
+                    print(info)
                     action = input('输入动作：').strip()
                     if action == '1':
                         list()
