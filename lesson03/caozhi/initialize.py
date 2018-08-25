@@ -2,12 +2,12 @@ import pickle
 import time
 
 userinfo = list([
-{'id': 1, 'name': 'name1', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
-{'id': 2, 'name': 'name2', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
-{'id': 3, 'name': 'name3', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
-{'id': 5, 'name': 'name4', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
-{'id': 8, 'name': 'name5', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
-{'id': 9, 'name': 'name6', 'age': 20, 'tel': '132xxx', 'address': 'beijing'}
+{'id': 1, 'name': 'name1', 'age': 21, 'tel': '132xxx', 'address': 'beijing'},
+{'id': 2, 'name': 'name2', 'age': 22, 'tel': '132xxx', 'address': 'beijing'},
+{'id': 3, 'name': 'name3', 'age': 23, 'tel': '132xxx', 'address': 'beijing'},
+{'id': 5, 'name': 'name4', 'age': 24, 'tel': '132xxx', 'address': 'beijing'},
+{'id': 8, 'name': 'name5', 'age': 25, 'tel': '132xxx', 'address': 'beijing'},
+{'id': 9, 'name': 'name6', 'age': 26, 'tel': '132xxx', 'address': 'beijing'}
 ])
 print(userinfo,type(userinfo))
 for i in userinfo:

@@ -1,11 +1,27 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# write by caozhi, 2018-08-23 
+# 用户信息管理系统
+
+
 from time import time
 import pickle
 
-with open('file', 'rb') as f:
-    usermessage = pickle.load(f)
+try:
+    with open('file', 'rb') as f:
+        usermessage = pickle.load(f)
+except FileNotFoundError as eee:
+    print(eee,'管理员用户文件异常')
+    exit(1)
 
-with open('message', 'rb') as a:
-    userinfo = pickle.load(a)
+try:
+    with open('message', 'rb') as a:
+        userinfo = pickle.load(a)
+except FileNotFoundError as fff:
+    print(fff,'管理员用户文件异常')
+    exit(1)
+
+
 # userinfo = [
 # {'id': 1, 'name': 'name1', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
 # {'id': 2, 'name': 'name2', 'age': 20, 'tel': '132xxx', 'address': 'beijing'},
@@ -21,39 +37,38 @@ while 1:
     if break_flag:
         break
 
+    # 没有机会时，强制同步 最后登陆失败时时间戳
+    now_time = time()
+    usermessage['lasttime'] = now_time
+    with open('file', 'wb') as a:
+        pickle.dump(usermessage,a)
     # 判断可登录的剩余次数 是否=0
     count = usermessage.get('count')
     if count <= 0:
-        now_time = time()
         lasttime = usermessage.get('lasttime')
-        usermessage['lasttime'] = now_time
-        with open('file', 'wb') as a:
-            pickle.dump(usermessage,a)
 
         # 判断是否超过1天，如果少于1天则不允许登陆
         drop = now_time - lasttime
-        if int(drop) > 30:
+        if int(drop) > 60:
             usermessage['count'] = 3
-            usermessage['lasttime'] = now_time
-            with open('file','wb') as f:
-                pickle.dump(usermessage,f)
             continue
         else:
-            print('\033[31mPlease retry 30秒(为调试方便，使用30s，可自定义调整) later, or contact super manager!\033[0m')
+            print('没有机会了~~~')
+            print('\033[31m请在 60秒后(为调试方便，使用60s，可自定义调整)重试， 或者联系我...\033[0m')
             break_flag = 1
             break
 
     # 输入登陆信息
-    user_name = input('\033[33m Please enter your user_name: \033[0m')
-    password = input('\033[33m Please enter your password: \033[0m')
+    user_name = input('\033[33m 请输入你的姓名: \033[0m').strip()
+    password = input('\033[33m 请输入你的密码: \033[0m').strip()
 
     if user_name == usermessage['name'] and password == usermessage['passwd']:
-        print('\033[32m login success \033[0m')
+        print('\033[32m login success ---> 登陆成功 \033[0m')
 
         # 登陆欢迎信息
         print('=' * 80)
         print('''
-\033[31mWelcome to come Liaoning Project Technology University library management system \033[0m
+\033[31m欢迎来到某某信息管理系统 \033[0m
 ''')
         print('=' * 80)
 
@@ -61,33 +76,53 @@ while 1:
             if break_flag:
                 break
             print('''
- Please enter an action:
- 1、 insert a record.
- 2、 select someone message.
- 3、 show all message.
- 4、 update someone message.
- 5、 delete someone message.
- 6、 quit this system.
+ 执行操作的序号:
+ 1、 插入一个用户信息.
+ 2、 查询当前某个用户信息.
+ 3、 展示所有用户信息.
+ 4、 更新某个用户信息.
+ 5、 删掉某个用户信息.
+ 6、 退出系统，并保存所有操作.
             ''')
 
             # 输入对用户信息的操作 按数据库逻辑实现,id 为主键
-            action = input('\033[34mPlease enter your action: \033[0m')
+            action = input('\033[34m请输入需要执行操作的序号: \033[0m').strip()
 
             # 添加用户信息
             if action == '1':
                 insert_id = int(userinfo[-1]['id']) + 1
-                insert_name = input('Please enter add name: ')
-                insert_age = int(input('Please enter add age: '))
-                insert_tel = input('Please enter add tel: ')
-                insert_add = input('Please enter add address: ')
+                insert_name = input('请输入增加的姓名: ').strip()
+                if len(insert_name) < 1:
+                    print('Illegal,输入非法↓')
+                    continue
+                try:
+                    insert_age = int(input('请输入年龄: ').strip())
+                except:
+                    print('输入类型错误')
+                    continue
+                else:
+                    if insert_age < 1 or insert_age > 200:
+                        print('Illegal,输入非法↓')
+                        continue
+                insert_tel = input('Please enter add tel: ').strip()
+                if len(insert_tel) < 7:
+                    print('Illegal,输入非法↓')
+                    continue
+                insert_add = input('Please enter add address: ').strip()
+                if len(insert_add) < 1:
+                    print('Illegal,输入非法↓')
+                    continue
                 insert_dict = {'id': insert_id, 'name': insert_name, 'age': insert_age, 'tel': insert_tel, 'address': insert_add}
                 userinfo.append(insert_dict)
-                print('This is insert message:')
+                print('这是新增的信息，请核对:')
                 print(userinfo[-1])
 
             # 查询某个用户信息
             elif action == '2':
-                select_name = input('Please enter select name: ')
+                select_name = input('请输入用户姓名: ').strip()
+                if len(select_name) < 1:
+                    print('Illegal,输入非法↓')
+                    continue
                 select_flag = 0
                 # [i for i in userinfo if i.get('name') == select_name]
                 for i in userinfo:
@@ -95,7 +130,7 @@ while 1:
                         select_flag = 1
                         print(i)
                 if select_flag == 0:
-                    print('Sorry, record empty')
+                    print('Sorry, 没有这个用户信息')
 
             # 显示所有用户信息，并分页展示，默认每页显示3条
             elif action == '3':
@@ -104,68 +139,100 @@ while 1:
                 else:
                     max_page = (len(userinfo) // 3 + 1)
                 while 1:
-                    page = int(input('which page (0 for all): '))
-                    if 0 < page <= max_page:
-                        for m in userinfo[3 * (page - 1):3 * page]:
-                            print(m)
-                    elif page == 0:
-                        for a in userinfo:
-                            print(a)
+
+                    try:
+                        page = int(input('请输入查看的页码 (0 是全部): ').strip())
+                    except:
+                        print('输入类型错误')
                     else:
-                        print('out of data,please enter correct page. eg:1 -- %d ' % max_page)
-                    print()
-                    show_quit = input('Weather continue show (\'N\' is quit): ')
-                    if show_quit == 'N':
-                        break
+                        if 0 < page <= max_page:
+                            for m in userinfo[3 * (page - 1):3 * page]:
+                                print(m)
+                        elif page == 0:
+                            for a in userinfo:
+                                print(a)
+                        else:
+                            print('超过了正常页数的范围，请重新输入页码. eg:1 -- %d ' % max_page)
+                            continue
+                        print()
+                        show_quit = input('是否要继续查看信息 (输入 \'N或n\' 则退出，否则继续): ').strip()
+                        if show_quit == 'N' or show_quit == 'n':
+                            break
 
             # 更新某个用户信息
             elif action == '4':
-                update_id = int(input('Please enter update student id: '))
+                try:
+                    update_id = int(input('请输入更新信息的id: ').strip())
+                except:
+                    print('输入类型错误')
+                    continue
                 update_flag = 0
                 j = 0
                 for m in userinfo:
+                    update_flag = 1
                     if update_id == m.get('id'):
-                        update_name = input('Please enter update name: ')
-                        update_age = int(input('Please enter update age: '))
-                        update_tel = input('Please enter update tel: ')
-                        update_add = input('Please enter update address: ')
+                        update_name = input('请输入更新用户姓名: ').strip()
+                        if len(update_name) < 1:
+                            print('Illegal,输入非法↓')
+                            continue
+                        try:
+                            update_age = int(input('请输入更新用户年龄: ').strip())
+                        except:
+                            print('Illegal,输入非法↓')
+                            break
+                        else:
+                            if update_age < 1 or update_age > 200:
+                                print('Illegal,输入年龄非法↓')
+                                continue
+                        update_tel = input('请输入更新用户电话: ').strip()
+                        if len(update_tel) < 1:
+                            print('Illegal,输入非法↓')
+                            continue
+                        update_add = input('请输入更新用户地址: ').strip()
+                        if len(update_add) < 1:
+                            print('Illegal,输入非法↓')
+                            continue
                         userinfo[j] = {'id': update_id, 'name': update_name, 'age': update_age, 'tel': update_tel, 'address': update_add}
                         print(userinfo[j])
-                        update_flag = 1
                     j += 1
                 if update_flag == 0:
-                    print('Sorry, record empty')
+                    print('Sorry, 没有这个用户id')
 
             # 删除某个用户信息
             elif action == '5':
-                delete_id = int(input('Please enter delete student id: '))
+                try:
+                    delete_id = int(input('请输入要删除的用户id: ').strip())
+                except:
+                    print('Illegal,输入非法↓')
+                    continue
                 n = 0
                 delete_flag = 0
                 for k in userinfo:
                     if delete_id == k.get('id'):
                         userinfo.pop(n)
                         delete_flag = 1
+                        print('用户信息删除成功')
                     n += 1
                 if delete_flag == 0:
-                    print('Sorry, record empty')
+                    print('Sorry, 没有这个用户信息')
 
             # 退出整个系统
             elif action == '6':
                 print()
-                print('Exit success')
-                break
+                print('退出成功，bye-bye ~')
                 break_flag = 1
+                break
             else:
                 print()
-                print('Your action is illegal')
+                print('你输入操作的动作非法')
 
     else:
         count -= 1
         with open('/home/caozhi/file', 'w') as f:
             f.write(str(count))
         usermessage['count'] = count
-        print('login error, you have %d left choice' % count)
+        print('用户信息错误，登陆失败，还有 %d 次机会' % count)
 
-# 将修改的内容写到磁盘中
+# 退出系统 自动将修改的内容写到磁盘中
 with open('message','wb') as m:
     pickle.dump(userinfo,m)
