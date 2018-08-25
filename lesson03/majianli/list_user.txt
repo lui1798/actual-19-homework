@@ -1,0 +1,4 @@
+{"name": "", "id": 1, "address": "beijing", "age": "20", "tel": "132xxx"}
+{"name": "\u674e\u56db", "id": 2, "address": "shanghai", "age": "30", "tel": "136xxx"}
+{"name": "\u738b\u4e94", "id": 3, "address": "guangzhou", "age": "40", "tel": "135xxx"}
+{"name": "\u9a6c\u516d", "id": 4, "address": "hangzhou", "age": "50", "tel": "186xxx"}

@@ -17,16 +17,16 @@
 
 
 #定义一个空列表userinfo
-userinfo = []
+userinfo = [1,'wangliu', '19', '132xx', 'hebei']
 #设置登录账号和密码
-loginUser = ('admin', '123')
+loginUser = ('admin', abc)
 #设定一个计数器（登录时输错3次密码就不上输入了）
 count = 3
 
 
 while True:
-    username = input("输入用户名: ")
-    password = input("输入登录密码: ")
+    username = input("输入用户名: ").strip()
+    password = input("输入登录密码: ").strip()
     # 如果username等于正确的用户名和密码
     if username == loginUser[0] and password == loginUser[1]:
         op = input("请输入操作 add delete update list: ")
@@ -41,25 +41,24 @@ while True:
                 NewId=max(uid)+1                  #从上边的遍历结果中找出最大值 加1  定义为NewId
                 newuser_list.append(0,NewId)      #把新输入的用户加上编号
                 userinfo.append(newuser_list)
+                print(userinfo)
 # ______________________________________________________________________________________________________________________________________________________
 
-        elif op == 'delete':                    #如果用户执行删除操作
+        elif op == 'delete':                  #如果用户执行删除操作
             print(userinfo)
             uid = input("输入要删除的用户编号: ")
             for x in userinfo:
                 if x[0] == int(uid):
                     userinfo.remove(x)
 # ______________________________________________________________________________________________________________________________________________________
-        elif op == 'update':                   #如果用户执行更新操作
+        elif op == 'update':               #如果用户执行更新操作
             print(userinfo)
-            uid = input("请输入要更新的用户编号：")
-            for x in userinfo:
-                if x[0] ==int(uid):
-                    newuser=input("请输入新的用户信息，以空格分隔")
-                    newuser_list=newuser.split(' ')
-                    newuser_list[0]=int(uid)
-                    userinfo.append(newuser_list)
-                    print(userinfo)
+            uid = int(input("请输入要更新的用户编号："))
+            print(type(uid))
+            if [x for x in userinfo][1]==uid:
+                print(uid)
+
+
 
     #     elif op == 'list':
     #         pass
@@ -73,5 +72,6 @@ while True:
     #         break
     #     else:
     #         print("invalid op.")
-     else:
-        print("login failed.")
+    #  else:
+    #     print("login failed.")
+    print("mgt end.")
