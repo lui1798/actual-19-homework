@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# write by caozhi, 2018-08-23 
+# write by caozhi, 2018-08-23, version:3.2
 # 用户信息管理系统
 
 
