@@ -66,6 +66,7 @@ while True:
             elif op == 'exit':
                 print("-------退出信息-----------")
                 break
+               # exit()
             elif op =='check':
                 print(userinfo)
             else:
