@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2018/8/25 下午2:21
 # @Author  : LuoFeng
-# @Site    : 
+# @Site    :
 # @File    : userManagev2.py
 # @Software: PyCharm
 
@@ -120,7 +120,7 @@ while state is True:
                     print(userList)
 
             if isState is not True:
-                print("\033[33m用户{}不存在，无法删除!!!\033[0m".format(updateUser))
+                print("\033[33m用户{}不存在，无法更新!!!\033[0m".format(updateUser))
 
         except Exception as e:
             print(e)
