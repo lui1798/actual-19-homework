@@ -11,7 +11,6 @@ import sys, json, time, datetime
 
 # 定义循环次数和认证用户名和密码
 count = 3
-# userinfo = {'user': 'admin', 'password': 123456, 'is_locked': False, 'locked_at': None}
 
 # 定义登录成功后提示信息
 succ_msg = '''\033[32m
