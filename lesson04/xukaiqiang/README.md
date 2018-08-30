@@ -14,6 +14,7 @@
 ### 管理员账号密码:
 
 user:admin
+
 password:123456
 
 ### 数据实例:
@@ -36,7 +37,7 @@ python usersysdemo.py
 
 ```
 
-## 效果演示
+## 效果演示
 
 - 管理员登陆
 
