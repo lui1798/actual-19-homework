@@ -1,4 +1,5 @@
 ## userdemo
+
 此项目是python构建的管理员演示系统,具有一下功能:
 
  - 管理员登陆验证
@@ -9,12 +10,14 @@
  - 退出登陆
 
 ## 用户数据类型 
+
 ### 管理员账号密码:
 
 user:admin
 password:123456
 
 ### 数据实例:
+
 ```
 users = [
     {'name' : 'monkey1', 'age':20, 'tel':'132xxx', 'address':'beijing', 'id':1},
@@ -23,7 +26,9 @@ users = [
 ]
 
 ```
+
 ## 项目运行
+
 ```
 git clone https://github.com/xxxxx/usersysdemo.git
 
@@ -33,14 +38,14 @@ python usersysdemo.py
 ## 效果演示
 
 - 管理员登陆
-	![login](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/login.png)
+	![login](https://raw.githubusercontent.com/iteemo/images/master/lesson04/login.png)
 - 添加用户
-	![adduser](https://raw.githubusercontent.com/iteemo/images/master/adduser.png)
+	![adduser](https://raw.githubusercontent.com/iteemo/images/master/lesson04/adduser.png)
 - 查询用户
-	![queryuser](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/query.png)
+	![queryuser](https://raw.githubusercontent.com/iteemo/images/master/lesson04/query.png)
 - 删除用户
-	![adduser](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/del.png)
+	![adduser](https://raw.githubusercontent.com/iteemo/images/master/lesson04/del.png)
 - 保存用户
-	![adduser](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/save.png)
+	![adduser](https://raw.githubusercontent.com/iteemo/images/master/lesson04/save.png)
 - 锁定用户
-	![adduser](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/lock.png)
+	![adduser](https://raw.githubusercontent.com/iteemo/images/master/lesson04/lock.png)
