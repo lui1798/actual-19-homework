@@ -31,10 +31,11 @@ python usersysdemo.py
 
 ```
 ## 效果演示
+
 - 管理员登陆
 	![login](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/login.png)
 - 添加用户
-	![adduser](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/adduser.png)
+	![adduser](https://raw.githubusercontent.com/iteemo/images/master/adduser.png)
 - 查询用户
 	![queryuser](https://github.com/51reboot/actual-19-homework/lesson04/xukaiqiang/images/query.png)
 - 删除用户
