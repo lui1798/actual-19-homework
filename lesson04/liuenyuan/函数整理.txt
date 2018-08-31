@@ -1,0 +1,181 @@
+函数整理
+一、python函数中的重要属性
+1.__doc__返回指定函数的文档字符串
+def square(x):
+    """return square of given number"""
+    return x**2
+ 
+>>> square.__doc__
+'return square of given number'
+2.__name__返回函数名字
+def square(x):
+    """return square of given number"""
+    return x**2
+ 
+>>> square.func_name
+'square'
+3.__module__返回函数定义所在的模块
+def square(x):
+    """return square of given number"""
+    return x**2
+ 
+>>> square.__module__
+'__main__'
+二、参数调用
+1.位置传递
+必须以在被调用函数中定义的顺序来传递
+>>>def f(a,b,c):
+...    print a, b, c   
+>>>f(1, 2, 3)
+1 2 3
+2.关键字传递
+关键字传递是根据每个参数的名字传递参数
+关键字传递参数可以不遵守位置对应关系
+关键字传递可以和位置传递混用。== 但位置参数要出现在关键字参数之前
+>>>def f(a,b,c):
+...    print a, b, c    
+>>>f(1, c = 3, b = 2)
+1 2 3
+3.参数默认值
+>>>def f(a = 10, b = 20, c = 30):
+...    print a, b, c
+    
+>>>f()
+10 20 30
+>>>f(1, b = 5)
+1 5 30
+所有的参数要在默认值之前
+>>> def test(a=1, b):
+    print a, b   
+SyntaxError: non-default argument follows default argument
+>设置默认参数后，当调用函数没有赋值时，使用默认值；当调用函数使用参数时，使用参数
+4.包裹传递
+在定义函数时，我们有时候并不知道调用的时候会传递多少个参数。这时候，包裹(packing)位置参数，或者包裹关键字参数，来进行参数传递，会非常有用。
+在func的参数表中，所有的参数被name收集，根据位置合并成一个元组(tuple)，这就是包裹位置传递,为了提醒Python参数，name是包裹位置传递所用的元组名，在定义func时，在name前加*号
+>>>def func(*name):
+...    print type(name)
+...    print name
+
+>>>func(1,4,6)
+<type 'tuple'>
+(1, 4, 6)
+>>>func(5,6,7,1,2,3)
+<type 'tuple'>
+(5, 6, 7, 1, 2, 3)
+==这样传递的参数元组必须在位置和默认参数后==
+>>> def test(a, b=2, *c, **d):
+    print a, b, c,d
+>>> test(1, 3, *[4, 5], **{'e':6, 'f':7})
+1 3 (4, 5) {'e': 6, 'f': 7}
+dict是一个字典，收集所有的关键字，传递给函数func。为了提醒Python，参数dict是包裹关键字传递所用的字典，在dict前加 **
+>>>def func(**dict):
+...    print type(dict)
+...    print dict
+>>>func(a=1,b=9)
+<type 'dict'>
+{'a': 1, 'b': 9}
+>>>func(m=2,n=1,c=11)
+<type 'dict'>
+{'c': 11, 'm': 2, 'n': 1}
+5.解包裹
+在函数中，*和 **，也可以在调用的时候使用，即解包裹(unpacking)
+所谓的解包裹，就是在传递tuple时，让tuple的每一个元素对应一个位置参数
+>>>def func(a,b,c):
+...    print a,b,c
+>>>args = (1,3,4)
+>>>func(*args)
+1 3 4
+>>> def test(a, b=2, *c, **d):
+    print a, b, c,d
+错误调用
+>>> test(1, 3, [4, 5], {'e':6, 'f':7})
+1 3 ([4, 5], {'e': 6, 'f': 7}) {}
+正确调用
+>>> test(1, 3, *[4, 5], **{'e':6, 'f':7})
+1 3 (4, 5) {'e': 6, 'f': 7}
+三、函数的return
+#!/usr/bin/python3
+# 可写函数说明
+def sum( arg1, arg2 ):
+   # 返回2个参数的和."
+   total = arg1 + arg2
+   print ("函数内 : ", total)
+   return total
+ 
+# 调用sum函数
+total = sum( 10, 20 )
+print ("函数外 : ", total)
+四、函数作用域
+1.全局变量和局部变量
+定义在函数内部的变量拥有一个局部作用域，定义在函数外的拥有全局作用域。
+局部变量只能在其被声明的函数内部访问，而全局变量可以在整个程序范围内访问。调用函数时，所有在函数内声明的变量名称都将被加入到作用域中。如下实例：
+#!/usr/bin/python3 
+total = 0 # 这是一个全局变量
+# 可写函数说明
+def sum( arg1, arg2 ):
+    #返回2个参数的和."
+    total = arg1 + arg2 # total在这里是局部变量.
+    print ("函数内是局部变量 : ", total)
+    return total
+#调用sum函数
+sum( 10, 20 )
+print ("函数外是全局变量 : ", total)
+######################输出#####################
+函数内是局部变量 :  30
+函数外是全局变量 :  0
+2.global和nonlocal关键字
+当内部作用域想修改外部作用域的变量时，就要用到global和nonlocal关键字了。
+以下实例修改全局变量 num：
+#!/usr/bin/python3 
+num = 1
+def fun1():
+    global num  # 需要使用 global 关键字声明
+    print(num) 
+    num = 123
+    print(num)
+fun1()
+print(num)
+#####################输出#####################
+1
+123
+123
+如果要修改嵌套作用域（enclosing 作用域，外层非全局作用域）中的变量则需要 nonlocal 关键字了，如下实例：
+#!/usr/bin/python3
+ 
+def outer():
+    num = 10
+    def inner():
+        nonlocal num   # nonlocal关键字声明
+        num = 100
+        print(num)
+    inner()
+    print(num)
+outer()
+#####################输出#####################
+100
+100
+另外有一种特殊情况，假设下面这段代码被运行
+#!/usr/bin/python3
+ 
+a = 10
+def test():
+    a = a + 1
+    print(a)
+test()
+以上程序执行，报错信息如下：
+Traceback (most recent call last):
+  File "test.py", line 7, in <module>
+    test()
+  File "test.py", line 5, in test
+    a = a + 1
+UnboundLocalError: local variable 'a' referenced before assignment
+错误信息为局部作用域引用错误，因为 test 函数中的 a 使用的是局部，未定义，无法修改。
+修改 a 为全局变量，通过函数参数传递，可以正常执行输出结果为：
+#!/usr/bin/python3 
+a = 10
+def test(a):
+    a = a + 1
+    print(a)
+test(a)
+#####################输出#####################
+11
