@@ -1,0 +1,180 @@
+#用户登录
+Please input administrator account: admin
+Please input password:
+********Welcome to User Managent System!!*********
+******************Login Success*******************
+*****************Congratulation!!*****************
+
+#分页显示用户列表
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+--------+----------+
+| ID |    NAME   | AGE |  TEL   | ADDRESS  |
++----+-----------+-----+--------+----------+
+| 1  | testuser1 |  21 |  123   | beijing  |
+| 3  | testuser4 |  21 | 131111 | beijing  |
+| 4  | testuser5 |  22 |  131   | nanjing  |
+| 5  | testuser5 |  77 |  131   | shanghai |
+| 6  | testuser6 |  24 |  121   | tianjin  |
++----+-----------+-----+--------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+-----------+-----+------+---------+
+| ID |    NAME   | AGE | TEL  | ADDRESS |
++----+-----------+-----+------+---------+
+| 7  | testuser7 |  22 | 1212 |  henan  |
++----+-----------+-----+------+---------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+
+#添加用户信息
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:a
+Please input new user info format like 'name,age,tel,address':testuser8,27,131123456,hangzhou
+***************Add new user success***************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+-----------+-----+-----------+----------+
+| ID |    NAME   | AGE |    TEL    | ADDRESS  |
++----+-----------+-----+-----------+----------+
+| 7  | testuser7 |  22 |    1212   |  henan   |
+| 8  | testuser8 |  27 | 131123456 | hangzhou |
++----+-----------+-----+-----------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+
+#删除用户
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:d
+Please input your want to delete user ID: 3
++----+-----------+-----+--------+---------+
+| ID |    NAME   | AGE |  TEL   | ADDRESS |
++----+-----------+-----+--------+---------+
+| 3  | testuser4 |  21 | 131111 | beijing |
++----+-----------+-----+--------+---------+
+Do you sure want to delete this user:(Y/N)y
+***************Delete user success****************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+------+----------+
+| ID |    NAME   | AGE | TEL  | ADDRESS  |
++----+-----------+-----+------+----------+
+| 1  | testuser1 |  21 | 123  | beijing  |
+| 4  | testuser5 |  22 | 131  | nanjing  |
+| 5  | testuser5 |  77 | 131  | shanghai |
+| 6  | testuser6 |  24 | 121  | tianjin  |
+| 7  | testuser7 |  22 | 1212 |  henan   |
++----+-----------+-----+------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+
+#修改用户信息
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:u
+Please input your want to update user ID: 4
++----+-----------+-----+-----+---------+
+| ID |    NAME   | AGE | TEL | ADDRESS |
++----+-----------+-----+-----+---------+
+| 4  | testuser5 |  22 | 131 | nanjing |
++----+-----------+-----+-----+---------+
+Please input your want to update attributes:(name,age,tel or address):name
+Please input new name: testuser4
+***************Update user success****************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+------+----------+
+| ID |    NAME   | AGE | TEL  | ADDRESS  |
++----+-----------+-----+------+----------+
+| 1  | testuser1 |  21 | 123  | beijing  |
+| 4  | testuser4 |  22 | 131  | nanjing  |
+| 5  | testuser5 |  77 | 131  | shanghai |
+| 6  | testuser6 |  24 | 121  | tianjin  |
+| 7  | testuser7 |  22 | 1212 |  henan   |
++----+-----------+-----+------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+
+#查找用户信息
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:f
+Please input your want to find user info(ID,NAME,AGE,TEL OR ADDRESS):testuser4
++----+-----------+-----+--------+---------+
+| ID |    NAME   | AGE |  TEL   | ADDRESS |
++----+-----------+-----+--------+---------+
+| 3  | testuser4 |  21 | 131111 | beijing |
++----+-----------+-----+--------+---------+
+
+#退出系统保存用户信息
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+E or e  ---> Exit system
+Please input your action:e
+*********************Log out!*********************
+
+#账号锁定
+$ python lesson-4-denglu.py
+Please input administrator account: admin
+Please input password:
+You just have three chances,Please try again!
+Please input administrator account:
+Please input password:
+You just have three chances,Please try again!
+Please input administrator account:
+Please input password:
+Sorry.Your account has been locked! Please try again after 24 hours!
+
+$ python lesson-4-denglu.py
+Sorry.Your account has been locked! Please try again after 24 hours!
+
+
