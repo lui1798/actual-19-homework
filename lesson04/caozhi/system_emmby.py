@@ -181,8 +181,6 @@ if is_login:
                 if len(update_name) < 1:
                     has_error = 1
                     print('输入姓名非法')
-                print(update_age.isdigit())
-                print(int(update_age))
                 if not update_age.isdigit() or int(update_age) < 1 or int(update_age) > 200:
                     has_error = 1
                     print('输入年龄非法')
