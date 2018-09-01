@@ -1,0 +1,50 @@
+账号：admin  密码：admin123
+"D:\Program Files (x86)\python\python.exe" D:/WorkSpace/Study/userManageV3.py
+Please input your username:admin
+Please input your password:admin123
+Please input your option [add|del|update|list|find|exit]:list
+----------------------------------------------------------------
+        id|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|       bob|   23|      413513451|                 anh
+----------------------------------------------------------------
+Please input your option [add|del|update|list|find|exit]:add
+请依次输入用户名，年龄，电话号码，地址, 信息使用空格分割:zhougui 18 23 1234567 shanghai
+ 输入的用户信息有误
+Please input your option [add|del|update|list|find|exit]:add
+请依次输入用户名，年龄，电话号码，地址, 信息使用空格分割:zhougui 18 1234567 shanghai
+用户添加成功
+Please input your option [add|del|update|list|find|exit]:list
+----------------------------------------------------------------
+        id|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|       bob|   23|      413513451|                 anh
+         2|   zhougui|   18|        1234567|            shanghai
+----------------------------------------------------------------
+Please input your option [add|del|update|list|find|exit]:del
+请输入删除用户的ID：3
+ 用户ID不存在
+Please input your option [add|del|update|list|find|exit]:del
+请输入删除用户的ID：1
+Please input your option [add|del|update|list|find|exit]:update
+请输入修改用户ID：1
+ 用户ID不存在
+Please input your option [add|del|update|list|find|exit]:update
+请输入修改用户ID：2
+Please choice your mod [name|age|tel|address]:age
+Please input your message:25
+Please input your option [add|del|update|list|find|exit]:list
+----------------------------------------------------------------
+        id|      name|  age|            tel|             address
+----------------------------------------------------------------
+         2|   zhougui|   25|        1234567|            shanghai
+----------------------------------------------------------------
+Please input your option [add|del|update|list|find|exit]:find
+请输入查询的字符串:shanghai
+----------------------------------------------------------------
+        id|      name|  age|            tel|             address
+----------------------------------------------------------------
+         2|   zhougui|   25|        1234567|            shanghai
+----------------------------------------------------------------
+Please input your option [add|del|update|list|find|exit]:exit
+ 存储用户信息成功
