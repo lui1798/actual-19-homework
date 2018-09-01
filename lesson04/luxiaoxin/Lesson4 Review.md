@@ -2,9 +2,9 @@
 - 抽象公用的代码段，为代码段命名，通过名字进行代码段的调用执行
 
 ## 函数定义
-- def func(params):
-      body
-      return 
+>def func(params):
+>>body
+>>return 
       
 ## 函数命名
 - ptyhon中函数命名规则与变量一致
