@@ -1,7 +1,14 @@
+# 用户信息管理系统
+# 可以实现以下功能：
+# 1、账户1天只能登陆失败3次，超过失败次数则锁定。
+# 2、对用户信息的增删改查操作，查看可以分页展示
+# 3、对数据进行存储到磁盘，方便下一次读取
+
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # write by caozhi, 2018-08-31, version:4.1
-# 用户信息管理系统
+
 from time import time
 import pickle
 import math
