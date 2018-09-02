@@ -1,6 +1,6 @@
 ## lesson05
 
-> homework
+- 熟悉logging模块， 能用lesson4作业中用到此模块；
 
 ```bash
 import logging
@@ -19,3 +19,5 @@ logging.warning('file not found.')
 logging.critical('mem oom')
 
 ```
+
+- 整理上课的知识点， 课下做好笔记；
