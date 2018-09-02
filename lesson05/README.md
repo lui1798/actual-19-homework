@@ -13,7 +13,9 @@ logging.basicConfig(level=logging.DEBUG,
                 
                 
 # Usage
-logger.debug("")
-logger.info("")
+logging.debug('User is lock!!!')
+logging.info('login sucess.')
+logging.warning('file not found.')
+logging.critical('mem oom')
 
 ```
