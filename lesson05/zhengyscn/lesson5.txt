@@ -1,0 +1,86 @@
+
+## 序列化
+
+
+data = [
+	{},
+	{},
+]
+
+	-> list
+
+json
+	http
+	tcp
+	
+		数据交换格式
+	
+	object -> str
+	
+	
+	dumps <--> loads
+	dump <-> load
+	
+	
+	
+	
+	
+pickle(cPickle)
+	dumps <--> loads   # bytes
+	dump <-> load
+	
+	本地序列化
+	
+shelve
+
+
+
+如何查看制定模块下有哪些可用的方法
+	- dir
+	- [module].[tab]
+
+
+我单独执行ngx.py文件的运行结果	
+nginx log
+hello world
+__main__
+
+我运行main.py文件的执行结果1
+nginx log
+hello world
+ngx  # 文件名 或 模块名
+
+我运行main.py文件的执行结果2
+nginx log
+hello world
+ngx
+nginx log
+
+
+如果执行文件，那么__name__ 的变量值 就是__main__
+如果在另外一个文件中， 调用这个函数， 那么__name__的变量值 就是 文件名 或 模块名
+
+
+
+
+
+fd
+	read		-> str
+	readline	-> str
+	readlines	-> list
+
+
+
+
+fd = open()
+
+fd.close()
+
+
+
+
+
+集合是一个无序不重复的序列
+
+
+	

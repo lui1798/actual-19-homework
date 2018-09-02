@@ -1,0 +1,1582 @@
+     1	2018-02-22 09:45:15 5123 [Note] Plugin 'FEDERATED' is disabled.
+     2	2018-02-22 09:45:15 5123 [Note] InnoDB: Using atomics to ref count buffer pool pages
+     3	2018-02-22 09:45:15 5123 [Note] InnoDB: The InnoDB memory heap is disabled
+     4	2018-02-22 09:45:15 5123 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+     5	2018-02-22 09:45:15 5123 [Note] InnoDB: Memory barrier is not used
+     6	2018-02-22 09:45:15 5123 [Note] InnoDB: Compressed tables use zlib 1.2.3
+     7	2018-02-22 09:45:15 5123 [Note] InnoDB: Using Linux native AIO
+     8	2018-02-22 09:45:15 5123 [Note] InnoDB: Using CPU crc32 instructions
+     9	2018-02-22 09:45:15 5123 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+    10	2018-02-22 09:45:15 5123 [Note] InnoDB: Completed initialization of buffer pool
+    11	2018-02-22 09:45:15 5123 [Note] InnoDB: Highest supported file format is Barracuda.
+    12	2018-02-22 09:45:15 5123 [Note] InnoDB: 128 rollback segment(s) are active.
+    13	2018-02-22 09:45:16 5123 [Note] InnoDB: Waiting for purge to start
+    14	2018-02-22 09:45:16 5123 [Note] InnoDB: 5.6.39 started; log sequence number 1625987
+    15	2018-02-22 09:45:16 5123 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: b47d6b37-17ac-11e8-b7e6-0800272d823a.
+    16	2018-02-22 09:45:16 5123 [Note] Server hostname (bind-address): '*'; port: 3306
+    17	2018-02-22 09:45:16 5123 [Note] IPv6 is available.
+    18	2018-02-22 09:45:16 5123 [Note]   - '::' resolves to '::';
+    19	2018-02-22 09:45:16 5123 [Note] Server socket created on IP: '::'.
+    20	2018-02-22 09:45:17 5123 [Note] Event Scheduler: Loaded 0 events
+    21	2018-02-22 09:45:17 5123 [Note] /usr/sbin/mysqld: ready for connections.
+    22	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+    23	2018-02-22 09:51:32 5123 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+    24	2018-02-22 09:51:32 5123 [Note] Hostname 'bogon' has the following IP addresses:
+    25	2018-02-22 09:51:32 5123 [Note]  - 192.168.37.80
+    26	2018-02-24 17:07:09 5123 [Note] /usr/sbin/mysqld: Normal shutdown
+    27	
+    28	2018-02-24 17:07:10 5123 [Note] Giving 2 client threads a chance to die gracefully
+    29	2018-02-24 17:07:10 5123 [Note] Event Scheduler: Purging the queue. 0 events
+    30	2018-02-24 17:07:10 5123 [Note] Shutting down slave threads
+    31	2018-02-24 17:07:12 5123 [Note] Forcefully disconnecting 2 remaining clients
+    32	2018-02-24 17:07:12 5123 [Warning] /usr/sbin/mysqld: Forcing close of thread 2216  user: 'zhengyansheng'
+    33	
+    34	2018-02-24 17:07:12 5123 [Warning] /usr/sbin/mysqld: Forcing close of thread 2215  user: 'zhengyansheng'
+    35	
+    36	2018-02-24 17:07:12 5123 [Note] Binlog end
+    37	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'partition'
+    38	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+    39	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+    40	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+    41	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+    42	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+    43	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+    44	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+    45	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+    46	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+    47	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+    48	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+    49	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+    50	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+    51	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+    52	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+    53	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+    54	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_METRICS'
+    55	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+    56	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+    57	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+    58	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+    59	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+    60	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+    61	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_CMPMEM'
+    62	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+    63	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_CMP'
+    64	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+    65	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_LOCKS'
+    66	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'INNODB_TRX'
+    67	2018-02-24 17:07:12 5123 [Note] Shutting down plugin 'InnoDB'
+    68	2018-02-24 17:07:12 5123 [Note] InnoDB: FTS optimize thread exiting.
+    69	2018-02-24 17:07:12 5123 [Note] InnoDB: Starting shutdown...
+    70	2018-02-24 17:07:14 5123 [Note] InnoDB: Shutdown completed; log sequence number 2631083
+    71	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'ARCHIVE'
+    72	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'BLACKHOLE'
+    73	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'CSV'
+    74	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'MEMORY'
+    75	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'MRG_MYISAM'
+    76	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'MyISAM'
+    77	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'sha256_password'
+    78	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'mysql_old_password'
+    79	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'mysql_native_password'
+    80	2018-02-24 17:07:14 5123 [Note] Shutting down plugin 'binlog'
+    81	2018-02-24 17:07:14 5123 [Note] /usr/sbin/mysqld: Shutdown complete
+    82	
+    83	2018-02-24 17:08:47 1492 [Note] Plugin 'FEDERATED' is disabled.
+    84	2018-02-24 17:08:47 1492 [Note] InnoDB: Using atomics to ref count buffer pool pages
+    85	2018-02-24 17:08:47 1492 [Note] InnoDB: The InnoDB memory heap is disabled
+    86	2018-02-24 17:08:47 1492 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+    87	2018-02-24 17:08:47 1492 [Note] InnoDB: Memory barrier is not used
+    88	2018-02-24 17:08:47 1492 [Note] InnoDB: Compressed tables use zlib 1.2.3
+    89	2018-02-24 17:08:47 1492 [Note] InnoDB: Using Linux native AIO
+    90	2018-02-24 17:08:48 1492 [Note] InnoDB: Using CPU crc32 instructions
+    91	2018-02-24 17:08:48 1492 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+    92	2018-02-24 17:08:48 1492 [Note] InnoDB: Completed initialization of buffer pool
+    93	2018-02-24 17:08:48 1492 [Note] InnoDB: Highest supported file format is Barracuda.
+    94	2018-02-24 17:08:50 1492 [Note] InnoDB: 128 rollback segment(s) are active.
+    95	2018-02-24 17:08:50 1492 [Note] InnoDB: Waiting for purge to start
+    96	2018-02-24 17:08:50 1492 [Note] InnoDB: 5.6.39 started; log sequence number 2631083
+    97	2018-02-24 17:08:51 1492 [Note] Server hostname (bind-address): '*'; port: 3306
+    98	2018-02-24 17:08:51 1492 [Note] IPv6 is available.
+    99	2018-02-24 17:08:51 1492 [Note]   - '::' resolves to '::';
+   100	2018-02-24 17:08:51 1492 [Note] Server socket created on IP: '::'.
+   101	2018-02-24 17:08:52 1492 [Note] Event Scheduler: Loaded 0 events
+   102	2018-02-24 17:08:52 1492 [Note] /usr/sbin/mysqld: ready for connections.
+   103	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   104	2018-02-25 11:30:30 1492 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   105	2018-02-25 11:30:30 1492 [Note] Hostname 'bogon' has the following IP addresses:
+   106	2018-02-25 11:30:30 1492 [Note]  - 192.168.37.80
+   107	2018-02-25 14:31:42 1492 [Note] /usr/sbin/mysqld: Normal shutdown
+   108	
+   109	2018-02-25 14:31:42 1492 [Note] Giving 1 client threads a chance to die gracefully
+   110	2018-02-25 14:31:42 1492 [Note] Event Scheduler: Purging the queue. 0 events
+   111	2018-02-25 14:31:42 1492 [Note] Shutting down slave threads
+   112	2018-02-25 14:31:44 1492 [Note] Forcefully disconnecting 1 remaining clients
+   113	2018-02-25 14:31:44 1492 [Warning] /usr/sbin/mysqld: Forcing close of thread 2  user: 'zhengyansheng'
+   114	
+   115	2018-02-25 14:31:44 1492 [Note] Binlog end
+   116	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'partition'
+   117	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   118	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   119	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   120	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   121	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   122	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   123	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   124	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   125	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   126	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   127	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   128	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   129	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   130	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   131	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   132	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   133	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_METRICS'
+   134	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   135	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   136	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   137	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   138	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   139	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   140	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   141	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   142	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_CMP'
+   143	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   144	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_LOCKS'
+   145	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'INNODB_TRX'
+   146	2018-02-25 14:31:44 1492 [Note] Shutting down plugin 'InnoDB'
+   147	2018-02-25 14:31:44 1492 [Note] InnoDB: FTS optimize thread exiting.
+   148	2018-02-25 14:31:44 1492 [Note] InnoDB: Starting shutdown...
+   149	2018-02-25 14:31:46 1492 [Note] InnoDB: Shutdown completed; log sequence number 2631093
+   150	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'ARCHIVE'
+   151	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'BLACKHOLE'
+   152	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'CSV'
+   153	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'MEMORY'
+   154	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'MRG_MYISAM'
+   155	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'MyISAM'
+   156	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'sha256_password'
+   157	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'mysql_old_password'
+   158	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'mysql_native_password'
+   159	2018-02-25 14:31:46 1492 [Note] Shutting down plugin 'binlog'
+   160	2018-02-25 14:31:46 1492 [Note] /usr/sbin/mysqld: Shutdown complete
+   161	
+   162	2018-02-25 14:33:23 1529 [Note] Plugin 'FEDERATED' is disabled.
+   163	2018-02-25 14:33:24 1529 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   164	2018-02-25 14:33:24 1529 [Note] InnoDB: The InnoDB memory heap is disabled
+   165	2018-02-25 14:33:24 1529 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   166	2018-02-25 14:33:24 1529 [Note] InnoDB: Memory barrier is not used
+   167	2018-02-25 14:33:24 1529 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   168	2018-02-25 14:33:24 1529 [Note] InnoDB: Using Linux native AIO
+   169	2018-02-25 14:33:24 1529 [Note] InnoDB: Using CPU crc32 instructions
+   170	2018-02-25 14:33:24 1529 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   171	2018-02-25 14:33:24 1529 [Note] InnoDB: Completed initialization of buffer pool
+   172	2018-02-25 14:33:24 1529 [Note] InnoDB: Highest supported file format is Barracuda.
+   173	2018-02-25 14:33:26 1529 [Note] InnoDB: 128 rollback segment(s) are active.
+   174	2018-02-25 14:33:26 1529 [Note] InnoDB: Waiting for purge to start
+   175	2018-02-25 14:33:26 1529 [Note] InnoDB: 5.6.39 started; log sequence number 2631093
+   176	2018-02-25 14:33:26 1529 [Note] Server hostname (bind-address): '*'; port: 3306
+   177	2018-02-25 14:33:26 1529 [Note] IPv6 is available.
+   178	2018-02-25 14:33:26 1529 [Note]   - '::' resolves to '::';
+   179	2018-02-25 14:33:26 1529 [Note] Server socket created on IP: '::'.
+   180	2018-02-25 14:33:27 1529 [Note] Event Scheduler: Loaded 0 events
+   181	2018-02-25 14:33:27 1529 [Note] /usr/sbin/mysqld: ready for connections.
+   182	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   183	2018-02-26 03:57:56 1529 [Note] /usr/sbin/mysqld: Normal shutdown
+   184	
+   185	2018-02-26 03:57:56 1529 [Note] Giving 0 client threads a chance to die gracefully
+   186	2018-02-26 03:57:56 1529 [Note] Event Scheduler: Purging the queue. 0 events
+   187	2018-02-26 03:57:56 1529 [Note] Shutting down slave threads
+   188	2018-02-26 03:57:57 1529 [Note] Forcefully disconnecting 0 remaining clients
+   189	2018-02-26 03:57:57 1529 [Note] Binlog end
+   190	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'partition'
+   191	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   192	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   193	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   194	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   195	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   196	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   197	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   198	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   199	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   200	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   201	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   202	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   203	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   204	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   205	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   206	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   207	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_METRICS'
+   208	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   209	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   210	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   211	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   212	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   213	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   214	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   215	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   216	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_CMP'
+   217	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   218	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_LOCKS'
+   219	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'INNODB_TRX'
+   220	2018-02-26 03:57:57 1529 [Note] Shutting down plugin 'InnoDB'
+   221	2018-02-26 03:57:57 1529 [Note] InnoDB: FTS optimize thread exiting.
+   222	2018-02-26 03:57:57 1529 [Note] InnoDB: Starting shutdown...
+   223	2018-02-26 03:57:58 1529 [Note] InnoDB: Shutdown completed; log sequence number 2631103
+   224	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'ARCHIVE'
+   225	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'BLACKHOLE'
+   226	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'CSV'
+   227	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'MEMORY'
+   228	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'MRG_MYISAM'
+   229	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'MyISAM'
+   230	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'sha256_password'
+   231	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'mysql_old_password'
+   232	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'mysql_native_password'
+   233	2018-02-26 03:57:58 1529 [Note] Shutting down plugin 'binlog'
+   234	2018-02-26 03:57:58 1529 [Note] /usr/sbin/mysqld: Shutdown complete
+   235	
+   236	2018-02-26 03:59:47 1488 [Note] Plugin 'FEDERATED' is disabled.
+   237	2018-02-26 03:59:48 1488 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   238	2018-02-26 03:59:48 1488 [Note] InnoDB: The InnoDB memory heap is disabled
+   239	2018-02-26 03:59:48 1488 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   240	2018-02-26 03:59:48 1488 [Note] InnoDB: Memory barrier is not used
+   241	2018-02-26 03:59:48 1488 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   242	2018-02-26 03:59:48 1488 [Note] InnoDB: Using Linux native AIO
+   243	2018-02-26 03:59:48 1488 [Note] InnoDB: Using CPU crc32 instructions
+   244	2018-02-26 03:59:48 1488 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   245	2018-02-26 03:59:48 1488 [Note] InnoDB: Completed initialization of buffer pool
+   246	2018-02-26 03:59:49 1488 [Note] InnoDB: Highest supported file format is Barracuda.
+   247	2018-02-26 03:59:51 1488 [Note] InnoDB: 128 rollback segment(s) are active.
+   248	2018-02-26 03:59:51 1488 [Note] InnoDB: Waiting for purge to start
+   249	2018-02-26 03:59:51 1488 [Note] InnoDB: 5.6.39 started; log sequence number 2631103
+   250	2018-02-26 03:59:51 1488 [Note] Server hostname (bind-address): '*'; port: 3306
+   251	2018-02-26 03:59:51 1488 [Note] IPv6 is available.
+   252	2018-02-26 03:59:51 1488 [Note]   - '::' resolves to '::';
+   253	2018-02-26 03:59:51 1488 [Note] Server socket created on IP: '::'.
+   254	2018-02-26 03:59:52 1488 [Note] Event Scheduler: Loaded 0 events
+   255	2018-02-26 03:59:52 1488 [Note] /usr/sbin/mysqld: ready for connections.
+   256	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   257	2018-02-27 07:43:03 1488 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   258	2018-02-27 07:43:03 1488 [Note] Hostname 'bogon' has the following IP addresses:
+   259	2018-02-27 07:43:03 1488 [Note]  - 192.168.37.80
+   260	2018-03-01 11:05:45 1488 [Note] /usr/sbin/mysqld: Normal shutdown
+   261	
+   262	2018-03-01 11:05:45 1488 [Note] Giving 0 client threads a chance to die gracefully
+   263	2018-03-01 11:05:45 1488 [Note] Event Scheduler: Purging the queue. 0 events
+   264	2018-03-01 11:05:45 1488 [Note] Shutting down slave threads
+   265	2018-03-01 11:05:45 1488 [Note] Forcefully disconnecting 0 remaining clients
+   266	2018-03-01 11:05:45 1488 [Note] Binlog end
+   267	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'partition'
+   268	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   269	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   270	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   271	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   272	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   273	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   274	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   275	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   276	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   277	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   278	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   279	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   280	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   281	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   282	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   283	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   284	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_METRICS'
+   285	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   286	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   287	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   288	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   289	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   290	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   291	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   292	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   293	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_CMP'
+   294	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   295	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_LOCKS'
+   296	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'INNODB_TRX'
+   297	2018-03-01 11:05:45 1488 [Note] Shutting down plugin 'InnoDB'
+   298	2018-03-01 11:05:45 1488 [Note] InnoDB: FTS optimize thread exiting.
+   299	2018-03-01 11:05:45 1488 [Note] InnoDB: Starting shutdown...
+   300	2018-03-01 11:05:47 1488 [Note] InnoDB: Shutdown completed; log sequence number 3220162
+   301	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'ARCHIVE'
+   302	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'BLACKHOLE'
+   303	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'CSV'
+   304	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'MEMORY'
+   305	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'MRG_MYISAM'
+   306	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'MyISAM'
+   307	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'sha256_password'
+   308	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'mysql_old_password'
+   309	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'mysql_native_password'
+   310	2018-03-01 11:05:47 1488 [Note] Shutting down plugin 'binlog'
+   311	2018-03-01 11:05:47 1488 [Note] /usr/sbin/mysqld: Shutdown complete
+   312	
+   313	2018-03-01 13:09:17 1478 [Note] Plugin 'FEDERATED' is disabled.
+   314	2018-03-01 13:09:17 1478 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   315	2018-03-01 13:09:17 1478 [Note] InnoDB: The InnoDB memory heap is disabled
+   316	2018-03-01 13:09:17 1478 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   317	2018-03-01 13:09:17 1478 [Note] InnoDB: Memory barrier is not used
+   318	2018-03-01 13:09:17 1478 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   319	2018-03-01 13:09:17 1478 [Note] InnoDB: Using Linux native AIO
+   320	2018-03-01 13:09:17 1478 [Note] InnoDB: Using CPU crc32 instructions
+   321	2018-03-01 13:09:17 1478 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   322	2018-03-01 13:09:17 1478 [Note] InnoDB: Completed initialization of buffer pool
+   323	2018-03-01 13:09:17 1478 [Note] InnoDB: Highest supported file format is Barracuda.
+   324	2018-03-01 13:09:17 1478 [Note] InnoDB: 128 rollback segment(s) are active.
+   325	2018-03-01 13:09:17 1478 [Note] InnoDB: Waiting for purge to start
+   326	2018-03-01 13:09:18 1478 [Note] InnoDB: 5.6.39 started; log sequence number 3220162
+   327	2018-03-01 13:09:18 1478 [Note] Server hostname (bind-address): '*'; port: 3306
+   328	2018-03-01 13:09:18 1478 [Note] IPv6 is available.
+   329	2018-03-01 13:09:18 1478 [Note]   - '::' resolves to '::';
+   330	2018-03-01 13:09:18 1478 [Note] Server socket created on IP: '::'.
+   331	2018-03-01 13:09:18 1478 [Note] Event Scheduler: Loaded 0 events
+   332	2018-03-01 13:09:18 1478 [Note] /usr/sbin/mysqld: ready for connections.
+   333	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   334	2018-03-02 04:51:28 1506 [Note] Plugin 'FEDERATED' is disabled.
+   335	2018-03-02 04:51:28 1506 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   336	2018-03-02 04:51:28 1506 [Note] InnoDB: The InnoDB memory heap is disabled
+   337	2018-03-02 04:51:28 1506 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   338	2018-03-02 04:51:28 1506 [Note] InnoDB: Memory barrier is not used
+   339	2018-03-02 04:51:28 1506 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   340	2018-03-02 04:51:28 1506 [Note] InnoDB: Using Linux native AIO
+   341	2018-03-02 04:51:28 1506 [Note] InnoDB: Using CPU crc32 instructions
+   342	2018-03-02 04:51:28 1506 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   343	2018-03-02 04:51:28 1506 [Note] InnoDB: Completed initialization of buffer pool
+   344	2018-03-02 04:51:28 1506 [Note] InnoDB: Highest supported file format is Barracuda.
+   345	2018-03-02 04:51:28 1506 [Note] InnoDB: The log sequence numbers 3220162 and 3220162 in ibdata files do not match the log sequence number 3241493 in the ib_logfiles!
+   346	2018-03-02 04:51:28 1506 [Note] InnoDB: Database was not shutdown normally!
+   347	2018-03-02 04:51:28 1506 [Note] InnoDB: Starting crash recovery.
+   348	2018-03-02 04:51:28 1506 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   349	2018-03-02 04:51:28 1506 [Note] InnoDB: Restoring possible half-written data pages 
+   350	2018-03-02 04:51:28 1506 [Note] InnoDB: from the doublewrite buffer...
+   351	2018-03-02 04:51:29 1506 [Note] InnoDB: 128 rollback segment(s) are active.
+   352	2018-03-02 04:51:29 1506 [Note] InnoDB: Waiting for purge to start
+   353	2018-03-02 04:51:29 1506 [Note] InnoDB: 5.6.39 started; log sequence number 3241493
+   354	2018-03-02 04:51:29 1506 [Note] Server hostname (bind-address): '*'; port: 3306
+   355	2018-03-02 04:51:29 1506 [Note] IPv6 is available.
+   356	2018-03-02 04:51:29 1506 [Note]   - '::' resolves to '::';
+   357	2018-03-02 04:51:29 1506 [Note] Server socket created on IP: '::'.
+   358	2018-03-02 04:51:29 1506 [Note] Event Scheduler: Loaded 0 events
+   359	2018-03-02 04:51:29 1506 [Note] /usr/sbin/mysqld: ready for connections.
+   360	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   361	2018-03-02 04:56:26 1506 [Note] Plugin 'FEDERATED' is disabled.
+   362	2018-03-02 04:56:26 1506 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   363	2018-03-02 04:56:26 1506 [Note] InnoDB: The InnoDB memory heap is disabled
+   364	2018-03-02 04:56:26 1506 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   365	2018-03-02 04:56:26 1506 [Note] InnoDB: Memory barrier is not used
+   366	2018-03-02 04:56:26 1506 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   367	2018-03-02 04:56:26 1506 [Note] InnoDB: Using Linux native AIO
+   368	2018-03-02 04:56:26 1506 [Note] InnoDB: Using CPU crc32 instructions
+   369	2018-03-02 04:56:26 1506 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   370	2018-03-02 04:56:26 1506 [Note] InnoDB: Completed initialization of buffer pool
+   371	2018-03-02 04:56:26 1506 [Note] InnoDB: Highest supported file format is Barracuda.
+   372	2018-03-02 04:56:26 1506 [Note] InnoDB: The log sequence numbers 3220162 and 3220162 in ibdata files do not match the log sequence number 3241503 in the ib_logfiles!
+   373	2018-03-02 04:56:26 1506 [Note] InnoDB: Database was not shutdown normally!
+   374	2018-03-02 04:56:26 1506 [Note] InnoDB: Starting crash recovery.
+   375	2018-03-02 04:56:26 1506 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   376	2018-03-02 04:56:26 1506 [Note] InnoDB: Restoring possible half-written data pages 
+   377	2018-03-02 04:56:26 1506 [Note] InnoDB: from the doublewrite buffer...
+   378	2018-03-02 04:56:27 1506 [Note] InnoDB: 128 rollback segment(s) are active.
+   379	2018-03-02 04:56:27 1506 [Note] InnoDB: Waiting for purge to start
+   380	2018-03-02 04:56:27 1506 [Note] InnoDB: 5.6.39 started; log sequence number 3241503
+   381	2018-03-02 04:56:27 1506 [Note] Server hostname (bind-address): '*'; port: 3306
+   382	2018-03-02 04:56:27 1506 [Note] IPv6 is available.
+   383	2018-03-02 04:56:27 1506 [Note]   - '::' resolves to '::';
+   384	2018-03-02 04:56:27 1506 [Note] Server socket created on IP: '::'.
+   385	2018-03-02 04:56:27 1506 [Note] Event Scheduler: Loaded 0 events
+   386	2018-03-02 04:56:27 1506 [Note] /usr/sbin/mysqld: ready for connections.
+   387	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   388	2018-03-02 05:43:58 1506 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   389	2018-03-02 05:43:58 1506 [Note] Hostname 'bogon' has the following IP addresses:
+   390	2018-03-02 05:43:58 1506 [Note]  - 192.168.37.80
+   391	2018-03-08 10:47:49 1504 [Note] Plugin 'FEDERATED' is disabled.
+   392	2018-03-08 10:47:49 1504 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   393	2018-03-08 10:47:49 1504 [Note] InnoDB: The InnoDB memory heap is disabled
+   394	2018-03-08 10:47:49 1504 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   395	2018-03-08 10:47:49 1504 [Note] InnoDB: Memory barrier is not used
+   396	2018-03-08 10:47:49 1504 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   397	2018-03-08 10:47:49 1504 [Note] InnoDB: Using Linux native AIO
+   398	2018-03-08 10:47:49 1504 [Note] InnoDB: Using CPU crc32 instructions
+   399	2018-03-08 10:47:49 1504 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   400	2018-03-08 10:47:49 1504 [Note] InnoDB: Completed initialization of buffer pool
+   401	2018-03-08 10:47:49 1504 [Note] InnoDB: Highest supported file format is Barracuda.
+   402	2018-03-08 10:47:49 1504 [Note] InnoDB: The log sequence numbers 3220162 and 3220162 in ibdata files do not match the log sequence number 3241513 in the ib_logfiles!
+   403	2018-03-08 10:47:49 1504 [Note] InnoDB: Database was not shutdown normally!
+   404	2018-03-08 10:47:49 1504 [Note] InnoDB: Starting crash recovery.
+   405	2018-03-08 10:47:49 1504 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   406	2018-03-08 10:47:50 1504 [Note] InnoDB: Restoring possible half-written data pages 
+   407	2018-03-08 10:47:50 1504 [Note] InnoDB: from the doublewrite buffer...
+   408	2018-03-08 10:47:50 1504 [Note] InnoDB: 128 rollback segment(s) are active.
+   409	2018-03-08 10:47:50 1504 [Note] InnoDB: Waiting for purge to start
+   410	2018-03-08 10:47:50 1504 [Note] InnoDB: 5.6.39 started; log sequence number 3241513
+   411	2018-03-08 10:47:50 1504 [Note] Server hostname (bind-address): '*'; port: 3306
+   412	2018-03-08 10:47:50 1504 [Note] IPv6 is available.
+   413	2018-03-08 10:47:50 1504 [Note]   - '::' resolves to '::';
+   414	2018-03-08 10:47:50 1504 [Note] Server socket created on IP: '::'.
+   415	2018-03-08 10:47:51 1504 [Note] Event Scheduler: Loaded 0 events
+   416	2018-03-08 10:47:51 1504 [Note] /usr/sbin/mysqld: ready for connections.
+   417	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   418	2018-03-08 11:02:09 1504 [Note] /usr/sbin/mysqld: Normal shutdown
+   419	
+   420	2018-03-08 11:02:09 1504 [Note] Giving 0 client threads a chance to die gracefully
+   421	2018-03-08 11:02:09 1504 [Note] Event Scheduler: Purging the queue. 0 events
+   422	2018-03-08 11:02:09 1504 [Note] Shutting down slave threads
+   423	2018-03-08 11:02:09 1504 [Note] Forcefully disconnecting 0 remaining clients
+   424	2018-03-08 11:02:09 1504 [Note] Binlog end
+   425	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'partition'
+   426	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   427	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   428	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   429	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   430	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   431	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   432	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   433	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   434	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   435	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   436	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   437	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   438	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   439	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   440	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   441	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   442	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_METRICS'
+   443	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   444	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   445	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   446	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   447	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   448	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   449	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   450	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   451	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_CMP'
+   452	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   453	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_LOCKS'
+   454	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'INNODB_TRX'
+   455	2018-03-08 11:02:09 1504 [Note] Shutting down plugin 'InnoDB'
+   456	2018-03-08 11:02:09 1504 [Note] InnoDB: FTS optimize thread exiting.
+   457	2018-03-08 11:02:09 1504 [Note] InnoDB: Starting shutdown...
+   458	2018-03-08 11:02:11 1504 [Note] InnoDB: Shutdown completed; log sequence number 3241523
+   459	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'ARCHIVE'
+   460	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'BLACKHOLE'
+   461	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'CSV'
+   462	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'MEMORY'
+   463	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'MRG_MYISAM'
+   464	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'MyISAM'
+   465	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'sha256_password'
+   466	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'mysql_old_password'
+   467	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'mysql_native_password'
+   468	2018-03-08 11:02:11 1504 [Note] Shutting down plugin 'binlog'
+   469	2018-03-08 11:02:11 1504 [Note] /usr/sbin/mysqld: Shutdown complete
+   470	
+   471	2018-03-08 11:53:55 1481 [Note] Plugin 'FEDERATED' is disabled.
+   472	2018-03-08 11:53:55 1481 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   473	2018-03-08 11:53:55 1481 [Note] InnoDB: The InnoDB memory heap is disabled
+   474	2018-03-08 11:53:55 1481 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   475	2018-03-08 11:53:55 1481 [Note] InnoDB: Memory barrier is not used
+   476	2018-03-08 11:53:55 1481 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   477	2018-03-08 11:53:55 1481 [Note] InnoDB: Using Linux native AIO
+   478	2018-03-08 11:53:55 1481 [Note] InnoDB: Using CPU crc32 instructions
+   479	2018-03-08 11:53:55 1481 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   480	2018-03-08 11:53:56 1481 [Note] InnoDB: Completed initialization of buffer pool
+   481	2018-03-08 11:53:56 1481 [Note] InnoDB: Highest supported file format is Barracuda.
+   482	2018-03-08 11:53:57 1481 [Note] InnoDB: 128 rollback segment(s) are active.
+   483	2018-03-08 11:53:57 1481 [Note] InnoDB: Waiting for purge to start
+   484	2018-03-08 11:53:57 1481 [Note] InnoDB: 5.6.39 started; log sequence number 3241523
+   485	2018-03-08 11:53:57 1481 [Note] Server hostname (bind-address): '*'; port: 3306
+   486	2018-03-08 11:53:57 1481 [Note] IPv6 is available.
+   487	2018-03-08 11:53:57 1481 [Note]   - '::' resolves to '::';
+   488	2018-03-08 11:53:57 1481 [Note] Server socket created on IP: '::'.
+   489	2018-03-08 11:53:57 1481 [Note] Event Scheduler: Loaded 0 events
+   490	2018-03-08 11:53:57 1481 [Note] /usr/sbin/mysqld: ready for connections.
+   491	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   492	2018-03-08 12:15:18 1481 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   493	2018-03-08 12:15:18 1481 [Note] Hostname 'bogon' has the following IP addresses:
+   494	2018-03-08 12:15:18 1481 [Note]  - 192.168.37.80
+   495	2018-03-12 16:57:52 1507 [Note] Plugin 'FEDERATED' is disabled.
+   496	2018-03-12 16:57:52 1507 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   497	2018-03-12 16:57:52 1507 [Note] InnoDB: The InnoDB memory heap is disabled
+   498	2018-03-12 16:57:52 1507 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   499	2018-03-12 16:57:52 1507 [Note] InnoDB: Memory barrier is not used
+   500	2018-03-12 16:57:52 1507 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   501	2018-03-12 16:57:52 1507 [Note] InnoDB: Using Linux native AIO
+   502	2018-03-12 16:57:52 1507 [Note] InnoDB: Using CPU crc32 instructions
+   503	2018-03-12 16:57:52 1507 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   504	2018-03-12 16:57:52 1507 [Note] InnoDB: Completed initialization of buffer pool
+   505	2018-03-12 16:57:52 1507 [Note] InnoDB: Highest supported file format is Barracuda.
+   506	2018-03-12 16:57:52 1507 [Note] InnoDB: The log sequence numbers 3241523 and 3241523 in ibdata files do not match the log sequence number 3241533 in the ib_logfiles!
+   507	2018-03-12 16:57:52 1507 [Note] InnoDB: Database was not shutdown normally!
+   508	2018-03-12 16:57:52 1507 [Note] InnoDB: Starting crash recovery.
+   509	2018-03-12 16:57:52 1507 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   510	2018-03-12 16:57:52 1507 [Note] InnoDB: Restoring possible half-written data pages 
+   511	2018-03-12 16:57:52 1507 [Note] InnoDB: from the doublewrite buffer...
+   512	2018-03-12 16:57:53 1507 [Note] InnoDB: 128 rollback segment(s) are active.
+   513	2018-03-12 16:57:53 1507 [Note] InnoDB: Waiting for purge to start
+   514	2018-03-12 16:57:53 1507 [Note] InnoDB: 5.6.39 started; log sequence number 3241533
+   515	2018-03-12 16:57:53 1507 [Note] Server hostname (bind-address): '*'; port: 3306
+   516	2018-03-12 16:57:53 1507 [Note] IPv6 is available.
+   517	2018-03-12 16:57:53 1507 [Note]   - '::' resolves to '::';
+   518	2018-03-12 16:57:53 1507 [Note] Server socket created on IP: '::'.
+   519	2018-03-12 16:57:53 1507 [Note] Event Scheduler: Loaded 0 events
+   520	2018-03-12 16:57:53 1507 [Note] /usr/sbin/mysqld: ready for connections.
+   521	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   522	2018-03-12 17:15:38 1507 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   523	2018-03-12 17:15:38 1507 [Note] Hostname 'bogon' has the following IP addresses:
+   524	2018-03-12 17:15:38 1507 [Note]  - 192.168.37.80
+   525	2018-03-21 13:47:46 1508 [Note] Plugin 'FEDERATED' is disabled.
+   526	2018-03-21 13:47:46 1508 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   527	2018-03-21 13:47:46 1508 [Note] InnoDB: The InnoDB memory heap is disabled
+   528	2018-03-21 13:47:46 1508 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   529	2018-03-21 13:47:46 1508 [Note] InnoDB: Memory barrier is not used
+   530	2018-03-21 13:47:46 1508 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   531	2018-03-21 13:47:46 1508 [Note] InnoDB: Using Linux native AIO
+   532	2018-03-21 13:47:46 1508 [Note] InnoDB: Using CPU crc32 instructions
+   533	2018-03-21 13:47:46 1508 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   534	2018-03-21 13:47:46 1508 [Note] InnoDB: Completed initialization of buffer pool
+   535	2018-03-21 13:47:47 1508 [Note] InnoDB: Highest supported file format is Barracuda.
+   536	2018-03-21 13:47:47 1508 [Note] InnoDB: The log sequence numbers 3241523 and 3241523 in ibdata files do not match the log sequence number 3241543 in the ib_logfiles!
+   537	2018-03-21 13:47:47 1508 [Note] InnoDB: Database was not shutdown normally!
+   538	2018-03-21 13:47:47 1508 [Note] InnoDB: Starting crash recovery.
+   539	2018-03-21 13:47:47 1508 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   540	2018-03-21 13:47:47 1508 [Note] InnoDB: Restoring possible half-written data pages 
+   541	2018-03-21 13:47:47 1508 [Note] InnoDB: from the doublewrite buffer...
+   542	2018-03-21 13:47:47 1508 [Note] InnoDB: 128 rollback segment(s) are active.
+   543	2018-03-21 13:47:47 1508 [Note] InnoDB: Waiting for purge to start
+   544	2018-03-21 13:47:47 1508 [Note] InnoDB: 5.6.39 started; log sequence number 3241543
+   545	2018-03-21 13:47:47 1508 [Note] Server hostname (bind-address): '*'; port: 3306
+   546	2018-03-21 13:47:47 1508 [Note] IPv6 is available.
+   547	2018-03-21 13:47:47 1508 [Note]   - '::' resolves to '::';
+   548	2018-03-21 13:47:47 1508 [Note] Server socket created on IP: '::'.
+   549	2018-03-21 13:47:48 1508 [Note] Event Scheduler: Loaded 0 events
+   550	2018-03-21 13:47:48 1508 [Note] /usr/sbin/mysqld: ready for connections.
+   551	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   552	2018-03-21 13:59:40 1508 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   553	2018-03-21 13:59:40 1508 [Note] Hostname 'bogon' has the following IP addresses:
+   554	2018-03-21 13:59:40 1508 [Note]  - 192.168.37.80
+   555	2018-03-25 11:58:14 1506 [Note] Plugin 'FEDERATED' is disabled.
+   556	2018-03-25 11:58:14 1506 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   557	2018-03-25 11:58:14 1506 [Note] InnoDB: The InnoDB memory heap is disabled
+   558	2018-03-25 11:58:14 1506 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   559	2018-03-25 11:58:14 1506 [Note] InnoDB: Memory barrier is not used
+   560	2018-03-25 11:58:14 1506 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   561	2018-03-25 11:58:14 1506 [Note] InnoDB: Using Linux native AIO
+   562	2018-03-25 11:58:14 1506 [Note] InnoDB: Using CPU crc32 instructions
+   563	2018-03-25 11:58:14 1506 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   564	2018-03-25 11:58:14 1506 [Note] InnoDB: Completed initialization of buffer pool
+   565	2018-03-25 11:58:14 1506 [Note] InnoDB: Highest supported file format is Barracuda.
+   566	2018-03-25 11:58:14 1506 [Note] InnoDB: The log sequence numbers 3241523 and 3241523 in ibdata files do not match the log sequence number 3241553 in the ib_logfiles!
+   567	2018-03-25 11:58:14 1506 [Note] InnoDB: Database was not shutdown normally!
+   568	2018-03-25 11:58:14 1506 [Note] InnoDB: Starting crash recovery.
+   569	2018-03-25 11:58:14 1506 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   570	2018-03-25 11:58:14 1506 [Note] InnoDB: Restoring possible half-written data pages 
+   571	2018-03-25 11:58:14 1506 [Note] InnoDB: from the doublewrite buffer...
+   572	2018-03-25 11:58:15 1506 [Note] InnoDB: 128 rollback segment(s) are active.
+   573	2018-03-25 11:58:15 1506 [Note] InnoDB: Waiting for purge to start
+   574	2018-03-25 11:58:15 1506 [Note] InnoDB: 5.6.39 started; log sequence number 3241553
+   575	2018-03-25 11:58:15 1506 [Note] Server hostname (bind-address): '*'; port: 3306
+   576	2018-03-25 11:58:15 1506 [Note] IPv6 is available.
+   577	2018-03-25 11:58:15 1506 [Note]   - '::' resolves to '::';
+   578	2018-03-25 11:58:15 1506 [Note] Server socket created on IP: '::'.
+   579	2018-03-25 11:58:15 1506 [Note] Event Scheduler: Loaded 0 events
+   580	2018-03-25 11:58:15 1506 [Note] /usr/sbin/mysqld: ready for connections.
+   581	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   582	2018-03-25 12:16:44 1506 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   583	2018-03-25 12:16:44 1506 [Note] Hostname 'bogon' has the following IP addresses:
+   584	2018-03-25 12:16:44 1506 [Note]  - 192.168.37.80
+   585	2018-03-28 17:31:44 1505 [Note] Plugin 'FEDERATED' is disabled.
+   586	2018-03-28 17:31:44 1505 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   587	2018-03-28 17:31:44 1505 [Note] InnoDB: The InnoDB memory heap is disabled
+   588	2018-03-28 17:31:44 1505 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   589	2018-03-28 17:31:44 1505 [Note] InnoDB: Memory barrier is not used
+   590	2018-03-28 17:31:44 1505 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   591	2018-03-28 17:31:44 1505 [Note] InnoDB: Using Linux native AIO
+   592	2018-03-28 17:31:44 1505 [Note] InnoDB: Using CPU crc32 instructions
+   593	2018-03-28 17:31:44 1505 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   594	2018-03-28 17:31:44 1505 [Note] InnoDB: Completed initialization of buffer pool
+   595	2018-03-28 17:31:44 1505 [Note] InnoDB: Highest supported file format is Barracuda.
+   596	2018-03-28 17:31:44 1505 [Note] InnoDB: The log sequence numbers 3241523 and 3241523 in ibdata files do not match the log sequence number 3241563 in the ib_logfiles!
+   597	2018-03-28 17:31:44 1505 [Note] InnoDB: Database was not shutdown normally!
+   598	2018-03-28 17:31:44 1505 [Note] InnoDB: Starting crash recovery.
+   599	2018-03-28 17:31:44 1505 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   600	2018-03-28 17:31:44 1505 [Note] InnoDB: Restoring possible half-written data pages 
+   601	2018-03-28 17:31:44 1505 [Note] InnoDB: from the doublewrite buffer...
+   602	2018-03-28 17:31:45 1505 [Note] InnoDB: 128 rollback segment(s) are active.
+   603	2018-03-28 17:31:45 1505 [Note] InnoDB: Waiting for purge to start
+   604	2018-03-28 17:31:45 1505 [Note] InnoDB: 5.6.39 started; log sequence number 3241563
+   605	2018-03-28 17:31:45 1505 [Note] Server hostname (bind-address): '*'; port: 3306
+   606	2018-03-28 17:31:45 1505 [Note] IPv6 is available.
+   607	2018-03-28 17:31:45 1505 [Note]   - '::' resolves to '::';
+   608	2018-03-28 17:31:45 1505 [Note] Server socket created on IP: '::'.
+   609	2018-03-28 17:31:45 1505 [Note] Event Scheduler: Loaded 0 events
+   610	2018-03-28 17:31:45 1505 [Note] /usr/sbin/mysqld: ready for connections.
+   611	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   612	2018-03-28 18:29:12 1505 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   613	2018-03-28 18:29:12 1505 [Note] Hostname 'bogon' has the following IP addresses:
+   614	2018-03-28 18:29:12 1505 [Note]  - 192.168.37.80
+   615	2018-03-29 10:15:25 1509 [Note] Plugin 'FEDERATED' is disabled.
+   616	2018-03-29 10:15:25 1509 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   617	2018-03-29 10:15:25 1509 [Note] InnoDB: The InnoDB memory heap is disabled
+   618	2018-03-29 10:15:25 1509 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   619	2018-03-29 10:15:25 1509 [Note] InnoDB: Memory barrier is not used
+   620	2018-03-29 10:15:25 1509 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   621	2018-03-29 10:15:25 1509 [Note] InnoDB: Using Linux native AIO
+   622	2018-03-29 10:15:26 1509 [Note] InnoDB: Using CPU crc32 instructions
+   623	2018-03-29 10:15:26 1509 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   624	2018-03-29 10:15:26 1509 [Note] InnoDB: Completed initialization of buffer pool
+   625	2018-03-29 10:15:26 1509 [Note] InnoDB: Highest supported file format is Barracuda.
+   626	2018-03-29 10:15:27 1509 [Note] InnoDB: The log sequence numbers 3241523 and 3241523 in ibdata files do not match the log sequence number 3241573 in the ib_logfiles!
+   627	2018-03-29 10:15:27 1509 [Note] InnoDB: Database was not shutdown normally!
+   628	2018-03-29 10:15:27 1509 [Note] InnoDB: Starting crash recovery.
+   629	2018-03-29 10:15:27 1509 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   630	2018-03-29 10:15:27 1509 [Note] InnoDB: Restoring possible half-written data pages 
+   631	2018-03-29 10:15:27 1509 [Note] InnoDB: from the doublewrite buffer...
+   632	2018-03-29 10:15:29 1509 [Note] InnoDB: 128 rollback segment(s) are active.
+   633	2018-03-29 10:15:29 1509 [Note] InnoDB: Waiting for purge to start
+   634	2018-03-29 10:15:29 1509 [Note] InnoDB: 5.6.39 started; log sequence number 3241573
+   635	2018-03-29 10:15:29 1509 [Note] Server hostname (bind-address): '*'; port: 3306
+   636	2018-03-29 10:15:29 1509 [Note] IPv6 is available.
+   637	2018-03-29 10:15:29 1509 [Note]   - '::' resolves to '::';
+   638	2018-03-29 10:15:29 1509 [Note] Server socket created on IP: '::'.
+   639	2018-03-29 10:15:30 1509 [Note] Event Scheduler: Loaded 0 events
+   640	2018-03-29 10:15:30 1509 [Note] /usr/sbin/mysqld: ready for connections.
+   641	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   642	2018-03-29 10:55:13 1509 [Note] /usr/sbin/mysqld: Normal shutdown
+   643	
+   644	2018-03-29 10:55:13 1509 [Note] Giving 0 client threads a chance to die gracefully
+   645	2018-03-29 10:55:13 1509 [Note] Event Scheduler: Purging the queue. 0 events
+   646	2018-03-29 10:55:13 1509 [Note] Shutting down slave threads
+   647	2018-03-29 10:55:13 1509 [Note] Forcefully disconnecting 0 remaining clients
+   648	2018-03-29 10:55:13 1509 [Note] Binlog end
+   649	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'partition'
+   650	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   651	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   652	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   653	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   654	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   655	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   656	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   657	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   658	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   659	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   660	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   661	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   662	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   663	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   664	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   665	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   666	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_METRICS'
+   667	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   668	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   669	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   670	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   671	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   672	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   673	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   674	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   675	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_CMP'
+   676	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   677	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_LOCKS'
+   678	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'INNODB_TRX'
+   679	2018-03-29 10:55:13 1509 [Note] Shutting down plugin 'InnoDB'
+   680	2018-03-29 10:55:13 1509 [Note] InnoDB: FTS optimize thread exiting.
+   681	2018-03-29 10:55:13 1509 [Note] InnoDB: Starting shutdown...
+   682	2018-03-29 10:55:15 1509 [Note] InnoDB: Shutdown completed; log sequence number 3241583
+   683	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'ARCHIVE'
+   684	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'BLACKHOLE'
+   685	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'CSV'
+   686	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'MEMORY'
+   687	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'MRG_MYISAM'
+   688	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'MyISAM'
+   689	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'sha256_password'
+   690	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'mysql_old_password'
+   691	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'mysql_native_password'
+   692	2018-03-29 10:55:15 1509 [Note] Shutting down plugin 'binlog'
+   693	2018-03-29 10:55:15 1509 [Note] /usr/sbin/mysqld: Shutdown complete
+   694	
+   695	2018-03-29 11:05:01 1489 [Note] Plugin 'FEDERATED' is disabled.
+   696	2018-03-29 11:05:02 1489 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   697	2018-03-29 11:05:02 1489 [Note] InnoDB: The InnoDB memory heap is disabled
+   698	2018-03-29 11:05:02 1489 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   699	2018-03-29 11:05:02 1489 [Note] InnoDB: Memory barrier is not used
+   700	2018-03-29 11:05:02 1489 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   701	2018-03-29 11:05:02 1489 [Note] InnoDB: Using Linux native AIO
+   702	2018-03-29 11:05:02 1489 [Note] InnoDB: Using CPU crc32 instructions
+   703	2018-03-29 11:05:02 1489 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   704	2018-03-29 11:05:02 1489 [Note] InnoDB: Completed initialization of buffer pool
+   705	2018-03-29 11:05:03 1489 [Note] InnoDB: Highest supported file format is Barracuda.
+   706	2018-03-29 11:05:06 1489 [Note] InnoDB: 128 rollback segment(s) are active.
+   707	2018-03-29 11:05:06 1489 [Note] InnoDB: Waiting for purge to start
+   708	2018-03-29 11:05:06 1489 [Note] InnoDB: 5.6.39 started; log sequence number 3241583
+   709	2018-03-29 11:05:06 1489 [Note] Server hostname (bind-address): '*'; port: 3306
+   710	2018-03-29 11:05:06 1489 [Note] IPv6 is available.
+   711	2018-03-29 11:05:06 1489 [Note]   - '::' resolves to '::';
+   712	2018-03-29 11:05:06 1489 [Note] Server socket created on IP: '::'.
+   713	2018-03-29 11:05:08 1489 [Note] Event Scheduler: Loaded 0 events
+   714	2018-03-29 11:05:08 1489 [Note] /usr/sbin/mysqld: ready for connections.
+   715	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   716	2018-03-29 12:05:29 1489 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   717	2018-03-29 12:05:29 1489 [Note] Hostname 'bogon' has the following IP addresses:
+   718	2018-03-29 12:05:29 1489 [Note]  - 192.168.37.80
+   719	2018-04-08 18:13:33 1489 [Note] /usr/sbin/mysqld: Normal shutdown
+   720	
+   721	2018-04-08 18:13:33 1489 [Note] Giving 0 client threads a chance to die gracefully
+   722	2018-04-08 18:13:33 1489 [Note] Event Scheduler: Purging the queue. 0 events
+   723	2018-04-08 18:13:33 1489 [Note] Shutting down slave threads
+   724	2018-04-08 18:13:33 1489 [Note] Forcefully disconnecting 0 remaining clients
+   725	2018-04-08 18:13:33 1489 [Note] Binlog end
+   726	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'partition'
+   727	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   728	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   729	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   730	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   731	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   732	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   733	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   734	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   735	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   736	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   737	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   738	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   739	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   740	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   741	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   742	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   743	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_METRICS'
+   744	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   745	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   746	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   747	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   748	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   749	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   750	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   751	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   752	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_CMP'
+   753	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   754	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_LOCKS'
+   755	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'INNODB_TRX'
+   756	2018-04-08 18:13:33 1489 [Note] Shutting down plugin 'InnoDB'
+   757	2018-04-08 18:13:33 1489 [Note] InnoDB: FTS optimize thread exiting.
+   758	2018-04-08 18:13:33 1489 [Note] InnoDB: Starting shutdown...
+   759	2018-04-08 18:13:35 1489 [Note] InnoDB: Shutdown completed; log sequence number 3241593
+   760	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'ARCHIVE'
+   761	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'BLACKHOLE'
+   762	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'CSV'
+   763	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'MEMORY'
+   764	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'MRG_MYISAM'
+   765	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'MyISAM'
+   766	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'sha256_password'
+   767	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'mysql_old_password'
+   768	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'mysql_native_password'
+   769	2018-04-08 18:13:35 1489 [Note] Shutting down plugin 'binlog'
+   770	2018-04-08 18:13:35 1489 [Note] /usr/sbin/mysqld: Shutdown complete
+   771	
+   772	2018-04-08 18:17:00 1441 [Note] Plugin 'FEDERATED' is disabled.
+   773	2018-04-08 18:17:00 1441 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   774	2018-04-08 18:17:00 1441 [Note] InnoDB: The InnoDB memory heap is disabled
+   775	2018-04-08 18:17:00 1441 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   776	2018-04-08 18:17:00 1441 [Note] InnoDB: Memory barrier is not used
+   777	2018-04-08 18:17:00 1441 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   778	2018-04-08 18:17:00 1441 [Note] InnoDB: Using Linux native AIO
+   779	2018-04-08 18:17:01 1441 [Note] InnoDB: Using CPU crc32 instructions
+   780	2018-04-08 18:17:01 1441 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   781	2018-04-08 18:17:01 1441 [Note] InnoDB: Completed initialization of buffer pool
+   782	2018-04-08 18:17:01 1441 [Note] InnoDB: Highest supported file format is Barracuda.
+   783	2018-04-08 18:17:01 1441 [Note] InnoDB: 128 rollback segment(s) are active.
+   784	2018-04-08 18:17:01 1441 [Note] InnoDB: Waiting for purge to start
+   785	2018-04-08 18:17:01 1441 [Note] InnoDB: 5.6.39 started; log sequence number 3241593
+   786	2018-04-08 18:17:01 1441 [Note] Server hostname (bind-address): '*'; port: 3306
+   787	2018-04-08 18:17:01 1441 [Note] IPv6 is available.
+   788	2018-04-08 18:17:01 1441 [Note]   - '::' resolves to '::';
+   789	2018-04-08 18:17:01 1441 [Note] Server socket created on IP: '::'.
+   790	2018-04-08 18:17:01 1441 [Note] Event Scheduler: Loaded 0 events
+   791	2018-04-08 18:17:01 1441 [Note] /usr/sbin/mysqld: ready for connections.
+   792	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   793	2018-04-08 18:18:38 1507 [Note] Plugin 'FEDERATED' is disabled.
+   794	2018-04-08 18:18:38 1507 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   795	2018-04-08 18:18:38 1507 [Note] InnoDB: The InnoDB memory heap is disabled
+   796	2018-04-08 18:18:38 1507 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   797	2018-04-08 18:18:38 1507 [Note] InnoDB: Memory barrier is not used
+   798	2018-04-08 18:18:38 1507 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   799	2018-04-08 18:18:38 1507 [Note] InnoDB: Using Linux native AIO
+   800	2018-04-08 18:18:38 1507 [Note] InnoDB: Using CPU crc32 instructions
+   801	2018-04-08 18:18:38 1507 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   802	2018-04-08 18:18:38 1507 [Note] InnoDB: Completed initialization of buffer pool
+   803	2018-04-08 18:18:38 1507 [Note] InnoDB: Highest supported file format is Barracuda.
+   804	2018-04-08 18:18:38 1507 [Note] InnoDB: The log sequence numbers 3241593 and 3241593 in ibdata files do not match the log sequence number 3241603 in the ib_logfiles!
+   805	2018-04-08 18:18:38 1507 [Note] InnoDB: Database was not shutdown normally!
+   806	2018-04-08 18:18:38 1507 [Note] InnoDB: Starting crash recovery.
+   807	2018-04-08 18:18:38 1507 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   808	2018-04-08 18:18:38 1507 [Note] InnoDB: Restoring possible half-written data pages 
+   809	2018-04-08 18:18:38 1507 [Note] InnoDB: from the doublewrite buffer...
+   810	2018-04-08 18:18:39 1507 [Note] InnoDB: 128 rollback segment(s) are active.
+   811	2018-04-08 18:18:39 1507 [Note] InnoDB: Waiting for purge to start
+   812	2018-04-08 18:18:39 1507 [Note] InnoDB: 5.6.39 started; log sequence number 3241603
+   813	2018-04-08 18:18:39 1507 [Note] Server hostname (bind-address): '*'; port: 3306
+   814	2018-04-08 18:18:39 1507 [Note] IPv6 is available.
+   815	2018-04-08 18:18:39 1507 [Note]   - '::' resolves to '::';
+   816	2018-04-08 18:18:39 1507 [Note] Server socket created on IP: '::'.
+   817	2018-04-08 18:18:39 1507 [Note] Event Scheduler: Loaded 0 events
+   818	2018-04-08 18:18:39 1507 [Note] /usr/sbin/mysqld: ready for connections.
+   819	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   820	2018-04-08 18:43:29 1507 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   821	2018-04-08 18:43:29 1507 [Note] Hostname 'bogon' has the following IP addresses:
+   822	2018-04-08 18:43:29 1507 [Note]  - 192.168.37.80
+   823	2018-04-09 10:27:22 1507 [Note] /usr/sbin/mysqld: Normal shutdown
+   824	
+   825	2018-04-09 10:27:22 1507 [Note] Giving 0 client threads a chance to die gracefully
+   826	2018-04-09 10:27:22 1507 [Note] Event Scheduler: Purging the queue. 0 events
+   827	2018-04-09 10:27:22 1507 [Note] Shutting down slave threads
+   828	2018-04-09 10:27:22 1507 [Note] Forcefully disconnecting 0 remaining clients
+   829	2018-04-09 10:27:22 1507 [Note] Binlog end
+   830	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'partition'
+   831	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   832	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   833	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   834	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   835	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   836	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   837	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   838	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   839	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   840	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   841	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   842	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   843	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   844	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   845	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   846	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   847	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_METRICS'
+   848	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   849	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   850	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   851	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   852	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   853	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   854	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   855	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   856	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_CMP'
+   857	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   858	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_LOCKS'
+   859	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'INNODB_TRX'
+   860	2018-04-09 10:27:22 1507 [Note] Shutting down plugin 'InnoDB'
+   861	2018-04-09 10:27:22 1507 [Note] InnoDB: FTS optimize thread exiting.
+   862	2018-04-09 10:27:22 1507 [Note] InnoDB: Starting shutdown...
+   863	2018-04-09 10:27:23 1507 [Note] InnoDB: Shutdown completed; log sequence number 3241613
+   864	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'ARCHIVE'
+   865	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'BLACKHOLE'
+   866	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'CSV'
+   867	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'MEMORY'
+   868	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'MRG_MYISAM'
+   869	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'MyISAM'
+   870	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'sha256_password'
+   871	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'mysql_old_password'
+   872	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'mysql_native_password'
+   873	2018-04-09 10:27:23 1507 [Note] Shutting down plugin 'binlog'
+   874	2018-04-09 10:27:23 1507 [Note] /usr/sbin/mysqld: Shutdown complete
+   875	
+   876	2018-04-09 10:36:56 1482 [Note] Plugin 'FEDERATED' is disabled.
+   877	2018-04-09 10:36:57 1482 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   878	2018-04-09 10:36:57 1482 [Note] InnoDB: The InnoDB memory heap is disabled
+   879	2018-04-09 10:36:57 1482 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   880	2018-04-09 10:36:57 1482 [Note] InnoDB: Memory barrier is not used
+   881	2018-04-09 10:36:57 1482 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   882	2018-04-09 10:36:57 1482 [Note] InnoDB: Using Linux native AIO
+   883	2018-04-09 10:36:57 1482 [Note] InnoDB: Using CPU crc32 instructions
+   884	2018-04-09 10:36:57 1482 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   885	2018-04-09 10:36:57 1482 [Note] InnoDB: Completed initialization of buffer pool
+   886	2018-04-09 10:36:57 1482 [Note] InnoDB: Highest supported file format is Barracuda.
+   887	2018-04-09 10:37:00 1482 [Note] InnoDB: 128 rollback segment(s) are active.
+   888	2018-04-09 10:37:00 1482 [Note] InnoDB: Waiting for purge to start
+   889	2018-04-09 10:37:01 1482 [Note] InnoDB: 5.6.39 started; log sequence number 3241613
+   890	2018-04-09 10:37:01 1482 [Note] Server hostname (bind-address): '*'; port: 3306
+   891	2018-04-09 10:37:01 1482 [Note] IPv6 is available.
+   892	2018-04-09 10:37:01 1482 [Note]   - '::' resolves to '::';
+   893	2018-04-09 10:37:01 1482 [Note] Server socket created on IP: '::'.
+   894	2018-04-09 10:37:02 1482 [Note] Event Scheduler: Loaded 0 events
+   895	2018-04-09 10:37:02 1482 [Note] /usr/sbin/mysqld: ready for connections.
+   896	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   897	2018-04-09 11:07:33 1482 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+   898	2018-04-09 11:07:33 1482 [Note] Hostname 'bogon' has the following IP addresses:
+   899	2018-04-09 11:07:33 1482 [Note]  - 192.168.37.80
+   900	2018-04-24 14:41:18 1510 [Note] Plugin 'FEDERATED' is disabled.
+   901	2018-04-24 14:41:18 1510 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   902	2018-04-24 14:41:18 1510 [Note] InnoDB: The InnoDB memory heap is disabled
+   903	2018-04-24 14:41:18 1510 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   904	2018-04-24 14:41:18 1510 [Note] InnoDB: Memory barrier is not used
+   905	2018-04-24 14:41:18 1510 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   906	2018-04-24 14:41:18 1510 [Note] InnoDB: Using Linux native AIO
+   907	2018-04-24 14:41:18 1510 [Note] InnoDB: Using CPU crc32 instructions
+   908	2018-04-24 14:41:18 1510 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   909	2018-04-24 14:41:18 1510 [Note] InnoDB: Completed initialization of buffer pool
+   910	2018-04-24 14:41:18 1510 [Note] InnoDB: Highest supported file format is Barracuda.
+   911	2018-04-24 14:41:18 1510 [Note] InnoDB: The log sequence numbers 3241613 and 3241613 in ibdata files do not match the log sequence number 3241623 in the ib_logfiles!
+   912	2018-04-24 14:41:18 1510 [Note] InnoDB: Database was not shutdown normally!
+   913	2018-04-24 14:41:18 1510 [Note] InnoDB: Starting crash recovery.
+   914	2018-04-24 14:41:18 1510 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   915	2018-04-24 14:41:19 1510 [Note] InnoDB: Restoring possible half-written data pages 
+   916	2018-04-24 14:41:19 1510 [Note] InnoDB: from the doublewrite buffer...
+   917	2018-04-24 14:41:19 1510 [Note] InnoDB: 128 rollback segment(s) are active.
+   918	2018-04-24 14:41:19 1510 [Note] InnoDB: Waiting for purge to start
+   919	2018-04-24 14:41:19 1510 [Note] InnoDB: 5.6.39 started; log sequence number 3241623
+   920	2018-04-24 14:41:19 1510 [Note] Server hostname (bind-address): '*'; port: 3306
+   921	2018-04-24 14:41:19 1510 [Note] IPv6 is available.
+   922	2018-04-24 14:41:19 1510 [Note]   - '::' resolves to '::';
+   923	2018-04-24 14:41:19 1510 [Note] Server socket created on IP: '::'.
+   924	2018-04-24 14:41:19 1510 [Note] Event Scheduler: Loaded 0 events
+   925	2018-04-24 14:41:19 1510 [Note] /usr/sbin/mysqld: ready for connections.
+   926	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   927	2018-05-21 15:59:43 1507 [Note] Plugin 'FEDERATED' is disabled.
+   928	2018-05-21 15:59:43 1507 [Note] InnoDB: Using atomics to ref count buffer pool pages
+   929	2018-05-21 15:59:43 1507 [Note] InnoDB: The InnoDB memory heap is disabled
+   930	2018-05-21 15:59:43 1507 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+   931	2018-05-21 15:59:43 1507 [Note] InnoDB: Memory barrier is not used
+   932	2018-05-21 15:59:43 1507 [Note] InnoDB: Compressed tables use zlib 1.2.3
+   933	2018-05-21 15:59:43 1507 [Note] InnoDB: Using Linux native AIO
+   934	2018-05-21 15:59:43 1507 [Note] InnoDB: Using CPU crc32 instructions
+   935	2018-05-21 15:59:43 1507 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+   936	2018-05-21 15:59:43 1507 [Note] InnoDB: Completed initialization of buffer pool
+   937	2018-05-21 15:59:43 1507 [Note] InnoDB: Highest supported file format is Barracuda.
+   938	2018-05-21 15:59:43 1507 [Note] InnoDB: The log sequence numbers 3241613 and 3241613 in ibdata files do not match the log sequence number 3241633 in the ib_logfiles!
+   939	2018-05-21 15:59:43 1507 [Note] InnoDB: Database was not shutdown normally!
+   940	2018-05-21 15:59:43 1507 [Note] InnoDB: Starting crash recovery.
+   941	2018-05-21 15:59:43 1507 [Note] InnoDB: Reading tablespace information from the .ibd files...
+   942	2018-05-21 15:59:44 1507 [Note] InnoDB: Restoring possible half-written data pages 
+   943	2018-05-21 15:59:44 1507 [Note] InnoDB: from the doublewrite buffer...
+   944	2018-05-21 15:59:44 1507 [Note] InnoDB: 128 rollback segment(s) are active.
+   945	2018-05-21 15:59:44 1507 [Note] InnoDB: Waiting for purge to start
+   946	2018-05-21 15:59:44 1507 [Note] InnoDB: 5.6.39 started; log sequence number 3241633
+   947	2018-05-21 15:59:44 1507 [Note] Server hostname (bind-address): '*'; port: 3306
+   948	2018-05-21 15:59:44 1507 [Note] IPv6 is available.
+   949	2018-05-21 15:59:44 1507 [Note]   - '::' resolves to '::';
+   950	2018-05-21 15:59:44 1507 [Note] Server socket created on IP: '::'.
+   951	2018-05-21 15:59:44 1507 [Note] Event Scheduler: Loaded 0 events
+   952	2018-05-21 15:59:44 1507 [Note] /usr/sbin/mysqld: ready for connections.
+   953	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+   954	2018-05-21 16:13:31 1507 [Note] /usr/sbin/mysqld: Normal shutdown
+   955	
+   956	2018-05-21 16:13:31 1507 [Note] Giving 0 client threads a chance to die gracefully
+   957	2018-05-21 16:13:31 1507 [Note] Event Scheduler: Purging the queue. 0 events
+   958	2018-05-21 16:13:31 1507 [Note] Shutting down slave threads
+   959	2018-05-21 16:13:31 1507 [Note] Forcefully disconnecting 0 remaining clients
+   960	2018-05-21 16:13:31 1507 [Note] Binlog end
+   961	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'partition'
+   962	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+   963	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+   964	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+   965	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+   966	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+   967	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+   968	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+   969	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+   970	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+   971	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+   972	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+   973	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+   974	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+   975	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+   976	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+   977	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+   978	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_METRICS'
+   979	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+   980	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+   981	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+   982	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+   983	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+   984	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+   985	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_CMPMEM'
+   986	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+   987	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_CMP'
+   988	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+   989	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_LOCKS'
+   990	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'INNODB_TRX'
+   991	2018-05-21 16:13:31 1507 [Note] Shutting down plugin 'InnoDB'
+   992	2018-05-21 16:13:31 1507 [Note] InnoDB: FTS optimize thread exiting.
+   993	2018-05-21 16:13:31 1507 [Note] InnoDB: Starting shutdown...
+   994	2018-05-21 16:13:32 1507 [Note] InnoDB: Shutdown completed; log sequence number 3241643
+   995	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'ARCHIVE'
+   996	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'BLACKHOLE'
+   997	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'CSV'
+   998	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'MEMORY'
+   999	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'MRG_MYISAM'
+  1000	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'MyISAM'
+  1001	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'sha256_password'
+  1002	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'mysql_old_password'
+  1003	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'mysql_native_password'
+  1004	2018-05-21 16:13:32 1507 [Note] Shutting down plugin 'binlog'
+  1005	2018-05-21 16:13:32 1507 [Note] /usr/sbin/mysqld: Shutdown complete
+  1006	
+  1007	2018-05-21 16:37:51 1483 [Note] Plugin 'FEDERATED' is disabled.
+  1008	2018-05-21 16:37:51 1483 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1009	2018-05-21 16:37:51 1483 [Note] InnoDB: The InnoDB memory heap is disabled
+  1010	2018-05-21 16:37:51 1483 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1011	2018-05-21 16:37:51 1483 [Note] InnoDB: Memory barrier is not used
+  1012	2018-05-21 16:37:51 1483 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1013	2018-05-21 16:37:51 1483 [Note] InnoDB: Using Linux native AIO
+  1014	2018-05-21 16:37:51 1483 [Note] InnoDB: Using CPU crc32 instructions
+  1015	2018-05-21 16:37:51 1483 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1016	2018-05-21 16:37:51 1483 [Note] InnoDB: Completed initialization of buffer pool
+  1017	2018-05-21 16:37:51 1483 [Note] InnoDB: Highest supported file format is Barracuda.
+  1018	2018-05-21 16:37:52 1483 [Note] InnoDB: 128 rollback segment(s) are active.
+  1019	2018-05-21 16:37:52 1483 [Note] InnoDB: Waiting for purge to start
+  1020	2018-05-21 16:37:52 1483 [Note] InnoDB: 5.6.39 started; log sequence number 3241643
+  1021	2018-05-21 16:37:52 1483 [Note] Server hostname (bind-address): '*'; port: 3306
+  1022	2018-05-21 16:37:52 1483 [Note] IPv6 is available.
+  1023	2018-05-21 16:37:52 1483 [Note]   - '::' resolves to '::';
+  1024	2018-05-21 16:37:52 1483 [Note] Server socket created on IP: '::'.
+  1025	2018-05-21 16:37:52 1483 [Note] Event Scheduler: Loaded 0 events
+  1026	2018-05-21 16:37:52 1483 [Note] /usr/sbin/mysqld: ready for connections.
+  1027	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1028	2018-05-21 17:06:01 1483 [Note] /usr/sbin/mysqld: Normal shutdown
+  1029	
+  1030	2018-05-21 17:06:01 1483 [Note] Giving 0 client threads a chance to die gracefully
+  1031	2018-05-21 17:06:01 1483 [Note] Event Scheduler: Purging the queue. 0 events
+  1032	2018-05-21 17:06:01 1483 [Note] Shutting down slave threads
+  1033	2018-05-21 17:06:02 1483 [Note] Forcefully disconnecting 0 remaining clients
+  1034	2018-05-21 17:06:02 1483 [Note] Binlog end
+  1035	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'partition'
+  1036	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+  1037	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+  1038	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+  1039	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+  1040	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+  1041	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+  1042	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+  1043	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+  1044	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+  1045	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+  1046	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+  1047	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+  1048	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+  1049	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+  1050	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+  1051	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+  1052	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_METRICS'
+  1053	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+  1054	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+  1055	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+  1056	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+  1057	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+  1058	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+  1059	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_CMPMEM'
+  1060	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+  1061	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_CMP'
+  1062	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+  1063	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_LOCKS'
+  1064	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'INNODB_TRX'
+  1065	2018-05-21 17:06:02 1483 [Note] Shutting down plugin 'InnoDB'
+  1066	2018-05-21 17:06:02 1483 [Note] InnoDB: FTS optimize thread exiting.
+  1067	2018-05-21 17:06:02 1483 [Note] InnoDB: Starting shutdown...
+  1068	2018-05-21 17:06:03 1483 [Note] InnoDB: Shutdown completed; log sequence number 3241653
+  1069	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'ARCHIVE'
+  1070	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'BLACKHOLE'
+  1071	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'CSV'
+  1072	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'MEMORY'
+  1073	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'MRG_MYISAM'
+  1074	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'MyISAM'
+  1075	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'sha256_password'
+  1076	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'mysql_old_password'
+  1077	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'mysql_native_password'
+  1078	2018-05-21 17:06:03 1483 [Note] Shutting down plugin 'binlog'
+  1079	2018-05-21 17:06:03 1483 [Note] /usr/sbin/mysqld: Shutdown complete
+  1080	
+  1081	2018-05-21 17:37:28 1481 [Note] Plugin 'FEDERATED' is disabled.
+  1082	2018-05-21 17:37:28 1481 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1083	2018-05-21 17:37:28 1481 [Note] InnoDB: The InnoDB memory heap is disabled
+  1084	2018-05-21 17:37:28 1481 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1085	2018-05-21 17:37:28 1481 [Note] InnoDB: Memory barrier is not used
+  1086	2018-05-21 17:37:28 1481 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1087	2018-05-21 17:37:28 1481 [Note] InnoDB: Using Linux native AIO
+  1088	2018-05-21 17:37:28 1481 [Note] InnoDB: Using CPU crc32 instructions
+  1089	2018-05-21 17:37:28 1481 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1090	2018-05-21 17:37:28 1481 [Note] InnoDB: Completed initialization of buffer pool
+  1091	2018-05-21 17:37:28 1481 [Note] InnoDB: Highest supported file format is Barracuda.
+  1092	2018-05-21 17:37:29 1481 [Note] InnoDB: 128 rollback segment(s) are active.
+  1093	2018-05-21 17:37:29 1481 [Note] InnoDB: Waiting for purge to start
+  1094	2018-05-21 17:37:29 1481 [Note] InnoDB: 5.6.39 started; log sequence number 3241653
+  1095	2018-05-21 17:37:29 1481 [Note] Server hostname (bind-address): '*'; port: 3306
+  1096	2018-05-21 17:37:29 1481 [Note] IPv6 is available.
+  1097	2018-05-21 17:37:29 1481 [Note]   - '::' resolves to '::';
+  1098	2018-05-21 17:37:29 1481 [Note] Server socket created on IP: '::'.
+  1099	2018-05-21 17:37:29 1481 [Note] Event Scheduler: Loaded 0 events
+  1100	2018-05-21 17:37:29 1481 [Note] /usr/sbin/mysqld: ready for connections.
+  1101	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1102	2018-06-06 10:26:20 1481 [Note] /usr/sbin/mysqld: Normal shutdown
+  1103	
+  1104	2018-06-06 10:26:20 1481 [Note] Giving 0 client threads a chance to die gracefully
+  1105	2018-06-06 10:26:20 1481 [Note] Event Scheduler: Purging the queue. 0 events
+  1106	2018-06-06 10:26:20 1481 [Note] Shutting down slave threads
+  1107	2018-06-06 10:26:20 1481 [Note] Forcefully disconnecting 0 remaining clients
+  1108	2018-06-06 10:26:20 1481 [Note] Binlog end
+  1109	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'partition'
+  1110	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+  1111	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+  1112	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+  1113	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+  1114	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+  1115	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+  1116	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+  1117	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+  1118	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+  1119	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+  1120	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+  1121	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+  1122	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+  1123	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+  1124	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+  1125	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+  1126	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_METRICS'
+  1127	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+  1128	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+  1129	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+  1130	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+  1131	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+  1132	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+  1133	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_CMPMEM'
+  1134	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+  1135	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_CMP'
+  1136	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+  1137	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_LOCKS'
+  1138	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'INNODB_TRX'
+  1139	2018-06-06 10:26:21 1481 [Note] Shutting down plugin 'InnoDB'
+  1140	2018-06-06 10:26:21 1481 [Note] InnoDB: FTS optimize thread exiting.
+  1141	2018-06-06 10:26:21 1481 [Note] InnoDB: Starting shutdown...
+  1142	2018-06-06 10:26:22 1481 [Note] InnoDB: Shutdown completed; log sequence number 3241663
+  1143	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'ARCHIVE'
+  1144	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'BLACKHOLE'
+  1145	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'CSV'
+  1146	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'MEMORY'
+  1147	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'MRG_MYISAM'
+  1148	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'MyISAM'
+  1149	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'sha256_password'
+  1150	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'mysql_old_password'
+  1151	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'mysql_native_password'
+  1152	2018-06-06 10:26:22 1481 [Note] Shutting down plugin 'binlog'
+  1153	2018-06-06 10:26:23 1481 [Note] /usr/sbin/mysqld: Shutdown complete
+  1154	
+  1155	2018-06-06 10:44:00 1469 [Note] Plugin 'FEDERATED' is disabled.
+  1156	2018-06-06 10:44:00 1469 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1157	2018-06-06 10:44:00 1469 [Note] InnoDB: The InnoDB memory heap is disabled
+  1158	2018-06-06 10:44:00 1469 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1159	2018-06-06 10:44:00 1469 [Note] InnoDB: Memory barrier is not used
+  1160	2018-06-06 10:44:00 1469 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1161	2018-06-06 10:44:00 1469 [Note] InnoDB: Using Linux native AIO
+  1162	2018-06-06 10:44:01 1469 [Note] InnoDB: Using CPU crc32 instructions
+  1163	2018-06-06 10:44:01 1469 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1164	2018-06-06 10:44:01 1469 [Note] InnoDB: Completed initialization of buffer pool
+  1165	2018-06-06 10:44:01 1469 [Note] InnoDB: Highest supported file format is Barracuda.
+  1166	2018-06-06 10:44:01 1469 [Note] InnoDB: 128 rollback segment(s) are active.
+  1167	2018-06-06 10:44:01 1469 [Note] InnoDB: Waiting for purge to start
+  1168	2018-06-06 10:44:01 1469 [Note] InnoDB: 5.6.39 started; log sequence number 3241663
+  1169	2018-06-06 10:44:01 1469 [Note] Server hostname (bind-address): '*'; port: 3306
+  1170	2018-06-06 10:44:01 1469 [Note] IPv6 is available.
+  1171	2018-06-06 10:44:01 1469 [Note]   - '::' resolves to '::';
+  1172	2018-06-06 10:44:01 1469 [Note] Server socket created on IP: '::'.
+  1173	2018-06-06 10:44:02 1469 [Note] Event Scheduler: Loaded 0 events
+  1174	2018-06-06 10:44:02 1469 [Note] /usr/sbin/mysqld: ready for connections.
+  1175	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1176	2018-06-19 10:23:25 1469 [Note] /usr/sbin/mysqld: Normal shutdown
+  1177	
+  1178	2018-06-19 10:23:25 1469 [Note] Giving 0 client threads a chance to die gracefully
+  1179	2018-06-19 10:23:25 1469 [Note] Event Scheduler: Purging the queue. 0 events
+  1180	2018-06-19 10:23:25 1469 [Note] Shutting down slave threads
+  1181	2018-06-19 10:23:25 1469 [Note] Forcefully disconnecting 0 remaining clients
+  1182	2018-06-19 10:23:25 1469 [Note] Binlog end
+  1183	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'partition'
+  1184	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+  1185	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+  1186	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+  1187	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+  1188	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+  1189	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+  1190	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+  1191	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+  1192	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+  1193	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+  1194	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+  1195	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+  1196	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+  1197	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+  1198	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+  1199	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+  1200	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_METRICS'
+  1201	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+  1202	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+  1203	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+  1204	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+  1205	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+  1206	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+  1207	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_CMPMEM'
+  1208	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+  1209	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_CMP'
+  1210	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+  1211	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_LOCKS'
+  1212	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'INNODB_TRX'
+  1213	2018-06-19 10:23:25 1469 [Note] Shutting down plugin 'InnoDB'
+  1214	2018-06-19 10:23:25 1469 [Note] InnoDB: FTS optimize thread exiting.
+  1215	2018-06-19 10:23:25 1469 [Note] InnoDB: Starting shutdown...
+  1216	2018-06-19 10:23:27 1469 [Note] InnoDB: Shutdown completed; log sequence number 3241673
+  1217	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'ARCHIVE'
+  1218	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'BLACKHOLE'
+  1219	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'CSV'
+  1220	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'MEMORY'
+  1221	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'MRG_MYISAM'
+  1222	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'MyISAM'
+  1223	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'sha256_password'
+  1224	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'mysql_old_password'
+  1225	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'mysql_native_password'
+  1226	2018-06-19 10:23:27 1469 [Note] Shutting down plugin 'binlog'
+  1227	2018-06-19 10:23:27 1469 [Note] /usr/sbin/mysqld: Shutdown complete
+  1228	
+  1229	2018-06-19 10:43:53 1481 [Note] Plugin 'FEDERATED' is disabled.
+  1230	2018-06-19 10:43:53 1481 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1231	2018-06-19 10:43:53 1481 [Note] InnoDB: The InnoDB memory heap is disabled
+  1232	2018-06-19 10:43:53 1481 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1233	2018-06-19 10:43:53 1481 [Note] InnoDB: Memory barrier is not used
+  1234	2018-06-19 10:43:53 1481 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1235	2018-06-19 10:43:53 1481 [Note] InnoDB: Using Linux native AIO
+  1236	2018-06-19 10:43:53 1481 [Note] InnoDB: Using CPU crc32 instructions
+  1237	2018-06-19 10:43:53 1481 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1238	2018-06-19 10:43:53 1481 [Note] InnoDB: Completed initialization of buffer pool
+  1239	2018-06-19 10:43:53 1481 [Note] InnoDB: Highest supported file format is Barracuda.
+  1240	2018-06-19 10:43:54 1481 [Note] InnoDB: 128 rollback segment(s) are active.
+  1241	2018-06-19 10:43:54 1481 [Note] InnoDB: Waiting for purge to start
+  1242	2018-06-19 10:43:54 1481 [Note] InnoDB: 5.6.39 started; log sequence number 3241673
+  1243	2018-06-19 10:43:54 1481 [Note] Server hostname (bind-address): '*'; port: 3306
+  1244	2018-06-19 10:43:54 1481 [Note] IPv6 is available.
+  1245	2018-06-19 10:43:54 1481 [Note]   - '::' resolves to '::';
+  1246	2018-06-19 10:43:54 1481 [Note] Server socket created on IP: '::'.
+  1247	2018-06-19 10:43:54 1481 [Note] Event Scheduler: Loaded 0 events
+  1248	2018-06-19 10:43:54 1481 [Note] /usr/sbin/mysqld: ready for connections.
+  1249	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1250	2018-06-25 10:20:41 1481 [Note] /usr/sbin/mysqld: Normal shutdown
+  1251	
+  1252	2018-06-25 10:20:41 1481 [Note] Giving 0 client threads a chance to die gracefully
+  1253	2018-06-25 10:20:41 1481 [Note] Event Scheduler: Purging the queue. 0 events
+  1254	2018-06-25 10:20:41 1481 [Note] Shutting down slave threads
+  1255	2018-06-25 10:20:41 1481 [Note] Forcefully disconnecting 0 remaining clients
+  1256	2018-06-25 10:20:41 1481 [Note] Binlog end
+  1257	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'partition'
+  1258	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+  1259	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+  1260	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+  1261	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+  1262	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+  1263	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+  1264	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+  1265	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+  1266	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+  1267	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+  1268	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+  1269	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+  1270	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+  1271	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+  1272	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+  1273	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+  1274	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_METRICS'
+  1275	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+  1276	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+  1277	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+  1278	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+  1279	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+  1280	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+  1281	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_CMPMEM'
+  1282	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+  1283	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_CMP'
+  1284	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+  1285	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_LOCKS'
+  1286	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'INNODB_TRX'
+  1287	2018-06-25 10:20:41 1481 [Note] Shutting down plugin 'InnoDB'
+  1288	2018-06-25 10:20:41 1481 [Note] InnoDB: FTS optimize thread exiting.
+  1289	2018-06-25 10:20:41 1481 [Note] InnoDB: Starting shutdown...
+  1290	2018-06-25 10:20:43 1481 [Note] InnoDB: Shutdown completed; log sequence number 3241683
+  1291	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'ARCHIVE'
+  1292	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'BLACKHOLE'
+  1293	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'CSV'
+  1294	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'MEMORY'
+  1295	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'MRG_MYISAM'
+  1296	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'MyISAM'
+  1297	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'sha256_password'
+  1298	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'mysql_old_password'
+  1299	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'mysql_native_password'
+  1300	2018-06-25 10:20:43 1481 [Note] Shutting down plugin 'binlog'
+  1301	2018-06-25 10:20:43 1481 [Note] /usr/sbin/mysqld: Shutdown complete
+  1302	
+  1303	2018-06-25 10:31:25 1483 [Note] Plugin 'FEDERATED' is disabled.
+  1304	2018-06-25 10:31:26 1483 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1305	2018-06-25 10:31:26 1483 [Note] InnoDB: The InnoDB memory heap is disabled
+  1306	2018-06-25 10:31:26 1483 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1307	2018-06-25 10:31:26 1483 [Note] InnoDB: Memory barrier is not used
+  1308	2018-06-25 10:31:26 1483 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1309	2018-06-25 10:31:26 1483 [Note] InnoDB: Using Linux native AIO
+  1310	2018-06-25 10:31:26 1483 [Note] InnoDB: Using CPU crc32 instructions
+  1311	2018-06-25 10:31:26 1483 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1312	2018-06-25 10:31:26 1483 [Note] InnoDB: Completed initialization of buffer pool
+  1313	2018-06-25 10:31:26 1483 [Note] InnoDB: Highest supported file format is Barracuda.
+  1314	2018-06-25 10:31:27 1483 [Note] InnoDB: 128 rollback segment(s) are active.
+  1315	2018-06-25 10:31:27 1483 [Note] InnoDB: Waiting for purge to start
+  1316	2018-06-25 10:31:27 1483 [Note] InnoDB: 5.6.39 started; log sequence number 3241683
+  1317	2018-06-25 10:31:28 1483 [Note] Server hostname (bind-address): '*'; port: 3306
+  1318	2018-06-25 10:31:28 1483 [Note] IPv6 is available.
+  1319	2018-06-25 10:31:28 1483 [Note]   - '::' resolves to '::';
+  1320	2018-06-25 10:31:28 1483 [Note] Server socket created on IP: '::'.
+  1321	2018-06-25 10:31:28 1483 [Note] Event Scheduler: Loaded 0 events
+  1322	2018-06-25 10:31:28 1483 [Note] /usr/sbin/mysqld: ready for connections.
+  1323	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1324	2018-07-09 10:25:21 1483 [Note] /usr/sbin/mysqld: Normal shutdown
+  1325	
+  1326	2018-07-09 10:25:21 1483 [Note] Giving 0 client threads a chance to die gracefully
+  1327	2018-07-09 10:25:21 1483 [Note] Event Scheduler: Purging the queue. 0 events
+  1328	2018-07-09 10:25:21 1483 [Note] Shutting down slave threads
+  1329	2018-07-09 10:25:21 1483 [Note] Forcefully disconnecting 0 remaining clients
+  1330	2018-07-09 10:25:21 1483 [Note] Binlog end
+  1331	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'partition'
+  1332	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+  1333	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+  1334	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+  1335	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+  1336	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+  1337	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+  1338	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+  1339	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+  1340	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+  1341	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+  1342	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+  1343	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+  1344	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+  1345	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+  1346	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+  1347	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+  1348	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_METRICS'
+  1349	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+  1350	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+  1351	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+  1352	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+  1353	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+  1354	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+  1355	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_CMPMEM'
+  1356	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+  1357	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_CMP'
+  1358	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+  1359	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_LOCKS'
+  1360	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'INNODB_TRX'
+  1361	2018-07-09 10:25:21 1483 [Note] Shutting down plugin 'InnoDB'
+  1362	2018-07-09 10:25:21 1483 [Note] InnoDB: FTS optimize thread exiting.
+  1363	2018-07-09 10:25:21 1483 [Note] InnoDB: Starting shutdown...
+  1364	2018-07-09 10:25:23 1483 [Note] InnoDB: Shutdown completed; log sequence number 5005429
+  1365	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'ARCHIVE'
+  1366	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'BLACKHOLE'
+  1367	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'CSV'
+  1368	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'MEMORY'
+  1369	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'MRG_MYISAM'
+  1370	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'MyISAM'
+  1371	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'sha256_password'
+  1372	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'mysql_old_password'
+  1373	2018-07-09 10:25:23 1483 [Note] Shutting down plugin 'mysql_native_password'
+  1374	2018-07-09 10:25:24 1483 [Note] Shutting down plugin 'binlog'
+  1375	2018-07-09 10:25:24 1483 [Note] /usr/sbin/mysqld: Shutdown complete
+  1376	
+  1377	2018-07-09 10:37:17 1484 [Note] Plugin 'FEDERATED' is disabled.
+  1378	2018-07-09 10:37:18 1484 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1379	2018-07-09 10:37:18 1484 [Note] InnoDB: The InnoDB memory heap is disabled
+  1380	2018-07-09 10:37:18 1484 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1381	2018-07-09 10:37:18 1484 [Note] InnoDB: Memory barrier is not used
+  1382	2018-07-09 10:37:18 1484 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1383	2018-07-09 10:37:18 1484 [Note] InnoDB: Using Linux native AIO
+  1384	2018-07-09 10:37:18 1484 [Note] InnoDB: Using CPU crc32 instructions
+  1385	2018-07-09 10:37:18 1484 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1386	2018-07-09 10:37:18 1484 [Note] InnoDB: Completed initialization of buffer pool
+  1387	2018-07-09 10:37:19 1484 [Note] InnoDB: Highest supported file format is Barracuda.
+  1388	2018-07-09 10:37:21 1484 [Note] InnoDB: 128 rollback segment(s) are active.
+  1389	2018-07-09 10:37:21 1484 [Note] InnoDB: Waiting for purge to start
+  1390	2018-07-09 10:37:22 1484 [Note] InnoDB: 5.6.39 started; log sequence number 5005429
+  1391	2018-07-09 10:37:22 1484 [Note] Server hostname (bind-address): '*'; port: 3306
+  1392	2018-07-09 10:37:22 1484 [Note] IPv6 is available.
+  1393	2018-07-09 10:37:22 1484 [Note]   - '::' resolves to '::';
+  1394	2018-07-09 10:37:22 1484 [Note] Server socket created on IP: '::'.
+  1395	2018-07-09 10:37:23 1484 [Note] Event Scheduler: Loaded 0 events
+  1396	2018-07-09 10:37:23 1484 [Note] /usr/sbin/mysqld: ready for connections.
+  1397	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1398	2018-07-16 16:13:14 1526 [Note] Plugin 'FEDERATED' is disabled.
+  1399	2018-07-16 16:13:15 1526 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1400	2018-07-16 16:13:15 1526 [Note] InnoDB: The InnoDB memory heap is disabled
+  1401	2018-07-16 16:13:15 1526 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1402	2018-07-16 16:13:15 1526 [Note] InnoDB: Memory barrier is not used
+  1403	2018-07-16 16:13:15 1526 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1404	2018-07-16 16:13:15 1526 [Note] InnoDB: Using Linux native AIO
+  1405	2018-07-16 16:13:15 1526 [Note] InnoDB: Using CPU crc32 instructions
+  1406	2018-07-16 16:13:15 1526 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1407	2018-07-16 16:13:15 1526 [Note] InnoDB: Completed initialization of buffer pool
+  1408	2018-07-16 16:13:15 1526 [Note] InnoDB: Highest supported file format is Barracuda.
+  1409	2018-07-16 16:13:15 1526 [Note] InnoDB: The log sequence numbers 5005429 and 5005429 in ibdata files do not match the log sequence number 6751282 in the ib_logfiles!
+  1410	2018-07-16 16:13:15 1526 [Note] InnoDB: Database was not shutdown normally!
+  1411	2018-07-16 16:13:15 1526 [Note] InnoDB: Starting crash recovery.
+  1412	2018-07-16 16:13:15 1526 [Note] InnoDB: Reading tablespace information from the .ibd files...
+  1413	2018-07-16 16:13:17 1526 [Note] InnoDB: Restoring possible half-written data pages 
+  1414	2018-07-16 16:13:17 1526 [Note] InnoDB: from the doublewrite buffer...
+  1415	2018-07-16 16:13:19 1526 [Note] InnoDB: 128 rollback segment(s) are active.
+  1416	2018-07-16 16:13:19 1526 [Note] InnoDB: Waiting for purge to start
+  1417	2018-07-16 16:13:19 1526 [Note] InnoDB: 5.6.39 started; log sequence number 6751282
+  1418	2018-07-16 16:13:20 1526 [Note] Server hostname (bind-address): '*'; port: 3306
+  1419	2018-07-16 16:13:20 1526 [Note] IPv6 is available.
+  1420	2018-07-16 16:13:20 1526 [Note]   - '::' resolves to '::';
+  1421	2018-07-16 16:13:20 1526 [Note] Server socket created on IP: '::'.
+  1422	2018-07-16 16:13:20 1526 [Note] Event Scheduler: Loaded 0 events
+  1423	2018-07-16 16:13:20 1526 [Note] /usr/sbin/mysqld: ready for connections.
+  1424	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1425	2018-07-18 18:17:03 1508 [Note] Plugin 'FEDERATED' is disabled.
+  1426	2018-07-18 18:17:04 1508 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1427	2018-07-18 18:17:04 1508 [Note] InnoDB: The InnoDB memory heap is disabled
+  1428	2018-07-18 18:17:04 1508 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1429	2018-07-18 18:17:04 1508 [Note] InnoDB: Memory barrier is not used
+  1430	2018-07-18 18:17:04 1508 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1431	2018-07-18 18:17:04 1508 [Note] InnoDB: Using Linux native AIO
+  1432	2018-07-18 18:17:04 1508 [Note] InnoDB: Using CPU crc32 instructions
+  1433	2018-07-18 18:17:04 1508 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1434	2018-07-18 18:17:04 1508 [Note] InnoDB: Completed initialization of buffer pool
+  1435	2018-07-18 18:17:04 1508 [Note] InnoDB: Highest supported file format is Barracuda.
+  1436	2018-07-18 18:17:04 1508 [Note] InnoDB: The log sequence numbers 5005429 and 5005429 in ibdata files do not match the log sequence number 6751292 in the ib_logfiles!
+  1437	2018-07-18 18:17:04 1508 [Note] InnoDB: Database was not shutdown normally!
+  1438	2018-07-18 18:17:04 1508 [Note] InnoDB: Starting crash recovery.
+  1439	2018-07-18 18:17:04 1508 [Note] InnoDB: Reading tablespace information from the .ibd files...
+  1440	2018-07-18 18:17:04 1508 [Note] InnoDB: Restoring possible half-written data pages 
+  1441	2018-07-18 18:17:04 1508 [Note] InnoDB: from the doublewrite buffer...
+  1442	2018-07-18 18:17:05 1508 [Note] InnoDB: 128 rollback segment(s) are active.
+  1443	2018-07-18 18:17:05 1508 [Note] InnoDB: Waiting for purge to start
+  1444	2018-07-18 18:17:05 1508 [Note] InnoDB: 5.6.39 started; log sequence number 6751292
+  1445	2018-07-18 18:17:05 1508 [Note] Server hostname (bind-address): '*'; port: 3306
+  1446	2018-07-18 18:17:05 1508 [Note] IPv6 is available.
+  1447	2018-07-18 18:17:05 1508 [Note]   - '::' resolves to '::';
+  1448	2018-07-18 18:17:05 1508 [Note] Server socket created on IP: '::'.
+  1449	2018-07-18 18:17:05 1508 [Note] Event Scheduler: Loaded 0 events
+  1450	2018-07-18 18:17:05 1508 [Note] /usr/sbin/mysqld: ready for connections.
+  1451	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1452	2018-07-19 13:59:50 1508 [Warning] Hostname 'bogon' does not resolve to '10.0.2.2'.
+  1453	2018-07-19 13:59:50 1508 [Note] Hostname 'bogon' has the following IP addresses:
+  1454	2018-07-19 13:59:50 1508 [Note]  - 192.168.37.80
+  1455	2018-08-28 10:09:26 1511 [Note] Plugin 'FEDERATED' is disabled.
+  1456	2018-08-28 10:09:26 1511 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1457	2018-08-28 10:09:26 1511 [Note] InnoDB: The InnoDB memory heap is disabled
+  1458	2018-08-28 10:09:26 1511 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1459	2018-08-28 10:09:26 1511 [Note] InnoDB: Memory barrier is not used
+  1460	2018-08-28 10:09:26 1511 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1461	2018-08-28 10:09:26 1511 [Note] InnoDB: Using Linux native AIO
+  1462	2018-08-28 10:09:26 1511 [Note] InnoDB: Using CPU crc32 instructions
+  1463	2018-08-28 10:09:26 1511 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1464	2018-08-28 10:09:26 1511 [Note] InnoDB: Completed initialization of buffer pool
+  1465	2018-08-28 10:09:26 1511 [Note] InnoDB: Highest supported file format is Barracuda.
+  1466	2018-08-28 10:09:26 1511 [Note] InnoDB: The log sequence numbers 5005429 and 5005429 in ibdata files do not match the log sequence number 6751302 in the ib_logfiles!
+  1467	2018-08-28 10:09:26 1511 [Note] InnoDB: Database was not shutdown normally!
+  1468	2018-08-28 10:09:26 1511 [Note] InnoDB: Starting crash recovery.
+  1469	2018-08-28 10:09:26 1511 [Note] InnoDB: Reading tablespace information from the .ibd files...
+  1470	2018-08-28 10:09:27 1511 [Note] InnoDB: Restoring possible half-written data pages 
+  1471	2018-08-28 10:09:27 1511 [Note] InnoDB: from the doublewrite buffer...
+  1472	2018-08-28 10:09:28 1511 [Note] InnoDB: 128 rollback segment(s) are active.
+  1473	2018-08-28 10:09:28 1511 [Note] InnoDB: Waiting for purge to start
+  1474	2018-08-28 10:09:28 1511 [Note] InnoDB: 5.6.39 started; log sequence number 6751302
+  1475	2018-08-28 10:09:28 1511 [Note] Server hostname (bind-address): '*'; port: 3306
+  1476	2018-08-28 10:09:28 1511 [Note] IPv6 is available.
+  1477	2018-08-28 10:09:28 1511 [Note]   - '::' resolves to '::';
+  1478	2018-08-28 10:09:28 1511 [Note] Server socket created on IP: '::'.
+  1479	2018-08-28 10:09:28 1511 [Note] Event Scheduler: Loaded 0 events
+  1480	2018-08-28 10:09:28 1511 [Note] /usr/sbin/mysqld: ready for connections.
+  1481	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1482	2018-08-28 11:03:29 1506 [Note] Plugin 'FEDERATED' is disabled.
+  1483	2018-08-28 11:03:29 1506 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1484	2018-08-28 11:03:29 1506 [Note] InnoDB: The InnoDB memory heap is disabled
+  1485	2018-08-28 11:03:29 1506 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1486	2018-08-28 11:03:29 1506 [Note] InnoDB: Memory barrier is not used
+  1487	2018-08-28 11:03:29 1506 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1488	2018-08-28 11:03:29 1506 [Note] InnoDB: Using Linux native AIO
+  1489	2018-08-28 11:03:29 1506 [Note] InnoDB: Using CPU crc32 instructions
+  1490	2018-08-28 11:03:29 1506 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1491	2018-08-28 11:03:30 1506 [Note] InnoDB: Completed initialization of buffer pool
+  1492	2018-08-28 11:03:30 1506 [Note] InnoDB: Highest supported file format is Barracuda.
+  1493	2018-08-28 11:03:30 1506 [Note] InnoDB: The log sequence numbers 5005429 and 5005429 in ibdata files do not match the log sequence number 6751312 in the ib_logfiles!
+  1494	2018-08-28 11:03:30 1506 [Note] InnoDB: Database was not shutdown normally!
+  1495	2018-08-28 11:03:30 1506 [Note] InnoDB: Starting crash recovery.
+  1496	2018-08-28 11:03:30 1506 [Note] InnoDB: Reading tablespace information from the .ibd files...
+  1497	2018-08-28 11:03:33 1506 [Note] InnoDB: Restoring possible half-written data pages 
+  1498	2018-08-28 11:03:33 1506 [Note] InnoDB: from the doublewrite buffer...
+  1499	2018-08-28 11:03:35 1506 [Note] InnoDB: 128 rollback segment(s) are active.
+  1500	2018-08-28 11:03:35 1506 [Note] InnoDB: Waiting for purge to start
+  1501	2018-08-28 11:03:35 1506 [Note] InnoDB: 5.6.39 started; log sequence number 6751312
+  1502	2018-08-28 11:03:36 1506 [Note] Server hostname (bind-address): '*'; port: 3306
+  1503	2018-08-28 11:03:36 1506 [Note] IPv6 is available.
+  1504	2018-08-28 11:03:36 1506 [Note]   - '::' resolves to '::';
+  1505	2018-08-28 11:03:36 1506 [Note] Server socket created on IP: '::'.
+  1506	2018-08-28 11:03:37 1506 [Note] Event Scheduler: Loaded 0 events
+  1507	2018-08-28 11:03:37 1506 [Note] /usr/sbin/mysqld: ready for connections.
+  1508	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
+  1509	2018-08-29 10:26:18 1506 [Note] /usr/sbin/mysqld: Normal shutdown
+  1510	
+  1511	2018-08-29 10:26:18 1506 [Note] Giving 0 client threads a chance to die gracefully
+  1512	2018-08-29 10:26:18 1506 [Note] Event Scheduler: Purging the queue. 0 events
+  1513	2018-08-29 10:26:18 1506 [Note] Shutting down slave threads
+  1514	2018-08-29 10:26:18 1506 [Note] Forcefully disconnecting 0 remaining clients
+  1515	2018-08-29 10:26:18 1506 [Note] Binlog end
+  1516	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'partition'
+  1517	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+  1518	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+  1519	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+  1520	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+  1521	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+  1522	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+  1523	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+  1524	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+  1525	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+  1526	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+  1527	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+  1528	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+  1529	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+  1530	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+  1531	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+  1532	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+  1533	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_METRICS'
+  1534	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+  1535	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+  1536	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+  1537	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+  1538	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+  1539	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+  1540	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_CMPMEM'
+  1541	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+  1542	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_CMP'
+  1543	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+  1544	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_LOCKS'
+  1545	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'INNODB_TRX'
+  1546	2018-08-29 10:26:18 1506 [Note] Shutting down plugin 'InnoDB'
+  1547	2018-08-29 10:26:18 1506 [Note] InnoDB: FTS optimize thread exiting.
+  1548	2018-08-29 10:26:18 1506 [Note] InnoDB: Starting shutdown...
+  1549	2018-08-29 10:26:20 1506 [Note] InnoDB: Shutdown completed; log sequence number 6752389
+  1550	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'ARCHIVE'
+  1551	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'BLACKHOLE'
+  1552	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'CSV'
+  1553	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'MEMORY'
+  1554	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'MRG_MYISAM'
+  1555	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'MyISAM'
+  1556	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'sha256_password'
+  1557	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'mysql_old_password'
+  1558	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'mysql_native_password'
+  1559	2018-08-29 10:26:20 1506 [Note] Shutting down plugin 'binlog'
+  1560	2018-08-29 10:26:20 1506 [Note] /usr/sbin/mysqld: Shutdown complete
+  1561	
+  1562	2018-08-29 10:59:46 1479 [Note] Plugin 'FEDERATED' is disabled.
+  1563	2018-08-29 10:59:46 1479 [Note] InnoDB: Using atomics to ref count buffer pool pages
+  1564	2018-08-29 10:59:46 1479 [Note] InnoDB: The InnoDB memory heap is disabled
+  1565	2018-08-29 10:59:46 1479 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+  1566	2018-08-29 10:59:46 1479 [Note] InnoDB: Memory barrier is not used
+  1567	2018-08-29 10:59:46 1479 [Note] InnoDB: Compressed tables use zlib 1.2.3
+  1568	2018-08-29 10:59:46 1479 [Note] InnoDB: Using Linux native AIO
+  1569	2018-08-29 10:59:46 1479 [Note] InnoDB: Using CPU crc32 instructions
+  1570	2018-08-29 10:59:47 1479 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+  1571	2018-08-29 10:59:47 1479 [Note] InnoDB: Completed initialization of buffer pool
+  1572	2018-08-29 10:59:47 1479 [Note] InnoDB: Highest supported file format is Barracuda.
+  1573	2018-08-29 10:59:48 1479 [Note] InnoDB: 128 rollback segment(s) are active.
+  1574	2018-08-29 10:59:48 1479 [Note] InnoDB: Waiting for purge to start
+  1575	2018-08-29 10:59:48 1479 [Note] InnoDB: 5.6.39 started; log sequence number 6752389
+  1576	2018-08-29 10:59:49 1479 [Note] Server hostname (bind-address): '*'; port: 3306
+  1577	2018-08-29 10:59:49 1479 [Note] IPv6 is available.
+  1578	2018-08-29 10:59:49 1479 [Note]   - '::' resolves to '::';
+  1579	2018-08-29 10:59:49 1479 [Note] Server socket created on IP: '::'.
+  1580	2018-08-29 10:59:49 1479 [Note] Event Scheduler: Loaded 0 events
+  1581	2018-08-29 10:59:49 1479 [Note] /usr/sbin/mysqld: ready for connections.
+  1582	Version: '5.6.39'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server (GPL)
