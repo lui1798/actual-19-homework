@@ -16,9 +16,18 @@ logging.basicConfig(level=logging.DEBUG,
 # Usage
 logging.debug('User is lock!!!')
 logging.info('login sucess.')
-logging.warning('file not found.')
+logging.war('file not found.')
 logging.critical('mem oom')
 
+
+提示：
+1. 登录时需要记录日志， 登录成功 可以用debug日志级别，登录失败 可以用warn日志级别；
+2. 增加用户 记录增加用户的及增加用户的参数 日志可以用debug
+3. 删除用户 记录删除用户的及删除用户的参数 日志可以用debug
+4. 修改用户 记录修改用户的及修改用户的参数 日志可以用debug
+如果增加用户、删除用户、修改用户错误，可以用warn日志级别；
+
+查找及分页可以不用记录日志；
 ```
 
 ## 整理上课的知识点， 课下做好笔记；
