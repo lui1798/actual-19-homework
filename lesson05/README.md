@@ -26,7 +26,7 @@ logging.critical('mem oom')
 - json | pickle
 - os
 - sys
-- __name__ 和 __file__
+- (__name__) 和 (__file__)
 - 集合
 - 函数
 - 装饰器
