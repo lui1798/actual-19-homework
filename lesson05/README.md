@@ -20,4 +20,10 @@ logging.critical('mem oom')
 
 ```
 
-- 整理上课的知识点， 课下做好笔记；
+## 整理上课的知识点， 课下做好笔记；
+
+- json | pickle
+- os
+- sys
+- 函数
+- 装饰器
