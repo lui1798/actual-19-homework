@@ -1,7 +1,7 @@
 ## lesson05
 > 我已经把上课的笔记上传到zhengyscn目录下了，方便大家复习；
 
-- 熟悉logging模块， 能用lesson4作业中用到此模块；
+- 熟悉logging模块， 能在lesson4作业中用到此模块；
 
 ```bash
 import logging
