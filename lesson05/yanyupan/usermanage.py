@@ -85,10 +85,15 @@ logger.addHandler(fh)
 # 读文件函数
 def read_file(fname):
     data = ''
+    # try:
+    #     fhandler = open(fname, 'r')
+    #     data = fhandler.read()
+    #     fhandler.close()
+    # except Exception as e:
+    #     pass
     try:
-        fhandler = open(fname, 'r')
-        data = fhandler.read()
-        fhandler.close()
+        with open(fname, 'r') as f:
+            data = f.read()
     except Exception as e:
         pass
     return data
@@ -96,13 +101,17 @@ def read_file(fname):
 
 # 写文件函数，参数：fname文件参数/data写入的数据/ser是否进行系列化
 def write_file(fname, data, ser):
-    fhandler = open(fname, 'w')
-    if ser == 'json':
-        fhandler.write(json.dumps(data))
-    else:
-        fhandler.write(data)
-    fhandler.close()
-
+    # fhandler = open(fname, 'w')
+    # if ser == 'json':
+    #     fhandler.write(json.dumps(data))
+    # else:
+    #     fhandler.write(data)
+    # fhandler.close()
+    with open(fname, 'w') as f:
+        if ser == "json":
+            f.write(json.dumps(data))
+        else:
+            f.write(data)
 
 # 显示提示信息函数，参数：msg要显示的信息/status成功或失败的状态
 # def print_msg(msg, status):
@@ -206,7 +215,6 @@ def get_users():
     try:
         users = json.loads(data)
     except Exception as e:
-        warn_msg(e)
         pass
     return users
 

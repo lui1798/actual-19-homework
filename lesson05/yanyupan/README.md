@@ -39,6 +39,7 @@
  - 选择操作函数：operate(users)
  - 主函数：main()
 ### 自定义函数与前一版差异：
+ - 函数read_file(fname)与write_file(fname, data, ser)的文件打开方式由open改成with open方式
  - 拆分提示信息函数print_msg(msg, status)为succ_msg(msg)与warn_msg(msg) [注：为了与日志记录函数结合]
  - 新增操作日志记录函数log_msg(level)
 
