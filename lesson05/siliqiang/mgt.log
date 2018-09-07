@@ -1,0 +1,16 @@
+
+[2018-09-07 23:46:30,871] - [MainThread] - [lesson-5-denglu.py-line:78] [INFO] administrator login success.
+[2018-09-07 23:46:51,728] - [MainThread] - [lesson-5-denglu.py-line:140] [DEBUG] Add user! newuser info testuser11,22,131,tianjin
+[2018-09-07 23:46:51,728] - [MainThread] - [lesson-5-denglu.py-line:179] [DEBUG] Add user! Add success, new user info testuser11,22,131,tianjin
+[2018-09-07 23:47:08,534] - [MainThread] - [lesson-5-denglu.py-line:140] [DEBUG] Add user! newuser info xx,xx,xx,xx
+[2018-09-07 23:47:08,535] - [MainThread] - [lesson-5-denglu.py-line:154] [WARNING] Add user! newuser age is wrong
+[2018-09-07 23:47:18,011] - [MainThread] - [lesson-5-denglu.py-line:162] [WARNING] Add user! newuser tel is wrong
+[2018-09-07 23:47:32,265] - [MainThread] - [lesson-5-denglu.py-line:179] [DEBUG] Add user! Add success, new user info testuser22,22,131,shanghai
+[2018-09-07 23:47:54,262] - [MainThread] - [lesson-5-denglu.py-line:197] [DEBUG] Del user! user info {'id': 3, 'name': 'testuser3', 'age': 21, 'tel': '131111', 'address': 'beijing'}.
+[2018-09-07 23:47:55,755] - [MainThread] - [lesson-5-denglu.py-line:203] [DEBUG] Del user! Delete user success.
+[2018-09-07 23:48:00,554] - [MainThread] - [lesson-5-denglu.py-line:215] [WARNING] Del user! Input wrong ID
+[2018-09-07 23:48:14,875] - [MainThread] - [lesson-5-denglu.py-line:238] [DEBUG] Update user! Update user info {'id': 7, 'name': 'testuser7', 'age': 22, 'tel': '1212', 'address': 'henan'}.
+[2018-09-07 23:48:21,889] - [MainThread] - [lesson-5-denglu.py-line:264] [DEBUG] Update user! Update user success. user info {'id': 7, 'name': 'testuser777', 'age': 22, 'tel': '1212', 'address': 'henan'}
+[2018-09-07 23:48:28,377] - [MainThread] - [lesson-5-denglu.py-line:242] [WARNING] Update user! not found user ID
+[2018-09-08 00:02:55,891] - [MainThread] - [lesson-5-denglu.py-line:64] [WARNING] User has been locked.
+[2018-09-08 00:03:10,093] - [MainThread] - [lesson-5-denglu.py-line:94] [WARNING] User has been locked. Try to login again.
