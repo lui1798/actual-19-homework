@@ -1,4 +1,9 @@
-# admin_sys_v3
+# admin_sys_v4
+
+## 新增：logging日志记录
+### 登录成功/失败
+![Image text]readme_add_pic/1.png
+    
 
 ## 登录账号密码
 账号：admin<br/>密码：123456
