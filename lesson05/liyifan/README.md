@@ -11,7 +11,6 @@
  ![Image text](https://github.com/1LiMingming1/readme_add_pic/blob/master/2.png)   
 
 
-
 ### 登录账号密码
 账号：admin<br/>密码：123456
 
