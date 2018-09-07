@@ -1,0 +1,126 @@
+
+##测试结果如下：
+
+①、log日志见admin_op文档（靠下部分）
+
+②、正确登录用户，执行增删改查正常。
+
+[qianlong@localhost wangqianlong]$ python user_admin5.py 
+请输入用户名:admin
+请输入密码:51reboot
+
+-----------------------------------
+登录成功！本用户管理系统可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 查询用户(list)
+    5. 搜索用户(query)
+    6. 退出登录（exit）
+-----------------------------------
+
+请输入操作方式(add/delete/update/list/query/exit) :add
+请输入用户信息(格式name age tel address):wang 22 131 henan
+添加成功，可以通过list查看！
+请输入操作方式(add/delete/update/list/query/exit) :list
+第 1 页 ， 共 2 页 
+    userid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         2|     zhang|   29|            135|             tianjin
+         3|     wang1|   28|            134|             beijing
+         4|     wang2|   29|            133|             beijing
+         5|     wang3|   30|            135|            shanghai
+         6|     wang4|   23|            137|            shanghai
+请输入up或down进行翻页,也可以选择exit退出翻页：down
+第 2 页 ， 共 2 页 
+    userid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         7|    zhang2|   27|            158|               hebei
+         1|      wang|   28|            132|             beijing
+         8|      wang|   22|            131|               henan
+请输入up或down进行翻页,也可以选择exit退出翻页：exit
+请输入操作方式(add/delete/update/list/query/exit) :delete
+请输入用户ID:2
+成功删除用户!
+请输入操作方式(add/delete/update/list/query/exit) :list
+第 1 页 ， 共 2 页 
+    userid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         3|     wang1|   28|            134|             beijing
+         4|     wang2|   29|            133|             beijing
+         5|     wang3|   30|            135|            shanghai
+         6|     wang4|   23|            137|            shanghai
+         7|    zhang2|   27|            158|               hebei
+请输入up或down进行翻页,也可以选择exit退出翻页：exit
+请输入操作方式(add/delete/update/list/query/exit) :delete
+请输入用户ID:10
+请输入操作方式(add/delete/update/list/query/exit) :update
+请输入要更新的用户ID：8
+要更新的内容：{'userid': 8, 'name': 'wang', 'age': '22', 'tel': '131', 'address': 'henan'}
+请输入要更新的内容（格式name age tel address)，以空格分割：wang10 28.5 134 beijing
+年龄或电话输入有问题！
+请输入操作方式(add/delete/update/list/query/exit) :^[[A^[[A^[[B
+无效输入!
+请输入操作方式(add/delete/update/list/query/exit) :update
+请输入要更新的用户ID：8
+要更新的内容：{'userid': 8, 'name': 'wang', 'age': '22', 'tel': '131', 'address': 'henan'}
+请输入要更新的内容（格式name age tel address)，以空格分割：wang10 28 134 beijing
+成功更新用户信息!
+请输入操作方式(add/delete/update/list/query/exit) :list
+第 1 页 ， 共 2 页 
+    userid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         3|     wang1|   28|            134|             beijing
+         4|     wang2|   29|            133|             beijing
+         5|     wang3|   30|            135|            shanghai
+         6|     wang4|   23|            137|            shanghai
+         7|    zhang2|   27|            158|               hebei
+请输入up或down进行翻页,也可以选择exit退出翻页：down
+第 2 页 ， 共 2 页 
+    userid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|      wang|   28|            132|             beijing
+         8|    wang10|   28|            134|             beijing
+请输入up或down进行翻页,也可以选择exit退出翻页：exit
+请输入操作方式(add/delete/update/list/query/exit) :add
+请输入用户信息(格式name age tel address):wang1 28 134 beijing
+添加重复用户不成功！.
+请输入操作方式(add/delete/update/list/query/exit) :exit
+程序退出，自动保存用户！
+
+
+③、错误登录用户，锁定用户正常，时间到后可以正常解锁。
+
+
+请输入用户名:admin
+请输入密码:
+登录失败，请重新输入!
+请输入用户名:admin
+请输入密码:
+登录失败，请重新输入!
+请输入用户名:admin
+请输入密码:
+失败3次，用户锁定！
+请输入用户名:18
+请输入密码:
+此账户不存在，请检查输入或选择退出！
+输入yes选择退出：
+请输入用户名:admin
+请输入密码:
+用户已锁定,请稍后再试！
+请输入用户名:admin
+请输入密码:51reboot
+
+-----------------------------------
+登录成功！本用户管理系统可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 查询用户(list)
+    5. 搜索用户(query)
+    6. 退出登录（exit）
+-----------------------------------
+
+请输入操作方式(add/delete/update/list/query/exit) :exit
+程序退出，自动保存用户！
+请输入用户名:
