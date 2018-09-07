@@ -3,10 +3,12 @@
 
 
 ### 新增：logging日志记录
-* 登录成功/失败
+* 登录成功记录/失败记录
 
 ![Image text](https://github.com/1LiMingming1/readme_add_pic/blob/master/1.png)
-    
+
+* 操作记录/信息修改记录
+ ![Image text](https://github.com/1LiMingming1/readme_add_pic/blob/master/2.png)   
 
 
 
