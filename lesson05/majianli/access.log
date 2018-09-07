@@ -1,0 +1,13 @@
+[2018-09-06 23:51:20,484] - [MainThread] - [homework5.py-line:202] [DEBUG] User root ,Password xxxx access successful
+[2018-09-06 23:52:06,655] - [MainThread] - [homework5.py-line:202] [DEBUG] User root ,Password xxxx access successful
+[2018-09-06 23:53:01,335] - [MainThread] - [homework5.py-line:99] [DEBUG] 用户 太阳 添加成功, 用户信息为 太阳 69 156xxx tianshang
+[2018-09-06 23:59:42,878] - [MainThread] - [homework5.py-line:234] [WARNING] 用户密码错误
+[2018-09-06 23:59:47,296] - [MainThread] - [homework5.py-line:202] [DEBUG] User root ,Password xxxx access successful
+[2018-09-07 00:00:29,083] - [MainThread] - [homework5.py-line:99] [DEBUG] 用户 星星 添加成功, 用户信息为 星星 44 123xxx taikong
+[2018-09-07 00:01:14,467] - [MainThread] - [homework5.py-line:136] [DEBUG] 用户"sdsd" 已成功删除.
+[2018-09-07 00:02:58,432] - [MainThread] - [homework5.py-line:167] [DEBUG] UPDATE: 用户"星星" 已成功更新. 跟新了age.
+[2018-09-07 00:03:49,630] - [MainThread] - [homework5.py-line:167] [DEBUG] UPDATE: 用户"星星" 已成功更新. 跟新了age.
+[2018-09-07 00:04:12,043] - [MainThread] - [homework5.py-line:136] [DEBUG] 用户"sdsd" 已成功删除.
+[2018-09-07 00:07:35,399] - [MainThread] - [homework5.py-line:139] [WARNING] 输入用户太阳 ,无此用户信息.
+[2018-09-07 00:08:40,089] - [MainThread] - [homework5.py-line:99] [DEBUG] 用户 太阳 添加成功, 用户信息为 太阳 23 123xxx beijing
+[2018-09-07 00:11:19,472] - [MainThread] - [homework5.py-line:136] [DEBUG] 用户"太阳" 已成功删除.
