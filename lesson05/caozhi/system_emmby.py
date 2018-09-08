@@ -16,13 +16,6 @@ import math
 import logging
 import getpass
 
-logging.basicConfig(level=logging.DEBUG,
-                format='[%(asctime)s] - [%(threadName)5s] - [%(filename)s-line:%(lineno)d] [%(levelname)s] %(message)s',
-                datefmt='%Y-%m-%d %I:%M:%S %p',
-                filename='error.log',
-                filemode='a'
-                )
-
 try:
     with open('file', 'rb') as f:
         usermessage = pickle.load(f)
@@ -49,6 +42,13 @@ has_error = 0
 
 # 定义日志等级和输出信息
 def log_log(level='debug',action='message'):
+    logging.basicConfig(level=logging.DEBUG,
+                format='[%(asctime)s] - [%(threadName)5s] - [%(filename)s-line:%(lineno)d] [%(levelname)s] %(message)s',
+                datefmt='%Y-%m-%d %I:%M:%S %p',
+                filename='error.log',
+                filemode='a'
+                )
+
     if level == 'debug':
         logging.debug(action)
     elif level == 'info':
@@ -90,11 +90,11 @@ def login_yt():
             with open('file', 'wb') as a:
                 pickle.dump(usermessage, a)
             print('用户信息错误，登陆失败，还有 %d 次机会' % count)
-            log_log('warn','用户信息错误，登陆失败')
+            log_log('warn', '用户信息错误，登陆失败')
     
     else:
         print('\033[31m请在 60秒后(为调试方便，使用60s，可自定义调整)重试， 或者联系我...\033[0m')
-        log_log('warn','用户信息错误，登陆失败，已锁定')
+        log_log('warn', '用户信息错误，登陆失败，已锁定')
     return(is_login)
 
 def main():
@@ -138,7 +138,7 @@ def main():
                     has_error = 1
                 if has_error:
                     print('Illegal,输入非法↓')
-                    log_log('warn','用户信息错误')
+                    log_log('warn', '用户信息错误')
                     continue
                 print('\033[34m这是新增的信息，请核对:\033[0m')
                 insert_dict = {'id': insert_id, 'name': insert_name, 'age': insert_age, 'tel': insert_tel,'address': insert_add}
@@ -148,8 +148,8 @@ def main():
                     userinfo.append(insert_dict)
                     # print(userinfo[-1])
                     print('用户信息插入成功')
-                    log_log('debug','增加用户信息')
-                    log_log('debug',insert_dict)
+                    log_log('debug', '增加用户信息')
+                    log_log('debug', insert_dict)
                 else:
                     print('未插入这个用户信息')
                 # print(userinfo)
@@ -162,6 +162,7 @@ def main():
                 for user in userinfo:
                     if select_sth == '' or user.get('name').find(select_sth) != -1 or user.get('tel').find(select_sth) != -1 or user.get('address').find(select_sth) != -1:
                         user_select.append(user)  # 都写到内存里 会占用大量内存 待优化
+                        print(user_select,'=====================')
                 if len(user_select) == 0:
                     print('无数据')
                 else:
@@ -180,7 +181,7 @@ def main():
                             page_num = int(page)
                             print(TABLE_TPL.format(**TABLE_TITLE))
                             print('-' * TABLE_SPLIT_LINE)
-                            for user in userinfo[(page_num - 1) * page_list : page_num * page_list]:
+                            for user in user_select[(page_num - 1) * page_list : page_num * page_list]:
                                 print(TABLE_TPL.format(**user))
                             # for m in userinfo[page_list * (page_num - 1):page_list * page_num]:
                             #    print(m)
@@ -232,13 +233,13 @@ def main():
                         if change_flag == 'Y' or change_flag == 'y':
                             userinfo[j] = {'id': update_id, 'name': update_name, 'age': int(update_age), 'tel': update_tel,'address': update_add}
                             print('用户信息更新成功')
-                            log_log('debug','更新用户信息')
-                            log_log('debug',userinfo[j])
+                            log_log('debug', '更新用户信息')
+                            log_log('debug', userinfo[j])
                         else:
                             print('未进行更新')
                     else:
                         print('请重新更新用户数据')
-                        log_log('warn','修改用户信息错误')
+                        log_log('warn', '修改用户信息错误')
             # 删除某个用户信息
             elif action == '4':
                 has_error = 0
@@ -246,7 +247,7 @@ def main():
                 if not delete.isdigit() or len(delete) < 1:
                     has_error = 1
                     print('输入id非法')
-                    log_log('warn','删除的输入id非法')
+                    log_log('warn', '删除的输入id非法')
                     continue
                 delete_id = int(delete)
                 n = 0
@@ -256,8 +257,8 @@ def main():
                         print(userinfo[n])
                         delete_flag = input('以下是删除的信息，请核对 是否删除？(Y|y) 否则不删除 ')
                         if delete_flag == 'Y' or delete_flag == 'y':
-                            log_log('debug','删除用户信息')
-                            log_log('debug',userinfo[n])
+                            log_log('debug', '删除用户信息')
+                            log_log('debug', userinfo[n])
                             userinfo.pop(n)
                             delete_flag = 1
                             print('用户信息删除成功')
@@ -279,7 +280,7 @@ def main():
             else:
                 print()
                 print('你输入操作的动作非法')
-                log_log('warn','输入操作非法')
+                log_log('warn', '输入操作非法')
 
 if __name__ == '__main__':
     is_login = login_yt()
