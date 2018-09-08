@@ -1,0 +1,9 @@
+[2018-09-05 14:24:25,001] - [MainThread] - [userManageV4.py-line:61] [WARNING] 用户admin登录失败
+[2018-09-05 14:24:29,127] - [MainThread] - [userManageV4.py-line:61] [WARNING] 用户admnin登录失败
+[2018-09-05 14:24:34,970] - [MainThread] - [userManageV4.py-line:56] [DEBUG] 用户admin登录成功
+[2018-09-05 14:24:45,481] - [MainThread] - [userManageV4.py-line:87] [WARNING] 用户信息输入有误
+[2018-09-05 14:24:56,553] - [MainThread] - [userManageV4.py-line:109] [DEBUG] 用户zhou添加成功,age:15,tel:15012345678,address:anhui
+[2018-09-05 14:24:59,785] - [MainThread] - [userManageV4.py-line:122] [WARNING] 删除用户ID不存在
+[2018-09-05 14:25:05,305] - [MainThread] - [userManageV4.py-line:161] [WARNING] 修改用户ID不存在
+[2018-09-05 14:25:12,954] - [MainThread] - [userManageV4.py-line:136] [DEBUG] name修改为bob
+[2018-09-05 14:25:28,007] - [MainThread] - [userManageV4.py-line:119] [DEBUG] 删除用户bob成功
