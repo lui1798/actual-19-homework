@@ -13,6 +13,7 @@ from time import time
 import pickle
 import math
 import logging
+import getpass
 
 logging.basicConfig(level=logging.DEBUG,
                 format='[%(asctime)s] - [%(threadName)5s] - [%(filename)s-line:%(lineno)d] [%(levelname)s] %(message)s',
@@ -76,7 +77,7 @@ def login_yt():
     is_login = 0
     for i in range(count):
         user_name = input('\033[33m 请输入你的姓名: \033[0m').strip()
-        password = input('\033[33m 请输入你的密码: \033[0m').strip()
+        password = getpass.getpass('\033[33m 请输入你的密码: \033[0m').strip()
     
         if user_name == usermessage['name'] and password == usermessage['passwd']:
             print('\033[32m login success ---> 登陆成功 \033[0m')
