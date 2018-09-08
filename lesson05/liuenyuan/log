@@ -1,0 +1,7 @@
+[2018-09-08 13:23:43,787] - [MainThread] - [lol.py-line:421] [DEBUG] [32mlol系统开始启动[0m
+[2018-09-08 13:24:01,446] - [MainThread] - [lol.py-line:371] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:24:39,563] - [MainThread] - [lol.py-line:92] [DEBUG] [32m添加用户1234成功[0m
+[2018-09-08 13:24:55,199] - [MainThread] - [lol.py-line:371] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:25:04,671] - [MainThread] - [lol.py-line:136] [WARNING] [31m1234用户已经被删除[0m
+[2018-09-08 13:25:27,279] - [MainThread] - [lol.py-line:223] [DEBUG] [32mzhangsan用户信息修改成功[0m
+[2018-09-08 13:25:41,343] - [MainThread] - [lol.py-line:437] [DEBUG] [34m程序退出[0m
