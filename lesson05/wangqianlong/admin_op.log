@@ -1,0 +1,94 @@
+[2018-09-06 21:03:46,664] - [MainThread] - [user_admin4.py-line:74] [WARNING] [Errno 2] No such file or directory: 'user.json'
+[2018-09-06 21:04:18,308] - [MainThread] - [user_admin4.py-line:90] [WARNING] 添加用户时，输入年龄或电话不对！.
+[2018-09-06 22:02:12,988] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:02:12,988] - [MainThread] - [user_admin4.py-line:287] [DEBUG] 登录成功！
+[2018-09-06 22:02:12,989] - [MainThread] - [user_admin4.py-line:75] [WARNING] [Errno 2] No such file or directory: 'user.json'
+[2018-09-06 22:05:32,368] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:05:32,369] - [MainThread] - [user_admin4.py-line:288] [DEBUG] 登录成功！
+[2018-09-06 22:05:32,370] - [MainThread] - [user_admin4.py-line:75] [WARNING] [Errno 2] No such file or directory: 'user.json'
+[2018-09-06 22:07:12,352] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:07:12,353] - [MainThread] - [user_admin4.py-line:288] [DEBUG] 登录成功！
+[2018-09-06 22:07:12,355] - [MainThread] - [user_admin4.py-line:75] [WARNING] [Errno 2] No such file or directory: 'user.json'
+[2018-09-06 22:07:22,708] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户！.
+[2018-09-06 22:16:29,657] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:16:29,657] - [MainThread] - [user_admin4.py-line:289] [DEBUG] 登录成功！
+[2018-09-06 22:16:29,658] - [MainThread] - [user_admin4.py-line:75] [WARNING] [Errno 2] No such file or directory: 'user.json'
+[2018-09-06 22:16:55,059] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 1, 'name': 'wang', 'age': '25', 'tel': '131', 'address': 'beijing'}
+[2018-09-06 22:18:00,298] - [MainThread] - [user_admin4.py-line:177] [DEBUG] 成功更新用户信息: {'userid': 1, 'name': 'wang', 'age': 27, 'tel': '132', 'address': 'shanghai'}
+[2018-09-06 22:19:14,971] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 2, 'name': 'zhang', 'age': '28', 'tel': '134', 'address': 'beijing'}
+[2018-09-06 22:19:26,904] - [MainThread] - [user_admin4.py-line:130] [WARNING] 删除用户时，输入用户ID为空！.
+[2018-09-06 22:19:26,905] - [MainThread] - [user_admin4.py-line:127] [DEBUG] 成功删除了一个用户:{'userid': 2, 'name': 'zhang', 'age': '28', 'tel': '134', 'address': 'beijing'}
+[2018-09-06 22:23:39,454] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:23:39,455] - [MainThread] - [user_admin4.py-line:302] [WARNING] 登录失败！
+[2018-09-06 22:23:47,633] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:23:47,634] - [MainThread] - [user_admin4.py-line:302] [WARNING] 登录失败！
+[2018-09-06 22:23:49,984] - [MainThread] - [user_admin4.py-line:54] [WARNING] [Errno 2] No such file or directory: 'lock'
+[2018-09-06 22:23:49,985] - [MainThread] - [user_admin4.py-line:297] [WARNING] 用户锁定！
+[2018-09-06 22:38:33,315] - [MainThread] - [user_admin4.py-line:306] [WARNING] 用户不存在！
+[2018-09-06 23:17:42,994] - [MainThread] - [user_admin4.py-line:306] [WARNING] 用户不存在！
+[2018-09-06 23:18:03,991] - [MainThread] - [user_admin4.py-line:289] [DEBUG] 登录成功！
+[2018-09-06 23:18:50,235] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 2, 'name': 'zhang', 'age': '29', 'tel': '135', 'address': 'tianjin'}
+[2018-09-06 23:19:38,129] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 3, 'name': 'wang1', 'age': '28', 'tel': '134', 'address': 'beijing'}
+[2018-09-06 23:19:56,160] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 4, 'name': 'wang2', 'age': '29', 'tel': '133', 'address': 'beijing'}
+[2018-09-06 23:20:05,469] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 5, 'name': 'wang3', 'age': '30', 'tel': '135', 'address': 'shanghai'}
+[2018-09-06 23:20:27,058] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 6, 'name': 'wang4', 'age': '23', 'tel': '137', 'address': 'shanghai'}
+[2018-09-06 23:21:06,599] - [MainThread] - [user_admin4.py-line:111] [DEBUG] 成功添加了一个用户: {'userid': 7, 'name': 'zhang2', 'age': '27', 'tel': '158', 'address': 'hebei'}
+[2018-09-06 23:23:35,413] - [MainThread] - [user_admin4.py-line:175] [DEBUG] 成功更新用户信息: {'userid': 1, 'name': 'wang', 'age': 28, 'tel': '132', 'address': 'beijing'}
+[2018-09-06 23:23:35,414] - [MainThread] - [user_admin4.py-line:175] [DEBUG] 成功更新用户信息: {'userid': 1, 'name': 'wang', 'age': 28, 'tel': '132', 'address': 'beijing'}
+[2018-09-06 23:25:29,863] - [MainThread] - [user_admin4.py-line:302] [WARNING] 登录失败！
+[2018-09-06 23:25:32,453] - [MainThread] - [user_admin4.py-line:302] [WARNING] 登录失败！
+[2018-09-06 23:25:34,590] - [MainThread] - [user_admin4.py-line:297] [WARNING] 用户锁定！
+[2018-09-06 23:30:26,343] - [MainThread] - [user_admin4.py-line:302] [WARNING] 登录失败！
+[2018-09-06 23:38:12,361] - [MainThread] - [user_admin4.py-line:302] [WARNING] 登录失败！
+[2018-09-06 23:38:13,610] - [MainThread] - [user_admin4.py-line:307] [WARNING] 用户不存在！
+[2018-09-06 23:38:22,547] - [MainThread] - [user_admin4.py-line:290] [DEBUG] 登录成功！
+[2018-09-07 20:19:06,342] - [MainThread] - [user_admin4.py-line:297] [INFO] [32m
+-----------------------------------
+登录成功！本用户管理系统可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 查询用户(list)
+    5. 搜索用户(query)
+    6. 退出登录（exit）
+-----------------------------------
+[0m
+[2018-09-07 20:19:06,345] - [MainThread] - [user_admin4.py-line:298] [DEBUG] 登录成功！
+[2018-09-07 20:19:43,447] - [MainThread] - [user_admin4.py-line:93] [WARNING] 添加用户时，输入格式不对！.
+[2018-09-07 20:28:14,110] - [MainThread] - [user_admin4.py-line:301] [INFO] [32m
+-----------------------------------
+登录成功！本用户管理系统可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 查询用户(list)
+    5. 搜索用户(query)
+    6. 退出登录（exit）
+-----------------------------------
+[0m
+[2018-09-07 20:28:14,111] - [MainThread] - [user_admin4.py-line:302] [DEBUG] 登录成功！
+[2018-09-07 20:28:31,177] - [MainThread] - [user_admin4.py-line:119] [INFO] 添加成功，可以通过list查看！
+[2018-09-07 20:28:31,178] - [MainThread] - [user_admin4.py-line:120] [DEBUG] 成功添加了一个用户: {'userid': 8, 'name': 'wang', 'age': '22', 'tel': '131', 'address': 'henan'}
+[2018-09-07 20:29:15,995] - [MainThread] - [user_admin4.py-line:137] [INFO] 成功删除用户!
+[2018-09-07 20:29:15,995] - [MainThread] - [user_admin4.py-line:138] [DEBUG] 成功删除了一个用户:{'userid': 2, 'name': 'zhang', 'age': '29', 'tel': '135', 'address': 'tianjin'}
+[2018-09-07 20:31:05,899] - [MainThread] - [user_admin4.py-line:170] [WARNING] 年龄或电话输入有问题！
+[2018-09-07 20:31:38,432] - [MainThread] - [user_admin4.py-line:185] [INFO] 成功更新用户信息!
+[2018-09-07 20:31:38,433] - [MainThread] - [user_admin4.py-line:186] [DEBUG] 成功更新用户信息!
+[2018-09-07 20:32:10,011] - [MainThread] - [user_admin4.py-line:123] [WARNING] 添加重复用户不成功！.
+[2018-09-07 20:32:41,443] - [MainThread] - [user_admin4.py-line:315] [WARNING] 登录失败，请重新输入!
+[2018-09-07 20:32:44,285] - [MainThread] - [user_admin4.py-line:315] [WARNING] 登录失败，请重新输入!
+[2018-09-07 20:32:47,349] - [MainThread] - [user_admin4.py-line:310] [WARNING] 失败3次，用户锁定！
+[2018-09-07 20:32:56,294] - [MainThread] - [user_admin4.py-line:320] [WARNING] 此账户不存在，请检查输入或选择退出！
+[2018-09-07 20:33:06,227] - [MainThread] - [user_admin4.py-line:295] [WARNING] 用户已锁定,请稍后再试！
+[2018-09-07 20:34:08,058] - [MainThread] - [user_admin4.py-line:301] [INFO] [32m
+-----------------------------------
+登录成功！本用户管理系统可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 查询用户(list)
+    5. 搜索用户(query)
+    6. 退出登录（exit）
+-----------------------------------
+[0m
+[2018-09-07 20:34:08,058] - [MainThread] - [user_admin4.py-line:302] [DEBUG] 登录成功！

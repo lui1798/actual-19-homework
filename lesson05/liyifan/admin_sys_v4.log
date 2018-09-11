@@ -1,0 +1,20 @@
+[2018-09-08 04:35:41,618] - [MainThread] - [admin_sys_v4.py-line:312] [DEBUG] -----------登录成功-----------
+[2018-09-08 04:35:43,589] - [MainThread] - [admin_sys_v4.py-line:273] [DEBUG] 进入add操作
+[2018-09-08 04:35:51,077] - [MainThread] - [admin_sys_v4.py-line:121] [DEBUG] add操作：{'id': 1, 'name': 'lyf', 'age': '22', 'tel': '22222222222', 'address': 'beijing'} 
+[2018-09-08 04:35:53,358] - [MainThread] - [admin_sys_v4.py-line:273] [DEBUG] 进入add操作
+[2018-09-08 04:35:58,453] - [MainThread] - [admin_sys_v4.py-line:105] [WARNING] add操作：输入错误
+[2018-09-08 04:36:03,899] - [MainThread] - [admin_sys_v4.py-line:279] [DEBUG] 进入modify操作
+[2018-09-08 04:36:12,658] - [MainThread] - [admin_sys_v4.py-line:189] [DEBUG] modify操作：{'id': 1, 'name': 'wx', 'age': '22', 'tel': '22222222222', 'address': 'beijing'} 
+[2018-09-08 04:36:15,519] - [MainThread] - [admin_sys_v4.py-line:282] [DEBUG] 进入list操作
+[2018-09-08 04:36:17,143] - [MainThread] - [admin_sys_v4.py-line:214] [DEBUG] list操作：查询成功 
+[2018-09-08 04:36:19,614] - [MainThread] - [admin_sys_v4.py-line:292] [DEBUG] 进入list_all操作
+[2018-09-08 04:36:21,977] - [MainThread] - [admin_sys_v4.py-line:285] [DEBUG] 进入save操作
+[2018-09-08 04:36:21,987] - [MainThread] - [admin_sys_v4.py-line:248] [DEBUG] 保存文件成功
+[2018-09-08 04:36:38,143] - [MainThread] - [admin_sys_v4.py-line:276] [DEBUG] 进入delete操作
+[2018-09-08 04:36:39,673] - [MainThread] - [admin_sys_v4.py-line:147] [WARNING] delete操作：输入错误
+[2018-09-08 04:36:41,567] - [MainThread] - [admin_sys_v4.py-line:276] [DEBUG] 进入delete操作
+[2018-09-08 04:36:43,178] - [MainThread] - [admin_sys_v4.py-line:144] [DEBUG] delete操作：{'id': 1, 'name': 'wx', 'age': '22', 'tel': '22222222222', 'address': 'beijing'}
+[2018-09-08 04:36:45,989] - [MainThread] - [admin_sys_v4.py-line:288] [DEBUG] 进入exit操作
+[2018-09-08 04:36:50,104] - [MainThread] - [admin_sys_v4.py-line:259] [DEBUG] 保存文件成功
+[2018-09-08 04:37:01,686] - [MainThread] - [admin_sys_v4.py-line:319] [WARNING] -----------登录失败-----------
+[2018-09-08 04:37:07,772] - [MainThread] - [admin_sys_v4.py-line:322] [WARNING] -----------登录失败-----------

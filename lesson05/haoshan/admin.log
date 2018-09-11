@@ -1,0 +1,11 @@
+[2018-09-08 11:52:55,801] - [MainThread] - [homework4.py-line:175] [DEBUG] login successful!
+[2018-09-08 11:53:20,614] - [MainThread] - [homework4.py-line:106] [DEBUG] your information added successfully!
+[2018-09-08 11:56:24,426] - [MainThread] - [homework4.py-line:150] [DEBUG] update successful!
+[2018-09-08 11:56:42,513] - [MainThread] - [homework4.py-line:202] [WARNING] invalid input��
+[2018-09-08 11:56:52,816] - [MainThread] - [homework4.py-line:125] [DEBUG] your information deleted successfully!
+[2018-09-08 20:25:24,428] - [MainThread] - [homework4.py-line:175] [DEBUG] login successful!
+[2018-09-08 20:25:25,789] - [MainThread] - [homework4.py-line:202] [WARNING] invalid input！
+[2018-09-08 20:25:25,971] - [MainThread] - [homework4.py-line:202] [WARNING] invalid input！
+[2018-09-08 20:26:11,330] - [MainThread] - [homework4.py-line:175] [DEBUG] login successful!
+[2018-09-08 20:26:22,594] - [MainThread] - [homework4.py-line:202] [WARNING] invalid input！
+[2018-09-08 20:26:22,769] - [MainThread] - [homework4.py-line:202] [WARNING] invalid input！
