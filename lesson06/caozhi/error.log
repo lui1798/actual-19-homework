@@ -1,0 +1,182 @@
+[2018-09-14 10:20:50 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:20:50 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:20:50 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:20:51 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 10:20:52 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-14 10:20:52 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:20:52 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:20:52 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:20:53 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 10:20:54 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-14 10:20:54 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:20:54 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:20:54 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:20:54 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-14 10:25:28 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:25:28 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:25:28 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:25:29 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 10:25:30 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-14 10:25:30 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:25:30 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:25:30 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:25:31 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 10:25:32 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-14 10:25:32 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:25:32 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:25:32 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:25:32 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-14 10:25:38 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:25:38 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:25:38 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:25:38 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 10:25:39 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-14 10:25:39 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:25:39 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:25:39 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:25:39 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 10:25:41 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-14 10:25:41 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-14 10:25:41 PM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-14 10:25:41 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-14 10:25:41 PM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:28:23 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:28:23 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:28:23 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:28:24 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:28:25 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:28:25 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:28:25 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:28:25 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:28:26 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:28:32 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:28:32 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:28:32 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:28:32 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:28:32 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:28:44 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:28:44 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:28:44 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:28:44 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:28:45 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:28:45 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:28:45 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:28:45 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:28:46 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:28:47 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:28:47 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:28:47 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:28:47 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:28:47 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:32:37 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:32:37 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:32:37 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:32:38 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:32:39 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:32:39 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:32:39 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:32:39 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:32:40 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:32:41 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:32:41 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:32:41 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:32:41 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:32:41 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:32:48 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:32:48 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:32:48 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:32:49 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:32:50 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:32:50 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:32:50 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:32:50 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:32:51 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:32:52 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:32:52 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:32:52 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:32:52 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:32:52 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:34:51 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:34:51 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:34:51 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:34:52 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:34:53 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:34:53 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:34:53 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:34:53 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:34:53 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:34:54 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:34:54 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:34:54 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:34:54 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:34:54 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:36:59 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:36:59 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:36:59 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:37:00 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:37:01 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:37:01 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:37:01 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:37:01 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:37:02 AM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 11:37:03 AM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 11:37:03 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 11:37:03 AM] - [MainThread] - [system_emmby.py-line:66] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 11:37:03 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 11:37:03 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:37:04 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 11:37:33 AM] - [MainThread] - [system_emmby.py-line:68] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 09:10:43 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 09:10:43 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:10:43 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 09:10:44 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 09:10:49 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 09:10:49 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 09:10:49 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:10:49 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 09:10:49 PM] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 09:10:50 PM] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user?key1=value1&key2=value2 HTTP/1.1" 401 83
+[2018-09-15 09:10:50 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] {"message": "Bad credentials", "documentation_url": "https://developer.github.com/v3"}
+[2018-09-15 09:10:50 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:10:50 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 09:10:50 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 09:10:52 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败，已锁定
+[2018-09-15 09:15:34 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:15:34 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:15:34 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 09:18:23 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:18:23 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:18:23 PM] - [MainThread] - [system_emmby.py-line:53] [WARNING] 用户信息错误，登陆失败
+[2018-09-15 09:19:18 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:19:18 PM] - [MainThread] - [system_emmby.py-line:51] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:19:18 PM] - [MainThread] - [system_emmby.py-line:49] [DEBUG] 登陆成功
+[2018-09-15 09:20:16 PM] - [MainThread] - [system_emmby.py-line:52] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:20:16 PM] - [MainThread] - [system_emmby.py-line:52] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:20:16 PM] - [MainThread] - [system_emmby.py-line:50] [DEBUG] 登陆成功
+[2018-09-15 09:23:59 PM] - [MainThread] - [system_emmby.py-line:52] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:23:59 PM] - [MainThread] - [system_emmby.py-line:52] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:23:59 PM] - [MainThread] - [system_emmby.py-line:50] [DEBUG] 登陆成功
+[2018-09-15 09:25:21 PM] - [MainThread] - [system_emmby.py-line:53] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:25:21 PM] - [MainThread] - [system_emmby.py-line:53] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:25:21 PM] - [MainThread] - [system_emmby.py-line:51] [DEBUG] 登陆成功
+[2018-09-15 09:26:16 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:26:16 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:26:16 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 登陆成功
+[2018-09-15 09:26:16 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 连接数据库了
+[2018-09-15 09:27:19 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 增加用户信息
+[2018-09-15 09:27:19 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] {'name': 'yutong', 'age': '26', 'tel': '13200000419', 'address': 'hangzhou'}
+[2018-09-15 09:27:34 PM] - [MainThread] - [system_emmby.py-line:51] [WARNING] 增加用户信息错误
+[2018-09-15 09:27:53 PM] - [MainThread] - [system_emmby.py-line:51] [WARNING] 增加用户信息错误
+[2018-09-15 09:28:14 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 手动取消，未插入这个用户信息
+[2018-09-15 09:29:36 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 09:29:36 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 09:29:36 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 登陆成功
+[2018-09-15 09:29:36 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 连接数据库了
+[2018-09-15 10:24:15 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 10:24:15 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 10:24:15 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 登陆成功
+[2018-09-15 10:24:15 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 连接数据库了
+[2018-09-15 10:24:52 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] {"login": "heyemmby", "id": 32669494, "node_id": "MDQ6VXNlcjMyNjY5NDk0", "avatar_url": "https://avatars0.githubusercontent.com/u/32669494?v=4", "gravatar_id": "", "url": "https://api.github.com/users/heyemmby", "html_url": "https://github.com/heyemmby", "followers_url": "https://api.github.com/users/heyemmby/followers", "following_url": "https://api.github.com/users/heyemmby/following{/other_user}", "gists_url": "https://api.github.com/users/heyemmby/gists{/gist_id}", "starred_url": "https://api.github.com/users/heyemmby/starred{/owner}{/repo}", "subscriptions_url": "https://api.github.com/users/heyemmby/subscriptions", "organizations_url": "https://api.github.com/users/heyemmby/orgs", "repos_url": "https://api.github.com/users/heyemmby/repos", "events_url": "https://api.github.com/users/heyemmby/events{/privacy}", "received_events_url": "https://api.github.com/users/heyemmby/received_events", "type": "User", "site_admin": false, "name": "emmby", "company": null, "blog": "", "location": null, "email": null, "hireable": null, "bio": "\u4eba\u4f1a\u98de\u4e48\u3001\uff1f\u5982\u679c\u5168\u4e16\u754c\u7684\u4eba\u90fd\u544a\u8bc9\u6211 \u4e0d\u80fd\u3001\u6211\u662f\u8be5\u653e\u5f03\uff0c\u8fd8\u662f \u9119\u89c6\u4ed6\u4eec\uff0c\uff0c\uff0c", "public_repos": 1, "public_gists": 0, "followers": 0, "following": 0, "created_at": "2017-10-10T09:20:48Z", "updated_at": "2018-09-12T03:17:00Z"}
+[2018-09-15 10:24:52 PM] - [MainThread] - [system_emmby.py-line:49] [INFO] https://api.github.com/user?key1=value1&key2=value2
+[2018-09-15 10:24:52 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 登陆成功
+[2018-09-15 10:24:52 PM] - [MainThread] - [system_emmby.py-line:47] [DEBUG] 连接数据库了
