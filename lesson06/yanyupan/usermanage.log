@@ -1,0 +1,120 @@
+[2018-09-16 00:35:35,038] - [MainThread] - [log.py-line:23] [WARNING] No section: 'LOCK'
+[2018-09-16 00:36:11,552] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:38:57,793] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:39:31,782] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:39:32,792] - [MainThread] - [log.py-line:23] [WARNING] (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+[2018-09-16 00:40:06,657] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:49:06,792] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:50:22,059] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:51:21,277] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:51:50,887] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:52:08,826] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:52:26,736] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:53:53,659] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:54:28,953] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:58:55,646] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:59:46,616] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 00:59:47,625] - [MainThread] - [log.py-line:23] [WARNING] (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+[2018-09-16 01:00:24,398] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:00:25,407] - [MainThread] - [log.py-line:23] [WARNING] (2003, "Can't connect to MySQL server on '127.0.0.1' ([WinError 10061] 由于目标计算机积极拒绝，无法连接。)")
+[2018-09-16 01:01:08,077] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:02:01,551] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:02:04,220] - [MainThread] - [log.py-line:23] [WARNING] 不存在你输入的相关操作！
+[2018-09-16 01:05:29,340] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:05:31,499] - [MainThread] - [log.py-line:23] [WARNING] 不存在你输入的相关操作！
+[2018-09-16 01:06:05,250] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:06:08,953] - [MainThread] - [log.py-line:23] [WARNING] ("'Connection' object has no attribute 'execute'",)
+[2018-09-16 01:08:20,830] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:11:58,804] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:12:06,739] - [MainThread] - [log.py-line:23] [WARNING] 不存在你输入的相关操作！
+[2018-09-16 01:12:24,503] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:14:31,575] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:14:39,285] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:18:19,013] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:18:26,514] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:19:10,252] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:19:21,923] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:20:30,035] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:20:36,036] - [MainThread] - [log.py-line:23] [WARNING] 8888888
+[2018-09-16 01:20:36,036] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:21:53,447] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:21:59,943] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:22:48,211] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:22:54,616] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:23:51,555] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:23:59,910] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:27:33,833] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:27:42,428] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:28:19,027] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:28:43,087] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:31:06,542] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:31:15,677] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:31:44,672] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:31:51,812] - [MainThread] - [log.py-line:23] [WARNING] (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%s, %d, %s, %s)' at line 1")
+[2018-09-16 01:34:28,182] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:35:25,601] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:35:38,935] - [MainThread] - [log.py-line:23] [WARNING] (1054, "Unknown column 'li3' in 'field list'")
+[2018-09-16 01:40:09,229] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:41:06,272] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:41:12,558] - [MainThread] - [log.py-line:21] [DEBUG] 添加用户信息成功！
+[2018-09-16 01:41:21,331] - [MainThread] - [log.py-line:21] [DEBUG] 返回上级菜单！
+[2018-09-16 01:43:15,988] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:43:30,344] - [MainThread] - [log.py-line:21] [DEBUG] 添加用户信息成功！
+[2018-09-16 01:43:33,222] - [MainThread] - [log.py-line:23] [WARNING] 不存在你输入的相关操作！
+[2018-09-16 01:43:50,682] - [MainThread] - [log.py-line:21] [DEBUG] 返回上级菜单！
+[2018-09-16 01:43:53,277] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:45:02,439] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:45:15,880] - [MainThread] - [log.py-line:21] [DEBUG] 添加用户信息成功！
+[2018-09-16 01:45:19,180] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:48:08,645] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:48:19,642] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:48:29,749] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:48:29,755] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:50:18,766] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:50:21,661] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:50:21,669] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:50:21,670] - [MainThread] - [log.py-line:21] [DEBUG] 正在退出系统！
+[2018-09-16 01:57:31,789] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 01:57:37,407] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息至xls文件！
+[2018-09-16 01:57:39,874] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息！
+[2018-09-16 01:57:39,881] - [MainThread] - [log.py-line:21] [DEBUG] 成功保存用户信息至xls文件！
+[2018-09-16 01:57:39,882] - [MainThread] - [log.py-line:21] [DEBUG] 正在退出系统！
+[2018-09-16 01:58:38,582] - [MainThread] - [log.py-line:23] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 01:58:38,793] - [MainThread] - [log.py-line:23] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 01:58:39,004] - [MainThread] - [log.py-line:23] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 01:58:39,004] - [MainThread] - [log.py-line:23] [WARNING] 你输入错误已经超过三次，账号被锁定！
+[2018-09-16 01:58:42,771] - [MainThread] - [log.py-line:23] [WARNING] 用户被锁定，锁定至：2018-09-16 01:59:39，请过后再试！
+[2018-09-16 02:05:23,121] - [MainThread] - [log.py-line:21] [DEBUG] 你已经登陆成功！
+[2018-09-16 02:05:33,681] - [MainThread] - [log.py-line:21] [DEBUG] 添加用户信息成功！
+[2018-09-16 02:05:36,666] - [MainThread] - [log.py-line:23] [WARNING] 不存在你输入的相关操作！
+[2018-09-16 02:05:46,086] - [MainThread] - [log.py-line:21] [DEBUG] 返回上级菜单！
+[2018-09-16 02:06:03,801] - [MainThread] - [log.py-line:21] [DEBUG] 用户信息更新成功！
+[2018-09-16 02:06:06,395] - [MainThread] - [log.py-line:23] [WARNING] 不存在你输入的相关操作！
+[2018-09-16 02:06:11,406] - [MainThread] - [log.py-line:21] [DEBUG] 暂无用户相关信息！
+[2018-09-16 02:11:01,767] - [MainThread] - [log.py-line:23] [WARNING] 你输入的密码有误，请重新输入！
+[2018-09-16 02:11:01,979] - [MainThread] - [log.py-line:23] [WARNING] 你输入的密码有误，请重新输入！
+[2018-09-16 02:11:02,307] - [MainThread] - [log.py-line:23] [WARNING] 你输入的密码有误，请重新输入！
+[2018-09-16 02:11:02,307] - [MainThread] - [log.py-line:23] [WARNING] 你输入错误已经超过三次，账号被锁定！
+[2018-09-16 02:12:07,495] - [MainThread] - [log.py-line:23] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 02:12:07,676] - [MainThread] - [log.py-line:23] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 02:12:07,840] - [MainThread] - [log.py-line:23] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 02:12:07,840] - [MainThread] - [log.py-line:23] [WARNING] 你输入错误已经超过三次，账号被锁定！
+[2018-09-16 02:12:10,655] - [MainThread] - [log.py-line:23] [WARNING] 用户被锁定，锁定至：2018-09-16 02:13:07，请过后再试！
+[2018-09-16 02:31:21,249] - [MainThread] - [log.py-line:24] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 02:31:25,329] - [MainThread] - [log.py-line:24] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 02:31:26,724] - [MainThread] - [log.py-line:24] [WARNING] 你输入的用户名错误，请重新输入！
+[2018-09-16 02:31:26,724] - [MainThread] - [log.py-line:24] [WARNING] 你输入错误已经超过三次，账号被锁定！
+[2018-09-16 02:31:30,000] - [MainThread] - [log.py-line:24] [WARNING] 用户被锁定，锁定至：2018-09-16 02:32:26，请过后再试！
+[2018-09-16 02:31:57,376] - [MainThread] - [log.py-line:24] [WARNING] 用户被锁定，锁定至：2018-09-16 02:32:26，请过后再试！
+[2018-09-16 02:32:02,288] - [MainThread] - [log.py-line:24] [WARNING] 用户被锁定，锁定至：2018-09-16 02:32:26，请过后再试！
+[2018-09-16 02:32:19,927] - [MainThread] - [log.py-line:22] [DEBUG] 你已经登陆成功！
+[2018-09-16 02:32:25,012] - [MainThread] - [log.py-line:22] [DEBUG] 成功保存用户信息！
+[2018-09-16 02:32:25,021] - [MainThread] - [log.py-line:22] [DEBUG] 成功保存用户信息至xls文件！
+[2018-09-16 02:32:25,021] - [MainThread] - [log.py-line:22] [DEBUG] 正在退出系统！
+[2018-09-16 02:37:50,562] - [MainThread] - [log.py-line:24] [WARNING] 你输入的密码有误，请重新输入！
+[2018-09-16 02:37:52,707] - [MainThread] - [log.py-line:24] [WARNING] 你输入的密码有误，请重新输入！
+[2018-09-16 02:37:56,817] - [MainThread] - [log.py-line:22] [DEBUG] 你已经登陆成功！
+[2018-09-16 02:38:09,072] - [MainThread] - [log.py-line:24] [WARNING] 你输入的页码错误！
+[2018-09-16 02:38:16,271] - [MainThread] - [log.py-line:22] [DEBUG] 成功保存用户信息！
+[2018-09-16 02:38:16,281] - [MainThread] - [log.py-line:22] [DEBUG] 成功保存用户信息至xls文件！
+[2018-09-16 02:38:16,281] - [MainThread] - [log.py-line:22] [DEBUG] 正在退出系统！
