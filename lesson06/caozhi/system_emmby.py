@@ -96,8 +96,6 @@ def login_yt():
             usermessage['count'] = count
             config.set("CONF", "count", str(count))
             config.write(open('conf.ini', "w"))
-            #with open('file', 'wb') as a:
-            #    pickle.dump(usermessage, a)
             print('用户信息错误，登陆失败，还有 %d 次机会' % count)
             log_log('warn', '用户信息错误，登陆失败')
     
@@ -178,90 +176,155 @@ def main():
     
             # 查询某个用户信息
             elif action == '2':
-                has_error = 0
-                user_select = []
-                select_sth = input('查询的字符串: ').strip()
-                for user in userinfo:
-                    if select_sth == '' or user.get('name').find(select_sth) != -1 or user.get('tel').find(select_sth) != -1 or user.get('address').find(select_sth) != -1:
-                        user_select.append(user)  # 都写到内存里 会占用大量内存 待优化
-                        print(user_select,'=====================')
-                if len(user_select) == 0:
-                    print('无数据')
+                select_flag = 0
+                select_word = input('查询的字符串: ').strip()
+                select_sql = "(select * from message where uid like '%{}%' or name like '%{}%' or tel like '%{}%' or address like '%{}%');".format(select_word, select_word, select_word, select_word)
+                mysqldb.execute(select_sql)
+                for i in mysqldb.fetchall():
+                    print(i)
+                    select_flag = 1
+                if select_flag:
+                    pass
                 else:
-                    # [i for i in userinfo if i.get('name') == select_name]
-                    max_page = math.ceil(len(user_select) / page_list)
-                    break_flag = 0
-                    while 1:
-                        if break_flag == 1:
-                            break
-                        page = input('想看哪一页 (最大页码 %d): ' % max_page)
-                        TABLE_TPL = '{id:^7}|{name:^10}|{age:^5}|{tel:^13}|{address:^13}'
-                        TABLE_SPLIT_LINE = 56
-                        TABLE_TITLE = {"id": "id", "name": "name", "age": "age", "tel": "tel", "address": "address"}
-                        TABLE_TPL.format(**TABLE_TITLE)
-                        if page.isdigit() and 0 < int(page) <= max_page:
-                            page_num = int(page)
-                            print(TABLE_TPL.format(**TABLE_TITLE))
-                            print('-' * TABLE_SPLIT_LINE)
-                            for user in user_select[(page_num - 1) * page_list : page_num * page_list]:
-                                print(TABLE_TPL.format(**user))
-                            # for m in userinfo[page_list * (page_num - 1):page_list * page_num]:
-                            #    print(m)
-                        else:
-                            print('输入页码非法，请重新输入页码. eg:1 -- %d ' % max_page)
-                            continue
-                        print()
-                        show_quit = input('是否要继续查看信息 (输入 \'N或n\' 则退出，否则继续): ').strip()
-                        if show_quit == 'N' or show_quit == 'n':
-                            break_flag = 1
+                    print('无数据')
+                #user_select = []
+                #for user in userinfo:
+                #    if select_sth == '' or user.get('name').find(select_sth) != -1 or user.get('tel').find(select_sth) != -1 or user.get('address').find(select_sth) != -1:
+                #        user_select.append(user)  # 都写到内存里 会占用大量内存 待优化
+                #        print(user_select,'=====================')
+                #if len(user_select) == 0:
+                #    print('无数据')
+                #else:
+                #    # [i for i in userinfo if i.get('name') == select_name]
+                #    max_page = math.ceil(len(user_select) / page_list)
+                #    break_flag = 0
+                #    while 1:
+                #        if break_flag == 1:
+                #            break
+                #        page = input('想看哪一页 (最大页码 %d): ' % max_page)
+                #        TABLE_TPL = '{id:^7}|{name:^10}|{age:^5}|{tel:^13}|{address:^13}'
+                #        TABLE_SPLIT_LINE = 56
+                #        TABLE_TITLE = {"id": "id", "name": "name", "age": "age", "tel": "tel", "address": "address"}
+                #        TABLE_TPL.format(**TABLE_TITLE)
+                #        if page.isdigit() and 0 < int(page) <= max_page:
+                #            page_num = int(page)
+                #            print(TABLE_TPL.format(**TABLE_TITLE))
+                #            print('-' * TABLE_SPLIT_LINE)
+                #            for user in user_select[(page_num - 1) * page_list : page_num * page_list]:
+                #                print(TABLE_TPL.format(**user))
+                #            # for m in userinfo[page_list * (page_num - 1):page_list * page_num]:
+                #            #    print(m)
+                #        else:
+                #            print('输入页码非法，请重新输入页码. eg:1 -- %d ' % max_page)
+                #            continue
+                #        print()
+                #        show_quit = input('是否要继续查看信息 (输入 \'N或n\' 则退出，否则继续): ').strip()
+                #        if show_quit == 'N' or show_quit == 'n':
+                #            break_flag = 1
     
             # 更新某个用户信息
             elif action == '3':
-                update_flag = 0
                 has_error = 0
-                update = input('请输入更新信息的id: ').strip()
-                j = 0
-                if update.isdigit():
-                    update_id = int(update)
-                    for m in userinfo:
-                        if update_id == m.get('id'):
-                            update_flag = 1
-                            break
-                        j += 1
+                Uselect_flag = 0
+                
+                update_uid = input('请输入更新用户的id: ').strip()
+                if update_uid.isdigit():
+                
+                    Uselect_sql = "(select * from message where uid='{}' limit 1);".format(update_uid)
+                    mysqldb.execute(Uselect_sql)
+                    for i in mysqldb.fetchall():
+                        print('这是要改的原数据→')
+                        print(i)
+                        Uselect_flag = 1
+                        break
                     else:
                         print('Sorry, 没有这个用户id')
+                
+                    if Uselect_flag:
+                        update_name = input('请输入更新用户的姓名: ').strip()
+                        update_age = input('请输入更新用户的年龄: ').strip()
+                        update_tel = input('请输入更新用户的电话: ').strip()
+                        update_add = input('请输入更新用户的地址: ').strip()
+                        update_update_time = int(time())
+                        if len(update_name) < 1:
+                            has_error = 1
+                            print('输入姓名非法')
+                        if not update_age.isdigit() or int(update_age) < 1 or int(update_age) > 200:
+                            has_error = 1
+                            print('输入年龄非法')
+                        if len(update_tel) < 7:
+                            has_error = 1
+                            print('输入电话非法')
+                        if len(update_add) < 1:
+                            has_error = 1
+                            print('输入地址非法')
+                
+                        if not has_error:
+                            update_sql = "update message set name='{}', age='{}', tel='{}', address='{}', update_time='{}' where uid='{}';".format(update_name, update_age, update_tel, update_add, update_update_time, update_uid)
+                            update_message = {'name': update_name, 'age': update_age, 'tel': update_tel,'address': update_add}
+                            print(update_message)
+                            change_flag = input('这是是更改的信息，请核对 是否更改？(Y|y) 否则不更改: ')
+                            if change_flag == 'Y' or change_flag == 'y':
+                                mysqldb.execute(update_sql)
+                                db.commit()
+                                print('用户信息更新成功')
+                                log_log('debug', '更新用户信息')
+                                log_log('debug', userinfo[j])
+                            else:
+                                print('未进行更新')
+                                log_log('debug', '手动取消，未更改这个用户信息')
+                        else:
+                            print('请重新更新用户数据')
+                            log_log('warn', '修改用户输入信息错误')
+                
                 else:
                     print('Sorry, id非法')
-                if update_flag:
-                    update_name = input('请输入更新用户姓名: ').strip()
-                    update_age = input('请输入更新用户年龄: ').strip()
-                    update_tel = input('请输入更新用户电话: ').strip()
-                    update_add = input('请输入更新用户地址: ').strip()
-                    if len(update_name) < 1:
-                        has_error = 1
-                        print('输入姓名非法')
-                    if not update_age.isdigit() or int(update_age) < 1 or int(update_age) > 200:
-                        has_error = 1
-                        print('输入年龄非法')
-                    if len(update_tel) < 7:
-                        has_error = 1
-                        print('输入电话非法')
-                    if len(update_add) < 1:
-                        has_error = 1
-                        print('输入地址非法')
-                    if not has_error:
-                        print({'id': update_id, 'name': update_name, 'age': update_age, 'tel': update_tel,'address': update_add})
-                        change_flag = input('这是是更改的信息，请核对 是否更改？(Y|y) 否则不更改 ')
-                        if change_flag == 'Y' or change_flag == 'y':
-                            userinfo[j] = {'id': update_id, 'name': update_name, 'age': int(update_age), 'tel': update_tel,'address': update_add}
-                            print('用户信息更新成功')
-                            log_log('debug', '更新用户信息')
-                            log_log('debug', userinfo[j])
-                        else:
-                            print('未进行更新')
-                    else:
-                        print('请重新更新用户数据')
-                        log_log('warn', '修改用户信息错误')
+
+                #update_flag = 0
+                #has_error = 0
+                #update = input('请输入更新信息的id: ').strip()
+                #j = 0
+                #if update.isdigit():
+                #    update_id = int(update)
+                #    for m in userinfo:
+                #        if update_id == m.get('id'):
+                #            update_flag = 1
+                #            break
+                #        j += 1
+                #    else:
+                #        print('Sorry, 没有这个用户id')
+                #else:
+                #    print('Sorry, id非法')
+                #if update_flag:
+                #    update_name = input('请输入更新用户姓名: ').strip()
+                #    update_age = input('请输入更新用户年龄: ').strip()
+                #    update_tel = input('请输入更新用户电话: ').strip()
+                #    update_add = input('请输入更新用户地址: ').strip()
+                #    if len(update_name) < 1:
+                #        has_error = 1
+                #        print('输入姓名非法')
+                #    if not update_age.isdigit() or int(update_age) < 1 or int(update_age) > 200:
+                #        has_error = 1
+                #        print('输入年龄非法')
+                #    if len(update_tel) < 7:
+                #        has_error = 1
+                #        print('输入电话非法')
+                #    if len(update_add) < 1:
+                #        has_error = 1
+                #        print('输入地址非法')
+                #    if not has_error:
+                #        print({'id': update_id, 'name': update_name, 'age': update_age, 'tel': update_tel,'address': update_add})
+                #        change_flag = input('这是是更改的信息，请核对 是否更改？(Y|y) 否则不更改 ')
+                #        if change_flag == 'Y' or change_flag == 'y':
+                #            userinfo[j] = {'id': update_id, 'name': update_name, 'age': int(update_age), 'tel': update_tel,'address': update_add}
+                #            print('用户信息更新成功')
+                #            log_log('debug', '更新用户信息')
+                #            log_log('debug', userinfo[j])
+                #        else:
+                #            print('未进行更新')
+                #    else:
+                #        print('请重新更新用户数据')
+                #        log_log('warn', '修改用户信息错误')
             # 删除某个用户信息
             elif action == '4':
                 has_error = 0
