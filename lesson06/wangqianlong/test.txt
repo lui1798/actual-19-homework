@@ -1,0 +1,175 @@
+
+####自测1：token认证，认证成功，三次失败，用户锁定，30s后解锁。
+
+[root@localhost lesson6]# python main.py
+请输入token值：0075844e71051dd19138ecf0e54179e1ad38601c
+
+-----------------------------------
+认证成功！欢迎使用本用户管理系统！
+您可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 搜索用户(query)
+    5. 查询用户并导出xls (export)
+    6. 退出登录（exit）
+-----------------------------------
+
+请输入对应操作数字(1-6):exit
+输入有误
+请输入对应操作数字(1-6):6
+退出系统.....
+请输入token值：1
+认证失败，请重新认证!
+请输入token值：2
+认证失败，请重新认证!
+请输入token值：3
+认证失败3次，用户锁定！
+[root@localhost lesson6]# python main.py
+请输入token值：0075844e71051dd19138ecf0e54179e1ad38601c
+用户锁定！
+请输入token值：0075844e71051dd19138ecf0e54179e1ad38601c
+
+-----------------------------------
+认证成功！欢迎使用本用户管理系统！
+您可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 搜索用户(query)
+    5. 查询用户并导出xls (export)
+    6. 退出登录（exit）
+-----------------------------------
+
+请输入对应操作数字(1-6):
+退出系统.....
+请输入token值：
+
+
+####自测2：增删改查与导出xls文件（路径conf.ini中）实现。
+
+数据库结构信息：
+mysql> select * from USERINFO;
++-----+---------+------+------+----------+
+| uid | name    | age  | tel  | address  |
++-----+---------+------+------+----------+
+|   1 | monkey1 |   22 |  133 | tianjin  |
+|   2 | monkey2 |   22 |  135 | tianjin  |
+|   3 | monkey3 |   25 |  135 | henan    |
+|   4 | monkey4 |   18 |  132 | beijing  |
+|   5 | monkey5 |   19 |  192 | beijing  |
+|   6 | monkey  |   20 |  132 | beijing  |
+|   7 | wang    |   28 |  132 | beijing  |
+|   8 | zhang   |   34 |  178 | tianjin  |
+|   9 | wang2   |   30 |  134 | tianjin  |
+|  10 | wang    |   23 |  132 | beijing  |
+|  11 | zhang3  |   32 |  137 | shandong |
+|  12 | zhang4  |   23 |  152 | hebei    |
+|  15 | wang    |   28 |  134 | beijing  |
++-----+---------+------+------+----------+
+13 rows in set (0.01 sec)
+
+
+
+[root@localhost lesson6]# python main.py
+输入200：200
+
+-----------------------------------
+认证成功！欢迎使用本用户管理系统！
+您可以执行以下操作：
+    1. 添加用户(add)
+    2. 删除用户(delete)
+    3. 更新用户(update)
+    4. 搜索用户(query)
+    5. 查询用户并导出xls (export)
+    6. 退出登录（exit）
+-----------------------------------
+
+请输入对应操作数字(1-6):4
+请输入要查找的内容：beijing
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|   monkey1|   23|            131|             beijing
+         4|   monkey4|   18|            132|             beijing
+         5|   monkey5|   19|            192|             beijing
+         6|    monkey|   20|            132|             beijing
+         7|      wang|   28|            132|             beijing
+        10|      wang|   23|            132|             beijing
+请输入对应操作数字(1-6):3
+请输入要更新的用户ID：1
+要更新的内容为：[(1, 'monkey1', 23, 131, 'beijing')]
+请输入要更新的内容（格式name age tel address)，以空格分割：monkey1 22 133 tianjin
+更新用户成功!
+请输入对应操作数字(1-6):5
+第 1 页 ， 共 4 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|   monkey1|   22|            133|             tianjin
+         2|   monkey2|   22|            135|             tianjin
+         3|   monkey3|   25|            135|               henan
+请输入up或down进行翻页,也可以选择exit退出翻页：exit
+输入yes可以保存数据到xls文件：yes
+导出到xls成功！
+请输入对应操作数字(1-6):1
+请输入用户信息(格式name age tel address):wang 30 178 hunan
+增加用户成功！
+请输入对应操作数字(1-6):5
+第 1 页 ， 共 5 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|   monkey1|   22|            133|             tianjin
+         2|   monkey2|   22|            135|             tianjin
+         3|   monkey3|   25|            135|               henan
+请输入up或down进行翻页,也可以选择exit退出翻页：down
+第 2 页 ， 共 5 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         4|   monkey4|   18|            132|             beijing
+         5|   monkey5|   19|            192|             beijing
+         6|    monkey|   20|            132|             beijing
+请输入up或down进行翻页,也可以选择exit退出翻页：down
+第 3 页 ， 共 5 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         7|      wang|   28|            132|             beijing
+         8|     zhang|   34|            178|             tianjin
+         9|     wang2|   30|            134|             tianjin
+请输入up或down进行翻页,也可以选择exit退出翻页：down
+第 4 页 ， 共 5 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+        10|      wang|   23|            132|             beijing
+        11|    zhang3|   32|            137|            shandong
+        12|    zhang4|   23|            152|               hebei
+请输入up或down进行翻页,也可以选择exit退出翻页：down
+第 5 页 ， 共 5 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+        14|      wang|   30|            178|               hunan
+请输入up或down进行翻页,也可以选择exit退出翻页：exit
+输入yes可以保存数据到xls文件：yes
+导出到xls成功！
+请输入对应操作数字(1-6):2
+请输入用户ID:14
+删除用户成功！
+请输入对应操作数字(1-6):4
+请输入要查找的内容：14
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+请输入对应操作数字(1-6):5
+第 1 页 ， 共 4 页 
+       uid|      name|  age|            tel|             address
+----------------------------------------------------------------
+         1|   monkey1|   22|            133|             tianjin
+         2|   monkey2|   22|            135|             tianjin
+         3|   monkey3|   25|            135|               henan
+请输入up或down进行翻页,也可以选择exit退出翻页：exit
+输入yes可以保存数据到xls文件：yes
+导出到xls成功！
+请输入对应操作数字(1-6):6
+退出系统.....
+输入200：
+
+
+
+
