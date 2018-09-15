@@ -9,7 +9,7 @@
 
 - 存储方式改成MySQL，使用数据库存储用户数据，增删改查用户数据时通过pymysql操作数据库进行，在新数据库中建立库reboot19，表user
 
-- 支持配置文件管理方式，使用configparser读取系统配置文件目录
+- 支持配置文件管理方式，使用configparser读取系统配置文件目录，系统配置文件conf.ini
 
 - 支持导出Excel，utils.py模块实现用户数据导出功能，菜单增加output操作。导出文件为mgt1.xls,测试格式及数据正常
 
