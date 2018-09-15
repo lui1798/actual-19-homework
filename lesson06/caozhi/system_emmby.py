@@ -2,13 +2,13 @@
 # 可以实现以下功能：
 # 1、账户1天只能登陆失败3次，超过失败次数则锁定。
 # 2、密码进行密文输入
-# 3、对用户信息的增删改查操作，查看可以分页展示
-# 4、对数据进行存储到磁盘，方便下一次读取
+# 3、对用户信息的增删改查操作，查看可以分页展示(改版的暂未实现)
+# 4、对数据进行存储到数据库，方便以后读取
 # 5、打印追加日志到 error.log 里
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# write by caozhi, 2018-09-07, version:4.2
+# write by caozhi, 2018-09-15, version:5.0
 
 from time import time
 import pickle
@@ -18,6 +18,7 @@ import requests
 import json
 import getpass
 import configparser
+import pymysql
 
 
 
@@ -28,9 +29,6 @@ LOGFILE = config['LOG']['LOGFILE']
 my_name = config['CONF']['my_name']
 MAX_LOGIN_TIMES = config['CONF']['MAX_LOGIN_TIMES']
 page_list = config['CONF']['page_list']
-server_ip = config['MYSQL']['server_ip']
-user = config['MYSQL']['user']
-passwd = config['MYSQL']['passwd']
 break_flag = 0
 has_error = 0
 payload = {'key1': 'value1', 'key2': 'value2'}
@@ -77,7 +75,7 @@ def login_yt():
     count = int(usermessage.get('count'))
     is_login = 0
     for i in range(count):
-        TOKEN = input('\033[33m 请输入你的TOKEN(5775cbe26a3a3b153a3be6e68b9925e8db10557e): \033[0m').strip()
+        TOKEN = getpass.getpass('\033[33m 请输入你的TOKEN(5775cbe26a3a3b153a3be6e68b9925e8db10557e): \033[0m').strip()
         headers = {'Authorization': 'token ' + TOKEN}
         #user_name = input('\033[33m 请输入你的姓名: \033[0m').strip()
         #password = getpass.getpass('\033[33m 请输入你的密码: \033[0m').strip()
@@ -88,6 +86,7 @@ def login_yt():
         res = req.json()
 
         #if user_name == usermessage['name'] and password == usermessage['passwd']:
+        print("********* %s, %s ********" % (res.get("login",None),my_name))
         if res.get("login",None) == my_name:
             print('\033[32m login success ---> 登陆成功 \033[0m')
             is_login = 1
@@ -115,6 +114,9 @@ def main():
     \033[31m欢迎来到某某信息管理系统 \033[0m
     ''')
         print('=' * 70)
+        server_ip = config['MYSQL']['server_ip']
+        user = config['MYSQL']['user']
+        passwd = config['MYSQL']['passwd']
         db = pymysql.connect(server_ip, user, passwd, "USERMESSAGE")
         mysqldb = db.cursor()
         print('连接数据库')
@@ -292,8 +294,6 @@ def main():
             elif action == '5':
                 print()
                 # 退出系统 自动将修改的内容写到磁盘中
-                with open('message', 'wb') as m:
-                    pickle.dump(userinfo, m)
                 print('用户信息保存成功，退出成功，bye-bye ~')
                 break_flag = 1
                 db.close()
