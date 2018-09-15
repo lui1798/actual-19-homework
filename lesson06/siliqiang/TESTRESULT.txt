@@ -1,0 +1,318 @@
+'''
+数据库最初用户信息列表
+MariaDB [vagrant]> select * from usertable;
++------+------------+------+----------+-----------+
+| id   | name       | age  | tel      | address   |
++------+------------+------+----------+-----------+
+| 2    | tesuser22  | 22   | 1311111  | tianjin   |
+| 3    | tesuser22  | 27   | 1311111  | beijing   |
+| 4    | tesuser33  | 28   | 1311111  | shanghai  |
+| 5    | testuer55  | 29   | 111111   | nanjing   |
+| 7    | tesuser77  | 31   | 1311111  | hebei     |
+| 9    | testuser99 | 31   | 12311231 | guangzhou |
+| 11   | usertest   | 22   | 13111    | beijing   |
+| 12   | usertest   | 22   | 13111    | beijing   |
++------+------------+------+----------+-----------+
+8 rows in set (0.00 sec)
+'''
+
+
+python main.py
+Please input administrator account: xxxx
+Please input your login Token:
+********Welcome to User Managent System!!*********
+******************Login Success*******************
+*****************Congratulation!!*****************
+
+"""
+github账号token登录验证成功
+
+[2018-09-15 10:27:22,554] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 10:27:23,667] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+"""
+
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+
+"""
+用户信息从数据库中读取，使用列表分片打印用户信息
+"""
+
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+---------+----------+
+| ID |    NAME   | AGE |   TEL   | ADDRESS  |
++----+-----------+-----+---------+----------+
+| 2  | tesuser22 |  22 | 1311111 | tianjin  |
+| 3  | tesuser22 |  27 | 1311111 | beijing  |
+| 4  | tesuser33 |  28 | 1311111 | shanghai |
+| 5  | testuer55 |  29 |  111111 | nanjing  |
+| 7  | tesuser77 |  31 | 1311111 |  hebei   |
++----+-----------+-----+---------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+-------------+-----+-----------+-----------+
+| ID |     NAME    | AGE |    TEL    |  ADDRESS  |
++----+-------------+-----+-----------+-----------+
+| 9  |  testuser99 |  31 |  12311231 | guangzhou |
+| 12 |   usertest  |  22 |   13111   |  beijing  |
+| 13 | testuser100 |  22 | 131123456 |  beijing  |
++----+-------------+-----+-----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+Please input your action:a
+Please input new user info format like 'name,age,tel,address':testuser101,33,131123456,nanjing
+***************Add new user success***************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+
+"""
+新增用户信息，数据库中可查看
+MariaDB [vagrant]> select * from usertable;
++------+-------------+------+-----------+-----------+
+| id   | name        | age  | tel       | address   |
++------+-------------+------+-----------+-----------+
+| 2    | tesuser22   | 22   | 1311111   | tianjin   |
+| 3    | tesuser22   | 27   | 1311111   | beijing   |
+| 4    | tesuser33   | 28   | 1311111   | shanghai  |
+| 5    | testuer55   | 29   | 111111    | nanjing   |
+| 7    | tesuser77   | 31   | 1311111   | hebei     |
+| 9    | testuser99  | 31   | 12311231  | guangzhou |
+| 12   | usertest    | 22   | 13111     | beijing   |
+| 13   | testuser100 | 22   | 131123456 | beijing   |
+| 14   | testuser101 | 33   | 131123456 | nanjing   |
++------+-------------+------+-----------+-----------+
+9 rows in set (0.00 sec)
+
+"""
+
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+---------+----------+
+| ID |    NAME   | AGE |   TEL   | ADDRESS  |
++----+-----------+-----+---------+----------+
+| 2  | tesuser22 |  22 | 1311111 | tianjin  |
+| 3  | tesuser22 |  27 | 1311111 | beijing  |
+| 4  | tesuser33 |  28 | 1311111 | shanghai |
+| 5  | testuer55 |  29 |  111111 | nanjing  |
+| 7  | tesuser77 |  31 | 1311111 |  hebei   |
++----+-----------+-----+---------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+-------------+-----+-----------+-----------+
+| ID |     NAME    | AGE |    TEL    |  ADDRESS  |
++----+-------------+-----+-----------+-----------+
+| 9  |  testuser99 |  31 |  12311231 | guangzhou |
+| 12 |   usertest  |  22 |   13111   |  beijing  |
+| 13 | testuser100 |  22 | 131123456 |  beijing  |
+| 14 | testuser101 |  33 | 131123456 |  nanjing  |
++----+-------------+-----+-----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+Please input your action:d
+Please input your want to delete user ID: 12
++----+----------+-----+-------+---------+
+| ID |   NAME   | AGE |  TEL  | ADDRESS |
++----+----------+-----+-------+---------+
+| 12 | usertest |  22 | 13111 | beijing |
++----+----------+-----+-------+---------+
+Do you sure want to delete this user:(Y/N)y
+***************Delete user success****************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+
+"""
+删除用户信息，删除后数据库中可查看
+MariaDB [vagrant]> select * from usertable;
++------+-------------+------+-----------+-----------+
+| id   | name        | age  | tel       | address   |
++------+-------------+------+-----------+-----------+
+| 2    | tesuser22   | 22   | 1311111   | tianjin   |
+| 3    | tesuser22   | 27   | 1311111   | beijing   |
+| 4    | tesuser33   | 28   | 1311111   | shanghai  |
+| 5    | testuer55   | 29   | 111111    | nanjing   |
+| 7    | tesuser77   | 31   | 1311111   | hebei     |
+| 9    | testuser99  | 31   | 12311231  | guangzhou |
+| 13   | testuser100 | 22   | 131123456 | beijing   |
+| 14   | testuser101 | 33   | 131123456 | nanjing   |
++------+-------------+------+-----------+-----------+
+8 rows in set (0.00 sec)
+"""
+
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+---------+----------+
+| ID |    NAME   | AGE |   TEL   | ADDRESS  |
++----+-----------+-----+---------+----------+
+| 2  | tesuser22 |  22 | 1311111 | tianjin  |
+| 3  | tesuser22 |  27 | 1311111 | beijing  |
+| 4  | tesuser33 |  28 | 1311111 | shanghai |
+| 5  | testuer55 |  29 |  111111 | nanjing  |
+| 7  | tesuser77 |  31 | 1311111 |  hebei   |
++----+-----------+-----+---------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+-------------+-----+-----------+-----------+
+| ID |     NAME    | AGE |    TEL    |  ADDRESS  |
++----+-------------+-----+-----------+-----------+
+| 9  |  testuser99 |  31 |  12311231 | guangzhou |
+| 13 | testuser100 |  22 | 131123456 |  beijing  |
+| 14 | testuser101 |  33 | 131123456 |  nanjing  |
++----+-------------+-----+-----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+Please input your action:u
+Please input your want to update user ID: 9
++----+------------+-----+----------+-----------+
+| ID |    NAME    | AGE |   TEL    |  ADDRESS  |
++----+------------+-----+----------+-----------+
+| 9  | testuser99 |  31 | 12311231 | guangzhou |
++----+------------+-----+----------+-----------+
+Please input your want to update attributes:(name,age,tel or address):name
+Please input new name: updateuser99
+***************Update user success****************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+
+"""
+修改用用户信息，修改后数据库中可查看
+MariaDB [vagrant]> select * from usertable;
++------+--------------+------+-----------+-----------+
+| id   | name         | age  | tel       | address   |
++------+--------------+------+-----------+-----------+
+| 2    | tesuser22    | 22   | 1311111   | tianjin   |
+| 3    | tesuser22    | 27   | 1311111   | beijing   |
+| 4    | tesuser33    | 28   | 1311111   | shanghai  |
+| 5    | testuer55    | 29   | 111111    | nanjing   |
+| 7    | tesuser77    | 31   | 1311111   | hebei     |
+| 9    | updateuser99 | 31   | 12311231  | guangzhou |
+| 13   | testuser100  | 22   | 131123456 | beijing   |
+| 14   | testuser101  | 33   | 131123456 | nanjing   |
++------+--------------+------+-----------+-----------+
+8 rows in set (0.00 sec)
+"""
+
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+---------+----------+
+| ID |    NAME   | AGE |   TEL   | ADDRESS  |
++----+-----------+-----+---------+----------+
+| 2  | tesuser22 |  22 | 1311111 | tianjin  |
+| 3  | tesuser22 |  27 | 1311111 | beijing  |
+| 4  | tesuser33 |  28 | 1311111 | shanghai |
+| 5  | testuer55 |  29 |  111111 | nanjing  |
+| 7  | tesuser77 |  31 | 1311111 |  hebei   |
++----+-----------+-----+---------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+--------------+-----+-----------+-----------+
+| ID |     NAME     | AGE |    TEL    |  ADDRESS  |
++----+--------------+-----+-----------+-----------+
+| 9  | updateuser99 |  31 |  12311231 | guangzhou |
+| 13 | testuser100  |  22 | 131123456 |  beijing  |
+| 14 | testuser101  |  33 | 131123456 |  nanjing  |
++----+--------------+-----+-----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+
+"""
+通过address或者年龄进行用户查询
+"""
+
+Please input your action:f
+Please input your want to find user info(ID,NAME,AGE,TEL OR ADDRESS):beijing
++----+-------------+-----+-----------+---------+
+| ID |     NAME    | AGE |    TEL    | ADDRESS |
++----+-------------+-----+-----------+---------+
+| 3  |  tesuser22  |  27 |  1311111  | beijing |
+| 13 | testuser100 |  22 | 131123456 | beijing |
++----+-------------+-----+-----------+---------+
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+Please input your action:f
+Please input your want to find user info(ID,NAME,AGE,TEL OR ADDRESS):22
++----+-------------+-----+-----------+---------+
+| ID |     NAME    | AGE |    TEL    | ADDRESS |
++----+-------------+-----+-----------+---------+
+| 2  |  tesuser22  |  22 |  1311111  | tianjin |
+| 13 | testuser100 |  22 | 131123456 | beijing |
++----+-------------+-----+-----------+---------+
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+
+"""
+新增"X"选项进行用户导出，导出格式为xls格式
+"""
+Please input your action:x
+**********Export users to excel success***********
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+E or e  ---> Exit system
+Please input your action:e
+*********************Log out!*********************
+(python36env) [vagrant@centos lesson6]$
