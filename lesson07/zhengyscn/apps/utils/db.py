@@ -21,7 +21,10 @@ def Select(sql):
 	try:
 		cur.execute(sql)
 		rows = cur.fetchall()
-		return rows, True
+		if cur.rowcount >= 1:
+			return rows, True
+		else:
+			return '', False
 	except Exception as e:
 		return e.args, False
 	finally:
@@ -82,6 +85,7 @@ def Delete(sql):
 	try:
 		cur.execute(sql)
 		conn.commit()
+		# 改变的行数
 		if cur.rowcount == 1:
 			return "", True
 		else:

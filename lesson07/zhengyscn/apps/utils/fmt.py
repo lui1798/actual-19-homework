@@ -7,11 +7,14 @@ def Println(data):
 	
 
 def PrintTable(data):
+	'''
+	type and isinstance?
+	'''
 	x = PrettyTable()
 	if isinstance(data, list):
-		x.field_names = data[0].keys()
+		x.field_names = data[0].keys()  # keys -> list ['id', 'name', 'age', 'tel', 'adderss']
 		for dicinfo in data:
-			x.add_row(dicinfo.values())
+			x.add_row(dicinfo.values())  # 每个元素的values 返回的列表
 	elif isinstance(data, dict):
 		x.field_names = data.keys()
 		x.add_row(data.values())
