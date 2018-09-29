@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户管理系统</title>
+	</head>
+	<body>
+		<h1>用户管理系统</h1>
+		
+		<table border =1>
+			<tr>
+				<td>编号</td>
+				<td>用户姓名</td>				
+				<td>年龄</td>
+				<td>电话</td>
+				<td>住址</td>			
+			</tr>
+			
+			{% for user in userinfo %}
+			<tr>
+				<td>{{user[0]}}</td>
+				<td>{{user[1]}}</td>				
+				<td>{{user[2]}}</td>
+				<td>{{user[3]}}</td>
+				<td>{{user[4]}}</td>			
+			</tr>			
+			{% endfor %}
+			
+			
+		</table>
+		
+		
+		
+	</body>
+</html>
