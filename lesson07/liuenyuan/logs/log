@@ -1,0 +1,66 @@
+[2018-09-08 13:05:52,748] - [MainThread] - [test.py-line:92] [DEBUG] [0m添加用户lll成功[0m
+[2018-09-08 13:06:51,392] - [MainThread] - [test.py-line:337] [DEBUG] [34madmin正在尝试登录!!![0m
+[2018-09-08 13:06:52,869] - [MainThread] - [test.py-line:374] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:07:25,143] - [MainThread] - [test.py-line:92] [DEBUG] [0m添加用户qqq成功[0m
+[2018-09-08 13:09:25,295] - [MainThread] - [test.py-line:424] [DEBUG] [32mlol系统开始启动[0m
+[2018-09-08 13:09:51,921] - [MainThread] - [test.py-line:92] [DEBUG] [32m添加用户eee成功[0m
+[2018-09-08 13:11:25,146] - [MainThread] - [test.py-line:337] [DEBUG] [34madmin正在尝试登录!!![0m
+[2018-09-08 13:11:26,393] - [MainThread] - [test.py-line:374] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:11:36,167] - [MainThread] - [test.py-line:136] [WARNING] [31meee用户已经被删除[0m
+[2018-09-08 13:11:53,887] - [MainThread] - [test.py-line:136] [WARNING] [31mqqq用户已经被删除[0m
+[2018-09-08 13:13:14,090] - [MainThread] - [test.py-line:422] [DEBUG] [32mlol系统开始启动[0m
+[2018-09-08 13:13:18,958] - [MainThread] - [test.py-line:335] [DEBUG] [34madmin正在尝试登录!!![0m
+[2018-09-08 13:13:21,260] - [MainThread] - [test.py-line:372] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:13:46,153] - [MainThread] - [test.py-line:223] [DEBUG] [32mzhangsan用户信息修改成功[0m
+[2018-09-08 13:15:03,302] - [MainThread] - [test.py-line:335] [DEBUG] [34madmin正在尝试登录!!![0m
+[2018-09-08 13:15:08,253] - [MainThread] - [test.py-line:383] [WARNING] [31m用户名密码验证失败[0m
+[2018-09-08 13:15:52,186] - [MainThread] - [test.py-line:335] [DEBUG] [34madmin正在尝试登录!!![0m
+[2018-09-08 13:15:53,576] - [MainThread] - [test.py-line:372] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:15:58,889] - [MainThread] - [test.py-line:438] [DEBUG] [34m程序退出[0m
+[2018-09-08 13:16:26,146] - [MainThread] - [test.py-line:421] [DEBUG] [32mlol系统开始启动[0m
+[2018-09-08 13:16:34,916] - [MainThread] - [test.py-line:371] [DEBUG] [32m用户admin登录成功[0m
+[2018-09-08 13:16:52,912] - [MainThread] - [test.py-line:382] [WARNING] [31mzhangsan用户名密码验证失败[0m
+[2018-09-08 13:16:58,840] - [MainThread] - [test.py-line:382] [WARNING] [31mzhangsan用户名密码验证失败[0m
+[2018-09-08 13:17:06,702] - [MainThread] - [test.py-line:382] [WARNING] [31mzhangsan用户名密码验证失败[0m
+[2018-09-08 13:17:54,768] - [MainThread] - [test.py-line:351] [WARNING] [31mzhangsan 用户本日连续三次登录失败，现在将进行用户锁定[0m
+[2018-09-08 13:21:47,320] - [MainThread] - [test.py-line:437] [DEBUG] [34m程序退出[0m
+[2018-10-08 22:09:54,103] - [MainThread] - [test.py-line:96] [DEBUG] [32m添加用户po成功[0m
+[2018-10-08 22:11:02,687] - [MainThread] - [test.py-line:96] [DEBUG] [32m添加用户uioasd成功[0m
+[2018-10-08 22:45:37,631] - [MainThread] - [test.py-line:43] [WARNING] [31mzhangsan用户已经被删除[0m
+[2018-10-10 19:23:59,264] - [MainThread] - [test4.py-line:99] [DEBUG] [32mzhangsan用户信息修改成功[0m
+[2018-10-10 19:27:04,604] - [MainThread] - [test.py-line:99] [DEBUG] [32mzhangsan用户信息修改成功[0m
+[2018-10-10 19:27:50,919] - [MainThread] - [test.py-line:99] [DEBUG] [32mzhangsan用户信息修改成功[0m
+[2018-10-10 22:05:30,178] - [MainThread] - [test6.py-line:35] [CRITICAL] [31m在查询数据库时发生了严重的错误[0m
+[2018-10-10 22:05:35,618] - [MainThread] - [test6.py-line:35] [CRITICAL] [31m在查询数据库时发生了严重的错误[0m
+[2018-10-10 22:06:58,362] - [MainThread] - [test6.py-line:35] [CRITICAL] [31m在查询数据库时发生了严重的错误[0m
+[2018-10-10 22:07:01,406] - [MainThread] - [test6.py-line:35] [CRITICAL] [31m在查询数据库时发生了严重的错误[0m
+[2018-10-11 09:43:33,301] - [MainThread] - [test7.py-line:79] [DEBUG] [32m用户zhangsan登录成功[0m
+[2018-10-11 09:43:52,911] - [MainThread] - [test7.py-line:92] [WARNING] [31mzhangsan用户名密码验证失败[0m
+[2018-10-11 09:44:20,126] - [MainThread] - [test7.py-line:59] [WARNING] [31mlibai 用户本日连续三次登录失败，现在将进行用户锁定[0m
+[2018-10-11 09:44:43,112] - [MainThread] - [test7.py-line:92] [WARNING] [31mwangwu用户名密码验证失败[0m
+[2018-10-11 09:46:59,871] - [MainThread] - [test7.py-line:92] [WARNING] [31mwangwu用户名密码验证失败[0m
+[2018-10-11 09:48:19,370] - [MainThread] - [test7.py-line:92] [WARNING] [31mwangwu用户名密码验证失败[0m
+[2018-10-11 09:49:08,155] - [MainThread] - [test7.py-line:92] [WARNING] [31mwangwu用户名密码验证失败[0m
+[2018-10-11 10:24:36,232] - [MainThread] - [test7.py-line:92] [WARNING] [31mwangwu用户名密码验证失败[0m
+[2018-10-11 10:24:57,769] - [MainThread] - [test7.py-line:59] [WARNING] [31mlibai 用户本日连续三次登录失败，现在将进行用户锁定[0m
+[2018-10-11 10:25:20,819] - [MainThread] - [test7.py-line:92] [WARNING] [31mlisi用户名密码验证失败[0m
+[2018-10-11 10:25:43,642] - [MainThread] - [test7.py-line:92] [WARNING] [31mlisi用户名密码验证失败[0m
+[2018-10-11 10:26:27,889] - [MainThread] - [test7.py-line:92] [WARNING] [31mzhangsan用户名密码验证失败[0m
+[2018-10-11 19:47:42,959] - [MainThread] - [test9.py-line:456] [DEBUG] [32mlol系统开始启动[0m
+[2018-10-11 19:47:53,757] - [MainThread] - [test9.py-line:405] [DEBUG] [32m用户zhangsan登录成功[0m
+[2018-10-11 19:48:13,743] - [MainThread] - [test9.py-line:228] [DEBUG] [32mlisi用户信息修改成功[0m
+[2018-10-11 19:51:09,507] - [MainThread] - [test9.py-line:456] [DEBUG] [32mlol系统开始启动[0m
+[2018-10-11 19:51:17,849] - [MainThread] - [test9.py-line:405] [DEBUG] [32m用户zhangsan登录成功[0m
+[2018-10-11 19:51:34,177] - [MainThread] - [test9.py-line:228] [DEBUG] [32mlisi用户信息修改成功[0m
+[2018-10-11 19:51:47,946] - [MainThread] - [test9.py-line:456] [DEBUG] [32mlol系统开始启动[0m
+[2018-10-11 19:51:53,286] - [MainThread] - [test9.py-line:405] [DEBUG] [32m用户zhangsan登录成功[0m
+[2018-10-11 19:52:03,114] - [MainThread] - [test9.py-line:228] [DEBUG] [32mlisi用户信息修改成功[0m
+[2018-10-11 19:53:43,096] - [MainThread] - [test9.py-line:97] [DEBUG] [32m添加用户admin成功[0m
+[2018-10-11 19:53:51,445] - [MainThread] - [test9.py-line:405] [DEBUG] [32m用户admin登录成功[0m
+[2018-10-11 19:54:01,642] - [MainThread] - [test9.py-line:472] [DEBUG] [34m程序退出[0m
+[2018-10-11 19:57:40,346] - [MainThread] - [lol.py-line:456] [DEBUG] [32mlol系统开始启动[0m
+[2018-10-11 19:57:48,131] - [MainThread] - [lol.py-line:405] [DEBUG] [32m用户admin登录成功[0m
+[2018-10-11 19:58:02,516] - [MainThread] - [lol.py-line:472] [DEBUG] [34m程序退出[0m
+[2018-10-12 18:23:29,741] - [MainThread] - [lol.py-line:455] [DEBUG] [32mlol系统开始启动[0m
+[2018-10-12 18:23:37,586] - [MainThread] - [lol.py-line:404] [DEBUG] [32m用户admin登录成功[0m
+[2018-10-12 18:23:45,827] - [MainThread] - [lol.py-line:471] [DEBUG] [34m程序退出[0m
