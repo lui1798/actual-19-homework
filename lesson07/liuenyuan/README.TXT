@@ -1,6 +1,6 @@
 一、功能：
 1.prettytable模块的调用
-2.结合jinja2自动生成index.html,使用export.py程序可以进行导出
+2.结合jinja2自动生成html,使用export.py程序可以打印出
 二、使用
 2.目录使用
 root@ubuntu:~/actual-19-homework/lesson07# tree liuenyuan/
