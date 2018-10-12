@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data</title>
+</head>
+<body>
+    <table border="5">
+        <tr>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">id</font></th>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">NAME</font></th>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">age</font></th>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">tel</font></th>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">addr</font></th>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">create_time</font></th>
+            <th><font size="7" style="font-family: '楷体';color: red;background-color: green;">update_time</font></th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.age }}</td>
+            <td>{{ item.tel }}</td>
+            <td>{{ item.addr }}</td>
+            <td>{{ item.create_time }}</td>
+            <td>{{ item.update_time }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
+
+
+
