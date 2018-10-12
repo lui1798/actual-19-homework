@@ -25,3 +25,32 @@
 
 ### 文件结构说明：
 ![](dir.png)
+    ├── apps
+    │   ├── __init__.py
+    │   ├── login.py						github账号登陆、token认证，账号出错锁定等函数
+    │   ├── oper.py							登陆成功后操作选择函数
+    │   ├── __pycache__
+    │   │   ├── __init__.cpython-36.pyc
+    │   │   ├── login.cpython-36.pyc
+    │   │   └── oper.cpython-36.pyc
+    │   └── utils
+    │       ├── date.py				日期相关函数
+    │       ├── db.py				数据库连接、操作函数
+    │       ├── file.py				文件读写、excel文件保存等函数
+    │       ├── fmt.py				格式化显示函数
+    │       ├── http.py				url请求返回相关函数
+    │       ├── __init__.py
+    │       ├── log.py				日志信息函数
+    │       ├── msg.py				显示操作成功、失败信息函数，输入提示信息函数
+    │       └── __pycache__
+    ├── auth_render
+    │   ├── css
+    │   │   └── list.css
+    │   ├── index.html				渲染页面
+    │   ├── js
+    │   └── render.py				渲染函数
+    ├── conf.ini					配置文件
+    ├── lock						锁定信息保存文件
+    ├── main.py						主函数
+    ├── operate.log					操作保存日志
+    └── user_sys.xls				保存excel文件
