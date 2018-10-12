@@ -1,33 +1,31 @@
 一、功能：
-1.全部采用数据库方式进行存储
-2.采用模块的方式进行调用
+1.prettytable模块的调用
+2.结合jinja2自动生成index.html,使用export.py程序可以进行导出
 二、使用
-1.安装mysql
- user  | CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(40) NOT NULL,
-  `passwd` varchar(40) NOT NULL,
-  `qq` int(20) NOT NULL,
-  `server` varchar(40) NOT NULL,
-  `failed_time` int(11) DEFAULT '0',
-  `login_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 |
 2.目录使用
-root@ubuntu:~/actual-19-homework/lesson06# tree liuenyuan/
+root@ubuntu:~/actual-19-homework/lesson07# tree liuenyuan/
 liuenyuan/
 ├── app
-│   ├── config.py         配置模块
-│   ├── log.py            日志模块
-│   ├── lol.py            主程序
-│   ├── mysql.py          数据库连接
+│   ├── clean.py
+│   ├── config.py
+│   ├── css
+│   │   └── user.css      这是个css文件，现在还看不了，上次有事没学好，照着大佬的（yanyupan）敲了敲
+│   ├── export.py         导出html的程序，完事就可以看了
+│   ├── index.html        html文件模板
+│   ├── log.py            日志程序
+│   ├── lol.py            主进程
+│   ├── mysql.py          数据操作程序
 │   └── __pycache__
+│       ├── clean.cpython-35.pyc
 │       ├── config.cpython-35.pyc
 │       └── mysql.cpython-35.pyc
 ├── config
-│   └── config.ini       配置文件
-└── logs
-    └── log              日志存储
-注：请按照config.ini先行配置数据库及日志
+│   └── config.ini        配置文件
+├── logs
+│   └── log               日志存储
+└── README.TXT
+
+5 directories, 14 files
+
 
 
