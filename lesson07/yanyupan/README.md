@@ -11,6 +11,17 @@
  - 存：将用户信息保存至数据库中或excel文件
  - 渲染：将用户数据返回到网页
  - 锁：用户输入错误超三次将按设定的时长进行锁定，保存到锁定文件lock中
+### 建库建表
+    CREATE DATABASE user_sys;
+    CREATE TABLE auth_user(
+        id int PRIMARY KEY AUTO_INCREMENT,
+        username varchar(30),
+        age int(3),
+        tel varchar(30),
+        address varchar(50),
+        create_time datetime(6),
+        update_time datetime(6)
+    );
 
 ### 文件结构说明：
 ![](dir.png)
