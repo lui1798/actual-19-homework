@@ -1,0 +1,31 @@
+
+[2018-09-15 10:27:22,554] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 10:27:23,667] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-09-15 10:27:23,670] - [MainThread] - [modulelogin.py-line:37] [INFO] administrator login success.
+[2018-09-15 10:28:00,705] - [MainThread] - [moduleop.py-line:55] [DEBUG] Add user! newuser info testuser101,33,131123456,nanjing
+[2018-09-15 10:28:00,709] - [MainThread] - [moduleop.py-line:89] [DEBUG] Add user! Add success, new user info testuser101,33,131123456,nanjing
+[2018-09-15 10:28:23,731] - [MainThread] - [moduleop.py-line:108] [DEBUG] Del user! user info ['12', 'usertest', '22', '13111', 'beijing'].
+[2018-09-15 10:28:25,409] - [MainThread] - [moduleop.py-line:114] [DEBUG] Del user! Delete user success.
+[2018-09-15 10:29:05,498] - [MainThread] - [moduleop.py-line:144] [DEBUG] Update user! Update user info ['9', 'testuser99', '31', '12311231', 'guangzhou'].
+[2018-09-15 10:29:30,738] - [MainThread] - [moduleop.py-line:169] [DEBUG] Update user! Update user success. user info ['9', 'testuser99', '31', '12311231', 'guangzhou'].
+[2018-10-10 23:31:16,432] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-10-10 23:31:18,192] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-10-10 23:31:18,195] - [MainThread] - [modulelogin.py-line:37] [INFO] administrator login success.
+[2018-10-10 23:36:19,304] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-10-10 23:36:23,000] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-10-10 23:36:23,003] - [MainThread] - [modulelogin.py-line:37] [INFO] administrator login success.
+[2018-10-11 00:07:16,647] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-10-11 00:07:18,223] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-10-11 00:07:18,226] - [MainThread] - [modulelogin.py-line:37] [INFO] administrator login success.
+[2018-10-11 00:19:42,317] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-10-11 00:19:46,405] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-10-11 00:19:46,448] - [MainThread] - [modulelogin.py-line:37] [INFO] administrator login success.
+[2018-10-13 00:25:32,857] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-10-13 00:25:34,500] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-10-13 00:25:34,503] - [MainThread] - [modulelogin.py-line:37] [INFO] administrator login success.
+[2018-10-13 00:26:17,810] - [MainThread] - [moduleop.py-line:57] [DEBUG] Add user! newuser info testuser44,23,131111111,hunan
+[2018-10-13 00:26:17,812] - [MainThread] - [moduleop.py-line:91] [DEBUG] Add user! Add success, new user info testuser44,23,131111111,hunan
+[2018-10-13 00:26:44,032] - [MainThread] - [moduleop.py-line:110] [DEBUG] Del user! user info ['5', 'testuer55', '29', '111111', 'nanjing'].
+[2018-10-13 00:26:45,834] - [MainThread] - [moduleop.py-line:116] [DEBUG] Del user! Delete user success.
+[2018-10-13 00:27:04,452] - [MainThread] - [moduleop.py-line:146] [DEBUG] Update user! Update user info ['15', 'testuser44', '23', '131111111', 'hunan'].
+[2018-10-13 00:27:16,541] - [MainThread] - [moduleop.py-line:163] [DEBUG] Update user! Update user success. user info []

@@ -1,0 +1,192 @@
+$ python main.py
+Please input administrator account: xxxxxx
+Please input your login Token:
+********Welcome to User Managent System!!*********
+******************Login Success*******************
+*****************Congratulation!!*****************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+-----------+-----+---------+----------+
+| ID |    NAME   | AGE |   TEL   | ADDRESS  |
++----+-----------+-----+---------+----------+
+| 2  | tesuser22 |  22 | 1311111 | tianjin  |
+| 3  | tesuser22 |  27 | 1311111 | beijing  |
+| 4  | tesuser33 |  28 | 1311111 | shanghai |
+| 5  | testuer55 |  29 |  111111 | nanjing  |
+| 7  | tesuser77 |  31 | 1311111 |  hebei   |
++----+-----------+-----+---------+----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+--------------+-----+-----------+-----------+
+| ID |     NAME     | AGE |    TEL    |  ADDRESS  |
++----+--------------+-----+-----------+-----------+
+| 9  | updateuser99 |  31 |  12311231 | guangzhou |
+| 13 | testuser100  |  22 | 131123456 |  beijing  |
+| 14 | testuser101  |  33 | 131123456 |  nanjing  |
++----+--------------+-----+-----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:a
+Please input new user info format like 'name,age,tel,address':testuser44,23,131111111,hunan
+***************Add new user success***************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+--------------+-----+-----------+-----------+
+| ID |     NAME     | AGE |    TEL    |  ADDRESS  |
++----+--------------+-----+-----------+-----------+
+| 9  | updateuser99 |  31 |  12311231 | guangzhou |
+| 13 | testuser100  |  22 | 131123456 |  beijing  |
+| 14 | testuser101  |  33 | 131123456 |  nanjing  |
+| 15 |  testuser44  |  23 | 131111111 |   hunan   |
++----+--------------+-----+-----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:d
+Please input your want to delete user ID: 5
++----+-----------+-----+--------+---------+
+| ID |    NAME   | AGE |  TEL   | ADDRESS |
++----+-----------+-----+--------+---------+
+| 5  | testuer55 |  29 | 111111 | nanjing |
++----+-----------+-----+--------+---------+
+Do you sure want to delete this user:(Y/N)y
+***************Delete user success****************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:l
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 1
++----+--------------+-----+----------+-----------+
+| ID |     NAME     | AGE |   TEL    |  ADDRESS  |
++----+--------------+-----+----------+-----------+
+| 2  |  tesuser22   |  22 | 1311111  |  tianjin  |
+| 3  |  tesuser22   |  27 | 1311111  |  beijing  |
+| 4  |  tesuser33   |  28 | 1311111  |  shanghai |
+| 7  |  tesuser77   |  31 | 1311111  |   hebei   |
+| 9  | updateuser99 |  31 | 12311231 | guangzhou |
++----+--------------+-----+----------+-----------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): 2
++----+-------------+-----+-----------+---------+
+| ID |     NAME    | AGE |    TEL    | ADDRESS |
++----+-------------+-----+-----------+---------+
+| 13 | testuser100 |  22 | 131123456 | beijing |
+| 14 | testuser101 |  33 | 131123456 | nanjing |
+| 15 |  testuser44 |  23 | 131111111 |  hunan  |
++----+-------------+-----+-----------+---------+
+Total 2 pages，Please input you want page 1~2,(input 'Q' or 'q' quit.): q
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:u
+Please input your want to update user ID: 15
++----+------------+-----+-----------+---------+
+| ID |    NAME    | AGE |    TEL    | ADDRESS |
++----+------------+-----+-----------+---------+
+| 15 | testuser44 |  23 | 131111111 |  hunan  |
++----+------------+-----+-----------+---------+
+Please input your want to update attributes:(name,age,tel or address):tel
+Please input new tel: 13211111111
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:f
+Please input your want to find user info(ID,NAME,AGE,TEL OR ADDRESS):tel
+**************Input wrong user info***************
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:f
+Please input your want to find user info(ID,NAME,AGE,TEL OR ADDRESS):testuser44
++----+------------+-----+-------------+---------+
+| ID |    NAME    | AGE |     TEL     | ADDRESS |
++----+------------+-----+-------------+---------+
+| 15 | testuser44 |  23 | 13211111111 |  hunan  |
++----+------------+-----+-------------+---------+
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:x
+**********Export users to excel success***********
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:z
+ You can do some operations:
+L or l  ---> List all users'information
+A or a  ---> Add a user
+D or d  ---> Delete a user
+U or u  ---> Update a user information
+F or f  ---> Find a user
+X or x  ---> Export users to excel file
+Z or z  ---> Export users to html
+E or e  ---> Exit system
+Please input your action:e
+*********************Log out!*********************
