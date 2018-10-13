@@ -1,0 +1,41 @@
+[2018-09-14 21:36:31,027] - [MainThread] - [useradmin.py-line:86] [INFO] 增加用户成功！
+[2018-09-14 21:36:58,902] - [MainThread] - [useradmin.py-line:109] [INFO] 删除用户成功！
+[2018-09-14 22:09:53,969] - [MainThread] - [useradmin.py-line:86] [INFO] 增加用户成功！
+[2018-09-14 22:14:03,781] - [MainThread] - [useradmin.py-line:86] [INFO] 增加用户成功！
+[2018-09-14 22:15:14,151] - [MainThread] - [useradmin.py-line:109] [INFO] 删除用户成功！
+[2018-09-14 22:19:19,735] - [MainThread] - [useradmin.py-line:156] [INFO] 更新用户成功!
+[2018-09-14 22:27:56,764] - [MainThread] - [useradmin.py-line:156] [INFO] 更新用户成功!
+[2018-09-14 22:31:31,339] - [MainThread] - [useradmin.py-line:86] [INFO] 增加用户成功！
+[2018-09-14 22:32:37,229] - [MainThread] - [useradmin.py-line:109] [INFO] 删除用户成功！
+[2018-09-14 22:39:19,998] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-14 22:39:20,564] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-14 22:39:20,572] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 22:39:22,930] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-09-14 22:39:42,290] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-14 22:39:42,839] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-14 22:39:42,848] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 22:39:43,989] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 401 83
+[2018-09-14 22:39:46,106] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-14 22:39:46,676] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-14 22:39:46,689] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 22:39:47,830] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 401 83
+[2018-09-14 22:39:49,525] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-14 22:39:50,055] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-14 22:39:50,061] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 22:39:51,162] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 401 83
+[2018-09-14 22:40:10,746] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-14 22:40:11,251] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-14 22:40:11,258] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 22:40:12,362] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-09-14 22:40:31,016] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-14 22:40:31,581] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-14 22:40:31,590] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-14 22:40:32,837] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-09-15 00:22:23,186] - [MainThread] - [connectionpool.py-line:205] [DEBUG] Starting new HTTP connection (1): api.github.com:80
+[2018-09-15 00:22:23,785] - [MainThread] - [connectionpool.py-line:393] [DEBUG] http://api.github.com:80 "GET /user HTTP/1.1" 301 0
+[2018-09-15 00:22:23,794] - [MainThread] - [connectionpool.py-line:823] [DEBUG] Starting new HTTPS connection (1): api.github.com:443
+[2018-09-15 00:22:25,061] - [MainThread] - [connectionpool.py-line:393] [DEBUG] https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+[2018-09-15 00:24:48,919] - [MainThread] - [useradmin.py-line:89] [DEBUG] insertfailed
+[2018-09-15 00:28:24,463] - [MainThread] - [useradmin.py-line:89] [DEBUG] insertfailed
+[2018-09-15 00:31:46,253] - [MainThread] - [useradmin.py-line:86] [INFO] 增加用户成功！
+[2018-09-15 00:35:49,832] - [MainThread] - [useradmin.py-line:89] [DEBUG] insertfailed

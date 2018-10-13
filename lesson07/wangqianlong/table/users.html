@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+    <style>
+        .checkbox label + span {
+            display: inline-block;
+            position: relative;
+            top: -6px;
+            left: -6px;
+        }
+
+        .fleft {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .modal span {
+            font-size: 12px;
+        }
+
+        .pageBtnWrap{
+            display: inline-block;
+        }
+        .modal .checkbox {
+             margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="matter">
+    <span class="title">用户管理</span>
+        <div class="contentArea">
+        <div class>
+            <div class="titleLine">用户列表</div>
+                <table class="table table-bordered text-center table-striped">
+                    <thead class="bg-primary">
+                        <tr class="text-center">
+                            <th class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </th>
+                            <th class="text-center">用户ID</th>
+                            <th class="text-center">用户名</th>
+                            <th class="text-center">年龄</th>
+                            <th class="text-center">电话</th>
+                            <th class="text-center">地址</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">1</td>
+                            <td class="text-center">monkey1</td>
+                            <td class="text-center">22</td>
+                            <td class="text-center">133</td>
+                            <td class="text-center ">tianjin</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">3</td>
+                            <td class="text-center">monkey3</td>
+                            <td class="text-center">25</td>
+                            <td class="text-center">135</td>
+                            <td class="text-center ">henan</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">4</td>
+                            <td class="text-center">monkey4</td>
+                            <td class="text-center">18</td>
+                            <td class="text-center">132</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">5</td>
+                            <td class="text-center">monkey5</td>
+                            <td class="text-center">19</td>
+                            <td class="text-center">192</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">6</td>
+                            <td class="text-center">monkey</td>
+                            <td class="text-center">20</td>
+                            <td class="text-center">132</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">7</td>
+                            <td class="text-center">wang</td>
+                            <td class="text-center">28</td>
+                            <td class="text-center">132</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">8</td>
+                            <td class="text-center">zhang</td>
+                            <td class="text-center">34</td>
+                            <td class="text-center">178</td>
+                            <td class="text-center ">tianjin</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">9</td>
+                            <td class="text-center">wang2</td>
+                            <td class="text-center">30</td>
+                            <td class="text-center">134</td>
+                            <td class="text-center ">tianjin</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">10</td>
+                            <td class="text-center">wang</td>
+                            <td class="text-center">23</td>
+                            <td class="text-center">132</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">11</td>
+                            <td class="text-center">zhang3</td>
+                            <td class="text-center">32</td>
+                            <td class="text-center">137</td>
+                            <td class="text-center ">shandong</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">12</td>
+                            <td class="text-center">zhang4</td>
+                            <td class="text-center">23</td>
+                            <td class="text-center">152</td>
+                            <td class="text-center ">hebei</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">15</td>
+                            <td class="text-center">wang</td>
+                            <td class="text-center">28</td>
+                            <td class="text-center">134</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">16</td>
+                            <td class="text-center">wangql</td>
+                            <td class="text-center">29</td>
+                            <td class="text-center">139</td>
+                            <td class="text-center ">beijing</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      
+                    </tbody>
+                </table>
+            </div>
+           
+          
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>

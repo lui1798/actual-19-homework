@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+    <style>
+        .checkbox label + span {
+            display: inline-block;
+            position: relative;
+            top: -6px;
+            left: -6px;
+        }
+
+        .fleft {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .modal span {
+            font-size: 12px;
+        }
+
+        .pageBtnWrap{
+            display: inline-block;
+        }
+        .modal .checkbox {
+             margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="matter">
+    <span class="title">用户管理</span>
+        <div class="contentArea">
+        <div class>
+            <div class="titleLine">用户列表</div>
+                <table class="table table-bordered text-center table-striped">
+                    <thead class="bg-primary">
+                        <tr class="text-center">
+                            <th class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </th>
+                            <th class="text-center">用户ID</th>
+                            <th class="text-center">用户名</th>
+                            <th class="text-center">年龄</th>
+                            <th class="text-center">电话</th>
+                            <th class="text-center">地址</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                      {% for user in userinfo %}
+                         <tr class="text-center">
+                            <td class="text-center firstThWid">
+                                <div class="checkbox checkbox-primary">
+                                    <input id="selectAll" class="selectAll" type="checkbox" name="">
+                                    <label class="btLabel" for="selectAll"></label>
+                                </div>
+                            </td>
+
+                            <td class="text-center">{{user.uid}}</td>
+                            <td class="text-center">{{user.name}}</td>
+                            <td class="text-center">{{user.age}}</td>
+                            <td class="text-center">{{user.tel}}</td>
+                            <td class="text-center ">{{user.address}}</td>
+                            <td class="text-center">操作</td>
+
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+           
+          
+        </div>
+        
+    </div>
+</div>
+
+</body>
+</html>
