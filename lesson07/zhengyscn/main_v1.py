@@ -16,17 +16,17 @@ def main():
 	BASEDIR = os.path.dirname(os.path.abspath(__file__))
 	auth_info, _ = ReadConfigFile(os.path.join(BASEDIR, 'config.ini'), 'AUTH')
 
-	if auth_info.get('auth_method_for_token') == '1':
-		token = input("Please input your github token: ").strip()
-		msg, ok = login.Auth_login_token(auth_info.get('url'), token)
-	else:
-		username = input("Please input your github username: ").strip()
-		password = input("Please input your github password for {}: ".format(username)).strip()
-		msg, ok = login.Auth_login_passwd(auth_info.get('url'), username, password)
-
-	if not ok:
-		logging.error("Auth error.")
-		sys.exit(1)
+	# if auth_info.get('auth_method_for_token') == '1':
+	# 	token = input("Please input your github token: ").strip()
+	# 	msg, ok = login.Auth_login_token(auth_info.get('url'), token)
+	# else:
+	# 	username = input("Please input your github username: ").strip()
+	# 	password = input("Please input your github password for {}: ".format(username)).strip()
+	# 	msg, ok = login.Auth_login_passwd(auth_info.get('url'), username, password)
+	#
+	# if not ok:
+	# 	logging.error("Auth error.")
+	# 	sys.exit(1)
 
 	oper.LogicOper()
 	

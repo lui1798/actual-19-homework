@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>51reboot users</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>fields[0]</td>
+            <td>fields[1]</td>
+            <td>fields[2]</td>
+            <td>fields[3]</td>
+            <td>fields[4]</td>
+            <td>fields[5]</td>
+            <td>fields[6]</td>
+        </tr>
+        {% for line in content %}
+        <tr>
+            <td>{{ line['id'] }}</td>
+            <td>{{ line['username'] }}</td>
+            <td>{{ line['age'] }}</td>
+            <td>{{ line['tel'] }}</td>
+            <td>{{ line['address'] }}</td>
+            <td>{{ line['create_time'] }}</td>
+            <td>{{ line['update_time'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

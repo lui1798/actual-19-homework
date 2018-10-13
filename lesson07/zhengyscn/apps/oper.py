@@ -1,9 +1,12 @@
+import os
 import sys
 import logging
 
 from apps.utils import date
 from apps.utils import db
 from apps.utils.fmt import PrintTable
+
+import jinja2
 
 
 
@@ -78,18 +81,62 @@ def list():
 	print(responseMsg)
 	return '', True
 
+
+def format():
+	format = input("Please input format[ html | csv]: ")
+	if format.strip() == "html":
+		print(1)
+		TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "templates")
+		print(TEMPLATE_DIR)
+		template_loader = jinja2.FileSystemLoader(searchpath=TEMPLATE_DIR)
+		print(2)
+		template_env = jinja2.Environment(loader=template_loader)
+		print(3)
+		try:
+			template = template_env.get_template("users.html")
+		except Exception as e:
+			print(e.args)
+			return
+		print(0)
+		fields = ['id', 'username', 'age', 'tel', 'address', 'create_time', 'update_time']
+		sql = 'SELECT {} FROM auth_user;'.format(','.join(fields))
+		msg, ok = db.Select(sql)
+		print(msg)
+		if not ok:
+			print("Select failed")
+		else:
+			dataMsg = [dict(zip(fields, x)) for x in msg]
+			content = {'fields': fields, 'content': dataMsg}
+			html_str = template.render(content)
+			print("22")
+			print(html_str)
+			print("11")
+		
+		
+	elif format == "csv":
+		print("csv")
+	else:
+		print("not support")
+
 def quit():
 	sys.exit(-1)
 
 
 def LogicOper():
-	prompt = "\nMenu: \n\tadd:\n\tupdate:\n\tfind:\n\tlist:\n\texit:\n\tPlease input your action:  "
-	mapFunc = {'add' : add, 'delete' : delete, 'update' : update, 'find' : find, 'list' : list,  'quit' : quit}
+	prompt = "\nMenu: \n\tadd:\n\tupdate:\n\tfind:\n\tlist:\n\tformat\n\texit:\n\tPlease input your action:  "
+	mapFunc = {
+		'add' : add,
+		'delete' : delete,
+		'update' : update,
+		'find' : find,
+		'list' : list,
+		'quit' : quit,
+		'format' : format,
+	}
 
 	while 1:
 
 		op = input(prompt).strip()
-		print('---{}---'.format(op))
 		try:
 			mapFunc[op]()
 		except Exception as e:
