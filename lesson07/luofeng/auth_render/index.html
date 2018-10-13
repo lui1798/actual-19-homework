@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/list.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<center>
+			<h1>用户信息表</h1>
+			<table>
+				<tr id='title'>
+					<th>ID</th>
+					<th>名称</th>
+					<th>年龄</th>
+					<th>电话</th>
+					<th>地址</th>
+					<th class="datetime">创建时间</th>
+					<th class="datetime">修改时间</th>
+				</tr>
+				{% for obj in userinfo %}
+				<tr>
+                    <td> {{ obj.id }}</td>
+					<td> {{ obj.username }}</td>
+					<td> {{ obj.age }}</td>
+					<td> {{ obj.tel }}</td>
+					<td> {{ obj.address }}</td>
+					<td> {{ obj.create_time }}</td>
+					<td> {{ obj.update_time }}</td>
+
+				</tr>
+				{% endfor %}
+			</table>
+		</center>
+	</body>
+</html>
