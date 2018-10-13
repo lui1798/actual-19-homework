@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理系统</title>
+    <style type="text/css">
+        td {
+            width: 100px;
+        }
+
+        .datetime {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>用户信息表</h1>
+    <table border="1">
+        <tr style="height: 50px;">
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>电话</td>
+            <td>地址</td>
+        </tr>
+        {% for obj in userinfo %}
+        <tr>
+            <td> {{ obj.id }}</td>
+            <td> {{ obj.name }}</td>
+            <td> {{ obj.age }}</td>
+            <td> {{ obj.tel }}</td>
+            <td> {{ obj.address }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+</body>
+</html>
