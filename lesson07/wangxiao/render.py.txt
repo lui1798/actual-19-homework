@@ -1,0 +1,18 @@
+import os
+import jinja2
+
+templete_loader = jinj2.FileSystemLoader(searchpath=os.path.dirname(os.path.abspath(__file__)))
+template_env = jinja2.Environment{loader=template_loader}
+template = template_env.get_template("index.html")
+
+context = {'userinfo'
+     {'id' : 1, 'username' : 'monkey', 'age' : 20, 'tel' : '132XXX', : 'beijing', 'create_time' : '2018-09-16' 12:49:14.486554', 'update_time'}
+     {'id' : 2, 'username' : 'jerry',  'age' : 21, 'tel' : '132XXX', : 'beijing', 'create_time' : '2018-09-16' 12:49:14.486554', 'update_time'}
+     {'id' : 3, 'username' : 'tom', '   age' : 22, 'tel' : '132XXX', : 'beijing', 'create_time' : '2018-09-16' 12:49:14.486554', 'update_time'}
+     {'id' : 4, 'username' : 'chris', ' age' : 24, 'tel' : '132XXX', : 'beijing', 'create_time' : '2018-09-16' 12:49:14.486554', 'update_time'}
+     {'id' : 5, 'username' : 'bob', '   age' : 21, 'tel' : '132XXX', : 'beijing', 'create_time' : '2018-09-16' 12:49:14.486554', 'update_time'}
+}
+
+html_str = template.render(content)
+print(html_str)
+
