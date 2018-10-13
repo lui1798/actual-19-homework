@@ -1,0 +1,27 @@
+h1 {
+	font-size: 35px;
+	color: cadetblue;
+}
+table {
+	border-collapse:collapse;
+}
+table, tr, th, td {
+	border: 1px solid gray;
+}
+th {
+	color: cadetblue;
+	background-color: aliceblue;
+}
+td {
+	width: 100px;
+	height: 25px;
+	align-content: center;
+	text-align: center;
+	color: gray;
+}
+#title {
+	height: 35px;
+}
+.datetime {
+	width: 300px;
+}
