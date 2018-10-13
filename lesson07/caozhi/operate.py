@@ -1,20 +1,15 @@
 import json
 import time
 import datetime
-import pickle
-import requests
 import math
-import base64
-import logging
-import getpass
 import configparser
-import pymysql
 import os
 import xlwt,xlrd
 import jinja2
 import prettytable
 import output_log
-
+import dbmysql
+import output_file
 
 config = configparser.ConfigParser()
 config.read('conf.ini')
@@ -22,13 +17,7 @@ config.read('conf.ini')
 MAX_LOGIN_TIMES = config['CONF']['MAX_LOGIN_TIMES']
 PAGE_LIST = int(config['CONF']['page_list'])
 
-server_ip = config['MYSQL']['server_ip']
-user = str(base64.urlsafe_b64decode(config['MYSQL']['user']), encoding='utf-8')
-passwd = str(base64.urlsafe_b64decode(config['MYSQL']['passwd']), encoding='utf-8')
-db = pymysql.connect(server_ip, user, passwd, "USERMESSAGE")
-mysqldb = db.cursor()
-output_log.log_log('debug','连接数据库了')
-
+db,mysqldb = dbmysql.open_mysql()
 
 
 def insert():
@@ -48,7 +37,7 @@ def insert():
     if has_error:
         print('Illegal,输入非法↓')
         output_log.log_log('warn', '增加用户信息错误')
-        return "Illegal,输入非法↓", False
+        return False
     print('\033[34m这是新增的信息，请核对:\033[0m')
     insert_dict = {'name': insert_name, 'age': insert_age, 'tel': insert_tel,'address': insert_add}
     print(insert_dict)
@@ -58,16 +47,16 @@ def insert():
         try:
             insert_sql = ("insert into message(name, age, tel, address,create_time,update_time) values ('{}', '{}', '{}', '{}', '{}', '{}');"
                           .format(insert_name, insert_age, insert_tel, insert_add, insert_create_time, insert_update_time))
-            mysqldb.execute(insert_sql)
+            dbmysql.execute_mysql(mysqldb = mysqldb,sql = insert_sql)
+            dbmysql.commit_mysql(db = db)
             print(insert_sql)
             # insert_sql = '''insert into message(name, age, tel, address,create_time,update_time) values (%s, %s, %s, %s, %s, %s);'''
             # mysqldb.execute(insert_sql, (insert_name, insert_age, insert_tel, insert_add, insert_create_time, insert_update_time))
-            db.commit()
             print('用户信息插入成功')
             output_log.log_log('debug', '增加用户信息')
             output_log.log_log('debug', insert_dict)
         except:
-            db.rollback()
+            dbmysql.rollback_mysql(db)
             print('数据库报错，未插入这个用户信息')
             output_log.log_log('debug', '数据库报错，未插入这个用户信息')
     else:
@@ -81,7 +70,7 @@ def select():
     select_sql = ("select * from message where uid like '%{}%' or name like '%{}%' or tel like '%{}%'or address like '%{}%';"
                  .format(select_word, select_word, select_word, select_word))
     output_log.log_log('warn', select_sql)
-    mysqldb.execute(select_sql)
+    dbmysql.execute_mysql(mysqldb = mysqldb,sql = select_sql)
     for i in mysqldb.fetchall():
         user_select.append(i)
         select_flag = 1
@@ -123,32 +112,16 @@ def select():
     # output_mess = prettytable.from_db_cursor(mysqldb)
     # print(output_mess)
     if choice == "1":
-        data = xlwt.Workbook(encoding='utf-8')
-        table = data.add_sheet('Sheet 1', cell_overwrite_ok=True)
-        keys = ["uid", "name", "age", "tel", "address", "createTime", "create_time", "updateTime", "update_time"]
-        for x in range(len(keys)):
-            table.write(0, x, keys[x])
-        for i in range(len(user_select)):
-            for j in range(len(user_select[i])):
-                table.write(i+1, j, user_select[i][j])
-        data.save('new.csv')
-        print('成功导出csv 文件, new.csv')
-        output_log.log_log('warn','成功导出csv 文件, new.csv')
+        output_file.output_csv(user_select)
+
     elif choice == "2":
-        template_loader = jinja2.FileSystemLoader(searchpath=os.path.dirname(os.path.abspath(__file__)))
-        template_env = jinja2.Environment(loader=template_loader)
-        template = template_env.get_template("index.html")
-        content = {'user_select': user_select
-        }
-        html_str = template.render(content)
-        with open('new.html', 'w') as fd:
-            fd.write(html_str)
-        print('成功导出html 文件, new.html')
-        output_log.log_log('warn','成功导出html 文件, new.html')
+        output_file.output_html(user_select)
+
     elif choice == "N" or choice == "n":
-        print('再见~')
+        output_file.dont_output()
+
     else:
-        print("输入非法，再见")
+        output_file.illegal()
 
 def update():
     has_error = 0
@@ -158,7 +131,7 @@ def update():
     if update_uid.isdigit():
 
         Uselect_sql = "select * from message where uid='{}' limit 1;".format(update_uid)
-        mysqldb.execute(Uselect_sql)
+        dbmysql.execute_mysql(mysqldb = mysqldb,sql = Uselect_sql)
         for i in mysqldb.fetchall():
             print('这是要改的原数据→')
             print(i)
@@ -195,8 +168,8 @@ def update():
                 print(update_message)
                 change_flag = input('这是是更改的信息，请核对 是否更改？(Y|y) 否则不更改: ')
                 if change_flag == 'Y' or change_flag == 'y':
-                    mysqldb.execute(update_sql)
-                    db.commit()
+                    dbmysql.execute_mysql(mysqldb = mysqldb,sql = update_sql)
+                    dbmysql.commit_mysql(db = db)
                     print('用户信息更新成功')
                     output_log.log_log('debug', '更新用户信息')
                     output_log.log_log('debug', update_sql)
@@ -220,7 +193,7 @@ def delete():
     if delete_uid.isdigit():
 
         Dselect_sql = "(select * from message where uid='{}' limit 1);".format(delete_uid)
-        mysqldb.execute(Dselect_sql)
+        dbmysql.execute_mysql(mysqldb = mysqldb,sql = Dselect_sql)
         for i in mysqldb.fetchall():
             print('这是要删的原数据→')
             print(i)
@@ -237,12 +210,12 @@ def delete():
                 delete_flag = input('这是是更改的信息，请核对 是否更改？(Y|y) 否则不更改: ')
                 if delete_flag == 'Y' or delete_flag == 'y':
                     try:
-                        mysqldb.execute(delete_sql)
-                        db.commit()
+                        dbmysql.execute_mysql(mysqldb = mysqldb,sql = delete_sql)
+                        dbmysql.commit_mysql(db = db)
                         print('用户信息删除成功')
                         output_log.log_log('debug', '删除用户信息成功')
                     except:
-                        db.rollback()
+                        dbmysql.rollback_mysql(db = db)
                         print('数据删除失败，已回滚')
                 else:
                     print('未进行删除')
@@ -259,8 +232,7 @@ def exit_system():
     print()
     print('用户信息保存成功，退出成功，bye-bye ~')
     break_flag = 1
-    mysqldb.close()
-    db.close()
+    dbmysql.close_mysql(db,mysqldb)
     output_log.log_log('debug', '退出系统，关闭数据库连接')
     return break_flag
 

@@ -1,18 +1,11 @@
 import json
 import time
 import datetime
-import pickle
 import requests
-import math
 import base64
-import logging
 import getpass
 import configparser
-import pymysql
 import os
-import xlwt,xlrd
-import jinja2
-import prettytable
 import output_log
 
 config = configparser.ConfigParser()
@@ -68,7 +61,7 @@ def login_def():
             output_log.log_log('warn', '用户信息错误，登陆失败')
 
     else:
-        print('\033[31m请在 60秒后(为调试方便，使用60s，可自定义调整)重试， 或者联系我...\033[0m')
+        print('\033[31m请在 30秒后(为调试方便，使用30s，可自定义调整)重试， 或者联系曹智(18000000000)...\033[0m')
         output_log.log_log('warn', '用户信息错误，登陆失败，已锁定')
     return is_login
 

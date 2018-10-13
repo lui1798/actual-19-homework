@@ -13,21 +13,6 @@
 # 最后更新时间 2018-10-12
 # version:5.1
 
-import json
-import time
-import datetime
-import pickle
-import requests
-import math
-import base64
-import logging
-import getpass
-import configparser
-import pymysql
-import os
-import xlwt,xlrd
-import jinja2
-import prettytable
 import output_log
 import login_def
 import operate
@@ -45,6 +30,7 @@ def main():
 
         while 1:
             if break_flag:
+                print('卧槽 退出了')
                 break
             print('''
      执行操作的序号:
@@ -59,7 +45,6 @@ def main():
  
             dict = {'1':operate.insert, '2': operate.select, '3':operate.update, '4':operate.delete, '5':operate.exit_system}
             break_flag = dict.get(action, operate.other_action)()
-
 
 if __name__ == '__main__':
     is_login = login_def.login_def()
