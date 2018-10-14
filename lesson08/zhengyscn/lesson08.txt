@@ -1,0 +1,84 @@
+
+
+os.getcwd()
+
+os.path.dirname(os.path.abspath(__file__))
+
+
+变量的作用域
+
+ELGB
+
+全局变量 G
+嵌套变量 E
+局部变量 L
+内置变量 B
+	__file__
+	__main__
+	
+## 优先级
+L > E > G > B
+
+
+
+	
+	
+局部变量 想修改 全局变量 的值， 用global声明 全局变量 为局部变量。
+局部变量 想修改 嵌套变量 的值， 用nonlocal声明 嵌套变量 为局部变量。
+
+
+1. 注释
+2. 变量
+3. 语句
+4. 函数
+5. jQuery
+
+
+
+1. 引入bootstrap的css文件
+2. 写原生的标签
+3. 在标签上加class
+
+
+
+
+
+table
+form
+button
+
+15分钟
+
+15:40
+
+
+
+function funcName() {
+	...
+}
+
+funcName()
+
+
+
+--
+document 整个文档
+getElementById 通过id查找元素
+innerHTML 改变值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<button type="button" onclick="alert('Welcome!')">点击这里</button>
+		<hr />
+		
+		<p id="demo">这是一段话</p>
+		<button type="button" onclick="changeElement()">点击这里</button>
+		<hr />
+		
+		<button type="button" onclick="missBody()">清空整个页面</button>
+		<hr />
+		Username: <input type="text" id="username" />
+		<hr />
+		
+		
+		<script>
+//			alert("警告：快关闭吧！！！")
+
+			/*
+			 	定义一个函数
+			 */
+			function changeElement() {
+				/*
+				 * 从整个文档中通过id查找元素，然后修改元素的值以及颜色
+				 * document 整个文档
+					getElementById 通过id查找元素
+					innerHTML 改变值
+				 */
+				x=document.getElementById("demo") 
+				x.innerHTML="Hello JavaScript";
+				x.style.color="red"; 
+				x.style.fontSize="24px";
+			}
+			
+			document.write("<h1>This is a heading</h1>");
+			document.write("<p>This is a paragraph</p>");
+			
+			var x = 2;
+			var y = 3;
+			var z = x + y;
+			alert(z);
+			
+			function missBody() {
+				document.write("123");
+			}
+		</script>
+	</body>
+</html>

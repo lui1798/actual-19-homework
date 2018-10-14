@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Navbar Template for Bootstrap</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://v3.bootcss.com/examples/navbar/navbar.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">51reboot</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">首页</a></li>
+              <li><a href="#">小电影</a></li>
+              <li><a href="#">音乐平台</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      
+      <div>
+      	<center>
+      			<h1>请输入要执行的命令</h1>
+      			<textarea id="cmdText" style="width: 768px; height: 30px;"></textarea>
+      			<br />
+      			<button type="button" class="btn btn-primary" id="cmdBtn">提交</button>
+      			
+      			
+      	</center>
+      </div>
+      <hr />
+      <div>
+      	<center><h3>命令的执行结果：</h1></center>
+      	<p ><pre id="content"></pre></p>
+      </div>
+    </div>
+    
+    	<script>
+    			$("#cmdBtn").click(function(){
+    				var cmd = document.getElementById("cmdText").value;
+    				console.log(cmd);
+    				var url = "http://www.djangoapi.com:8000/api/v1/command?cmd=" + cmd;
+    				console.log(url);
+    				$.get(url, function(data, status){
+    					console.log(status);
+    					obj = document.getElementById("content");
+    					if (status == "success") {
+    						obj.innerHTML = data;
+    					} else {
+    						obj.innerHTML = "命令执行失败。";
+    					}
+    				})
+    			})
+    	</script>
+  </body>
+</html>
