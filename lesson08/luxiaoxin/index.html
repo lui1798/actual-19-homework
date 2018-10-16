@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="../../favicon.ico">
+    <title>51reboot命令执行系统</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-registration-mark" aria-hidden="true"></span>51reboot</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">主页</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#contact">联系我们</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">往期作业<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+              	<li class="dropdown-header">基础知识</li>
+                <li><a href="#">第一课</a></li>
+                <li><a href="#">第二课</a></li>
+                <li><a href="#">第三课</a></li>
+                <li><a href="#">第四课</a></li>
+                <li><a href="#">第五课</a></li>
+                <li><a href="#">第六课</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">前端知识</li>
+                <li><a href="#">第七课</a></li>
+                <li><a href="#">第八课</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">项目实践</li>
+                <li><a href="#">第九课</a></li>
+              </ul>
+            </li>
+            <li><a href="#operation">服务器操作</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          	<li style="float: right;"><a href="./login.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>退出</a>/li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div>
+		      	<center>
+		      			<h2>请输入需要执行的命令</h2>
+		      			<textarea id="cmdText" style="width: 300px; height: 60px;"></textarea>
+		      			<br />
+		      			<button type="button" class="btn btn-primary" id="cmdButton">提交</button>		      				      			
+		      	</center>
+      	</div>
+      <hr />
+	      <div>
+	      	<center><h3>命令的执行结果：</h3></center>
+	      	<p ><pre id="content"></pre></p>
+	      </div>
+    	</div>
+    </div> 
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	jQuery("#cmdButton").click(function(){
+    				var cmd = document.getElementById("cmdText").value;
+    				console.log(cmd);
+    				var url = "http://112.74.164.107:9000/api/v1/command?cmd=" + cmd;
+    				console.log(url);
+    				jQuery.get(url, function(data, status){
+    					console.log(status);
+    					obj = document.getElementById("content");
+    					if (status == "success") {
+    						obj.innerHTML = data;
+    					} else {
+    						obj.innerHTML = "命令执行失败。";
+    					}
+    				})
+    			})
+    </script>
+  </body>
+</html>
+
