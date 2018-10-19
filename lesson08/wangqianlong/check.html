@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Linux命令执行查询页面</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/carousel.css" rel="stylesheet">-->
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">51reboot</a>
+        </div>
+    
+    	<div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="http://www.51reboot.com/">主页</a></li>
+                <li><a href="http://www.51reboot.com/">关于</a></li>
+                <li><a href="http://www.51reboot.com/">联系我们</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程介绍 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">python基础</a></li>
+                    <li><a href="#">python进阶</a></li>
+                    <li><a href="#">自动化</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">其他</li>
+                    <li><a href="#">其他1</a></li>
+                    <li><a href="#">其他2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+    <div class="jumbotron" >
+    	<div style=";">
+    		<div>
+	      	<center>
+	      			<h4>传入命令参数:</h4>
+	      			<textarea id="cmdText" style="width: 300px; height: 30px;"></textarea>
+	      			<br />
+	      			<button type="button" class="btn btn-primary" id="cmdBtn">提交</button>
+	      			
+	      	</center>
+	      	</div>
+	   	    <!--<hr />-->
+	      	<div>
+	      		<center><h4>返回结果如下：</h4>
+	      		<p ><pre id="content" style="width: 300px; align-content: center; "></pre></p>
+	      		</center>
+	      	</div>
+    		
+    	</div>
+        
+
+    </div>
+	<script>
+		$("#cmdBtn").click(function(){
+//			var cmd = document.getElementById("cmdText").value;
+			var cmd = document.getElementsByTagName('textarea').item(0).value;
+			console.log(cmd);
+			var url = "http://112.74.164.107:9000/api/v1/command?cmd=" + cmd;
+			console.log(url);
+			$.get(url, function(data, status){
+				console.log(status);
+				obj = document.getElementById("content");
+				if (status == "success") {
+					obj.innerHTML = data;
+				} else {
+					obj.innerHTML = "命令执行失败。";
+				}
+			})
+		})
+    </script>
+
+      <address>
+		  <strong>&copy;2018 51reboot, Inc.</strong><br>
+		  1355 Market Street, Suite 900<br>
+		  San Francisco, CA 94103<br>
+		  <abbr title="Phone">P:</abbr> (123) 456-7890
+	  </address>
+    </div> 
+
+  </body>
+</html>
