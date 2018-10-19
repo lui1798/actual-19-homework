@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+    <title>Run Command</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://v3.bootcss.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="https://v3.bootcss.com/examples/cover/cover.css" rel="stylesheet">
+    <script src="https://v3.bootcss.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            </div>
+         </div>
+          <div class="inner cover">
+            <h1 class="cover-heading">输入要执行的命令</h1>
+            <p class="lead">
+            		<textarea id="cmdText" style="width: 600px; height: 30px; color: black;"></textarea>
+      			<br />
+                <button type="button" class="btn btn-lg btn-default" id="cmdBtn">执行</button>
+            </p>
+              <div>
+      				<center><h3>命令的执行结果：</h3></center>
+      				<center><textarea  id="content" style="width: 600px; height: 500px; color: black;"></textarea></center>
+      		  </div>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<script>
+    			$("#cmdBtn").click(function(){
+    				var cmd = document.getElementById("cmdText").value;
+    				var url = "http://127.0.0.1:8000/api/v1/command?cmd=" + cmd;
+    				$.get(url, function(data, status){
+    					obj = document.getElementById("content");
+    					if (status == "success") {
+    						obj.innerHTML = data;
+    					} else {
+    						obj.innerHTML = "命令执行失败。";
+    					}
+    				})
+    			})
+    	</script>
+    	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
