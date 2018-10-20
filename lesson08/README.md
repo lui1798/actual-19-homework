@@ -27,4 +27,5 @@ cmd 是必传参数，表示linux上的命令；
 |zhougui       |优   |                   | 
 |wangqianlong       |优   |                   | 
 |siliqiang       |优   |   为什么url用的是127.0.0.1，是自已本地部署了django吗？                | 
+|haoshan       |优   |                  | 
 |      |   |                   |
