@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="配置管理平台">
+		<link rel="icon"href="img/favicon.ico">
+		<title>配置管理平台</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/navbar.css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+               		</button>
+						<a class="navbar-brand" href="#">仪表盘</a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">操作管理</a>
+							</li>
+							<li>
+								<a href="#">资产管理</a>
+							</li>
+							<li>
+								<a href="#">权限管理</a>
+							</li>
+					</div>
+				</div>
+			</nav>
+			<div class="jumbotron">
+				<center>
+					<p>请输入需要执行的命令:</p>
+					<textarea id="cmdText" style="height: 80px; width: 80%;">
+					</textarea>
+					<p>
+						<a class="btn btn-lg btn-primary" role="button" id="cmdButton">提交</a>
+					</p>
+					<hr/>
+					<div>
+						<h3>命令的执行结果：</h3>
+						<p>
+							<pre id="content"></pre>
+						</p>
+					</div>
+			</div>
+			<script>
+				$("#cmdButton").click(function() {
+					var cmd = document.getElementById("cmdText").value;
+					console.log(cmd);
+					var url = "http://112.74.164.107:9000/api/v1/command?cmd=" + cmd;
+					console.log(url);
+					$.get(url, function(data, status) {
+						console.log(status);
+						obj = document.getElementById("content");
+						if(status == "success") {
+							obj.innerHTML = data;
+						} else {
+							obj.innerHTML = "命令执行失败。";
+						}
+					})
+				})
+			</script>
+		</div>
+		</center>
+
+	</body>
+
+</html>
