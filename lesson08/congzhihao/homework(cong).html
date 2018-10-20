@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			.myred{color: red;}
+			.mygreen{color: green;}
+		</style>
+
+
+		<title>gin js</title>
+	</head>
+	<body>
+		<center><h1>lesson 8 homework </h1></center>
+		<h5 align="center">from congzhihao</h5>
+		
+		<!--获取input里输入的值-->
+		<center>
+		<h3>请输入要执行的命令:<input id="name" /></h3>
+		<button id="buttonDemo">提交</button>
+		</center>
+		<hr />
+		<!--显示命令执行的结果-->
+		<div	 class="mygreen">
+			<h3>命令的执行结果：</h3> <br />
+			<p id="output" class="myred"> </p>
+		</div>
+		
+		
+	</body>
+	<script>
+		var b = $("#buttonDemo");
+
+//下面的有点问题
+//		b.click(function()
+//		{
+//			var n = $("#name")
+//			var url = "http://112.74.164.107:9000/api/v1/command?cmd=" + n[0].value;
+//			console.log(url)
+//			rsq = $.get(url)
+//			console.log(rsq)
+//			var out = $("#output")
+//			out[0].innerText = rsq.respondText
+//			
+//		}
+//		)
+		
+				b.click(function()
+		{
+			var n = $("#name")
+			var url = "http://112.74.164.107:9000/api/v1/command?cmd=" + n[0].value;
+			console.log(url)
+			rsq = $.get(url,function(data,status)
+				{
+					var out = $("#output")
+					out[0].innerText = data
+				}
+			)
+
+		}
+		)
+		
+		
+	</script>
+</html>
