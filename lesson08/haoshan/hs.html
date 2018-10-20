@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		
+		<!-- Bootstrap core CSS -->
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<title>郝珊-homework</title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	</head>
+	<body style="text-align:center;">
+		<h1>输入Linux命令</h1>
+		<textarea id="info" style="width:768px; height:30px;" placeholder="请输入command"></textarea>
+		<button id="getcurl" type="button" class="btn btn-sm btn-success" onclick="discommand('info')">执行</button>
+
+		<h1>输出结果</h1>
+			
+		<div style="text-align:center;">
+			<p id="output"></p>
+		</div>
+		
+		<script>
+			function discommand(input)
+				{
+					var cmd = document.getElementById(input).value;
+					console.log(cmd);
+					var url="http://112.74.164.107:9000/api/v1/command?cmd="+cmd
+					console.log(url)
+					jQuery.get(url,function(data,status){
+						console.log(data)
+						obj = document.getElementById("output");
+						if (status == "success") {
+    						obj.innerHTML = data;
+    					} else {
+    						obj.innerHTML = "command not found";
+    					}
+						});
+					
+				}
+		</script>
+
+	</body>
+</html> 
