@@ -18,14 +18,15 @@ cmd 是必传参数，表示linux上的命令；
 
 ## 作业检查结果
  
-|账号            |成绩  |备注               |   
-|:--------------|:---  |:----------------- |
-|caozhi         |优    |  建议js代码写在html代码后                |
-|luxiaoxin      |优+   |  命令执行和登录两个功能都完成了                 | 
+|账号            |成绩 |备注               |   
+|:--------------|:--- |:----------------- |
+|caozhi         |优   |  建议js代码写在html代码后                |
+|luxiaoxin      |优+  |  命令执行和登录两个功能都完成了                 | 
 |majianli       |优   |  建议提交的html页面文件名要有意义                 | 
 |congzhihao     |优   |                   | 
 |zhougui        |优   |                   | 
 |wangqianlong   |优   |                   | 
 |siliqiang      |优   |   为什么url用的是127.0.0.1，是自已本地部署了django吗？                | 
 |haoshan        |优   |                  | 
-|yanyupan       |优+   |                   |
+|yanyupan       |优+  |                   |
+|heweiping      |优   |  |
