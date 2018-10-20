@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/navbar.css" rel="stylesheet">
+		<link href="css/signin.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/limonte-sweetalert2/7.28.5/sweetalert2.min.css" rel="stylesheet" />
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/limonte-sweetalert2/7.28.5/sweetalert2.min.js"></script>
+	</head>
+
+	<body>
+		<div class="signin">
+			<div class="signin-head"><img src="images/head.png" alt="" class="img-circle"></div>
+			<div class="form-signin">
+				<input type="text" id="username" class="form-control" placeholder="用户名" />
+				<input type="password" id="password" class="form-control" placeholder="密码" />
+				<button id="btn" class="btn btn-lg btn-warning btn-block" type="submit">登录</button>
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me"> 记住我
+				</label>
+			</div>
+		</div>
+		<script type="text/javascript">
+			jQuery("#btn").click(function() {
+				var username = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				var url = "http://112.74.164.107:9000/api/v1/login?username=" + username + "&password=" + password;
+				jQuery.get(url, function(data, status) {
+					if (status == "s") {
+						$(location).attr('href', './index.html');
+					} else {
+						sweetAlert(
+							'登录……',
+							'失败了！',
+							'error'
+						);
+						$("#username").val('');
+						$("#password").val('');
+					}
+
+				})
+			})
+		</script>
+	</body>
+</html>
