@@ -31,3 +31,4 @@ cmd 是必传参数，表示linux上的命令；
 |yanyupan       |优+  |                   |
 |heweiping      |优   |  |
 |wangxiao       |良   | 你用paramiko模块实现了远程主机命令执行，但是没有实现页面执行命令的功能哈。 |
+|pangya         |优   |  |
