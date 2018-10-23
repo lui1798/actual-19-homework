@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="page-header">两数求和</h2>
+<form method="get" action="/api/sum/">
+	<center>
+	num1: <input type="text" name="num1" />
+	num2: <input type="text" name="num2"/>
+	<input id="btn" class="btn btn-sm btn-primary" type="submit" value="求和"/>
+	</center>
+	<div id="result" style="visibility: visible;">
+		<hr/>
+		<center><h3>两数之和: </h1></center>
+		<p id="content" style="width: auto;"></p>
+		{% if status == "success" %}
+		<pre style="color: green; font-size: 14px;">{{ data }}</pre>
+		{% else %}
+		<pre style="color: red; font-size: 14px;">{{ data }}</pre>
+		{% endif %}
+	</div>	
+</form>
+{% endblock %}
