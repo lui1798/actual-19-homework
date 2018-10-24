@@ -10,3 +10,19 @@
 3. 页面一定要用我提供的页面；
 ```
 
+## 作业检查结果
+ 
+|账号            |成绩 |备注               |   
+|:--------------|:--- |:----------------- |
+|caozhi         |  |                      |
+|luxiaoxin      |  |                      | 
+|majianli       |  |                      | 
+|congzhihao     |  |                      | 
+|zhougui        |  |                      | 
+|wangqianlong   |  |                      | 
+|siliqiang      |  |                      | 
+|haoshan        |  |                      | 
+|yanyupan       |  |                      |
+|heweiping      |  |                      |
+|wangxiao       |  |                      |
+|pangya         |  |                      |
