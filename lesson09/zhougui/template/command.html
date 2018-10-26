@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>运维管理平台</title>
+        <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css " rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				   </button>
+				   <a class="navbar-brand" href="/"><font color="#F0F8FF">运维管理平台</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li><a href="/">仪表盘</a></li>
+					<li><a href="/utils/">常用工具</a></li>
+					<li class="active"><a href="/command/">命令执行</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">命令执行</h1>
+			</div>
+		</div>
+        <div style="margin-left: 20%">
+            <h4>请输入命令:</h4>
+					<textarea id="cmdText" style="height: 80px; width: 80%;">
+					</textarea>
+					<p style="width: 80%;text-align: center;">
+						<a class="btn btn-lg btn-primary" role="button" id="cmdButton">提交</a>
+					</p>
+					<hr/>
+					<div style="margin-right: 20%">
+						<h3>命令执行结果：</h3>
+						<p>
+							<pre id="content"></pre>
+						</p>
+					</div>
+        </div>
+    </div>
+        <script>
+            $("#cmdButton").click(function () {
+                var cmd = document.getElementById('cmdText').value;
+//                console.log(cmd);
+                var url = "http://47.52.228.140:8000/command/command?cmd=" + cmd;
+//                console.log(url);
+                $.get(url,function (data,status) {
+//                    console.log(status);
+                    obj=document.getElementById("content");
+                    if ("status == success"){
+                        obj.innerHTML=data;
+                    }else {
+                        obj.innerHTML="命令执行失败"
+                    }
+                })
+
+            })
+        </script>
+
+	</body>
+</html>
