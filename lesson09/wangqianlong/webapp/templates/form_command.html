@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Python19 Platform</title>
+
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css" rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				   </button>
+				   <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="/dashboard">仪表盘</a></li>
+					<li><a href="/command">命令执行</a></li>
+					<li><a href="/sum">求和</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">Dashboard</h1>
+				  <div class="jumbotron" >
+    				<div style=";">
+						<div>
+							<center>
+									<h4>传入命令参数:</h4>
+									<textarea id="cmdText" style="width: 300px; height: 30px;"></textarea>
+									<br />
+									<button type="button" class="btn btn-primary" id="cmdBtn">提交</button>
+
+							</center>
+						</div>
+	   	    				<!--<hr />-->
+						<div>
+							<center><h4>返回结果如下：</h4>
+							<p ><pre id="content" style="width: 300px; align-content: center; "></pre></p>
+							</center>
+						</div>
+					</div>
+
+				  </div>
+				<script src= "/static/js/jquery-3.3.1.min.js" ></script>
+    			<script src= "/static/js/bootstrap.min.js" ></script>
+				<script>
+					$("#cmdBtn").click(function(){
+						var cmd = document.getElementById("cmdText").value;
+						// var cmd = document.getElementsByTagName('textarea').item(0).value;
+						console.log(cmd);
+						var url = "http://127.0.0.1:8000/command_v3?cmd=" + cmd;
+						console.log(url);
+						$.get(url, function(data, status){
+							console.log(status);
+							obj = document.getElementById("content");
+							if (status == "success") {
+								obj.innerHTML = data;
+							} else {
+								obj.innerHTML = "命令执行失败。";
+							}
+						})
+					})
+				</script>
+
+			</div>
+		</div>
+    </div>
+
+	</body>
+</html>
