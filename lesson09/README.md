@@ -14,15 +14,15 @@
  
 |账号            |成绩 |备注               |   
 |:--------------|:--- |:----------------- |
-|caozhi         |  |                      |
-|luxiaoxin      |  |                      | 
-|majianli       |  |                      | 
-|congzhihao     |  |                      | 
-|zhougui        |  |                      | 
-|wangqianlong   |  |                      | 
-|siliqiang      |  |                      | 
+|caozhi         |优  |                      |
+|luxiaoxin      |优+  |                      | 
+|majianli       |优  |                      | 
+|congzhihao     |优+  |                      | 
+|zhougui        |优  |                      | 
+|wangqianlong   |优  |                      | 
+|siliqiang      |优  |                      | 
 |haoshan        |  |                      | 
-|yanyupan       |  |                      |
+|yanyupan       |优+  |                      |
 |heweiping      |  |                      |
 |wangxiao       |  |                      |
 |pangya         |  |                      |
