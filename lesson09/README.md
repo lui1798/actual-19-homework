@@ -26,7 +26,3 @@
 |heweiping      |  |                      |
 |wangxiao       |  |                      |
 |pangya         |  |                      |
-|         |  |                      |
-|         |  |                      |
-|         |  |                      |
-|         |  |                      |
