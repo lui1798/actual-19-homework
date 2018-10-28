@@ -14,15 +14,15 @@
  
 |账号            |成绩 |备注               |   
 |:--------------|:--- |:----------------- |
-|caozhi         |优  |                      |
-|luxiaoxin      |优+  |                      | 
-|majianli       |优  |                      | 
-|congzhihao     |优+  |                      | 
-|zhougui        |优  |                      | 
-|wangqianlong   |优  |                      | 
-|siliqiang      |优  |                      | 
-|haoshan        |  |                      | 
-|yanyupan       |优+  |                      |
-|heweiping      |  |                      |
-|wangxiao       |  |                      |
-|pangya         |  |                      |
+|caozhi         |优   |                      |
+|luxiaoxin      |优+  | 代码中有实现用户登录的功能                     | 
+|majianli       |优   |                      | 
+|congzhihao     |优+  | 用后端变量传递到前端的方式实现，好                     | 
+|zhougui        |优   |                      | 
+|wangqianlong   |优   |                      | 
+|siliqiang      |优   |                      | 
+|haoshan        |     |                      | 
+|yanyupan       |优+  | 用模板继承的方式实现，好                     |
+|heweiping      |     |                      |
+|wangxiao       |良   | 没有用django web的方式实现需求                      |
+|pangya         |     |                      |
