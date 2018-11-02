@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Python19 Platform</title>
+
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css" rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				   </button>
+				   <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="/">首页</a></li>
+					<li><a href="/cmd">命令执行</a></li>
+					<li><a href="/ssum">求和</a></li>
+					<li><a href="/asset">资产管理</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">资产管理</h1>
+
+				<form method="get" action="http://127.0.0.1:8000/asset/add/?">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">主机名</label>
+                        host_name:<input type="text" class="form-control" name="host_name" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Cpu核</label>
+                        cpu_num:<input type="text" class="form-control" name="cpu_num" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Cpu型号</label>
+                        cpu_model:<input type="text" class="form-control" name="cpu_model" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">备注</label>
+                        remark:<input type="text" class="form-control" name="remark" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">内存</label>
+                        mem_total:<input type="text" class="form-control" name="mem_total" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">硬盘大小</label>
+                        disk:<input type="text" class="form-control" name="disk" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">公网ip</label>
+                        public_ip:<input type="text" class="form-control" name="public_ip" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">私有ip</label>
+                        private_ip:<input type="text" class="form-control" name="private_ip" placeholder="192.168.1.">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">远程ip</label>
+                        remote_ip:<input type="text" class="form-control" name="remote_ip" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">运维负责人</label>
+                        op:<input type="text" class="form-control" name="op" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">机器的状态0|1</label>
+                        status:<input type="text" class="form-control" name="status" placeholder="0或1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">操作系统</label>
+                        os_system:<input type="text" class="form-control" name="os_system" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">所属业务线</label>
+                        service_line:<input type="text" class="form-control" name="service_line" >
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">机架</label>
+                        frame:<input type="text" class="form-control" name="frame" placeholder="1-1-">
+                    </div>
+
+                    <input type="submit" class="btn btn-default" value="提交">
+				</form>
+
+			</div>
+		</div>
+    </div>
+
+
+
+	</body>
+</html>
