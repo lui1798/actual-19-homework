@@ -1,0 +1,320 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h2 class="page-header">资产管理</h2>
+    <div>
+        <button class="btn btn-primary btn-info" data-toggle="modal" data-target="#assetsModal">
+            添加资产
+        </button>
+    </div>
+    <br>
+    <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>计算机名</th>
+            <th>CPU核数</th>
+            <th>CPU型号</th>
+            <th>内存</th>
+            <th>硬盘</th>
+            <th>公网IP</th>
+            <th>操作</th>
+        </tr>
+        {% for obj in objs %}
+            <tr>
+                <td>{{ obj.pk }}</td>
+                <td>{{ obj.hostname }}</td>
+                <td>{{ obj.cpu_num }}</td>
+                <td>{{ obj.cpu_model }}</td>
+                <td>{{ obj.mem_total }}</td>
+                <td>{{ obj.disk }}</td>
+                <td>{{ obj.public_ip }}</td>
+                <td>
+                    <button class="btn btn-info btn-xs btnMod" data-toggle="modal" data-target="#assetsModal"
+                            onclick="return get_edit_info({{ obj.pk }})">编辑
+                    </button>
+                    <button class="btn btn-danger btn-xs btnDel" data="{{ obj.pk }}">删除</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <!-- 模态框 -->
+    <form action="" class="form-horizontal" role="form" id="form_data" onsubmit="return assets_form()"
+          style="margin: 20px;">
+        <div class="modal fade" id="assetsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            资产信息
+                        </h4>
+                        <input type="hidden" id="act" value="add"/>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="hostname" class="col-sm-3 control-label">ID</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="id" value="" id="id"
+                                           readonly="readonly"
+                                           placeholder="资产ID<自动生成>">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hostname" class="col-sm-3 control-label">主机名</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="hostname" value="" id="hostname"
+                                           placeholder="主机名">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpu_num" class="col-sm-3 control-label">CPU核数</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="cpu_num" value="" id="cpu_num"
+                                           placeholder="CPU核数">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpu_model" class="col-sm-3 control-label">CPU型号</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="cpu_model" value="" id="cpu_model"
+                                           placeholder="CPU型号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mem_total" class="col-sm-3 control-label">内存</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="mem_total" value="" id="mem_total"
+                                           placeholder="内存">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="disk" class="col-sm-3 control-label">硬盘</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="disk" value="" id="disk"
+                                           placeholder="硬盘">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="public_ip" class="col-sm-3 control-label">公网IP</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="public_ip" value="" id="public_ip"
+                                           placeholder="公网IP">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="private_ip" class="col-sm-3 control-label">内网IP</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="private_ip" value="" id="private_ip"
+                                           placeholder="内网IP">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-3 control-label">远程IP</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="remote_ip" value="" id="remote_ip"
+                                           placeholder="远程IP">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="op" class="col-sm-3 control-label">负责人</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="op" value="" id="op"
+                                           placeholder="负责人">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="status" class="col-sm-3 control-label">上下线</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" name="status" id="status">
+                                        <option value="1" id="on_line">已上线</option>
+                                        <option value="0" id="off_line">已下线</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="os_system" class="col-sm-3 control-label">操作系统</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="os_system" value="" id="os_system"
+                                           placeholder="操作系统">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="service_line" class="col-sm-3 control-label">所属业务</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="service_line" value=""
+                                           id="service_line"
+                                           placeholder="所属业务">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="frame" class="col-sm-3 control-label">机柜位置</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="frame" value="" id="frame"
+                                           placeholder="机柜位置">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="remark" class="col-sm-3 control-label">备注</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" name="remark" value="" id="remark"
+                                              placeholder="备注信息"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <span id="tip"> </span>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            提交
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+    </form>
+
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/limonte-sweetalert2/7.28.5/sweetalert2.min.js"></script>
+    <script>
+        // 关闭后重新加载以清涂模态框数据
+        $(function () {
+            $("#assetsModal").on("hidden.bs.modal", function () {
+                window.location.reload();
+            });
+        })
+
+        // 获取编辑的资产信息
+        function get_edit_info(pk) {
+            var pk = pk;
+            $("#act").val("edit");
+            $("#myModalLabel").text("资产编辑");
+            $.ajax(
+                {
+                    url: "/assets/get/?pk=" + pk,
+                    type: "get",
+                    success: function (data) {
+                        if (data) {
+                            // 赋值
+                            $("#id").val(data.id);
+                            $("#hostname").val(data.hostname);
+                            $("#cpu_num").val(data.cpu_num);
+                            $("#cpu_model").val(data.cpu_model);
+                            $("#mem_total").val(data.mem_total);
+                            $("#disk").val(data.disk);
+                            $("#public_ip").val(data.public_ip);
+                            $("#private_ip").val(data.private_ip);
+                            $("#remote_ip").val(data.remote_ip);
+                            $("#op").val(data.op);
+                            $("#os_system").val(data.os_system);
+                            $("#service_line").val(data.service_line);
+                            $("#frame").val(data.frame);
+                            $("#remark").val(data.remark);
+
+                            if (data.status == 1) {
+                                $("#on_line").val("1");
+                                $("#on_line").attr("selected", "true");
+                            } else {
+                                $("#off_line").val("1");
+                                $("#off_line").attr("selected", "true");
+                            }
+                            // 将input元素设置为readonly
+                            $('#access_id').attr("readonly", "readonly")
+                        }
+                    },
+                    error: function () {
+                        sweetAlert(
+                            '失败',
+                            '获取信息失败！',
+                            'error'
+                        );
+                    }
+                    {#请求完成后回调函数 (请求成功或失败之后均调用)#}
+                    /*
+                    complete: function () {
+                        setTimeout(function(){
+                            window.location.reload();//刷新当前页面.
+                        },3000)
+                    }
+                    */
+                });
+            return false;
+        }
+
+        // 提交资产表单
+        function assets_form() {
+            // 可增加对表单数据做判断
+            /*
+            var hostname = $.trim($('#hostname').val());
+
+            if(!hostname)
+            {
+                alert('计算机名不能为空！');
+                return false;
+            }
+            */
+            var form_data = $('#form_data').serialize();
+            var act = $("#act").val();
+            if (act == "edit") {
+                var u = "/assets/edit/";
+            }
+            else {
+                var u = "/assets/add/";
+            };
+            // 异步提交数据
+            $.ajax({
+                    url: u,
+                    data: form_data,
+                    type: "post",
+                    {#请求成功时调用此函数#}
+                    success: function (msg) {
+                        sweetAlert(
+                            '成功',
+                             msg,
+                            'success'
+                        );
+                    },
+                    {#请求失败时调用此函数#}
+                    error: function () {
+                        sweetAlert(
+                            '失败',
+                            "操作失败！",
+                            'error'
+                        );
+                    },
+                    {#请求完成后回调函数 (请求成功或失败之后均调用)#}
+                    complete: function () {
+                        setTimeout(function(){
+                            window.location.reload();//刷新当前页面.
+                        },2000)
+                    }
+            });
+            return false;
+        }
+
+        $(".btnDel").click(function () {
+            var pk = $(this).attr('data');
+            var url = "/assets/delete/?pk=" + pk;
+            $.get(url, function (msg,status) {
+                if (status == "success") {
+                    sweetAlert(
+                        '成功',
+                        msg,
+                        'success'
+                    );
+                }
+                setTimeout(function(){
+                    window.location.reload();//刷新当前页面.
+                },2000)
+            })
+        })
+    </script>
+{% endblock %}
