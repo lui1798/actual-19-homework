@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Add assets | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css" />
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css" />
+
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/static/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/static/admin/js/vendor/xregexp/xregexp.js"></script>
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+
+
+<body class=" app-assets model-assets change-form"
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Django administration</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>vagrant</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Change password</a> /
+                
+                <a href="/admin/logout/">Log out</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/admin/">Home</a>
+&rsaquo; <a href="/admin/assets/">Assets</a>
+&rsaquo; <a href="/admin/assets/assets/">Assetss</a>
+&rsaquo; Add assets
+</div>
+
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Add assets</h1>
+        <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" action="" method="post" id="assets_form" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='T60wMDlmRXN2vQxeqDJ9G8BKglpYBIdkYRwCB8rrSZdQLyn5iboE2sCjISaUaoma' />
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-hostname">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_hostname">主机名:</label>
+                        
+                            <input type="text" name="hostname" class="vTextField" maxlength="50" required id="id_hostname" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-cpu_num">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_cpu_num">Cpu核:</label>
+                        
+                            <input type="number" name="cpu_num" class="vIntegerField" id="id_cpu_num" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-cpu_model">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_cpu_model">Cpu型号:</label>
+                        
+                            <input type="text" name="cpu_model" class="vTextField" maxlength="100" required id="id_cpu_model" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-mem_total">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_mem_total">内存:</label>
+                        
+                            <input type="text" name="mem_total" value="8G" class="vTextField" maxlength="3" required id="id_mem_total" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-disk">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_disk">磁盘大小:</label>
+                        
+                            <input type="text" name="disk" class="vTextField" maxlength="4" required id="id_disk" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-public_ip">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_public_ip">公网ip:</label>
+                        
+                            <input type="text" name="public_ip" class="vTextField" maxlength="32" required id="id_public_ip" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-private_ip">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_private_ip">私有ip:</label>
+                        
+                            <input type="text" name="private_ip" class="vTextField" maxlength="32" required id="id_private_ip" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-remote_ip">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_remote_ip">远程ip:</label>
+                        
+                            <input type="text" name="remote_ip" class="vTextField" maxlength="32" required id="id_remote_ip" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-op">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_op">运维负责人:</label>
+                        
+                            <input type="text" name="op" class="vTextField" maxlength="32" required id="id_op" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-status">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_status">机器的状态0 | 1:</label>
+                        
+                            <select name="status" id="id_status">
+  <option value="" selected>---------</option>
+
+  <option value="0">关机</option>
+
+  <option value="1">运行</option>
+
+</select>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-os_system">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_os_system">操作系统:</label>
+                        
+                            <input type="text" name="os_system" class="vTextField" maxlength="32" required id="id_os_system" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-service_line">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_service_line">所属业务线:</label>
+                        
+                            <input type="text" name="service_line" class="vTextField" maxlength="32" required id="id_service_line" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-frame">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_frame">机架:</label>
+                        
+                            <input type="text" name="frame" class="vTextField" maxlength="32" required id="id_frame" />
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-remark">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_remark">备注:</label>
+                        
+                            <textarea name="remark" cols="40" rows="10" class="vLargeTextField" required id="id_remark">
+</textarea>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+<input type="submit" value="Save" class="default" name="_save" />
+
+
+<input type="submit" value="Save and add another" name="_addanother" />
+<input type="submit" value="Save and continue editing" name="_continue" />
+</div>
+
+
+
+    <script type="text/javascript"
+            id="django-admin-form-add-constants"
+            src="/static/admin/js/change_form.js"
+            
+                data-model-name="assets"
+            >
+    </script>
+
+
+
+
+<script type="text/javascript"
+        id="django-admin-prepopulated-fields-constants"
+        src="/static/admin/js/prepopulate_init.js"
+        data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>

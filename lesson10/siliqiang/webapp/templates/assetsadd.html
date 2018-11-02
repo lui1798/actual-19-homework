@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Python19 Platform</title>
+
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css" rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+	</head>
+	<style>
+        label {
+            width: 120px;
+            float:left;
+            text-align:left;
+        }
+        .form-control {
+            width: auto;
+        }
+		/*.formcontrol {  text-align:right; }*/
+	</style>
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				   </button>
+				   <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <h1 class="page-header">Add assets</h1>
+
+		<form class="form-inline" action="/assets/addassets/" id="assetsForm">
+
+			<div>
+				<label for="id_hostname">主机名:</label>
+				<input type="text" name='hostname' class="form-control" maxlength="50" required id="id_hostname" />
+  			</div>
+
+			<br>
+			<div>
+				 <label for="id_cpu_num">Cpu核:</label>
+				 <input style="width:80px;" type="number" name="cpu_num" class="form-control" id="id_cpu_num" />
+  			</div>
+
+			<br>
+			<div>
+				  <label class="required" for="id_cpu_model">Cpu型号:</label>
+				  <input type="text" name="cpu_model" class="form-control" maxlength="100" required id="id_cpu_model" />
+			</div>
+
+			<br>
+			<div>
+					<label class="required" for="id_mem_total">内存:</label>
+					<input type="text" name="mem_total" value="8G" class="form-control" maxlength="3" required id="id_mem_total" />
+			</div>
+
+            <br>
+            <div>
+                    <label class="required" for="id_disk">磁盘大小:</label>
+                    <input type="text" name="disk" class="form-control" maxlength="4" required id="id_disk" />
+            </div>
+
+            <br>
+            <div>
+                    <label class="required" for="id_public_ip">公网ip:</label>
+                    <input type="text" name="public_ip" class="form-control" maxlength="32" required id="id_public_ip" />
+            </div>
+
+
+            <br>
+            <div>
+                <label class="required" for="id_private_ip">私有ip:</label>
+                <input type="text" name="private_ip" class="form-control" maxlength="32" required id="id_private_ip" />
+            </div>
+
+
+            <br>
+            <div>
+                <label class="required" for="id_remote_ip">远程ip:</label>
+                <input type="text" name="remote_ip" class="form-control" maxlength="32" required id="id_remote_ip" />
+            </div>
+
+
+            <br>
+            <div>
+                <label class="required" for="id_op">运维负责人:</label>
+                <input type="text" name="op" class="form-control" maxlength="32" required id="id_op" />
+            </div>
+
+            <br>
+            <div>
+                <label for="id_status">机器的状态0 | 1:</label>
+                <select name="status" id="id_status">
+                    <option value="" selected>---------</option>
+
+                     <option value="0">关机</option>
+
+                    <option value="1">运行</option>
+
+                </select>
+
+            </div>
+
+
+            <br>
+            <div>
+
+                <label class="required" for="id_os_system">操作系统:</label>
+                <input type="text" name="os_system" class="form-control" maxlength="32" required id="id_os_system" />
+
+            </div>
+
+
+            <br>
+            <div>
+
+                <label class="required" for="id_service_line">所属业务线:</label>
+                <input type="text" name="service_line" class="form-control" maxlength="32" required id="id_service_line" />
+
+            </div>
+
+            <br>
+            <div>
+                <label class="required" for="id_frame">机架:</label>
+                <input type="text" name="frame" class="form-control" maxlength="32" required id="id_frame" />
+
+            </div>
+
+            <br>
+            <div>
+                <label class="required" for="id_remark">备注:</label>
+                <textarea name="remark" cols="40" rows="10" class="form-control" required id="id_remark">
+</textarea>
+
+            </div>
+
+
+
+        <br>
+        <div>
+            <button type="button" class="btn btn-info" id="btnAdd">提交</button>
+        </div>
+
+        </form>
+
+
+
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$("#btnAdd").click(function () {
+		    	 var targetUrl = $("#assetsForm").attr("action");
+                 var data = $("#assetsForm").serialize();
+            $.get(targetUrl, data, function (result, status) {
+                $("#data").val(result);
+
+                if (status = "success") {
+						window.location.reload();
+					}
+            })
+        })
+	</script>
+	</body>
+</html>
