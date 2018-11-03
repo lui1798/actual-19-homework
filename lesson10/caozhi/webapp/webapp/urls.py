@@ -18,7 +18,7 @@ from django.contrib import admin
 from api.views import hello
 from api.views import commond,ccommond_v1,cssum,page,cat_cat,pagesum,pagesum_v2
 from dashboard.views import index, command, hessum
-from assets.views import assetsView
+from assets.views import assetsView, deleteAssetsView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^page', page),
     url(r'^cat_cat', cat_cat),
     url(r'^dashboard', index),
-    url(r'^assets', assetsView),
+    url(r'^assets$', assetsView),
+    url(r'^assets/delete/$', deleteAssetsView),
 
 ]

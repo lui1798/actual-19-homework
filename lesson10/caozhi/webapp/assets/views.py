@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponseRedirect
 
 from .models import Assets
 
@@ -8,6 +8,7 @@ def assetsView(request):
 
 def deleteAssetsView(request):
     pk = request.GET.get("pk")
-    obj = Assets.get(pk=pk)
+    obj = Assets.objects.get(pk=pk)
     obj.delete()
-    return HttpResponse("Delete {} ok".format(obj.hostname))
+    return HttpResponseRedirect("Delete {} ok".format(obj.hostname))
+    #return HttpResponseRedirect("emmby")
