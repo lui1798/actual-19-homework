@@ -1,0 +1,14 @@
+from django.db import models
+
+# Create your models here.
+
+class Assets(models.Model):
+    hostname = models.CharField(max_length=50, db_index=True, unique=True, verbose_name='主机名',default='')
+    cpu_num = models.IntegerField(verbose_name='cpu核数',default=0)
+    cpu_model = models.CharField(max_length=100, verbose_name='cpu型号',default='')
+    remark = models.TextField(default='', null=True, verbose_name='备注')
+    def __str__(self):
+        return self.hostname
+
+    class Meta:
+        db_table = 'assets'

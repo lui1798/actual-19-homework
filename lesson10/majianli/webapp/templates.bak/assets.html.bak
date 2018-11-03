@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Python19 Platform</title>
+
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css" rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+		<script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-md-2 sidebar">
+					<ul class="nav nav-sidebar">
+						<li class="active"><a href="/dashboard">仪表盘</a></li>
+						<li><a href="/command">命令执行</a></li>
+						<li><a href="/users">用户管理</a></li>
+						<li><a href="/users">主机管理</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header">Dashboard</h1>
+					<div>
+						<center>
+							<h1>请输入要执行的命令</h1>
+							<textarea id="cmdText" style="width: 768px; height: 30px;"></textarea>
+							<br />
+							<button type="button" class="btn btn-primary" id="cmdBtn">提交</button>
+
+
+						</center>
+					</div>
+					<hr />
+					<div>
+						<p ><pre id="content"></pre></p>   
+					</div>
+				</div>
+
+				<script>
+					$("#cmdBtn").click(function(){	
+						var cmd = document.getElementById("cmdText").value;
+						console.log(cmd);
+						/* var url = "http://112.74.164.107:9000/api/v1/command?cmd=" + cmd;*/
+						var url = "http://172.18.41.30:8000/api/v1/command?cmd=" + cmd;
+						console.log(url);
+						$.get(url, function(data, status){
+							console.log(data)
+							console.log(status);
+							obj = document.getElementById("content");
+							if (status == "success") {
+								obj.innerHTML = data;
+							} 
+
+						})
+					})
+				</script>
+			</div>
+		</div>
+		</div>
+
+	</body>
+</html>
