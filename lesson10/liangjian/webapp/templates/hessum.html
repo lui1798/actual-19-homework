@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Python19 Platform</title>
+
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css" rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+			<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+			</script>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+		</script>
+	</head>
+
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				   </button>
+				   <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="/dashboard">仪表盘</a></li>
+					<li><a href="/commond">命令执行</a></li>
+					<li><a href="/hessum">求和</a></li>
+					<li><a href="/assets">资产管理</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				num1: <input id="num1" type="text" name="num1" />
+				num2: <input id="num2" type="text" name="num2"/>
+				<button id="ssum" type="button" class="btn btn-primary" onclick="ssum(id)">求和</button> 
+				
+				<h1 style="text-align:center">相加结果</h1>
+				<div cols="155" style="text-align:center;">
+					 <pre id="output"></pre>
+				</div>
+			</div>
+		</div>
+    </div>
+			<script>
+			 $("#ssum").click(function()){
+				var cmd1 = document.getElementById("num1").value;
+				var cmd2 = document.getElementById("num2").value;
+			      	var url="http://140.143.227.246:9092/hessum/?num1="+cmd1+"&num2="+cmd2;
+					$.get(url,function(data,status){
+						console.log(status);
+						obj = document.getElementById("output");
+						if (status == "success") {
+								obj.innerHTML = data;
+							} else {
+								obj.innerHTML = "faild";
+							}
+						});
+			}
+			
+			</script>
+	</body>
+</html>
