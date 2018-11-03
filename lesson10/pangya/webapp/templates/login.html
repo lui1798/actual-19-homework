@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>51reboot login</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/style_log.css" >
+		<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/userpanel.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/jquery.ui.all.css">
+	</head>
+	<body class="login" mycollectionplug="bind">
+		<div class="login_m">
+			<div class="login_logo"><img src="/static/img/logo.png" width="196" height="46"></div>
+			<div class="login_boder">
+				<form method="get" action="/login_ok">
+				<div class="login_padding" id="login_model">
+					<h2>用户名</h2>
+					<label>
+					    <input type="text" id="username" name="username" class="txt_input txt_input2" onfocus="if (value ==&#39;username&#39;){value =&#39;&#39;}" onblur="if (value ==&#39;&#39;){value=&#39;username&#39;}" value="username">
+					</label>
+
+					<h2>密码</h2>
+					<label>
+					    <input type="password" id="userpwd" name="passwd" class="txt_input" onfocus="if (value ==&#39;******&#39;){value =&#39;&#39;}" onblur="if (value ==&#39;&#39;){value=&#39;******&#39;}" value="******">
+					</label>
+
+					<p class="forgot"><a id="iforget" href="javascript:void(0);">忘记密码</a></p>
+
+					<div class="rem_sub">
+					  	<div class="rem_sub_l">
+				  			<input type="checkbox" name="checkbox" id="save_me">
+				   			<label for="checkbox">记住用户</label>
+					   	</div>
+				    	<label>
+				      		<input type="submit" class="sub_button" id="sign_in" value="登陆" style="opacity: 0.7;">
+				    	</label>
+			        </div>
+				</div>
+				</form>
+			</div>
+		</div>
+		 <br> <br>
+		<p align="center"> More Information <a href="http://www.51reboot.com//" target="_blank" title="51reboot">&nbsp;51reboot</a> - Collect from <a href="https://v3.bootcss.com/" title="Bootstrap" target="_blank">&nbsp;Bootstrap框架</a></p>
+
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+ <!--
+	<script type="text/javascript">
+		jQuery("#sign_in").click(function(){
+				var username = document.getElementById("username").value;
+				var passwd = document.getElementById("userpwd").value
+				console.log(username,passwd);
+				var url = "login_ok?username=" + username + "&password=" + passwd;
+				console.log(url);
+				jQuery.get(url, function(status){
+					console.log(status);
+					if (status == "Login ok") {
+						jQuery(location).attr('href', '/dashboard/');;
+					} else {
+						alert("用户名密码错误！请重新输入");
+					}
+				})
+			})
+	</script>
+-->
+	</body>
+</html>

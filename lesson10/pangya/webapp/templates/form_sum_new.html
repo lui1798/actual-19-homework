@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Python19 Platform</title>
+
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/main.css" rel="stylesheet">
+		<link href="/static/css/extend.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<nav class="navbar top-bg-color navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				   </button>
+				   <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/login"><font color="#F0F8FF">退出</font></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li><a href="/dashboard">仪表盘</a></li>
+					<li><a href="/command">命令执行</a></li>
+					<li  class="active"><a href="/ssum/">数据求和</a></li>
+					<li><a href="/assets">资产管理</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+				<h1 class="page-header">Sum</h1>
+				<h3><strong>数据求和</strong></h3>
+				<br>
+				<div class="col-md-6">
+					<h4>输入数据</h4>
+	                <form method="get" action="/ssum">
+	                    num1:<input type="text" name="num1"/>
+	                    num2:<input type="text" name="num2"/>
+	                    <input type="submit" value="求和"/>
+	                </form>
+                </div>
+                <div class="col-md-6">
+			      	<h4>计算结果：</h4>
+			      	<p><pre>{{pageHtml}}</pre></p>
+			      	<!--<p ><pre id="content"></pre></p>-->
+			    </div>
+			</div>
+		</div>
+    </div>
+
+	</body>
+</html>

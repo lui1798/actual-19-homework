@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Python19 Platform</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/extend.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar top-bg-color navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="/">仪表盘</a></li>
+                <li><a href="/command">命令执行</a></li>
+                <li><a href="/ssum">求和</a></li>
+                <li><a href="/assets">资产管理</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">资产管理</h1>
+
+            <form method="get" action="/assets/add/">
+                <div class="form-group">
+                    <label for="hostname">主机名</label>
+                    <input type="text" class="form-control" id="hostname" name="hostname">
+                </div>
+                <div class="form-group">
+                    <label for="private_ip">私网ip</label>
+                    <input type="text" class="form-control" id="private_ip" name="private_ip" value="192.168.0.1">
+                </div>
+                <div class="form-group">
+                    <label for="public_ip">外网ip</label>
+                    <input type="text" class="form-control" id="public_ip" name="public_ip" placeholder="x.x.x.x">
+                </div>
+
+                <div class="form-group">
+                    <label for="cpu_num">Cpu核</label>
+                    <input type="text" class="form-control" id="cpu_num" name="cpu_num" placeholder="输入整数">
+                </div>
+                <div class="form-group">
+                    <label for="cpu_model">cpu型号</label>
+                    <input type="text" class="form-control" id="cpu_model" name="cpu_model" value="Intel(R)">
+                </div>
+                <div class="form-group">
+                    <label for="mem_total">内存</label>
+                    <input type="text" class="form-control" id="mem_total" name="mem_total" value="8G">
+                </div>
+                <div class="form-group">
+                    <label for="disk">磁盘</label>
+                    <input type="text" class="form-control" id="disk" name="disk" value="128G">
+                </div>
+                <div class="form-group">
+                    <label for="os_system">操作系统</label>
+                    <input type="text" class="form-control" id="os_system" name="os_system" value="centos 6.8">
+                </div>
+                <div class="form-group">
+                    <label for="status">机器状态</label>
+                    <select name="status" class="form-control" id="status">
+                        <option value="0">开机</option>
+                        <option value="1">关机</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="frame">机架</label>
+                    <input type="text" class="form-control" id="frame" name="frame" placeholder="x-x-x">
+                </div>
+                <div class="form-group">
+                    <label for="remark">备注</label>
+                    <input type="text" class="form-control" id="remark" name="remark" placeholder="备注信息">
+                </div>
+
+                <input type="submit" onclick="return Validate()" class="btn btn-default" value="提交">
+                <div id="container_buttom" style=" text-align:center; margin:5px 0;">
+                </div>
+
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
