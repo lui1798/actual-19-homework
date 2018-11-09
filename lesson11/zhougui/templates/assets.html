@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>运维管理平台</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/css/ionicons.min.css">
+		<link rel="stylesheet" href="/static/css/AdminLTE.min.css">
+		<link rel="stylesheet" href="/static/css/_all-skins.min.css">
+		<link rel="stylesheet" href="/static/css/morris.css">
+		<link rel="stylesheet" href="/static/css/jquery-jvectormap.css">
+		<link rel="stylesheet" href="/static/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="/static/css/daterangepicker.css">
+		<link rel="stylesheet" href="/static/css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="/static/css/sweetalert.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+	</head>
+
+	<body class="hold-transition skin-blue sidebar-mini" >
+
+		<!--头部信息-->
+		<div class="wrapper">
+			<header class="main-header">
+				<a href="/home/" class="logo">
+					<span class="logo-mini"><b>A</b>LT</span>
+					<span class="logo-lg"><b>Admin</b>LTE</span>
+				</a>
+				<nav class="navbar navbar-static-top">
+					<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+						<span class="sr-only">Toggle navigation</span>
+					</a>
+
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li class="dropdown user user-menu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<img src="/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+									<span class="hidden-xs">root</span>
+								</a>
+								<ul class="dropdown-menu">
+									<li class="user-header">
+										<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+									</li>
+
+									<li class="user-footer">
+										<div class="pull-left">
+											<a href="#" class="btn btn-default btn-flat">个人信息</a>
+										</div>
+										<div class="pull-right">
+											<a href="/account/logout/" class="btn btn-default btn-flat">退出</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+			<aside class="main-sidebar">
+				<section class="sidebar">
+
+					<!--菜单栏-->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+						</div>
+						<div class="pull-left info">
+							<p>Alexander Pierce</p>
+							<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+						</div>
+					</div>
+
+					<ul class="sidebar-menu" data-widget="tree">
+						<li class="header">MAIN NAVIGATION</li>
+
+						<li class="active treeview">
+							<a href="#">
+								<i class="fa fa-dashboard"></i> <span>资产管理</span>
+								<span class="pull-right-container">
+							              		<i class="fa fa-angle-left pull-right"></i>
+							            	</span>
+							</a>
+
+							<ul class="treeview-menu">
+								<li class="active">
+									<a href="/assets/list/"><i class="fa fa-circle-o"></i>主机管理</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-circle-o"></i>站点管理</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-circle-o"></i>应用管理</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="treeview">
+							<a href="#">
+								<i class="fa fa-edit"></i> <span>用户管理</span>
+								<span class="pull-right-container">
+					              				<i class="fa fa-angle-left pull-right"></i>
+					            			</span>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="#"><i class="fa fa-circle-o"></i> 用户管理</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-circle-o"></i> 用户组管理</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="treeview">
+							<a href="#">
+								<i class="fa fa-files-o"></i><span>批量管理</span>
+								<span class="pull-right-container">
+					              				<i class="fa fa-angle-left pull-right"></i>
+					            			</span>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> 命令执行</a>
+								</li>
+								<li>
+									<a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 文件上传</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</section>
+			</aside>
+
+			<div class="content-wrapper">
+				<section class="content-header">
+					<h1>主机管理</h1>
+
+					<ol class="breadcrumb">
+						<li>
+							<a href="#"><i class="fa fa-dashboard"></i> Home</a>
+						</li>
+						<li class="active">Dashboard</li>
+					</ol>
+				</section>
+				<div class="box">
+
+					<div class="box-body">
+						<div class="box-header" style="float: left">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+							<a href="/assets/export/"><button class="btn btn-info">导出</button></a>
+						</div>
+						<div class="box-header" style="float: right">
+							<form class="form-inline">
+								<input type="text" class="form-control" style="width: 200px" placeholder="请输入主机名" name="search_value">
+								<button class="btn btn-info">搜索</button>
+							</form>
+						</div>
+						<table class="table table-hover table-bordered table-striped ">
+							<thead style="text-align: center;">
+								<tr>
+									<td>主机名</td>
+									<td>CPU核数</td>
+									<td>CPU型号</td>
+									<td>内存</td>
+									<td>磁盘</td>
+									<td>内网IP</td>
+									<td>外网IP</td>
+									<td>操作</td>
+								</tr>
+							</thead>
+
+							<tbody style="text-align: center;">
+								{% for obj in objs%}
+								<tr>
+									<td>{{obj.hostname}}</td>
+									<td>{{obj.cpu_num}}</td>
+									<td>{{obj.cpu_model}}</td>
+									<td>{{obj.mem_total }}</td>
+									<td>{{obj.disk }}</td>
+									<td>{{obj.private_ip}}</td>
+									<td>{{obj.public_ip }}</td>
+									<td>
+                                        <button type="button" class="btn btn-primary btn-xs btnDetail" data-toggle="modal" data-target="#Detail" data="{{ obj.pk }}">详情</button>
+                                        <button type="button" class="btn btn-info btn-xs btnEdit" data-toggle="modal" data-target="#Edit" data="{{ obj.pk }}">编辑</button>
+										<button type="button" class="btn btn-danger btn-xs btnDelete" data="{{ obj.pk }}">删除</button>
+									</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--添加主机-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">主机添加</h4>
+		      </div>
+		      <div class="modal-body">
+		
+				  <form class="form-horizontal" id="formAdd">
+				  		<div class="form-group">
+							<label class="col-sm-2 control-label">主机名</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" name="hostname">
+							</div>
+					  	</div>
+					  	
+					  	<div class="form-group">
+							<label class="col-sm-2 control-label">CPU核数</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="cpu_num">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">CPU型号</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="cpu_model">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">内存</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="mem_total">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">磁盘</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="disk">
+							</div>
+						</div>
+						
+						<div class="form-group">
+								<label class="col-sm-2 control-label">内网IP</label>
+									<div class="col-sm-9">
+									<input type="text" class="form-control" name="private_ip">
+								</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">公网IP</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="public_ip">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">操作系统</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="os_system">
+							</div>
+						</div>
+					
+						<div class="form-group">
+							<label class="col-sm-2 control-label">状态</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="status">
+									<option>---请选择---</option>
+								  	<option value="0">关机</option>
+								  	<option value="1">运行</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-2 control-label">业务线</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="service_line">
+							</div>
+						</div>	
+						<div class="form-group">
+								<label class="col-sm-2 control-label">运维负责人</label>
+									<div class="col-sm-9">
+									<input type="text" class="form-control" name="op">
+								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">备注</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" name="remark"></textarea>
+							</div>
+						</div>
+				</form>
+		
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		        <button type="button" class="btn btn-primary" id="btnAddAsset">提交</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+        <!--查看主机-->
+		<div class="modal fade" id="Detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="Detail">主机详情</h4>
+		      </div>
+		      <div class="modal-body">
+                      <form class="form-horizontal">
+                          <div class="form-group">
+							<label class="col-sm-2 control-label">主机名</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" name="hostname" id="Detail_hostname" readonly>
+							</div>
+					  	</div>
+
+					  	<div class="form-group">
+							<label class="col-sm-2 control-label">CPU核数</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="cpu_num" id="Detail_cpunum">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">CPU型号</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="cpu_model" id="Detail_cpumodel">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">内存</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="mem_total" id="Detail_memtotal">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">磁盘</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="disk" id="Detail_disk">
+							</div>
+						</div>
+
+						<div class="form-group">
+								<label class="col-sm-2 control-label">内网IP</label>
+									<div class="col-sm-9">
+									<input type="text" class="form-control" name="private_ip" id="Detail_privateip">
+								</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">公网IP</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="public_ip" id="Detail_publicip">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">操作系统</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="os_system" id="Detail_ossystem">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">状态</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="status" id="Detail_status">
+									<option>---请选择---</option>
+								  	<option value="0">关机</option>
+								  	<option value="1">运行</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">业务线</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="service_line" id="Detail_serviceline">
+							</div>
+						</div>
+						<div class="form-group">
+								<label class="col-sm-2 control-label">运维负责人</label>
+									<div class="col-sm-9">
+									<input type="text" class="form-control" name="op" id="Detail_op">
+								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">备注</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" name="remark" id="Detail_remark"></textarea>
+							</div>
+						</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+        <!--编辑主机-->
+        <div class="modal fade" id="Edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="Edit">主机编辑</h4>
+		      </div>
+		      <div class="modal-body">
+                      <form class="form-horizontal" id="formEdit">
+                          <div class="form-group">
+							<label class="col-sm-2 control-label">主机名</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" name="hostname" id="Edit_hostname" readonly>
+							</div>
+					  	</div>
+
+					  	<div class="form-group">
+							<label class="col-sm-2 control-label">CPU核数</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="cpu_num" id="Edit_cpunum">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">CPU型号</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="cpu_model" id="Edit_cpumodel">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">内存</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="mem_total" id="Edit_memtotal">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">磁盘</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="disk" id="Edit_disk">
+							</div>
+						</div>
+
+						<div class="form-group">
+								<label class="col-sm-2 control-label">内网IP</label>
+									<div class="col-sm-9">
+									<input type="text" class="form-control" name="private_ip" id="Edit_privateip">
+								</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">公网IP</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="public_ip" id="Edit_publicip">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">操作系统</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="os_system" id="Edit_ossystem">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">状态</label>
+							<div class="col-sm-9">
+								<select class="form-control" name="status" id="Edit_status">
+									<option>---请选择---</option>
+								  	<option value="0">关机</option>
+								  	<option value="1">运行</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">业务线</label>
+								<div class="col-sm-9">
+								<input type="text" class="form-control" name="service_line" id="Edit_serviceline">
+							</div>
+						</div>
+						<div class="form-group">
+								<label class="col-sm-2 control-label">运维负责人</label>
+									<div class="col-sm-9">
+									<input type="text" class="form-control" name="op" id="Edit_op">
+								</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">备注</label>
+							<div class="col-sm-9">
+								<textarea class="form-control" name="remark" id="Edit_remark"></textarea>
+							</div>
+						</div>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		          <button type="button" class="btn btn-primary" id="btnEditAsset" data-dismiss="modal">提交</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/adminlte.min.js"></script>
+		<script src="/static/js/sweetalert.min.js"></script>
+        <script src="/static/js/bootstrapValidator.min.js"></script>
+		<script>
+            var form = $('#formAdd');
+            $(document).ready(function () {
+                form.bootstrapValidator({
+                    message:"输入值不合法",
+                    feedbackIcons:{
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields:{
+                        hostname:{
+                            message: '主机名不合法',
+                            validators: {
+                                 notEmpty: {
+                            message: '主机名不能为空'
+                        },
+                        stringLength: {
+                            min: 3,
+                            max: 25,
+                            message: '请输入3到25个字符'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_\u4e00-\u9fa5 ]+$/,
+                            message: '主机名只能由字母、数字、下划线组成 '
+                        }
+                    }
+                        },
+                        cpu_num: {
+                            message:'CPU核数不合法',
+                            validators:{
+                                notEmpty:{
+                                    message:'CPU核数不能为空'
+                                },
+                                 regexp: {
+                            regexp: /^[0-9]+$/,
+                            message: '请输入数字'
+                                }
+                            },
+
+                        },
+                        cpu_model:{
+                            message:"CPU型号不合法",
+                            validators:{
+                                notEmpty:{
+                                    message:"CPU型号不能为空"
+                                }}
+                        },
+                        mem_total:{
+                            message:"内存不合法",
+                            validators:{
+                                notEmpty:{
+                                    message:"内存不能为空"
+                                }}
+                        },
+                        disk:{
+                            message:"磁盘不合法",
+                            validators:{
+                                notEmpty:{
+                                    message:"磁盘不能为空"
+                                }}
+                        },
+                        private_ip:{
+                            message:"内网IP不合法",
+                            validators:{
+                                notEmpty:{
+                                    message:"内网IP不能为空"
+                                }}
+                        },
+                        public_ip:{
+                            message:"公网IP不合法",
+                            validators:{
+                                notEmpty:{
+                                    message:"公网IP不能为空"
+                                }}
+                        },
+                        op:{message:"运维负责人不合法",
+                            validators:{
+                            notEmpty:{
+                                message:"运维负责人不能为空"
+                            }},
+                        },
+                        remark:{
+                            message:"备注不合法",
+                            validators:{
+                                notEmpty:{
+                                    message:"备注不能为空"
+                                }}
+                        },
+
+                    }
+                })
+                
+            });
+
+			$('#btnAddAsset').click(function(){
+			    var bv  = form.data('bootstrapValidator');
+			    bv.validate();
+			    if (bv.validate()){
+                    var data = $('#formAdd').serialize();
+                    var url = "/assets/add/";
+                    $.post(url,data,function (res) {
+                        if(res=='success'){
+                             window.location.reload();
+                    }
+                })
+
+                }
+
+			});
+			
+			function deleteRecord(url) {
+			    $.ajax({
+					type:'POST',
+					data:'',
+					url:url,
+					success:function(data){
+						swal("删除！", "删除成功", "success");
+						window.location.reload();
+					},
+					dataType:'text',
+					error:function (){
+						swal("删除！", "删除失败。", "error");
+					}
+				})
+			}
+			
+			$('.btnDelete').click( function () {
+			    var pk = $(this).attr('data');
+			    var url = "/assets/delete/"+pk + "/";
+				swal({
+				  title: "确定删除吗？",
+				  text: "你确定删除该条记录吗？",
+				  type: "warning",
+				  showCancelButton: true,
+				  confirmButtonColor: "#DD6B55",
+				  confirmButtonText: "确定",
+				  cancelButtonText: "取消",
+				  closeOnConfirm: false,
+				  closeOnCancel: false
+				},
+				function(isConfirm){
+				  if (isConfirm) {
+				      deleteRecord(url);
+				  } else {
+                      swal("取消！", "取消成功", "error");
+				  }
+				});
+			});
+
+			$('.btnDetail').click(function () {
+			    var pk = $(this).attr('data');
+                var url = "/assets/detail/?pk=" +pk;
+                $.get(url,function (data) {
+                    $('#Detail_hostname').val(data.hostname);
+                    $('#Detail_cpumodel').val(data.cpu_model);
+                    $('#Detail_cpunum').val(data.cpu_num);
+                    $('#Detail_memtotal').val(data.mem_total);
+                    $('#Detail_disk').val(data.disk);
+                    $('#Detail_privateip').val(data.private_ip);
+                    $('#Detail_publicip').val(data.public_ip);
+                    $('#Detail_ossystem').val(data.os_system);
+                    $('#Detail_status').val(data.status);
+                    $('#Detail_serviceline').val(data.service_line);
+                    $('#Detail_op').val(data.op);
+                    $('#Detail_remark').val(data.remark);
+                });
+            });
+
+            $('.btnEdit').click(function () {
+                var pk = $(this).attr('data');
+                var url = "/assets/detail/?pk=" +pk;
+                $.get(url,function (data) {
+                    $('#Edit_hostname').val(data.hostname);
+                    $('#Edit_cpumodel').val(data.cpu_model);
+                    $('#Edit_cpunum').val(data.cpu_num);
+                    $('#Edit_memtotal').val(data.mem_total);
+                    $('#Edit_disk').val(data.disk);
+                    $('#Edit_privateip').val(data.private_ip);
+                    $('#Edit_publicip').val(data.public_ip);
+                    $('#Edit_ossystem').val(data.os_system);
+                    $('#Edit_status').val(data.status);
+                    $('#Edit_serviceline').val(data.service_line);
+                    $('#Edit_op').val(data.op);
+                    $('#Edit_remark').val(data.remark);
+                    $('#btnEditAsset').click(function () {
+                        var data = $('#formEdit').serialize();
+                        var url = "/assets/edit/"+pk + "/";
+                        updateRecord(url,data);
+                    })
+                });
+            });
+
+            function updateRecord(url,data) {
+                $.ajax({
+                    type: 'PUT',
+                    data:data,
+                    url:url,
+                    contentType:"application/json",
+                    success:function (data) {
+                        swal("更新！", "更新成功", "success");
+                        window.location.reload();
+                    },
+                    dataType:'text',
+                    error:function () {
+                        swal("更新！", "更新失败。", "error");
+                    }
+                })
+            }
+		</script>
+	</body>
