@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			  <meta charset="utf-8">
+			  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			  <title>AdminLTE 2 | Dashboard</title>
+			  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+			  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+			  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+			  <link rel="stylesheet" href="/static/css/ionicons.min.css">
+			  <link rel="stylesheet" href="/static/css/AdminLTE.min.css">
+			  <link rel="stylesheet" href="/static/css/_all-skins.min.css">
+			  <link rel="stylesheet" href="/static/css/morris.css">
+			  <link rel="stylesheet" href="/static/css/jquery-jvectormap.css">
+			  <link rel="stylesheet" href="/static/css/bootstrap-datepicker.min.css">
+			  <link rel="stylesheet" href="/static/css/daterangepicker.css">
+			  <link rel="stylesheet" href="/static/css/bootstrap3-wysihtml5.min.css">
+			  <link rel="stylesheet" href="/static/css/sweetalert.css">
+			  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+		</head>
+		
+		
+<body class="hold-transition skin-blue sidebar-mini">
+	
+		<!--头部信息-->
+		<div class="wrapper">
+  			<header class="main-header">
+		    		<a href="index2.html" class="logo">
+		      		<span class="logo-mini"><b>A</b>LT</span>
+		      		<span class="logo-lg"><b>Admin</b>LTE</span>
+		    		</a>
+    				<nav class="navbar navbar-static-top">
+      					<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        						<span class="sr-only">Toggle navigation</span>
+      					</a>
+
+      					<div class="navbar-custom-menu">
+						        <ul class="nav navbar-nav">
+							          <li class="dropdown user user-menu">
+							            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							              		<img src="/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+							              		<span class="hidden-xs">Monkey</span>
+							            	</a>
+							            	<ul class="dropdown-menu">
+							              		<li class="user-header">
+							                			<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							              		</li>
+							     
+									              <li class="user-footer">
+									              		<div class="pull-left">
+									                  		<a href="#" class="btn btn-default btn-flat">个人信息</a>
+									                	</div>
+									                	<div class="pull-right">
+									                  		<a href="/account/logout/" class="btn btn-default btn-flat">退出</a>
+								                		</div>
+									              </li>
+							            	</ul>
+						          	</li>
+						        </ul>
+      					</div>
+    					</nav>
+  			</header>
+  			
+  			
+  			<aside class="main-sidebar">
+		    		<section class="sidebar">
+		    			
+		    				<!--菜单栏-->
+					      <div class="user-panel">
+						        <div class="pull-left image">
+						          <img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+						        </div>
+						        <div class="pull-left info">
+						          <p>Alexander Pierce</p>
+						          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+						        </div>
+					      </div>
+ 
+					      <ul class="sidebar-menu" data-widget="tree">
+					        	<li class="header">MAIN NAVIGATION</li>
+					        	
+					        	<li class="active treeview">
+					          		<a href="#">
+						            		<i class="fa fa-dashboard"></i> <span>资源管理</span>
+							            	<span class="pull-right-container">
+							              		<i class="fa fa-angle-left pull-right"></i>
+							            	</span>
+					          		</a>
+					          		
+							          <ul class="treeview-menu">
+							            <li class="active"><a href="/assets/list/"><i class="fa fa-circle-o"></i> 资产管理</a></li>
+							            <li><a href="#"><i class="fa fa-circle-o"></i> 负载均衡</a></li>
+							          </ul>
+					        	</li>
+					        	
+						        <li class="treeview">
+						          	<a href="#">
+						            		<i class="fa fa-files-o"></i>
+						            		<span>批量管理</span>
+						            		<span class="pull-right-container">
+						              			<span class="label label-primary pull-right">4</span>
+						            		</span>
+						          	</a>
+						          	<ul class="treeview-menu">
+						            		<li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> 简单命令执行</a></li>
+						            		<li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 上传文件</a></li>
+						          	</ul>
+					        	</li>
+					     
+					        	<li class="treeview">
+					          		<a href="#">
+					            			<i class="fa fa-edit"></i> <span>用户管理</span>
+					            			<span class="pull-right-container">
+					              				<i class="fa fa-angle-left pull-right"></i>
+					            			</span>
+					          		</a>
+							          <ul class="treeview-menu">
+								            <li><a href="#"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+								            <li><a href="#"><i class="fa fa-circle-o"></i> 用户组管理</a></li>
+							          </ul>
+					        	</li>
+					      </ul>
+				    </section>
+			  </aside>
+
+
+
+		  	<div class="content-wrapper">
+		    		<section class="content-header">
+					      <h1>Dashboard<small>Control panel</small></h1>
+					      
+					      <ol class="breadcrumb">
+					        	<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+					        	<li class="active">Dashboard</li>
+					      </ol>
+		    		</section>
+		
+		    		<section class="content">
+
+						<div class="box">
+		            		<div class="box-header" style="float: left">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+								<button class="btn btn-info"><a href="/assets/export/">导出</a></button>
+
+							</div>
+
+							<div class="box-header" style=" float: right">
+								<form class="form-inline" method="GET" action="/assets/list/">
+									<input type="text" class="form-control" style="width: 300px" name="search_value">
+									<button type="submit" class="btn btn-info" >搜索</button>
+								</form>
+							</div>
+
+			<!--列出主机信息				-->
+            <div class="box-body">
+            		<table class="table table-hover table-bordered table-striped ">
+            				<thead style="text-align: center;">
+            				<tr >
+            					<td>ID</td>
+            					<td>主机名</td>
+            					<td>CPU核数</td>
+            					<td>CPU型号</td>
+            					<td>内存</td>
+            					<td>硬盘</td>
+								<td>操作</td>
+            				</tr>
+            				</thead>
+            				
+            				<tbody style="text-align: center;">
+							{% for obj in content %}
+            					<tr>
+	            					<td>{{ obj.pk }}</td>
+	            					<td>{{ obj.hostname }}</td>
+	            					<td>{{ obj.cpu_num }}</td>
+	            					<td>{{ obj.cpu_model }}</td>
+	            					<td>{{ obj.mem }}</td>
+									<td>{{ obj.disk }}</td>
+	            					<td style="text-align: center;">
+	            						<button type="button" data-toggle="modal" data-target="#detailModal"class="btn btn-primary btn-xs btnDetail" data="{{ obj.pk }}">详情</button>
+										<button type="button" data-toggle="modal" data-target="#editModal" class="btn btn-info btn-xs btnEdit" data="{{ obj.pk }}">编辑</button>
+	            						<button type="button" class="btn btn-danger btn-xs btnDelete" data="{{ obj.pk }}">删除</button>
+									</td>
+            					</tr>
+							{% endfor %}
+
+							</tbody>
+            		</table>
+            </div>
+						</div>
+
+
+						</section>
+			</div>
+		</div>
+
+		<!--详情-->
+		<!-- Modal -->
+    <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title" >添加资产</h4>
+      		</div>
+      		<div class="modal-body">
+        		<form class="form-horizontal" method="/assets/edit/" action="POST" id="formDetailAsset">
+					<input id="detail_pk" style="display: none" name="pk">
+
+			  		<div class="form-group">
+    					<label class="col-sm-3 control-label">主机名: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_hostname" name="hostname" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">CPU核数: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_cpu_num" name="cpu_num" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">CPU型号: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_cpu_model" name="cpu_model" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">内存: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_mem" name="mem" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">硬盘: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_disk" name="disk" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">IP地址: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_ip" name="ip" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">负责人: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_op" name="op" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">操作系统: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_system" name="system" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">业务线: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="detail_line" name="line" disabled="disabled">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">备注: </label>
+    					<div class="col-sm-8">
+							<textarea class="form-control" id="detail_remark"  name="remark" disabled="disabled"></textarea>
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">状态: </label>
+    					<div class="col-sm-8">
+							<select class="form-control" name="status" id="detail_status" disabled="disabled">
+								<option value="0">关机</option>
+								<option value="1">运行</option>
+							</select>
+    					</div>
+  					</div>
+
+
+				</form>
+      		</div>
+
+    	</div>
+  	</div>
+</div>
+
+
+		<!--编辑-->
+		<!-- Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      		<div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h4 class="modal-title" >添加资产</h4>
+      		</div>
+      		<div class="modal-body">
+        		<form class="form-horizontal" method="/assets/edit/" action="POST" id="formEditAsset">
+					<input id="edit_pk" style="display: none" name="pk">
+
+			  		<div class="form-group">
+    					<label class="col-sm-3 control-label">主机名: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_hostname" name="hostname" disabled="disabled">
+    					</div>
+  					</div>
+
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">CPU核数: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_cpu_num" name="cpu_num">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">CPU型号: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_cpu_model" name="cpu_model">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">内存: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_mem" name="mem">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">硬盘: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_disk" name="disk" >
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">IP地址: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_ip" name="ip">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">负责人: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_op" name="op" >
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">操作系统: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_system" name="system">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">业务线: </label>
+    					<div class="col-sm-8">
+      						<input type="text" class="form-control" id="edit_line" name="line">
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">备注: </label>
+    					<div class="col-sm-8">
+							<textarea class="form-control" id="edit_remark"  name="remark"></textarea>
+    					</div>
+  					</div>
+
+					<div class="form-group">
+    					<label class="col-sm-3 control-label">状态: </label>
+    					<div class="col-sm-8">
+							<select class="form-control" name="host_status" id="edit_status">
+								<option value="0">关机</option>
+								<option value="1">运行</option>
+							</select>
+						</div>
+
+					</div>
+				</form>
+      		</div>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        		<button type="button" id="btnModalEditAset" class="btn btn-primary">提交</button>
+      		</div>
+    	</div>
+  	</div>
+</div>
+
+		<!--添加-->
+		<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加资产</h4>
+      </div>
+
+		<!--添加主机信息-->
+		<div class="modal-body">
+			<form class="form-horizontal" id="formAdd">
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">主机名</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_hostname" name="hostname">
+					</div>
+			  	</div>
+
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">CPU核数</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_cpu_num" name="cpu_num">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">CPU型号</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_cpu_model" name="cpu_model">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">内存大小</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_mem" name="mem">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">硬盘大小</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_disk" name="disk">
+					</div>
+			</div>
+
+
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">IP地址</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_disk" name="ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">负责人</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_op" name="op">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">操作系统</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_system" name="system">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">业务线</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" id="add_line" name="line">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">状态</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="host_status">
+							<option>---请选择---</option>
+						  	<option value="0">关机</option>
+						  	<option value="1">运行</option>
+						</select>
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">备注</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" name="remark"></textarea>
+					</div>
+				</div>
+		</form>
+
+
+
+
+
+		</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnAddAsset">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/adminlte.min.js"></script>
+		<script src="/static/js/sweetalert.min.js"></script>
+		<!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+		<script>
+
+		function deleteRecord(url) {
+			    $.ajax({
+					type:'DELETE',
+					data:'',
+					url:url,
+					success:function(data){
+					    swal({
+								title : "删除",
+								text : "删除成功！",
+								type : "success",
+							}, function () {
+					        	window.location.reload();
+                        	}
+                        );
+					},
+					dataType:'text',
+					error:function (){
+						swal("删除！", "删除失败。", "error");
+					}
+				})
+			}
+
+
+			$('.btnDelete').click( function () {
+			    var pk = $(this).attr('data');
+			    var url = "/assets/delete/"+pk + "/";
+				swal({
+				  title: "确定删除吗？",
+				  text: "你确定删除该条记录吗？",
+				  type: "warning",
+				  showCancelButton: true,
+				  confirmButtonColor: "#DD6B55",
+				  confirmButtonText: "确定删除！",
+				  cancelButtonText: "取消删除！",
+				  closeOnConfirm: false,
+				  closeOnCancel: false
+				},
+				function(isConfirm){
+				  if (isConfirm) {
+				      deleteRecord(url);
+
+				  } else {
+						swal("取消！", "取消成功", "error");
+				  }
+				});
+
+			});
+
+
+			$('#btnAddAsset').click( function () {
+			    if ($("#add_hostname").val() === '') {
+					alert("主机名不能为空");
+					return;
+				}
+				else if ($("#add_cpu_num").val() === ''){
+					alert("CPU核数不能为空");
+					return;
+				}
+				else if ($("#add_cpu_model").val() === ''){
+					alert("CPU型号不能为空");
+					return;
+				}
+				else if ($("#add_mem").val() === ''){
+					alert("内存不能为空");
+					return;
+				}
+				else if ($("#add_disk").val() === ''){
+					alert("硬盘不能为空");
+					return;
+				}
+				else if ($("#add_ip").val() === ''){
+					alert("ip不能为空");
+					return;
+				}
+				else if ($("#add_op").val() === ''){
+					alert("负责人不能为空");
+					return;
+				}
+				else if ($("#add_system").val() === ''){
+					alert("操作系统不能为空");
+					return;
+				}
+				else if($("#add_line").val() === ''){
+					alert("业务线不能为空");
+					return;
+				}
+
+				var data = $("#formAdd").serialize();
+				var url = "/assets/add/";
+				console.log(url);
+				$.post(url, data, function (retdata) {
+					alert(retdata);
+                })
+            });
+
+
+
+			$(".btnDetail").click(function () {
+			    var pk = $(this).attr("data");
+			    var url = "/assets/detail/" + pk + "/";
+				$.get(url, function (obj) {
+					$("#detail_hostname").val(obj.data.hostname);
+					$("#detail_cpu_num").val(obj.data.cpu_num);
+					$("#detail_cpu_model").val(obj.data.cpu_model);
+					$("#detail_mem").val(obj.data.mem);
+					$("#detail_disk").val(obj.data.disk);
+					$("#detail_ip").val(obj.data.ip);
+					$("#detail_op").val(obj.data.op);
+					$("#detail_system").val(obj.data.system);
+					$("#detail_line").val(obj.data.line);
+					$("#detail_status").val(obj.data.status);
+					$("#detail_remark").html(obj.data.remark);
+					$("#detail_pk").val(pk);
+                })
+            });
+
+
+
+
+				$(".btnEdit").click(function () {
+			    var pk = $(this).attr("data");
+			    var url = "/assets/detail/" + pk + "/";
+				$.get(url, function (obj) {
+				    $("#edit_hostname").val(obj.data.hostname);
+					$("#edit_cpu_num").val(obj.data.cpu_num);
+					$("#edit_cpu_model").val(obj.data.cpu_model);
+					$("#edit_mem").val(obj.data.mem);
+					$("#edit_disk").val(obj.data.disk);
+					$("#edit_ip").val(obj.data.ip);
+					$("#edit_op").val(obj.data.op);
+					$("#edit_system").val(obj.data.system);
+					$("#edit_line").val(obj.data.line);
+					$("#edit_status").val(obj.data.status);
+					$("#edit_remark").html(obj.data.remark);
+					$("#edit_pk").val(pk);
+
+					var post_url = "/assets/edit/";
+					$("#btnModalEditAset").click(function () {
+
+					if ($("#edit_hostname").val() === '') {
+						alert("主机名不能为空");
+						return;
+					}
+					else if ($("#edit_cpu_num").val() === ''){
+						alert("CPU核数不能为空");
+						return;
+					}
+					else if ($("#edit_cpu_model").val() === ''){
+						alert("CPU型号不能为空");
+						return;
+					}
+					else if ($("#edit_mem").val() === ''){
+						alert("内存不能为空");
+						return;
+					}
+					else if ($("#edit_disk").val() === ''){
+						alert("硬盘不能为空");
+						return;
+					}
+					else if ($("#edit_ip").val() === ''){
+						alert("ip不能为空");
+						return;
+					}
+					else if ($("#edit_op").val() === ''){
+						alert("负责人不能为空");
+						return;
+					}
+					else if ($("#edit_system").val() === ''){
+						alert("操作系统不能为空");
+						return;
+					}
+					else if($("#edit_line").val() === ''){
+						alert("业务线不能为空");
+						return;
+					}
+
+
+					    var data = $("#formEditAsset").serialize();
+                        $.post(post_url, data, function (retdata) {
+							console.log(retdata);
+                    	})
+                    });
+                })
+            });
+		</script>
+</body>
+</html>
