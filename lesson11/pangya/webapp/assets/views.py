@@ -82,4 +82,4 @@ def AssetsExportCsvView(request):
     objs = Assets.objects.all()
     for obj in objs.values_list():
         writer.writerow(list(obj))
-    return response
+    return HttpResponse("Export ok")
