@@ -3,22 +3,74 @@ from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse, QueryDict
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
+from django.core.paginator import Paginator
 import csv, codecs
 
 from .models import Assets
 
 # Create your views here.
 
+# @require_http_methods(["GET",])
+# @login_required(login_url="/account/login")
+# def AssetsListView(request):
+#     search_value = request.GET.get('search_value')
+#     if search_value:
+#         objs = Assets.objects.filter(hostname=search_value)
+#     else:
+#         objs = Assets.objects.all()
+#
+#     return render(request, "assets.html", context={"content": objs})
+
+
+def get_pages(totalpage=1, current_page=1):
+    """
+    DISPLAY_PAGE: 显示页数
+    before_offset: 起始显示页码与当前页码的偏移值
+    before_offset: 结束显示页码与当前页码的偏移值
+    当显示页数为偶数时：前偏移值与后偏移值相同，即：before_offset = before_offset
+    当显示页数为奇数时：前偏移值比后偏移值大1，即：before_offset = before_offset + 1
+    example: get_pages(10,1) result=[1,2,3,4,5]
+    example: get_pages(10,9) result=[6,7,8,9,10]
+    显示页码个数由DISPLAY_PAGE设定
+    """
+    DISPLAY_PAGE = 3
+    before_offset = int(DISPLAY_PAGE / 2)
+    if DISPLAY_PAGE % 2 == 1:
+        behind_offset = before_offset
+    else:
+        behind_offset = before_offset - 1
+
+    if totalpage < DISPLAY_PAGE:
+        return list(range(1, totalpage+1))
+    elif current_page <= before_offset:
+        return list(range(1, DISPLAY_PAGE+1))
+    elif current_page >= totalpage - behind_offset:
+        start_page = totalpage - DISPLAY_PAGE + 1
+        return list(range(start_page, totalpage+1))
+    else:
+        start_page = current_page - before_offset
+        end_page = current_page + behind_offset
+        return list(range(start_page, end_page+1))
+
+
 @require_http_methods(["GET",])
 @login_required(login_url="/account/login")
 def AssetsListView(request):
     search_value = request.GET.get('search_value')
     if search_value:
-        objs = Assets.objects.filter(hostname=search_value)
+        assets_obj = Assets.objects.filter(hostname=search_value)
     else:
-        objs = Assets.objects.all()
+        assets_obj = Assets.objects.all().order_by('id')
 
-    return render(request, "assets.html", context={"content": objs})
+    per = 10
+    paginator_obj = Paginator(assets_obj, per)
+    current_page_num = request.GET.get('page', 1)
+    current_page_obj = paginator_obj.page(current_page_num)
+    total_page_number = paginator_obj.num_pages
+    page_range = get_pages(int(total_page_number), int(current_page_num))
+    total_count = assets_obj.count()
+
+    return render(request, "assets.html", {"current_page_obj": current_page_obj, "page_range": page_range, "total_count": total_count})
 
 
 @require_http_methods(["DELETE",])
@@ -89,3 +141,4 @@ def AssetsExportView(request):
         writer.writerow([obj.pk, obj.hostname, obj.cpu_num, obj.cpu_model, obj.mem_total, obj.disk, obj.public_ip, obj.private_ip, obj.remote_ip, obj.op, obj.status, obj.os_system, obj.service_line, obj.frame, obj.remark])
 
     return response
+

@@ -5,64 +5,148 @@
 {% endblock %}
 
 {% block content %}
-    <section class="content">
-        <div class="box">
-            <div class="box-header" style="float: left;">
-                <button class="btn btn-primary btn-info btnAdd" data-toggle="modal" data-target="#assetsModal">添加</button>
-                <!-- <button class="btn btn-primary btn-info"><a href="/assets/export/">导出</a></button> -->
-                <a class="btn btn-primary btn-info" href="/assets/export/">导出</a>
-            </div>
-            <div class="box-header" style="float: right">
-                <form class="form-inline" method="GET" action="" id="formSearch">
-                    <input type="text" class="form-control" name="search_value">
-                    <button class="btn btn-primary btn-info">搜索</button>
-                </form>
-            </div>
-            <div class="box-body">
-                <table class="table table-hover table-bordered table-striped ">
-                    <thead style="text-align: center;">
-                    <tr>
-                        <td>ID</td>
-                        <td>计算机名</td>
-                        <td>CPU核数</td>
-                        <td>CPU型号</td>
-                        <td>内存</td>
-                        <td>硬盘</td>
-                        <td>公网IP</td>
-                        <td>操作</td>
-                    </tr>
-                    </thead>
-
-                    <tbody style="text-align: center;">
-                    {% for obj in content %}
-                        <tr>
-                            <td>{{ obj.pk }}</td>
-                            <td>{{ obj.hostname }}</td>
-                            <td>{{ obj.cpu_num }}</td>
-                            <td>{{ obj.cpu_model }}</td>
-                            <td>{{ obj.mem_total }}</td>
-                            <td>{{ obj.disk }}</td>
-                            <td>{{ obj.public_ip }}</td>
-                            <td style="text-align: center;">
-                                <button type="button" class="btn btn-primary btn-xs assetsInfo" data-toggle="modal" data-target="#assetsModal" isedit="no" data="{{ obj.pk }}">详情</button>
-                                <input type="hidden" id="set-edit" value=""/>
-                                <button type="button" class="btn btn-info btn-xs assetsEdit" data-toggle="modal" data-target="#assetsModal" isedit="yes" data="{{ obj.pk }}">编辑</button>
-                                <button type="button" class="btn btn-danger btn-xs assetsDel" data="{{ obj.pk }}">删除</button>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+    <div class="box">
+        <div class="box-header" style="float: left;">
+            <button class="btn btn-primary btn-info btnAdd" data-toggle="modal" data-target="#assetsModal">添加
+            </button>
+            <!-- <button class="btn btn-primary btn-info"><a href="/assets/export/">导出</a></button> -->
+            <a class="btn btn-primary btn-info" href="/assets/export/">导出</a>
+        </div>
+        <div class="box-header" style="float: right">
+            <form class="form-inline" method="GET" action="" id="formSearch">
+                <input type="text" class="form-control" name="search_value">
+                <button class="btn btn-primary btn-info">搜索</button>
+            </form>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="example2" class="table table-bordered table-hover dataTable table-striped"
+                               role="grid"
+                               aria-describedby="example2_info">
+                            <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-sort="ascending"
+                                    aria-label="Rendering engine: activate to sort column descending">ID
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="Browser: activate to sort column ascending">计算机名
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="Platform(s): activate to sort column ascending">CPU核数
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="Engine version: activate to sort column ascending">CPU型号
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="CSS grade: activate to sort column ascending">内存
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="CSS grade: activate to sort column ascending">硬盘
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="CSS grade: activate to sort column ascending">公网IP
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                    aria-label="CSS grade: activate to sort column ascending">操作
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for obj in current_page_obj %}
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">{{ obj.pk }}</td>
+                                    <td>{{ obj.hostname }}</td>
+                                    <td>{{ obj.cpu_num }}</td>
+                                    <td>{{ obj.cpu_model }}</td>
+                                    <td>{{ obj.mem_total }}</td>
+                                    <td>{{ obj.disk }}</td>
+                                    <td>{{ obj.public_ip }}</td>
+                                    <td style="text-align: center;">
+                                        <button type="button" class="btn btn-primary btn-xs assetsInfo"
+                                                data-toggle="modal"
+                                                data-target="#assetsModal" isedit="no" data="{{ obj.pk }}">详情
+                                        </button>
+                                        <input type="hidden" id="set-edit" value=""/>
+                                        <button type="button" class="btn btn-info btn-xs assetsEdit" data-toggle="modal"
+                                                data-target="#assetsModal" isedit="yes" data="{{ obj.pk }}">编辑
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-xs assetsDel"
+                                                data="{{ obj.pk }}">删除
+                                        </button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                            共{{ total_count }}条 [ {{ current_page_obj.start_index }} - {{ current_page_obj.end_index }} ]
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                            <ul class="pagination">
+                                {% if current_page_obj.has_previous %}
+                                    <li class="paginate_button previous" id="example2_previous"><a
+                                            href="?page={{ current_page_obj.previous_page_number }}" aria-controls="example2"
+                                            data-dt-idx="0" tabindex="0">上一页</a></li>
+                                {% else %}
+                                    <li class="paginate_button previous disabled" id="example2_previous"><a href="#"
+                                                                                                            aria-controls="example2"
+                                                                                                            data-dt-idx="0"
+                                                                                                            tabindex="0">上一页</a>
+                                    </li>
+                                {% endif %}
+                                {% for page_num in page_range %}
+                                    {% if page_num == current_page_obj.number %}
+                                        <li class="paginate_button active"><a href="?page={{ page_num }}"
+                                                                              aria-controls="example2" data-dt-idx="1"
+                                                                              tabindex="0">{{ page_num }}</a></li>
+                                    {% else %}
+                                        <li class="paginate_button "><a href="?page={{ page_num }}"
+                                                                        aria-controls="example2" data-dt-idx="2"
+                                                                        tabindex="0">{{ page_num }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                                {% if current_page_obj.has_next %}
+                                    <li class="paginate_button next" id="example2_next"><a
+                                            href="?page={{ current_page_obj.next_page_number }}" aria-controls="example2"
+                                            data-dt-idx="7" tabindex="0">下一页</a></li>
+                                {% else %}
+                                    <li class="paginate_button next disabled" id="example2_next"><a href="#"
+                                                                                                    aria-controls="example2"
+                                                                                                    data-dt-idx="7"
+                                                                                                    tabindex="0">下一页</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+        <!-- /.box-body -->
+    </div>
 
     <!-- 模态框 -->
-    <div class="modal fade" id="assetsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="assetsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">添加资产</h4>
                 </div>
                 <div class="modal-body">
@@ -70,7 +154,8 @@
                         <div class="form-group" id="div-id">
                             <label for="hostname" class="col-sm-3 control-label">ID</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="id" id="id" readonly="readonly" placeholder="资产ID<自动生成>">
+                                <input type="text" class="form-control" name="id" id="id" readonly="readonly"
+                                       placeholder="资产ID<自动生成>">
                             </div>
                         </div>
                         <div class="form-group">
@@ -88,13 +173,15 @@
                         <div class="form-group">
                             <label for="cpu_model" class="col-sm-3 control-label">CPU型号</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="cpu_model" id="cpu_model" placeholder="CPU型号">
+                                <input type="text" class="form-control" name="cpu_model" id="cpu_model"
+                                       placeholder="CPU型号">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="mem_total" class="col-sm-3 control-label">内存</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="mem_total" id="mem_total" placeholder="内存">
+                                <input type="text" class="form-control" name="mem_total" id="mem_total"
+                                       placeholder="内存">
                             </div>
                         </div>
                         <div class="form-group">
@@ -106,19 +193,22 @@
                         <div class="form-group">
                             <label for="public_ip" class="col-sm-3 control-label">公网IP</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="public_ip" id="public_ip" placeholder="公网IP">
+                                <input type="text" class="form-control" name="public_ip" id="public_ip"
+                                       placeholder="公网IP">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="private_ip" class="col-sm-3 control-label">内网IP</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="private_ip" id="private_ip" placeholder="内网IP">
+                                <input type="text" class="form-control" name="private_ip" id="private_ip"
+                                       placeholder="内网IP">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="lastname" class="col-sm-3 control-label">远程IP</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="remote_ip" id="remote_ip" placeholder="远程IP">
+                                <input type="text" class="form-control" name="remote_ip" id="remote_ip"
+                                       placeholder="远程IP">
                             </div>
                         </div>
                         <div class="form-group">
@@ -139,13 +229,15 @@
                         <div class="form-group">
                             <label for="os_system" class="col-sm-3 control-label">操作系统</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="os_system" id="os_system" placeholder="操作系统">
+                                <input type="text" class="form-control" name="os_system" id="os_system"
+                                       placeholder="操作系统">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="service_line" class="col-sm-3 control-label">所属业务</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="service_line" id="service_line" placeholder="所属业务">
+                                <input type="text" class="form-control" name="service_line" id="service_line"
+                                       placeholder="所属业务">
                             </div>
                         </div>
                         <div class="form-group">
@@ -258,7 +350,8 @@
                 var url = "/assets/add/";
                 var type = "POST";
                 var contenttype = "application/x-www-form-urlencoded";
-            };
+            }
+            ;
             var form_data = $('#infoForm').serialize();
             $.ajax({
                 url: url,
