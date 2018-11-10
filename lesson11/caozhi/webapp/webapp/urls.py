@@ -18,7 +18,7 @@ from django.contrib import admin
 from api.views import hello
 from api.views import commond,ccommond_v1,cssum,page,cat_cat,pagesum,pagesum_v2
 from dashboard.views import index, command, hessum
-from assets.views import assetsView, deleteAssetsView, AssetsListView, AssetsDeleteView, favicon, AssetsAddView, AssetsExportView
+from assets.views import assetsView, deleteAssetsView, AssetsListView, AssetsDeleteView, favicon, AssetsAddView, AssetsExportView, AssetsDetailView
 from account.views import AccountLoginView, AccountLogoutView
 
 urlpatterns = [
@@ -38,6 +38,7 @@ urlpatterns = [
     url(r'^assets/list$', AssetsListView),
     url(r'^assets/add', AssetsAddView),
     url(r'^assets/export', AssetsExportView),
+    url(r'^assets/detail', AssetsDetailView),
     url(r'^assets/delete/(?P<pk>[0-9]+)/$', AssetsDeleteView),
     url(r'^index', index),
 #    url(r'^favicon.ico', favicon),

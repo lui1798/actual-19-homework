@@ -1,111 +1,532 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Python19 Platform</title>
+		<head>
+			  <meta charset="utf-8">
+			  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			  <title>AdminLTE 2 | Dashboard</title>
+			  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+			  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+			  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+			  <link rel="stylesheet" href="/static/css/ionicons.min.css">
+			  <link rel="stylesheet" href="/static/css/AdminLTE.min.css">
+			  <link rel="stylesheet" href="/static/css/_all-skins.min.css">
+			  <link rel="stylesheet" href="/static/css/morris.css">
+			  <link rel="stylesheet" href="/static/css/jquery-jvectormap.css">
+			  <link rel="stylesheet" href="/static/css/bootstrap-datepicker.min.css">
+			  <link rel="stylesheet" href="/static/css/daterangepicker.css">
+			  <link rel="stylesheet" href="/static/css/bootstrap3-wysihtml5.min.css">
+			<link rel="stylesheet" href="/static/css/sweetalert.css">
+			  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+		</head>
+		
+		
+<body class="hold-transition skin-blue sidebar-mini">
+	
+		<!--头部信息-->
+		<div class="wrapper">
+  			<header class="main-header">
+		    		<a href="index2.html" class="logo">
+		      		<span class="logo-mini"><b>A</b>LT</span>
+		      		<span class="logo-lg"><b>Admin</b>LTE</span>
+		    		</a>
+    				<nav class="navbar navbar-static-top">
+      					<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        						<span class="sr-only">Toggle navigation</span>
+      					</a>
 
-		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/static/css/main.css" rel="stylesheet">
-		<link href="/static/css/extend.css" rel="stylesheet">
-			<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
-			</script>
-		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
-		</script>
-	</head>
+      					<div class="navbar-custom-menu">
+						        <ul class="nav navbar-nav">
+							          <li class="dropdown user user-menu">
+							            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							              		<img src="/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+							              		<span class="hidden-xs">Monkey</span>
+							            	</a>
+							            	<ul class="dropdown-menu">
+							              		<li class="user-header">
+							                			<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							              		</li>
+							     
+									              <li class="user-footer">
+									              		<div class="pull-left">
+									                  		<a href="#" class="btn btn-default btn-flat">个人信息</a>
+									                	</div>
+									                	<div class="pull-right">
+									                  		<a href="/account/logout/" class="btn btn-default btn-flat">退出</a>
+								                		</div>
+									              </li>
+							            	</ul>
+						          	</li>
+						        </ul>
+      					</div>
+    					</nav>
+  			</header>
+  			
+  			
+  			<aside class="main-sidebar">
+		    		<section class="sidebar">
+		    			
+		    				<!--菜单栏-->
+					      <div class="user-panel">
+						        <div class="pull-left image">
+						          <img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+						        </div>
+						        <div class="pull-left info">
+						          <p>Alexander Pierce</p>
+						          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+						        </div>
+					      </div>
+ 
+					      <ul class="sidebar-menu" data-widget="tree">
+					        	<li class="header">MAIN NAVIGATION</li>
+					        	
+					        	<li class="active treeview">
+					          		<a href="#">
+						            		<i class="fa fa-dashboard"></i> <span>资源管理</span>
+							            	<span class="pull-right-container">
+							              		<i class="fa fa-angle-left pull-right"></i>
+							            	</span>
+					          		</a>
+					          		
+							          <ul class="treeview-menu">
+							            <li class="active"><a href="/assets/list"><i class="fa fa-circle-o"></i> 资产管理</a></li>
+							            <li><a href="#"><i class="fa fa-circle-o"></i> 负载均衡</a></li>
+							          </ul>
+					        	</li>
+					        	
+						        <li class="treeview">
+						          	<a href="#">
+						            		<i class="fa fa-files-o"></i>
+						            		<span>批量管理</span>
+						            		<span class="pull-right-container">
+						              			<span class="label label-primary pull-right">4</span>
+						            		</span>
+						          	</a>
+						          	<ul class="treeview-menu">
+						            		<li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> 简单命令执行</a></li>
+						            		<li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 上传文件</a></li>
+						          	</ul>
+					        	</li>
+					     
+					        	<li class="treeview">
+					          		<a href="#">
+					            			<i class="fa fa-edit"></i> <span>用户管理</span>
+					            			<span class="pull-right-container">
+					              				<i class="fa fa-angle-left pull-right"></i>
+					            			</span>
+					          		</a>
+							          <ul class="treeview-menu">
+								            <li><a href="#"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+								            <li><a href="#"><i class="fa fa-circle-o"></i> 用户组管理</a></li>
+							          </ul>
+					        	</li>
+					      </ul>
+				    </section>
+			  </aside>
 
-	<body>
-
-		<nav class="navbar top-bg-color navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-				   </button>
-				   <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><font color="#F0F8FF">退出</font></a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-    <div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-3 col-md-2 sidebar">
-				<ul class="nav nav-sidebar">
-					<li><a href="/dashboard">仪表盘</a></li>
-					<li><a href="/command">命令执行</a></li>
-					<li><a href="/hessum">求和</a></li>
-					<li class="active"><a href="/assets">资产管理</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <h1 class="page-header">资产管理</h1>
 
 
+		  	<div class="content-wrapper">
+		    		<section class="content-header">
+					      <h1>Dashboard<small>Control panel</small></h1>
+					      
+					      <ol class="breadcrumb">
+					        	<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+					        	<li class="active">Dashboard</li>
+					      </ol>
+		    		</section>
+		
+		    		<section class="content">
+		    			
+		    			
 
+		    			
+		     		
+						<div class="box">
+							<div class="box-header" style="float: left">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+								<button class="btn btn-info"><a href="/assets/export/">导出</a></button>
+							</div>
+							<div class="box-header" style="float: right">
+								<form class="form-inline" method="GET" action="" id="searchform">
+									<input type="text" class="form-control" style="width: 300px" name="search_value">
+									<button class="btn btn-info" id="btnSearch">搜索</button>
+								</form>
+							</div>
+            <div class="box-body">
+            		<table class="table table-hover table-bordered table-striped ">
+            				<thead style="text-align: center;">
+            				<tr >
+            					<td>#</td>
+            					<td>主机名</td>
+            					<td>内网ip</td>
+            					<td>外网ip</td>
+            					<td>操作</td>
+            				</tr>
+            				</thead>
+            				
+            				<tbody style="text-align: center;">
+							{% for obj in context %}
+            					<tr>
+	            					<td>{{ obj.pk }}</td>
+									<td>{{ obj.hostname }}</td>
+									<td>{{ obj.private_ip }}</td>
+									<td>{{ obj.public_ip }}</td>
+	            					<td style="text-align: center;">
+	            						<button type="button" class="btn btn-primary btn-xs">详情</button>
+	            						<button type="button" class="btn btn-info btn-xs btnAssetEdit" data-toggle="modal" data-target="#editModal" data="{{ obj.pk }}">编辑</button>
+	            						<button type="button" class="btn btn-danger btn-xs btnDelete" data="{{ obj.pk }}">删除</button>
+	            					</td>
+								</tr>
+							{% endfor %}
+							</tbody>
+            		</table>
             </div>
+				</div>
+  	</div>
 
-			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                        <table class="table table-hover">
-			<div>
-				搜索：<input type="text" name="search_value">
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加资产</h4>
+      </div>
+      <div class="modal-body">
+
+		  <form class="form-horizontal" id="myform">
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">主机名</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="hostname">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">内网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="private_ip">
+					</div>
+			  	</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">外网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="public_ip">
+					</div>
 			</div>
-			<a href="/assets/add" class="button">增加新记录</a>
-				<tr>
-					<td>ID</td>	
-					<td>主机名</td>	
-					<td>内网ip</td>	
-					<td>外网ip</td>	
-					<td>备注</td>	
-					<td>系统版本</td>	
-					<td>cpu核</td>	
-					<td>cpu型号</td>	
-					<td>操作</td>	
-				</tr>			
-					{% for obj in objs %}
-						<tr>
-							<td>{{ obj.pk }}</td>
-							<td>{{ obj.hostname }}</td>
-							<td>{{ obj.private_ip }}</td>
-							<td>{{ obj.public_ip }}</td>
-							<td>{{ obj.remark }}</td>
-							<td>{{ obj.os_system }}</td>
-							<td>{{ obj.cpu_num }}</td>
-							<td>{{ obj.cpu_model }}</td>
-							<td>
-								<button class="btn btn-info btn-xs">编辑</button>
-								<button class="btn btn-danger btn-xs btnDelete" data="{{obj.pk}}">删除</button>
 
-							</td>
-						</tr>
-					{% endfor %}
-
-           <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-           	<script>
-           		$(".btnDelete").click(function () {
-           		    	var pk = $(this).attr('data');
-           		    	console.log(pk);
-           		    	var url = "/assets/delete/?pk=" + pk;
-           		    	console.log(url);
-           		    	console.log("----------");
-           				$.get(url, function(data, status){
-           				    if (status = "success") {
-           						window.location.reload();
-           					}
-           				})
-                   })
-               	</script>
-
-
-                        </table>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_model</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_model">
+					</div>
 			</div>
-		</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_num</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_num">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">mem_total</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="mem_total">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">disk</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="disk">
+					</div>
+			</div>
+
+
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">remote_ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="remote_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">op</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="op">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">os_system</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="os_system">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">service_line</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="service_line">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">frame</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="frame">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">状态</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="status">
+							<option>---请选择---</option>
+						  	<option value="0">关机</option>
+						  	<option value="1">运行</option>
+						</select>
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">备注</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" name="remark"></textarea>
+					</div>
+				</div>
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnAddAsset">提交</button>
+      </div>
     </div>
-	</body>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改资产</h4>
+      </div>
+      <div class="modal-body">
+
+		  <form class="form-horizontal" id="editAssetsForm">
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">主机名</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="hostname" id="edit_hostname">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">内网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="private_ip" id="edit_private_ip">
+					</div>
+			  	</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">外网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="public_ip" id="edit_public_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_model</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_model" id="edit_cpu_model">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_num</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_num" id="edit_cpu_num">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">mem_total</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="mem_total" id="edit_mem_total">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">disk</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="disk" id="edit_disk">
+					</div>
+			</div>
+
+
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">remote_ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="remote_ip" id="edit_remote_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">op</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="op" id="edit_op">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">os_system</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="os_system" id="edit_os_system">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">service_line</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="service_line" id="edit_service_line">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">frame</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="frame" id="edit_frame">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">状态</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="status" id="edit_status">
+							<option>---请选择---</option>
+						  	<option value="0">关机</option>
+						  	<option value="1">运行</option>
+						</select>
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">备注</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" name="remark" id="edit_remark"></textarea>
+					</div>
+				</div>
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnEditAsset">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/adminlte.min.js"></script>
+		<script src="/static/js/sweetalert.min.js"></script>
+
+		<script>
+
+			function deleteRecord(url) {
+			    $.ajax({
+					type:'DELETE',
+					data:'',
+					url:url,
+					success:function(data){
+						swal("删除！", "删除成功", "success");
+					},
+					dataType:'text',
+					error:function (){
+						swal("删除！", "删除失败。", "error");
+					}
+				})
+			}
+
+			$('.btnDelete').click( function () {
+			    var pk = $(this).attr('data');
+			    var url = "/assets/delete/"+pk + "/";
+				swal({
+				  title: "确定删除吗？",
+				  text: "你确定删除该条记录吗？",
+				  type: "warning",
+				  showCancelButton: true,
+				  confirmButtonColor: "#DD6B55",
+				  confirmButtonText: "确定删除！",
+				  cancelButtonText: "取消删除！",
+				  closeOnConfirm: false,
+				  closeOnCancel: false
+				},
+				function(isConfirm){
+				  if (isConfirm) {
+				      deleteRecord(url);
+
+				  } else {
+						swal("取消！", "取消成功", "error");
+				  }
+				});
+			});
+
+			$('#btnAddAsset').click( function () {
+				var data = $("#myform").serialize();
+				var url = "/assets/add/";
+				console.log(url);
+				$.post(url, data, function (retdata) {
+					alert(retdata);
+                })
+            });
+
+			$('.btnAssetEdit').click( function () {
+                                var pk = $(this).attr('data')
+				var url = "/assets/detail/?pk=" + pk;
+				console.log(url);
+				$.get(url, function (data) {
+					console.log(data);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_private_ip").val(data.hostname);
+					$("#edit_public_ip").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_hostname").val(data.hostname);
+
+
+
+
+
+                })
+            });
+
+
+		</script>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

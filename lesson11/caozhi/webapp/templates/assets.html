@@ -173,7 +173,7 @@
 									<td>{{ obj.public_ip }}</td>
 	            					<td style="text-align: center;">
 	            						<button type="button" class="btn btn-primary btn-xs">详情</button>
-	            						<button type="button" class="btn btn-info btn-xs">编辑</button>
+	            						<button type="button" class="btn btn-info btn-xs btnAssetEdit" data-toggle="modal" data-target="#editModal" data="{{ obj.pk }}">编辑</button>
 	            						<button type="button" class="btn btn-danger btn-xs btnDelete" data="{{ obj.pk }}">删除</button>
 	            					</td>
 								</tr>
@@ -183,8 +183,6 @@
             </div>
 				</div>
   	</div>
-
-
 
 
 <!-- Modal -->
@@ -310,6 +308,131 @@
   </div>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改资产</h4>
+      </div>
+      <div class="modal-body">
+
+		  <form class="form-horizontal" id="editAssetsForm">
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">主机名</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="hostname" id="edit_hostname">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">内网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="private_ip" id="edit_private_ip">
+					</div>
+			  	</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">外网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="public_ip" id="edit_public_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_model</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_model" id="edit_cpu_model">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_num</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_num" id="edit_cpu_num">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">mem_total</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="mem_total" id="edit_mem_total">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">disk</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="disk" id="edit_disk">
+					</div>
+			</div>
+
+
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">remote_ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="remote_ip" id="edit_remote_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">op</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="op" id="edit_op">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">os_system</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="os_system" id="edit_os_system">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">service_line</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="service_line" id="edit_service_line">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">frame</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="frame" id="edit_frame">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">状态</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="status" id="edit_status">
+							<option>---请选择---</option>
+						  	<option value="0">关机</option>
+						  	<option value="1">运行</option>
+						</select>
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">备注</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" name="remark" id="edit_remark"></textarea>
+					</div>
+				</div>
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnEditAsset">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </div>
 		<script src="/static/js/jquery.min.js"></script>
 		<script src="/static/js/bootstrap.min.js"></script>
@@ -366,7 +489,43 @@
                 })
             });
 
+			$('.btnAssetEdit').click( function () {
+                                var pk = $(this).attr('data')
+				var url = "/assets/detail/?pk=" + pk;
+				console.log(url);
+				$.get(url, function (data) {
+					console.log(data);
+					$("#edit_hostname").val(data.hostname);
+					$("#edit_private_ip").val(data.private_ip);
+					$("#edit_public_ip").val(data.public_ip);
+					$("#edit_cpu_model").val(data.cpu_model);
+					$("#edit_cpu_num").val(data.cpu_num);
+					$("#edit_mem_total").val(data.mem_total);
+					$("#edit_disk").val(data.disk);
+					$("#edit_remote_ip").val(data.remote_ip);
+					$("#edit_op").val(data.op);
+					$("#edit_os_system").val(data.os_system);
+					$("#edit_service_line").val(data.service_line);
+					$("#edit_frame").val(data.frame);
+					$("#edit_status").val(data.status);
+					$("#edit_remark").val(data.remark);
+
+                })
+            });
+
+
 		</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
