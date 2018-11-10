@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Python19 Platform</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+    <link href="/static/css/extend.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar top-bg-color navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><font color="#F0F8FF">Python19 Platform</font></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><font color="#F0F8FF">退出</font></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li ><a href="/dashboard">仪表盘</a></li>
+                <li><a href="/command">命令执行</a></li>
+                <li><a href="/ssum/">数据求和</a></li>
+                <li class="active"><a href="/assets">资产管理</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">资产管理</h1>
+
+            <div>
+                <a href="/assets/addpage"><input type=button class="btn btn-info" value="添加"
+                                                 onclick="window.location.href('添加')"></a>
+            </div>
+            <br>
+
+            <table class="table table-hover">
+                <tr>
+                    <td>ID</td>
+                    <td>主机名</td>
+                    <td>私网ip</td>
+                    <td>外网ip</td>
+                    <td>cpu核</td>
+                    <td>cpu型号</td>
+                    <td>内存</td>
+                    <td>磁盘</td>
+                    <td>操作系统</td>
+                    <td>机器状态</td>
+                    <td>机架</td>
+                    <td>创建时间</td>
+                    <td>更新时间</td>
+                    <td>备注</td>
+                    <td>操作</td>
+
+                </tr>
+
+                {% for obj in objs %}
+                <tr>
+                    <td>{{ obj.pk }}</td>
+                    <td>{{ obj.hostname }}</td>
+                    <td>{{ obj.private_ip }}</td>
+                    <td>{{ obj.public_ip }}</td>
+                    <td>{{ obj.cpu_num }}</td>
+                    <td>{{ obj.cpu_model }}</td>
+                    <td>{{ obj.mem_total }}</td>
+                    <td>{{ obj.disk }}</td>
+                    <td>{{ obj.os_system }}</td>
+                    <td>{{ obj.status }}</td>
+                    <td>{{ obj.frame }}</td>
+                    <td>{{ obj.create_time }}</td>
+                    <td>{{ obj.update_time }}</td>
+                    <td>{{ obj.remark }}</td>
+
+                    <td>
+                        <button class="btn btn-info btn-xs">编辑</button>
+                        <button class="btn btn-danger btn-xs btnDelete" data="{{obj.pk}}">删除</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(".btnDelete").click(function () {
+        var pk = $(this).attr('data');
+        // alert(pk);
+        var url = "/assets/delete/?pk=" + pk;
+        console.log(url);
+        $.get(url, function (data, status) {
+            if (status = "success") {
+                window.location.reload();
+            }
+        })
+    })
+</script>
+</body>
+</html>
