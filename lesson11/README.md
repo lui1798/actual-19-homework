@@ -19,3 +19,4 @@
 |zhougui           |优+   | 建议视图上加上登录认证和允许的http请求方式装饰器会更规范；                   |
 |pangya            |优    | 使用了model_to_dict包， 加上登录验证装饰器；                   |
 |yanyupan          |优+   | 独自实现了后端分页的功能，建议AssetsGetView优化；                   |
+|caozhi            |优    | 需验证提交数据 及 登录验证装饰器；                   |
