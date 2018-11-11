@@ -16,6 +16,7 @@
 			  <link rel="stylesheet" href="/static/css/daterangepicker.css">
 			  <link rel="stylesheet" href="/static/css/bootstrap3-wysihtml5.min.css">
 			<link rel="stylesheet" href="/static/css/sweetalert.css">
+			<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 			  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 		</head>
 		
@@ -153,7 +154,7 @@
 								</form>
 							</div>
             <div class="box-body">
-            		<table class="table table-hover table-bordered table-striped ">
+            		<table class="table table-hover table-bordered table-striped " id="myTable">
             				<thead style="text-align: center;">
             				<tr >
             					<td>#</td>
@@ -205,44 +206,39 @@
 			  <div class="form-group" style="display: none">
 					<label class="col-sm-2 control-label">pk</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="hostname" disabled="disabled" id="edit_pk">
+						<input type="text" class="form-control" name="pk" disabled="disabled" id="edit_pk">
 					</div>
 			  	</div>
 
-		  		<div class="form-group">
-					<label class="col-sm-2 control-label">主机名</label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" name="hostname" disabled="disabled" id="edit_hostname">
-					</div>
-			  	</div>
+
 
 			  <div class="form-group">
-					<label class="col-sm-2 control-label">内网ip</label>
+					<label class="col-sm-2 control-label">用户名</label>
 						<div class="col-sm-9">
-						<input type="text" class="form-control" name="private_ip" id="edit_private_ip">
+						<input type="text" class="form-control" name="username" id="edit_username" disabled="disabled">
 					</div>
 			  	</div>
 			  <div class="form-group">
-					<label class="col-sm-2 control-label">外网ip</label>
+					<label class="col-sm-2 control-label">年龄</label>
 						<div class="col-sm-9">
-						<input type="text" class="form-control" name="public_ip" id="edit_public_ip">
+						<input type="text" class="form-control" name="age" id="edit_age">
 					</div>
 			</div>
 
 			  <div class="form-group">
-					<label class="col-sm-2 control-label">状态</label>
+					<label class="col-sm-2 control-label">性别</label>
 					<div class="col-sm-9">
-						<select class="form-control" name="status" id="edit_status">
+						<select class="form-control" name="sex" id="edit_sex">
 							<option>---请选择---</option>
-						  	<option value="0">关机</option>
-						  	<option value="1">运行</option>
+						  	<option value="0">男</option>
+						  	<option value="1">女</option>
 						</select>
 					</div>
 				</div>
 			  <div class="form-group">
-					<label class="col-sm-2 control-label">备注</label>
+					<label class="col-sm-2 control-label">城市</label>
 					<div class="col-sm-9">
-						<textarea class="form-control" name="remark" id="edit_remark"></textarea>
+						<input type="text" class="form-control" name="city" id="edit_city">
 					</div>
 				</div>
 		</form>
@@ -266,128 +262,38 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">添加资产</h4>
+        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
       </div>
       <div class="modal-body">
 
 		  <form class="form-horizontal" id="formAdd">
 		  		<div class="form-group">
-					<label class="col-sm-2 control-label">主机名</label>
+					<label class="col-sm-2 control-label">用户名</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="hostname">
+						<input type="text" class="form-control" name="username" >
 					</div>
 			  	</div>
 
 			  <div class="form-group">
-					<label class="col-sm-2 control-label">内网ip</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="private_ip">
-					</div>
-			  	</div>
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">外网ip</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="public_ip">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">cpu_num</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="cpu_num">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">cpu_model</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="cpu_model">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">cpu_model</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="mem_total">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">disk</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="disk">
-					</div>
-			</div>
-
-
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">remote_ip</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="remote_ip">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">op</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="op">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">os_system</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="os_system">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">service_line</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="service_line">
-					</div>
-			</div>
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">frame</label>
-						<div class="col-sm-9">
-						<input type="text" class="form-control" name="frame">
-					</div>
-			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			  <div class="form-group">
-					<label class="col-sm-2 control-label">状态</label>
+					<label class="col-sm-2 control-label">性别</label>
 					<div class="col-sm-9">
-						<select class="form-control" name="status">
+						<select class="form-control" name="sex">
 							<option>---请选择---</option>
-						  	<option value="0">关机</option>
-						  	<option value="1">运行</option>
+						  	<option value="0">男</option>
+						  	<option value="1">女</option>
 						</select>
 					</div>
 				</div>
 			  <div class="form-group">
-					<label class="col-sm-2 control-label">备注</label>
+					<label class="col-sm-2 control-label">年龄</label>
 					<div class="col-sm-9">
-						<textarea class="form-control" name="remark"></textarea>
+						<input type="text" class="form-control" name="age">
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">城市</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="city">
 					</div>
 				</div>
 		</form>
@@ -416,28 +322,42 @@
 		<script src="/static/js/bootstrap.min.js"></script>
 		<script src="/static/js/adminlte.min.js"></script>
 		<script src="/static/js/sweetalert.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 
 		<script>
 
 			// editAssetForm
 			$('.btnAssetEdit').click( function () {
                 var pk = $(this).attr('data');
-                var url = "/assets/detail/?pk=" + pk;
+                var url = "/user/detail/?pk=" + pk;
 				$.get(url, function (data) {
 					console.log(data);
+					console.log(data.code);
+					console.log(data.data);
+					var data = data.data;
 					$("#edit_pk").val(pk);
-					$("#edit_hostname").val(data.hostname);
-					$("#edit_public_ip").val(data.public_ip);
-					$("#edit_remark").val(data.remark);
-					$("#edit_private_ip").val(data.private_ip);
-					$("#edit_status").val(data.status);
+					$("#edit_username").val(data.username);
+					$("#edit_age").val(data.age);
+					$("#edit_sex").val(data.sex);
+					$("#edit_city").val(data.city);
 					$('#btnEditAsset').click( function () {
 						var data = $("#editAssetForm").serialize();
-						var url = "/assets/edit/"+pk + "/";
+						var url = "/user/edit/"+pk + "/";
 						updateRecord(url, data);
+
                     })
-                })
+
+                });
+				$('#editModal').modal('hide');
+
             });
+
+			function readloDocument() {
+			    setTimeout(function () {
+			        window.location.reload();
+				}, 3000);
+
+            }
 
 			function deleteRecord(url) {
 			    $.ajax({
@@ -452,6 +372,7 @@
 						swal("删除！", "删除失败。", "error");
 					}
 				})
+
 			}
 
 			function updateRecord(url, data) {
@@ -462,12 +383,16 @@
 					contentType: "application/json",
 					success:function(data){
 						swal("更新！", "更新成功", "success");
+
 					},
 					dataType:'text',
 					error:function (){
 						swal("更新！", "更新失败。", "error");
 					}
-				})
+				});
+
+			    readloDocument();
+
 			}
 
 			$('.btnDelete').click( function () {
@@ -498,13 +423,15 @@
 
 			$('#btnAddAsset').click( function () {
 				var data = $("#formAdd").serialize();
-				alert(data);
-				var url = "/assets/add/";
-				console.log(url);
+				var url = "/user/add/";
 				$.post(url, data, function (retdata) {
 					alert(retdata);
                 })
             });
+
+			    $(document).ready(function(){
+        			$('#myTable').DataTable();
+    			});
 
 
 

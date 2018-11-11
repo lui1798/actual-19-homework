@@ -1,0 +1,74 @@
+2018-11-11 17:56:58,701 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 17:56:58,702 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 17:56:59,026 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 17:56:59,042 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 17:57:00,510 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 17:57:00,511 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 17:57:00,517 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 09:57:00.507718'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 09:57:00.507718')
+2018-11-11 17:57:00,519 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 17:57:00,523 DEBUG (0.003) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC LIMIT 21; args=()
+2018-11-11 17:57:00,657 DEBUG (0.097) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()
+2018-11-11 18:00:46,105 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:00:46,106 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:00:46,384 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:00:46,400 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:02:05,176 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:02:05,177 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-11 18:02:05,488 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:02:05,502 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:02:21,362 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:02:21,362 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:02:21,367 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 10:02:21.359192'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 10:02:21.359192')
+2018-11-11 18:02:21,369 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 18:02:21,388 DEBUG (0.018) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC LIMIT 21; args=()
+2018-11-11 18:02:21,452 DEBUG (0.040) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()
+2018-11-11 18:03:03,129 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:03:03,130 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:03:03,405 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-11 18:03:03,430 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:03:07,501 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:03:07,502 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-11 18:03:07,512 DEBUG (0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 10:03:07.493826'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 10:03:07.493826')
+2018-11-11 18:03:07,516 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 18:03:07,527 DEBUG (0.008) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC LIMIT 21; args=()
+2018-11-11 18:03:07,636 DEBUG (0.060) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()
+2018-11-11 18:03:23,085 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:03:23,085 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:03:23,372 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:03:23,387 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:03:33,369 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:03:33,370 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-11 18:03:33,704 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:03:33,721 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:03:36,690 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:03:36,690 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:03:36,694 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 10:03:36.686504'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 10:03:36.686504')
+2018-11-11 18:03:36,699 DEBUG (0.003) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 18:03:36,765 DEBUG (0.039) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()
+2018-11-11 18:04:07,336 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:04:07,337 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:04:07,679 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:04:07,690 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:04:10,137 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:04:10,137 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:04:10,141 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 10:04:10.129100'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 10:04:10.129100')
+2018-11-11 18:04:10,143 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 18:04:10,311 DEBUG (0.114) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()
+2018-11-11 18:04:32,369 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:04:32,369 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:04:32,677 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:04:32,692 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:04:34,512 DEBUG (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:04:34,512 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:04:34,519 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 10:04:34.506657'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 10:04:34.506657')
+2018-11-11 18:04:34,522 DEBUG (0.003) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 18:04:34,606 DEBUG (0.043) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()
+2018-11-11 18:06:24,299 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:06:24,300 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:06:24,583 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-11 18:06:24,597 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-11 18:08:26,856 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-11 18:08:26,857 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-11 18:08:26,860 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = '4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck' AND `django_session`.`expire_date` > '2018-11-11 10:08:26.851687'); args=('4jwgceh0ofd8e9l92ee6mtaf8ey6g3ck', '2018-11-11 10:08:26.851687')
+2018-11-11 18:08:26,862 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-11-11 18:08:26,939 DEBUG (0.034) SELECT `users`.`id`, `users`.`username`, `users`.`sex`, `users`.`city`, `users`.`age`, `users`.`create_time`, `users`.`update_time` FROM `users` ORDER BY `users`.`id` ASC, `users`.`username` ASC; args=()

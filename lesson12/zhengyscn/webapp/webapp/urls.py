@@ -23,7 +23,7 @@ from assets.views import AssetsListView, AssetsDeleteView, AssetsAddView, Assets
 
 from account.views import AccountLoginView, AccountLogoutView
 
-from user.views import UserListView, UserDeleteView
+from user.views import UserListView, UserDeleteView, UserAddView, UserEditView, UserDetailView
 
 # uri匹配
 urlpatterns = [
@@ -48,6 +48,9 @@ urlpatterns = [
 
     # user
     url(r'^user/list/$', UserListView),
+    url(r'^user/add/$', UserAddView),
+    url(r'^user/detail/$', UserDetailView),
     url(r'^user/delete/(?P<pk>[0-9]+)/$', UserDeleteView),
+    url(r'^user/edit/(?P<pk>[0-9]+)/$', UserEditView),
 
 ]

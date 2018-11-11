@@ -140,3 +140,88 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+
+LOGIN_URL = "/account/login/"
+
+
+
+# LOGGING
+# Logging setting
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {'format': '%(asctime)s %(levelname)s %(message)s'},
+        'simple': {'format': '%(levelname)s %(message)s'},
+        'default': {
+            'format': '%(asctime)s [%(name)s:%(lineno)d] [%(levelname)s] - %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        }
+    },
+    'handlers': {
+        'null': {
+            'level':'DEBUG',
+            'class':'logging.NullHandler',#/dev/null
+        },
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter': 'default'
+        },
+        'django':{
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'django.log'),
+            'formatter': 'default'
+
+        },
+        'root_handler': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'formatter': 'default',
+            'filename': os.path.join(BASE_DIR, 'logs', 'server.log'),
+            'when': 'D',
+            'interval': 1,
+            'encoding': 'utf8',
+        },
+        'django_request_handler':{
+            'level': 'DEBUG',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'formatter': 'default',
+            'filename': os.path.join(BASE_DIR, 'logs', 'request.log'),
+            'when': 'D',
+            'interval': 7,
+            'encoding': 'utf8',
+        },
+        'django_db_backends_handler':{
+            'level': 'DEBUG',
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'formatter': 'verbose',
+            'filename': os.path.join(BASE_DIR, 'logs', 'db_backends.log'),
+            'when': 'D',
+            'interval': 7,
+        }
+    },
+    'loggers' : {
+        'django': {
+            'level': 'DEBUG',
+            'handlers': ['django'],
+            'propagate': False
+        },
+        'django.request': {
+            'handlers': ['django_request_handler'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'django.db.backends':{
+            'handlers': ['django_db_backends_handler'],
+            'level': 'DEBUG',
+            'propagate': False,
+        }
+    },
+    'root':{
+        'level': 'DEBUG',
+        'handlers': ['root_handler']
+    }
+}
