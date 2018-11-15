@@ -1,7 +1,7 @@
 # /usr/bin/env python3
 # -*- coding: utf-8 -*-
 # __author__ = caozhi
-# create_time 2018-11-12,update_time 2018-11-14
+# create_time 2018-11-12,update_time 2018-11-15
 # version = 1.0
 # 录像高可用报警
 # 1 读取日志 使用游标移动
