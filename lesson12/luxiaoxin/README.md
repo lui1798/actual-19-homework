@@ -1,7 +1,7 @@
 ## 本周作业完成内容
  - 系统增加logger功能，项目代码中把所有的print全部替换成logger日志，日志输出到webapp项目的logs目录下；
  - 系统用户models的功能全部实现，增删改查、搜索、分页、导出；
- - 系统增加“日志分析”功能，新增app为loganalysis，在app下建立management/commands/ 目录和todb.py文件，增加python manage.py todb命令，运行指令实现日志每分钟统计数据自动入库；
+ - 系统增加“日志分析”功能，新增loganalysis的app，MySQL新建log统计表log，在loganalysis目录下建立management/commands/ 目录和todb.py文件，增加python manage.py todb命令，运行指令实现不同日志级别每分钟出现次数统计数据自动入库；
  - 系统增加“日志分析”功能，功能下的“系统日志分析”页面显示最近一次统计的日志信息，表格显示每分钟匹配的不同日志级别【'[DEBUG]', '[INFO]', '[WARNING]', '[ERROR]'】出现的次数；
  - 系统增加“日志分析”功能，功能下的“乘法表”页面显示99乘法表；
  - 根目录下的log_statistics.py脚本实现日志统计功能，打印每分钟匹配DEBUG，INFO，WARNING，ERROR出现的次数；
