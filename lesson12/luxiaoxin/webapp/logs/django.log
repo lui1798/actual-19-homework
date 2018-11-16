@@ -1,0 +1,168 @@
+2018-11-15 16:32:33 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-15 16:32:35 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-15 16:32:36 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-15 16:32:36 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-15 16:32:37 [django.server:124] [INFO] - "GET /assets/list/ HTTP/1.1" 200 27608
+2018-11-15 16:32:40 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-15 16:32:41 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-15 16:32:41 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-15 16:32:45 [django.server:124] [INFO] - "GET /user/detail/?pk=1 HTTP/1.1" 200 74
+2018-11-15 16:33:17 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-15 16:33:19 [django.server:124] [INFO] - "GET /assets/list/ HTTP/1.1" 200 27608
+2018-11-15 16:35:33 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 18630
+2018-11-15 16:37:09 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 18703
+2018-11-15 16:37:10 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-15 16:37:10 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 14:46:07 [django.template:925] [DEBUG] - Exception while resolving variable 'errmsg' in template 'login.html'.
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/context.py", line 87, in __getitem__
+    raise KeyError(key)
+KeyError: 'errmsg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 888, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'errmsg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'errmsg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [errmsg] in "[{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x7fb1e928dd90>>, 'request': <WSGIRequest: GET '/account/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x7fb1e9282d08>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb1eb915550>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb1e92375f8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}]"
+2018-11-16 14:46:07 [django.server:124] [INFO] - "GET /account/login/ HTTP/1.1" 200 2098
+2018-11-16 14:46:07 [django.server:124] [INFO] - "GET /static/css/blue.css HTTP/1.1" 304 0
+2018-11-16 14:46:08 [django.server:124] [WARNING] - "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 404 1739
+2018-11-16 14:46:08 [django.server:124] [WARNING] - "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 404 1736
+2018-11-16 14:46:08 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^assets/list/$>], [<RegexURLPattern None ^assets/add/$>], [<RegexURLPattern None ^assets/edit/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^assets/detail/$>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^assets/export/$>], [<RegexURLPattern None ^user/list/$>], [<RegexURLPattern None ^user/add/$>], [<RegexURLPattern None ^user/edit/(?P<pk>[0-9]+)/$$>], [<RegexURLPattern None ^user/detail/$>], [<RegexURLPattern None ^user/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^user/export/$>], [<RegexURLPattern None ^test/mul/$>], [<RegexURLPattern None ^log/analysis/$>], [<RegexURLPattern None ^account/login/$>], [<RegexURLPattern None ^account/logout/$>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-16 14:46:08 [django.server:124] [INFO] - "GET /static/fonts/glyphicons-halflings-regular.ttf HTTP/1.1" 304 0
+2018-11-16 14:46:08 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3980
+2018-11-16 14:46:15 [django.server:124] [INFO] - "POST /account/login/ HTTP/1.1" 302 0
+2018-11-16 14:46:15 [django.server:124] [INFO] - "GET / HTTP/1.1" 200 10777
+2018-11-16 14:46:19 [django.server:124] [ERROR] - "GET /log/analysis/ HTTP/1.1" 500 67262
+2018-11-16 14:47:04 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20046
+2018-11-16 14:47:04 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 304 0
+2018-11-16 14:47:04 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 304 0
+2018-11-16 14:47:05 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 14:47:05 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 14:47:51 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-16 14:47:53 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 19616
+2018-11-16 14:47:54 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 14:47:54 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 14:49:05 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-16 14:49:07 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 19618
+2018-11-16 14:49:08 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 14:49:08 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 14:49:32 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-16 14:49:34 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 19618
+2018-11-16 14:49:35 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 14:49:35 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:10:12 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 19621
+2018-11-16 15:10:13 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:10:13 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:10:37 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20049
+2018-11-16 15:10:38 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:10:38 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:11:11 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-16 15:11:13 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 15:11:14 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:11:14 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:11:16 [django.server:124] [INFO] - "GET /assets/list/ HTTP/1.1" 200 27608
+2018-11-16 15:11:20 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 15:11:21 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:11:21 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:11:22 [django.server:124] [INFO] - "GET /user/detail/?pk=1 HTTP/1.1" 200 74
+2018-11-16 15:11:59 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20050
+2018-11-16 15:12:00 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:12:00 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:16:32 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 15:16:33 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:16:33 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:16:35 [django.server:124] [INFO] - "GET /assets/list/ HTTP/1.1" 200 27608
+2018-11-16 15:16:39 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 15:16:40 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:16:40 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:16:42 [django.server:124] [INFO] - "GET /user/detail/?pk=1 HTTP/1.1" 200 74
+2018-11-16 15:16:46 [django.server:124] [INFO] - "GET /user/detail/?pk=5 HTTP/1.1" 200 71
+2018-11-16 15:16:49 [django.server:124] [INFO] - "GET /test/mul/ HTTP/1.1" 200 7431
+2018-11-16 15:16:53 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20050
+2018-11-16 15:16:53 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:16:53 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 15:16:58 [django.server:124] [INFO] - "GET /assets/list/ HTTP/1.1" 200 27608
+2018-11-16 15:20:14 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20050
+2018-11-16 15:20:15 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 15:20:15 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:07:14 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20052
+2018-11-16 16:07:15 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:07:15 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:07:17 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 16:07:18 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:07:18 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:07:21 [django.server:124] [INFO] - "GET /user/detail/?pk=1 HTTP/1.1" 200 74
+2018-11-16 16:07:24 [django.server:124] [INFO] - "GET /assets/list/ HTTP/1.1" 200 27608
+2018-11-16 16:07:26 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20052
+2018-11-16 16:07:27 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:07:27 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:07:46 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 16:07:47 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:07:47 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:07:52 [django.server:124] [INFO] - "GET /user/list/?search_value=5 HTTP/1.1" 200 89251
+2018-11-16 16:07:53 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:07:53 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:07:56 [django.server:124] [INFO] - "GET /user/list/?search_value= HTTP/1.1" 200 89251
+2018-11-16 16:07:57 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:07:57 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:08:01 [django.server:124] [INFO] - "GET /user/list/ HTTP/1.1" 200 89251
+2018-11-16 16:08:02 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:08:02 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745
+2018-11-16 16:08:04 [django.server:124] [INFO] - "GET /user/detail/?pk=5 HTTP/1.1" 200 71
+2018-11-16 16:08:15 [django.server:124] [INFO] - "GET /log/analysis/ HTTP/1.1" 200 20052
+2018-11-16 16:08:16 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_both.png HTTP/1.1" 404 1748
+2018-11-16 16:08:16 [django.server:124] [WARNING] - "GET /static/css/DataTables-1.10.18/images/sort_asc.png HTTP/1.1" 404 1745

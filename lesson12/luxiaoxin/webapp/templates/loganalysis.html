@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			  <meta charset="utf-8">
+			  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			  <title>AdminLTE 2 | Dashboard</title>
+			  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+			  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+			  <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+			  <link rel="stylesheet" href="/static/css/ionicons.min.css">
+			  <link rel="stylesheet" href="/static/css/AdminLTE.min.css">
+			  <link rel="stylesheet" href="/static/css/_all-skins.min.css">
+			  <link rel="stylesheet" href="/static/css/morris.css">
+			  <link rel="stylesheet" href="/static/css/jquery-jvectormap.css">
+			  <link rel="stylesheet" href="/static/css/bootstrap-datepicker.min.css">
+			  <link rel="stylesheet" href="/static/css/daterangepicker.css">
+			  <link rel="stylesheet" href="/static/css/bootstrap3-wysihtml5.min.css">
+			  <link rel="stylesheet" href="/static/css/sweetalert.css">
+			  <link rel="stylesheet" href="/static/css/datatables.min.css">
+			  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+		</head>
+
+
+<body class="hold-transition skin-blue sidebar-mini">
+
+		<!--头部信息-->
+		<div class="wrapper">
+  			<header class="main-header">
+		    		<a href="index2.html" class="logo">
+		      		<span class="logo-mini"><b>A</b>LT</span>
+		      		<span class="logo-lg"><b>Admin</b>LTE</span>
+		    		</a>
+    				<nav class="navbar navbar-static-top">
+      					<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        						<span class="sr-only">Toggle navigation</span>
+      					</a>
+
+      					<div class="navbar-custom-menu">
+						        <ul class="nav navbar-nav">
+							          <li class="dropdown user user-menu">
+							            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							              		<img src="/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+							              		<span class="hidden-xs">Monkey</span>
+							            	</a>
+							            	<ul class="dropdown-menu">
+							              		<li class="user-header">
+							                			<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+							              		</li>
+
+									              <li class="user-footer">
+									              		<div class="pull-left">
+									                  		<a href="#" class="btn btn-default btn-flat">个人信息</a>
+									                	</div>
+									                	<div class="pull-right">
+									                  		<a href="/account/logout/" class="btn btn-default btn-flat">退出</a>
+								                		</div>
+									              </li>
+							            	</ul>
+						          	</li>
+						        </ul>
+      					</div>
+    					</nav>
+  			</header>
+
+
+  			<aside class="main-sidebar">
+		    		<section class="sidebar">
+
+		    				<!--菜单栏-->
+					      <div class="user-panel">
+						        <div class="pull-left image">
+						          <img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+						        </div>
+						        <div class="pull-left info">
+						          <p>Alexander Pierce</p>
+						          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+						        </div>
+					      </div>
+
+					      <ul class="sidebar-menu" data-widget="tree">
+					        	<li class="header">MAIN NAVIGATION</li>
+
+					        	<li class="treeview">
+					          		<a href="#">
+						            		<i class="fa fa-dashboard"></i> <span>资源管理</span>
+							            	<span class="pull-right-container">
+							              		<i class="fa fa-angle-left pull-right"></i>
+							            	</span>
+					          		</a>
+
+							          <ul class="treeview-menu">
+							            <li><a href="/assets/list/"><i class="fa fa-circle-o"></i> 资产管理</a></li>
+							            <li><a href="#"><i class="fa fa-circle-o"></i> 负载均衡</a></li>
+							          </ul>
+					        	</li>
+
+						        <li class="treeview">
+						          	<a href="#">
+						            		<i class="fa fa-files-o"></i>
+						            		<span>批量管理</span>
+						            		<span class="pull-right-container">
+						              			<span class="label label-primary pull-right">4</span>
+						            		</span>
+						          	</a>
+						          	<ul class="treeview-menu">
+						            		<li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> 简单命令执行</a></li>
+						            		<li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 上传文件</a></li>
+						          	</ul>
+					        	</li>
+
+					        	<li class="treeview">
+					          		<a href="#">
+					            			<i class="fa fa-user-circle"></i> <span>用户管理</span>
+					            			<span class="pull-right-container">
+					              				<i class="fa fa-angle-left pull-right"></i>
+					            			</span>
+					          		</a>
+							          <ul class="treeview-menu">
+								            <li><a href="/user/list/"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+								            <li><a href="#"><i class="fa fa-circle-o"></i> 用户组管理</a></li>
+							          </ul>
+					        	</li>
+
+					        	<li class="active treeview">
+					          		<a href="#">
+					            			<i class="fa fa-edit"></i> <span>日志分析</span>
+					            			<span class="pull-right-container">
+					              				<i class="fa fa-angle-left pull-right"></i>
+					            			</span>
+					          		</a>
+							          <ul class="treeview-menu">
+								            <li class="active"><a href="/log/analysis/"><i class="fa fa-circle-o"></i> 系统日志分析</a></li>
+								            <li><a href="#"><i class="fa fa-circle-o"></i> web日志分析</a></li>
+								            <li><a href="/test/mul/"><i class="fa fa-circle-o"></i> 乘法表</a></li>
+							          </ul>
+					        	</li>
+
+					      </ul>
+				    </section>
+			  </aside>
+
+
+
+		  	<div class="content-wrapper">
+		    		<section class="content-header">
+					      <h1>LogAnalysis<small>Log Analysis</small></h1>
+
+					      <ol class="breadcrumb">
+					        	<li><a href="#"><i class="fa fa-edit"></i> Home</a></li>
+					        	<li class="active">LogAnalysis</li>
+					      </ol>
+		    		</section>
+
+		    		<section class="content">
+
+
+						<div class="box">
+							<div class="box-header" style="float: left">
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Add_User_Modal">添加</button>
+								<button class="btn btn-info"><a href="/user/export/" style="color:white;text-decoration:none;">导出</a></button>
+							</div>
+							<div class="box-header" style="float: right">
+								<form class="form-inline" method="GET" action="" id="formSearch">
+									<input type="text" class="form-control" style="width: 300px" name="search_value">
+									<button class="btn btn-info" >搜索</button>
+								</form>
+							</div>
+            <div class="box-body">
+            		<table class="table table-hover table-bordered table-striped " id="myTable">
+            				<thead style="text-align: center;">
+            				<tr >
+            					<td>ID</td>
+            					<td>时间</td>
+            					<td>日志文件</td>
+            					<td>日志级别</td>
+            					<td>出现次数</td>
+            					<td>操作</td>
+            				</tr>
+            				</thead>
+
+            				<tbody style="text-align: center;">
+            				{% for obj in objs%}
+            					<tr>
+	            					<td>{{obj.pk}}</td>
+									<td>{{obj.query_time}}</td>
+									<td>{{obj.logname}}</td>
+									<td>{{obj.loglevel}}</td>
+									<td>{{obj.count}}</td>
+	            					<td style="text-align: center;">
+	            						<button type="button" class="btn btn-primary btn-xs btnDetail" data-toggle="modal" data-target="#Detail_User_Modal" data="">日志详情</button>
+	            					</td>
+								</tr>
+							{% endfor %}
+							</tbody>
+            		</table>
+            </div>
+				</div>
+  	</div>
+
+
+
+<!-- Add User Modal -->
+<div class="modal fade" id="Add_User_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+      </div>
+      <div class="modal-body">
+
+		  <form class="form-horizontal" id="formAdd">
+
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">用户名:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="username">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">性别 0 | 1:</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="sex">
+							<option>---请选择---</option>
+						  	<option value="0">男</option>
+						  	<option value="1">女</option>
+						</select>
+					</div>
+				</div>
+
+			  	<div class="form-group">
+					<label class="col-sm-2 control-label">年龄:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="age">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">城市:</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="city">
+					</div>
+				</div>
+			</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnAddUser">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Detail User Modal -->
+<div class="modal fade" id="Detail_User_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">用户详情</h4>
+      </div>
+      <div class="modal-body">
+		  <form class="form-horizontal" id="formDetail">
+
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">用户名:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="username" disabled="disabled" id="detail_username">
+					</div>
+			  	</div>
+
+			  	<div class="form-group">
+					<label class="col-sm-2 control-label">性别 0 | 1:</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="sex" disabled="disabled" id="detail_sex">
+							<option>---请选择---</option>
+						  	<option value="0">男</option>
+						  	<option value="1">女</option>
+						</select>
+					</div>
+				</div>
+
+			  	<div class="form-group">
+					<label class="col-sm-2 control-label">年龄:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="age" disabled="disabled" id="detail_age">
+					</div>
+				</div>
+
+			  	<div class="form-group">
+					<label class="col-sm-2 control-label">城市:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="city" disabled="disabled" id="detail_city">
+					</div>
+				</div>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Edit User Modal -->
+<div class="modal fade" id="Edit_User_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">修改用户信息</h4>
+      </div>
+      <div class="modal-body">
+		  <form class="form-horizontal" id="formEdit">
+		  		<div class="form-group" style="display: none;">
+					<label class="col-sm-2 control-label">ID:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="pk" disabled="disabled" id="edit_pk">
+					</div>
+			  	</div>
+
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">用户名:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="username" disabled="disabled" id="edit_username">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">性别 0 | 1:</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="sex" id="edit_sex">
+							<option>---请选择---</option>
+						  	<option value="0">男</option>
+						  	<option value="1">女</option>
+						</select>
+					</div>
+				</div>
+
+
+			  	<div class="form-group">
+					<label class="col-sm-2 control-label">年龄:</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="age" id="edit_age">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">城市:</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="city" id="edit_city">
+					</div>
+			  	</div>
+			  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnEditUser">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/adminlte.min.js"></script>
+		<script src="/static/js/sweetalert.min.js"></script>
+		<script src="/static/js/datatables.min.js"></script>
+		<script>
+			//删除用户操作函数
+			function DeleteRecord(url) {
+			    jQuery.ajax({
+					type:'DELETE',
+					data:'',
+					url:url,
+					contentType:"application/json",
+					success:function(){
+						setTimeout(function(){swal('删除！', "操作成功", "success"); },100);
+						setTimeout(function(){window.location.reload(); },1000);
+					},
+					dataType:'text',
+					error:function () {
+						swal('删除！', "操作失败", "error");
+					}
+				})
+			}
+
+			//修改用户操作函数
+			function EditRecord(url, data) {
+			    jQuery.ajax({
+					type:'PUT',
+					data:data,
+					url:url,
+					contentType:"application/json",
+					success:function(result){
+						console.log(result)
+						if (result['code']==200) {
+							setTimeout(function(){swal('修改！', "操作成功", "success"); },100);
+							setTimeout(function(){window.location.reload(); },1000);
+						} else if (result['code']==400) {
+							var errors = []
+			            	jQuery.each(result['errors'], function(k,v) {errors.push(v);});
+			            	swal("验证失败:", errors.join('\n'),"error");
+						}
+					}
+				})
+			}
+
+
+			//删除用户操作
+			jQuery('.btnDelete').click( function () {
+			    var pk = jQuery(this).attr('data');
+			    var url = "/user/delete/"+pk + "/";
+			    var method = 'DELETE';
+				swal({
+				  title: "确定删除吗？",
+				  text: "你确定删除该条记录吗？",
+				  type: "warning",
+				  showCancelButton: true,
+				  confirmButtonColor: "#DD6B55",
+				  confirmButtonText: "确定删除！",
+				  cancelButtonText: "取消删除！",
+				  closeOnConfirm: false,
+				  closeOnCancel: false
+				},
+				function(isConfirm){
+				  if (isConfirm) {
+				      DeleteRecord(url);
+
+				  } else {
+						swal("取消！", "取消成功", "error");
+				  }
+				});
+			});
+
+
+			//提交添加用户
+			jQuery('#btnAddUser').click( function () {
+				var data = jQuery("#formAdd").serialize();
+				var url = "/user/add/";
+				jQuery.post(url, data, function (result) {
+					if (result['code']==200) {
+						setTimeout(function(){swal("添加！","添加成功","success"); },100);//增加时延，避免被刷新掉
+						jQuery('#Add_User_Modal').modal('hide');
+						setTimeout(function(){window.location.reload(); },2000);
+					}else if (result['code']==400) {
+			            var errors = []
+			            jQuery.each(result['errors'], function(k,v) {errors.push(v);});
+			            swal("验证失败:", errors.join('\n'),"error");
+                	}
+                });
+            });
+
+
+			//用户详情显示
+			jQuery('.btnDetail').click( function () {
+				var pk = jQuery(this).attr('data');
+				var url = "/user/detail/?pk="+pk;
+				jQuery.get(url, function (data) {
+					jQuery('#detail_username').val(data.username)
+					jQuery('#detail_sex').val(data.sex)
+					jQuery('#detail_age').val(data.age)
+					jQuery('#detail_city').val(data.city)
+				})
+			})
+
+
+			//点击编辑按钮呈现数据
+			jQuery('.btnEdit').click( function () {
+				var pk = jQuery(this).attr('data');
+				var url = "/user/detail/?pk="+pk;
+				jQuery.get(url, function (data) {
+					jQuery('#edit_pk').val(pk);
+					jQuery('#edit_username').val(data.username);
+					jQuery('#edit_sex').val(data.sex);
+					jQuery('#edit_age').val(data.age);
+					jQuery('#edit_city').val(data.city);
+					//提交编辑完成的数据
+					jQuery('#btnEditUser').click( function () {
+						var data = jQuery("#formEdit").serialize();
+						var url = "/user/edit/"+pk + "/";
+						EditRecord(url, data);
+					})
+				})
+			})
+
+
+			$(document).ready(function(){
+        		$('#myTable').DataTable({
+        			language: {
+				        "sProcessing": "处理中...",
+				        "sLengthMenu": "显示 _MENU_ 项结果",
+				        "sZeroRecords": "没有匹配结果",
+				        "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+				        "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+				        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+				        "sInfoPostFix": "",
+				        "sSearch": "搜索:",
+				        "sUrl": "",
+				        "sEmptyTable": "表中数据为空",
+				        "sLoadingRecords": "载入中...",
+				        "sInfoThousands": ",",
+				        "oPaginate": {
+				            "sFirst": "首页",
+				            "sPrevious": "上页",
+				            "sNext": "下页",
+				            "sLast": "末页"
+				        },
+				        "oAria": {
+				            "sSortAscending": ": 以升序排列此列",
+				            "sSortDescending": ": 以降序排列此列"
+				        }
+        		    }
+        		});
+   			});
+
+		</script>
+</body>
+</html>

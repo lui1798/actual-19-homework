@@ -1,0 +1,12 @@
+2018-11-16 14:46:08 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-16 14:46:19 [django.request:135] [ERROR] - Internal Server Error: /log/analysis/
+Traceback (most recent call last):
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/luxx/documents/reboot19/python36env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/luxx/documents/reboot19/webapp/loganalysis/views.py", line 20, in Loganalysis
+    objs = Log.objects.all().order_by(query_time)[0:4]
+NameError: name 'query_time' is not defined

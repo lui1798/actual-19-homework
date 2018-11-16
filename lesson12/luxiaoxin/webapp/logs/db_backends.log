@@ -1,0 +1,356 @@
+2018-11-15 16:32:25,181 DEBUG (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:32:25,183 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-15 16:32:25,289 DEBUG (0.004) SHOW FULL TABLES; args=None
+2018-11-15 16:32:25,297 DEBUG (0.004) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 16:32:35,690 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:32:35,694 DEBUG (0.003) SELECT VERSION(); args=None
+2018-11-15 16:32:35,698 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-15 08:32:35.684807'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-15 08:32:35.684807')
+2018-11-15 16:32:35,701 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-15 16:32:35,713 DEBUG (0.008) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-15 16:32:37,490 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:32:37,492 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-15 16:32:37,496 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-15 08:32:37.484732'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-15 08:32:37.484732')
+2018-11-15 16:32:37,498 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-15 16:32:37,503 DEBUG (0.002) SELECT `assets`.`id`, `assets`.`hostname`, `assets`.`cpu_num`, `assets`.`cpu_model`, `assets`.`mem_total`, `assets`.`disk`, `assets`.`public_ip`, `assets`.`private_ip`, `assets`.`remote_ip`, `assets`.`status`, `assets`.`os_system`, `assets`.`service_line`, `assets`.`frame`, `assets`.`op`, `assets`.`remark`, `assets`.`create_time`, `assets`.`update_time` FROM `assets`; args=()
+2018-11-15 16:32:40,778 DEBUG (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:32:40,779 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-15 16:32:40,785 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-15 08:32:40.771436'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-15 08:32:40.771436')
+2018-11-15 16:32:40,788 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-15 16:32:40,797 DEBUG (0.006) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-15 16:32:45,276 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:32:45,278 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-15 16:32:45,282 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-15 08:32:45.271337'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-15 08:32:45.271337')
+2018-11-15 16:32:45,285 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-15 16:32:45,289 DEBUG (0.002) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user` WHERE `user`.`id` = 1; args=(1,)
+2018-11-15 16:33:19,923 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:33:19,924 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-15 16:33:19,927 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-15 08:33:19.917502'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-15 08:33:19.917502')
+2018-11-15 16:33:19,930 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-15 16:33:19,934 DEBUG (0.002) SELECT `assets`.`id`, `assets`.`hostname`, `assets`.`cpu_num`, `assets`.`cpu_model`, `assets`.`mem_total`, `assets`.`disk`, `assets`.`public_ip`, `assets`.`private_ip`, `assets`.`remote_ip`, `assets`.`status`, `assets`.`os_system`, `assets`.`service_line`, `assets`.`frame`, `assets`.`op`, `assets`.`remark`, `assets`.`create_time`, `assets`.`update_time` FROM `assets`; args=()
+2018-11-15 16:51:39,730 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:51:39,731 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-15 16:51:39,831 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-15 16:51:39,839 DEBUG (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 16:52:51,719 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:52:51,720 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-15 16:52:51,774 DEBUG (0.002) SHOW FULL TABLES; args=None
+2018-11-15 16:52:51,778 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 16:53:01,020 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 16:53:01,021 DEBUG (0.001) SELECT @@sql_mode; args=None
+2018-11-15 16:53:01,022 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-15 16:53:01,091 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-15 16:53:01,097 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 16:53:01,100 DEBUG (0.002) SHOW FULL TABLES; args=None
+2018-11-15 16:53:01,102 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 16:53:01,147 DEBUG CREATE TABLE `log` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `query_time` datetime(6) NOT NULL, `logname` varchar(64) NOT NULL UNIQUE, `loglevel` varchar(128) NOT NULL, `count` integer NOT NULL); (params None)
+2018-11-15 16:53:01,200 DEBUG (0.053) CREATE TABLE `log` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `query_time` datetime(6) NOT NULL, `logname` varchar(64) NOT NULL UNIQUE, `loglevel` varchar(128) NOT NULL, `count` integer NOT NULL); args=None
+2018-11-15 16:53:01,203 DEBUG (0.002) SELECT engine FROM information_schema.tables WHERE table_name = 'log'; args=['log']
+2018-11-15 16:53:01,205 DEBUG (0.002) SELECT engine FROM information_schema.tables WHERE table_name = 'log'; args=['log']
+2018-11-15 16:53:01,207 DEBUG (0.002) SELECT engine FROM information_schema.tables WHERE table_name = 'log'; args=['log']
+2018-11-15 16:53:01,209 DEBUG (0.002) SELECT engine FROM information_schema.tables WHERE table_name = 'log'; args=['log']
+2018-11-15 16:53:01,211 DEBUG (0.002) SELECT engine FROM information_schema.tables WHERE table_name = 'log'; args=['log']
+2018-11-15 16:53:01,213 DEBUG (0.002) SHOW FULL TABLES; args=None
+2018-11-15 16:53:01,215 DEBUG (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('loganalysis', '0001_initial', '2018-11-15 08:53:01.214255'); args=['loganalysis', '0001_initial', '2018-11-15 08:53:01.214255']
+2018-11-15 16:53:01,222 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-15 16:53:01,227 DEBUG (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 16:53:01,301 DEBUG (0.047) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2018-11-15 16:53:01,318 DEBUG (0.015) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2018-11-15 16:53:01,320 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2018-11-15 16:53:01,323 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2018-11-15 16:53:01,325 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2018-11-15 16:53:01,327 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2018-11-15 16:53:01,330 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2018-11-15 16:53:01,332 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2018-11-15 16:53:01,334 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2018-11-15 16:53:01,337 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2018-11-15 16:53:01,339 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2018-11-15 16:53:01,341 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2018-11-15 16:53:01,344 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2018-11-15 16:53:01,346 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2018-11-15 16:53:01,348 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'assets' AND `django_content_type`.`model` = 'assets'); args=('assets', 'assets')
+2018-11-15 16:53:01,351 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(7,)
+2018-11-15 16:53:01,353 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'assets'; args=('assets',)
+2018-11-15 16:53:01,355 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'user' AND `django_content_type`.`model` = 'users'); args=('user', 'users')
+2018-11-15 16:53:01,358 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8,)
+2018-11-15 16:53:01,360 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'user'; args=('user',)
+2018-11-15 16:53:01,362 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'loganalysis' AND `django_content_type`.`model` = 'log'); args=('loganalysis', 'log')
+2018-11-15 16:53:01,364 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'loganalysis' AND `django_content_type`.`model` = 'log'); args=('loganalysis', 'log')
+2018-11-15 16:53:01,366 DEBUG (0.001) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('loganalysis', 'log'); args=['loganalysis', 'log']
+2018-11-15 16:53:01,390 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (9) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(9,)
+2018-11-15 16:53:01,392 DEBUG (0.001) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add log', 9, 'add_log'), ('Can change log', 9, 'change_log'), ('Can delete log', 9, 'delete_log'); args=('Can add log', 9, 'add_log', 'Can change log', 9, 'change_log', 'Can delete log', 9, 'delete_log')
+2018-11-15 16:53:01,398 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'loganalysis'; args=('loganalysis',)
+2018-11-16 14:19:35,331 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:19:35,332 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:21:36,858 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:21:36,859 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 14:24:40,479 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:24:40,480 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 14:24:40,822 DEBUG (0.196) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:24:40.625956', 'django.log', 'DEBUG', 0); args=['2018-11-16 06:24:40.625956', 'django.log', 'DEBUG', 0]
+2018-11-16 14:24:40,827 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:24:40.826510', 'django.log', 'INFO', 9); args=['2018-11-16 06:24:40.826510', 'django.log', 'INFO', 9]
+2018-11-16 14:27:27,025 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:27:27,026 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 14:27:27,199 DEBUG (0.046) SHOW FULL TABLES; args=None
+2018-11-16 14:27:27,217 DEBUG (0.014) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:27:40,676 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:27:40,677 DEBUG (0.000) SELECT @@sql_mode; args=None
+2018-11-16 14:27:40,678 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 14:27:40,758 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-16 14:27:40,764 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:27:40,769 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-16 14:27:40,771 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:27:40,997 DEBUG (0.186) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = DATABASE() AND
+                kc.table_name = 'log'
+        ; args=['log']
+2018-11-16 14:27:41,005 DEBUG (0.008) 
+            SELECT c.constraint_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = DATABASE() AND
+                c.table_name = 'log'
+        ; args=['log']
+2018-11-16 14:27:41,114 DEBUG (0.109) SHOW INDEX FROM `log`; args=None
+2018-11-16 14:27:41,114 DEBUG ALTER TABLE `log` DROP INDEX `logname`; (params ())
+2018-11-16 14:27:41,206 DEBUG (0.091) ALTER TABLE `log` DROP INDEX `logname`; args=()
+2018-11-16 14:27:41,206 DEBUG CREATE INDEX `log_logname_3b75fe49` ON `log` (`logname`); (params ())
+2018-11-16 14:27:41,224 DEBUG (0.018) CREATE INDEX `log_logname_3b75fe49` ON `log` (`logname`); args=()
+2018-11-16 14:27:41,229 DEBUG (0.005) SHOW FULL TABLES; args=None
+2018-11-16 14:27:41,233 DEBUG (0.001) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('loganalysis', '0002_auto_20181116_1427', '2018-11-16 06:27:41.230194'); args=['loganalysis', '0002_auto_20181116_1427', '2018-11-16 06:27:41.230194']
+2018-11-16 14:27:41,241 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-16 14:27:41,245 DEBUG (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:27:41,347 DEBUG (0.033) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2018-11-16 14:27:41,397 DEBUG (0.047) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2018-11-16 14:27:41,399 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2018-11-16 14:27:41,402 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2018-11-16 14:27:41,404 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2018-11-16 14:27:41,406 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2018-11-16 14:27:41,410 DEBUG (0.002) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2018-11-16 14:27:41,412 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2018-11-16 14:27:41,414 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2018-11-16 14:27:41,417 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2018-11-16 14:27:41,420 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2018-11-16 14:27:41,423 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2018-11-16 14:27:41,426 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2018-11-16 14:27:41,432 DEBUG (0.002) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2018-11-16 14:27:41,436 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'assets' AND `django_content_type`.`model` = 'assets'); args=('assets', 'assets')
+2018-11-16 14:27:41,439 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(7,)
+2018-11-16 14:27:41,442 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'assets'; args=('assets',)
+2018-11-16 14:27:41,444 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'user' AND `django_content_type`.`model` = 'users'); args=('user', 'users')
+2018-11-16 14:27:41,448 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8,)
+2018-11-16 14:27:41,451 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'user'; args=('user',)
+2018-11-16 14:27:41,454 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'loganalysis' AND `django_content_type`.`model` = 'log'); args=('loganalysis', 'log')
+2018-11-16 14:27:41,457 DEBUG (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (9) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(9,)
+2018-11-16 14:27:41,459 DEBUG (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'loganalysis'; args=('loganalysis',)
+2018-11-16 14:28:33,960 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:28:33,961 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 14:28:34,010 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:28:34.008741', 'django.log', 'DEBUG', 0); args=['2018-11-16 06:28:34.008741', 'django.log', 'DEBUG', 0]
+2018-11-16 14:28:34,056 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:28:34.055453', 'django.log', 'INFO', 9); args=['2018-11-16 06:28:34.055453', 'django.log', 'INFO', 9]
+2018-11-16 14:28:34,062 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:28:34.061037', 'django.log', 'WARNING', 6); args=['2018-11-16 06:28:34.061037', 'django.log', 'WARNING', 6]
+2018-11-16 14:44:58,267 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:44:58,268 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 14:44:58,308 DEBUG (0.002) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:44:58.305694', 'django.log', 'DEBUG', 0); args=['2018-11-16 06:44:58.305694', 'django.log', 'DEBUG', 0]
+2018-11-16 14:44:58,403 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:44:58.402246', 'django.log', 'INFO', 9); args=['2018-11-16 06:44:58.402246', 'django.log', 'INFO', 9]
+2018-11-16 14:44:58,409 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 06:44:58.408440', 'django.log', 'WARNING', 6); args=['2018-11-16 06:44:58.408440', 'django.log', 'WARNING', 6]
+2018-11-16 14:45:48,835 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:45:48,839 DEBUG (0.004) SELECT VERSION(); args=None
+2018-11-16 14:45:48,968 DEBUG (0.002) SHOW FULL TABLES; args=None
+2018-11-16 14:45:48,974 DEBUG (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:46:15,550 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:46:15,551 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:46:15,702 DEBUG (0.148) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'admin'; args=('admin',)
+2018-11-16 14:46:15,769 DEBUG (0.004) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 06:46:15.763967'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 06:46:15.763967')
+2018-11-16 14:46:15,778 DEBUG (0.004) UPDATE `auth_user` SET `last_login` = '2018-11-16 06:46:15.772889' WHERE `auth_user`.`id` = 3; args=('2018-11-16 06:46:15.772889', 3)
+2018-11-16 14:46:15,871 DEBUG (0.002) UPDATE `django_session` SET `session_data` = 'ZmI2YjUwYzAzZmIwOTBiN2I0YTg2NWMzYWIzZDgzNGEwZjM2YTRjMjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhYWRjOTMwZTQ1MTg0MjZmZWI1MTA1YmU0Njg1NDdiZmFjZGRhNzFlIn0=', `expire_date` = '2018-11-30 06:46:15.867487' WHERE `django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3'; args=('ZmI2YjUwYzAzZmIwOTBiN2I0YTg2NWMzYWIzZDgzNGEwZjM2YTRjMjp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhYWRjOTMwZTQ1MTg0MjZmZWI1MTA1YmU0Njg1NDdiZmFjZGRhNzFlIn0=', '2018-11-30 06:46:15.867487', 'dm3neianqfku0beusrgj7br2c9p2zez3')
+2018-11-16 14:46:15,898 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:46:15,899 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:46:15,902 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 06:46:15.893766'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 06:46:15.893766')
+2018-11-16 14:46:15,905 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 14:46:19,260 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:46:19,261 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:46:19,266 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 06:46:19.232645'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 06:46:19.232645')
+2018-11-16 14:46:19,271 DEBUG (0.004) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 14:46:54,739 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:46:54,740 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:46:54,837 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-16 14:46:54,843 DEBUG (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:47:04,154 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:47:04,155 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` ASC LIMIT 4; args=()
+2018-11-16 14:47:04,174 DEBUG (0.003) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` ASC LIMIT 4; args=()
+2018-11-16 14:47:48,559 DEBUG (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:47:48,562 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:47:48,722 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-16 14:47:48,730 DEBUG (0.002) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:47:53,710 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:47:53,712 DEBUG (0.002) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` ASC LIMIT 3; args=()
+2018-11-16 14:47:53,722 DEBUG (0.002) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` ASC LIMIT 3; args=()
+2018-11-16 14:49:00,018 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:49:00,019 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 14:49:00,141 DEBUG (0.004) SHOW FULL TABLES; args=None
+2018-11-16 14:49:00,149 DEBUG (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 14:49:07,792 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:49:07,794 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 3; args=()
+2018-11-16 14:49:07,798 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 3; args=()
+2018-11-16 14:49:34,919 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 14:49:34,921 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 3; args=()
+2018-11-16 14:49:34,925 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 3; args=()
+2018-11-16 15:09:57,055 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:09:57,056 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 15:09:57,118 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:09:57.117322', 'django.log', 'DEBUG', 1); args=['2018-11-16 07:09:57.117322', 'django.log', 'DEBUG', 1]
+2018-11-16 15:09:57,230 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:09:57.229017', 'django.log', 'INFO', 9); args=['2018-11-16 07:09:57.229017', 'django.log', 'INFO', 9]
+2018-11-16 15:09:57,237 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:09:57.235955', 'django.log', 'WARNING', 6); args=['2018-11-16 07:09:57.235955', 'django.log', 'WARNING', 6]
+2018-11-16 15:09:57,261 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:09:57.260184', 'django.log', 'ERROR', 0); args=['2018-11-16 07:09:57.260184', 'django.log', 'ERROR', 0]
+2018-11-16 15:10:12,957 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:10:12,958 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 3; args=()
+2018-11-16 15:10:12,962 DEBUG (0.002) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 3; args=()
+2018-11-16 15:10:36,016 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:10:36,018 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:10:36,165 DEBUG (0.003) SHOW FULL TABLES; args=None
+2018-11-16 15:10:36,172 DEBUG (0.003) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-16 15:10:37,625 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:10:37,627 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
+2018-11-16 15:10:57,310 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:10:57.309391', 'django.log', 'DEBUG', 0); args=['2018-11-16 07:10:57.309391', 'django.log', 'DEBUG', 0]
+2018-11-16 15:10:57,380 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:10:57.379053', 'django.log', 'INFO', 0); args=['2018-11-16 07:10:57.379053', 'django.log', 'INFO', 0]
+2018-11-16 15:10:57,446 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:10:57.445181', 'django.log', 'WARNING', 0); args=['2018-11-16 07:10:57.445181', 'django.log', 'WARNING', 0]
+2018-11-16 15:10:57,582 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:10:57.581495', 'django.log', 'ERROR', 0); args=['2018-11-16 07:10:57.581495', 'django.log', 'ERROR', 0]
+2018-11-16 15:11:13,177 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:11:13,179 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:11:13,185 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:11:13.171616'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:11:13.171616')
+2018-11-16 15:11:13,188 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:11:13,220 DEBUG (0.028) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 15:11:16,681 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:11:16,682 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 15:11:16,686 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:11:16.677933'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:11:16.677933')
+2018-11-16 15:11:16,690 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:11:16,718 DEBUG (0.023) SELECT `assets`.`id`, `assets`.`hostname`, `assets`.`cpu_num`, `assets`.`cpu_model`, `assets`.`mem_total`, `assets`.`disk`, `assets`.`public_ip`, `assets`.`private_ip`, `assets`.`remote_ip`, `assets`.`status`, `assets`.`os_system`, `assets`.`service_line`, `assets`.`frame`, `assets`.`op`, `assets`.`remark`, `assets`.`create_time`, `assets`.`update_time` FROM `assets`; args=()
+2018-11-16 15:11:20,421 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:11:20,422 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 15:11:20,426 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:11:20.412346'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:11:20.412346')
+2018-11-16 15:11:20,429 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:11:20,440 DEBUG (0.009) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 15:11:22,335 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:11:22,336 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:11:22,341 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:11:22.328468'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:11:22.328468')
+2018-11-16 15:11:22,344 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:11:22,348 DEBUG (0.002) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user` WHERE `user`.`id` = 1; args=(1,)
+2018-11-16 15:11:57,678 DEBUG (0.002) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:11:57.675129', 'django.log', 'DEBUG', 0); args=['2018-11-16 07:11:57.675129', 'django.log', 'DEBUG', 0]
+2018-11-16 15:11:57,715 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:11:57.714104', 'django.log', 'INFO', 0); args=['2018-11-16 07:11:57.714104', 'django.log', 'INFO', 0]
+2018-11-16 15:11:57,722 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:11:57.721290', 'django.log', 'WARNING', 0); args=['2018-11-16 07:11:57.721290', 'django.log', 'WARNING', 0]
+2018-11-16 15:11:57,733 DEBUG (0.002) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:11:57.731225', 'django.log', 'ERROR', 0); args=['2018-11-16 07:11:57.731225', 'django.log', 'ERROR', 0]
+2018-11-16 15:11:59,469 DEBUG (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:11:59,471 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
+2018-11-16 15:16:19,110 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:19,111 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:16:19,158 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:16:19.157366', 'django.log', 'DEBUG', 1); args=['2018-11-16 07:16:19.157366', 'django.log', 'DEBUG', 1]
+2018-11-16 15:16:19,187 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:16:19.186199', 'django.log', 'INFO', 9); args=['2018-11-16 07:16:19.186199', 'django.log', 'INFO', 9]
+2018-11-16 15:16:19,193 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:16:19.192305', 'django.log', 'WARNING', 6); args=['2018-11-16 07:16:19.192305', 'django.log', 'WARNING', 6]
+2018-11-16 15:16:19,207 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:16:19.206666', 'django.log', 'ERROR', 0); args=['2018-11-16 07:16:19.206666', 'django.log', 'ERROR', 0]
+2018-11-16 15:16:32,437 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:32,437 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 15:16:32,442 DEBUG (0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:16:32.432831'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:16:32.432831')
+2018-11-16 15:16:32,448 DEBUG (0.004) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:16:32,460 DEBUG (0.009) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 15:16:35,579 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:35,580 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:16:35,584 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:16:35.575030'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:16:35.575030')
+2018-11-16 15:16:35,588 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:16:35,597 DEBUG (0.004) SELECT `assets`.`id`, `assets`.`hostname`, `assets`.`cpu_num`, `assets`.`cpu_model`, `assets`.`mem_total`, `assets`.`disk`, `assets`.`public_ip`, `assets`.`private_ip`, `assets`.`remote_ip`, `assets`.`status`, `assets`.`os_system`, `assets`.`service_line`, `assets`.`frame`, `assets`.`op`, `assets`.`remark`, `assets`.`create_time`, `assets`.`update_time` FROM `assets`; args=()
+2018-11-16 15:16:39,247 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:39,250 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:16:39,255 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:16:39.241823'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:16:39.241823')
+2018-11-16 15:16:39,258 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:16:39,272 DEBUG (0.011) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 15:16:42,945 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:42,946 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:16:42,950 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:16:42.938130'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:16:42.938130')
+2018-11-16 15:16:42,957 DEBUG (0.005) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:16:42,965 DEBUG (0.003) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user` WHERE `user`.`id` = 1; args=(1,)
+2018-11-16 15:16:46,405 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:46,406 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:16:46,412 DEBUG (0.002) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:16:46.397656'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:16:46.397656')
+2018-11-16 15:16:46,419 DEBUG (0.005) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:16:46,422 DEBUG (0.001) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user` WHERE `user`.`id` = 5; args=(5,)
+2018-11-16 15:16:53,046 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:53,047 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
+2018-11-16 15:16:58,487 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:16:58,488 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:16:58,504 DEBUG (0.003) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 07:16:58.479579'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 07:16:58.479579')
+2018-11-16 15:16:58,507 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 15:16:58,513 DEBUG (0.003) SELECT `assets`.`id`, `assets`.`hostname`, `assets`.`cpu_num`, `assets`.`cpu_model`, `assets`.`mem_total`, `assets`.`disk`, `assets`.`public_ip`, `assets`.`private_ip`, `assets`.`remote_ip`, `assets`.`status`, `assets`.`os_system`, `assets`.`service_line`, `assets`.`frame`, `assets`.`op`, `assets`.`remark`, `assets`.`create_time`, `assets`.`update_time` FROM `assets`; args=()
+2018-11-16 15:17:19,283 DEBUG (0.002) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:17:19.280663', 'django.log', 'DEBUG', 0); args=['2018-11-16 07:17:19.280663', 'django.log', 'DEBUG', 0]
+2018-11-16 15:17:19,387 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:17:19.385899', 'django.log', 'INFO', 0); args=['2018-11-16 07:17:19.385899', 'django.log', 'INFO', 0]
+2018-11-16 15:17:19,393 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:17:19.391879', 'django.log', 'WARNING', 0); args=['2018-11-16 07:17:19.391879', 'django.log', 'WARNING', 0]
+2018-11-16 15:17:19,398 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:17:19.397045', 'django.log', 'ERROR', 0); args=['2018-11-16 07:17:19.397045', 'django.log', 'ERROR', 0]
+2018-11-16 15:20:14,071 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:20:14,073 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
+2018-11-16 15:24:39,994 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:24:39,995 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:24:40,035 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:24:40.033335', 'django.log', 'DEBUG', 1); args=['2018-11-16 07:24:40.033335', 'django.log', 'DEBUG', 1]
+2018-11-16 15:24:40,128 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:24:40.128029', 'django.log', 'INFO', 9); args=['2018-11-16 07:24:40.128029', 'django.log', 'INFO', 9]
+2018-11-16 15:24:40,133 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:24:40.132863', 'django.log', 'WARNING', 6); args=['2018-11-16 07:24:40.132863', 'django.log', 'WARNING', 6]
+2018-11-16 15:24:40,171 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:24:40.170422', 'django.log', 'ERROR', 0); args=['2018-11-16 07:24:40.170422', 'django.log', 'ERROR', 0]
+2018-11-16 15:33:38,616 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 15:33:38,617 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 15:33:38,679 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:33:38.677247', 'django.log', 'DEBUG', 1); args=['2018-11-16 07:33:38.677247', 'django.log', 'DEBUG', 1]
+2018-11-16 15:33:38,727 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:33:38.726301', 'django.log', 'INFO', 9); args=['2018-11-16 07:33:38.726301', 'django.log', 'INFO', 9]
+2018-11-16 15:33:38,767 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:33:38.766291', 'django.log', 'WARNING', 6); args=['2018-11-16 07:33:38.766291', 'django.log', 'WARNING', 6]
+2018-11-16 15:33:38,771 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 07:33:38.770910', 'django.log', 'ERROR', 0); args=['2018-11-16 07:33:38.770910', 'django.log', 'ERROR', 0]
+2018-11-16 16:07:07,616 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:07,618 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 16:07:07,685 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:07:07.683573', 'django.log', 'DEBUG', 2); args=['2018-11-16 08:07:07.683573', 'django.log', 'DEBUG', 2]
+2018-11-16 16:07:07,739 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:07:07.738201', 'django.log', 'INFO', 40); args=['2018-11-16 08:07:07.738201', 'django.log', 'INFO', 40]
+2018-11-16 16:07:07,760 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:07:07.759941', 'django.log', 'WARNING', 35); args=['2018-11-16 08:07:07.759941', 'django.log', 'WARNING', 35]
+2018-11-16 16:07:07,766 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:07:07.765283', 'django.log', 'ERROR', 1); args=['2018-11-16 08:07:07.765283', 'django.log', 'ERROR', 1]
+2018-11-16 16:07:14,289 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:14,291 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
+2018-11-16 16:07:17,436 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:17,437 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-16 16:07:17,444 DEBUG (0.003) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:07:17.432784'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:07:17.432784')
+2018-11-16 16:07:17,451 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:07:17,464 DEBUG (0.010) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 16:07:21,389 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:21,391 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:07:21,395 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:07:21.385183'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:07:21.385183')
+2018-11-16 16:07:21,400 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:07:21,404 DEBUG (0.002) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user` WHERE `user`.`id` = 1; args=(1,)
+2018-11-16 16:07:24,202 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:24,203 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:07:24,208 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:07:24.197205'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:07:24.197205')
+2018-11-16 16:07:24,210 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:07:24,215 DEBUG (0.002) SELECT `assets`.`id`, `assets`.`hostname`, `assets`.`cpu_num`, `assets`.`cpu_model`, `assets`.`mem_total`, `assets`.`disk`, `assets`.`public_ip`, `assets`.`private_ip`, `assets`.`remote_ip`, `assets`.`status`, `assets`.`os_system`, `assets`.`service_line`, `assets`.`frame`, `assets`.`op`, `assets`.`remark`, `assets`.`create_time`, `assets`.`update_time` FROM `assets`; args=()
+2018-11-16 16:07:26,349 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:26,350 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
+2018-11-16 16:07:46,585 DEBUG (0.002) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:46,587 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:07:46,593 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:07:46.579947'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:07:46.579947')
+2018-11-16 16:07:46,597 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:07:46,608 DEBUG (0.009) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 16:07:52,371 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:52,372 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:07:52,380 DEBUG (0.004) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:07:52.366674'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:07:52.366674')
+2018-11-16 16:07:52,384 DEBUG (0.002) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:07:52,399 DEBUG (0.012) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 16:07:56,421 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:07:56,422 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:07:56,426 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:07:56.415439'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:07:56.415439')
+2018-11-16 16:07:56,429 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:07:56,445 DEBUG (0.012) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 16:08:01,779 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:08:01,780 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:08:01,783 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:08:01.770816'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:08:01.770816')
+2018-11-16 16:08:01,786 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:08:01,795 DEBUG (0.007) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user`; args=()
+2018-11-16 16:08:04,980 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:08:04,981 DEBUG (0.001) SELECT VERSION(); args=None
+2018-11-16 16:08:04,986 DEBUG (0.001) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`session_key` = 'dm3neianqfku0beusrgj7br2c9p2zez3' AND `django_session`.`expire_date` > '2018-11-16 08:08:04.975541'); args=('dm3neianqfku0beusrgj7br2c9p2zez3', '2018-11-16 08:08:04.975541')
+2018-11-16 16:08:04,989 DEBUG (0.001) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 3; args=(3,)
+2018-11-16 16:08:04,992 DEBUG (0.001) SELECT `user`.`id`, `user`.`username`, `user`.`sex`, `user`.`age`, `user`.`city`, `user`.`create_time`, `user`.`update_time` FROM `user` WHERE `user`.`id` = 5; args=(5,)
+2018-11-16 16:08:07,830 DEBUG (0.002) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:08:07.827917', 'django.log', 'DEBUG', 0); args=['2018-11-16 08:08:07.827917', 'django.log', 'DEBUG', 0]
+2018-11-16 16:08:07,873 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:08:07.871439', 'django.log', 'INFO', 10); args=['2018-11-16 08:08:07.871439', 'django.log', 'INFO', 10]
+2018-11-16 16:08:07,878 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:08:07.877179', 'django.log', 'WARNING', 14); args=['2018-11-16 08:08:07.877179', 'django.log', 'WARNING', 14]
+2018-11-16 16:08:07,940 DEBUG (0.001) INSERT INTO `log` (`query_time`, `logname`, `loglevel`, `count`) VALUES ('2018-11-16 08:08:07.939223', 'django.log', 'ERROR', 0); args=['2018-11-16 08:08:07.939223', 'django.log', 'ERROR', 0]
+2018-11-16 16:08:15,057 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-16 16:08:15,059 DEBUG (0.001) SELECT `log`.`id`, `log`.`query_time`, `log`.`logname`, `log`.`loglevel`, `log`.`count` FROM `log` ORDER BY `log`.`query_time` DESC LIMIT 4; args=()
