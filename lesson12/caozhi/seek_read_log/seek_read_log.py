@@ -14,13 +14,17 @@ import requests
 import time
 import re
 
-#CONF = {"seek": 0, "inode": 922817, "last_file": "logstash.log"}
 cini = 'conf.ini'
 log_file = 'logstash.log'
 
 def readconf():
-    with open(cini, 'r+') as f:
-        CONF = json.load(f)
+    try:
+        with open(cini, 'r+') as f:
+            CONF = json.load(f)
+    except:
+        CONF = {"seek": 0, "inode": 922817, "last_file": "logstash.log"}
+        writeconf(CONF=CONF)
+        print('conf.ini 配置文件缺失，自动创建一个新的配置文件')
     return CONF
 
 def writeconf(CONF):
@@ -33,10 +37,11 @@ def main(log_file, seek):
     except FileNotFoundError:
         f = open('logstash.log', 'r')
         seek = 0
+        print('上一个文件读取失败了，请检查切割的日志文件')
     except:
         print('日志文件打开错误，退出程序')
         sys.exit()
-        
+
     f.seek(seek)
     line = f.readline()
     new_seek = f.tell()
@@ -71,7 +76,7 @@ def record(value, stream):
     record['counterType'] = 'GAUGE'
     record['Tags'] = '{}={}'.format(int(time.time()), stream)
     data.append(record)
-    
+
     if data:
         print('这是data的json数据')
         print(data)
@@ -82,6 +87,9 @@ def record(value, stream):
 
 
 if __name__ == '__main__':
+    print()
+    print('***************************************')
+    print('本次执行脚本时间：{}'.format(time.strftime("%Y%m%d_%H%M", time.localtime())))
     CONF = readconf()
     print('first_CONF :{}'.format(CONF))
     print('NO1.log_file',log_file)
