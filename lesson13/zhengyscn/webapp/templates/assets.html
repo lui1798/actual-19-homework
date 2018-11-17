@@ -1,28 +1,335 @@
 {% extends "base.html" %}
 
-{% block content %}
-<div class="callout callout-info">
-    <h4>Tip!</h4>
-        <p>Add the layout-top-nav class to the body tag to get this layout. This feature can also be used with a
-            sidebar! So use this class if you want to remove the custom dropdown menus from the navbar and use regular
-            links instead.
-        </p>
-    </div>
-    <div class="callout callout-danger">
-        <h4>Warning!</h4>
+{% block css %}
+    <link rel="stylesheet" href="/static/css/sweetalert.css">
+{% endblock %}
 
-        <p>
-            The construction of this layout differs from the normal one. In other words, the HTML markup of the navbar
-            and the content will slightly differ than that of the normal layout.
-        </p>
+{% block content %}
+<div class="box">
+    <div class="box-header" style="float: left">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+        <button class="btn btn-info"><a href="/assets/export/">导出</a></button>
     </div>
-    <div class="box box-default">
-        <div class="box-header with-border">
-            <h3 class="box-title">Blank Box</h3>
-        </div>
-        <div class="box-body">
-            The great content goes here
-        </div>
+    <div class="box-header" style="float: right">
+        <form class="form-inline" method="GET" action="" id="formSearch">
+            <input type="text" class="form-control" style="width: 300px" name="search_value">
+            <button class="btn btn-info" >搜索</button>
+        </form>
+    </div>
+    <div class="box-body">
+            <table class="table table-hover table-bordered table-striped ">
+                    <thead style="text-align: center;">
+                    <tr >
+                        <td>#</td>
+                        <td>主机名</td>
+                        <td>内网ip</td>
+                        <td>外网ip</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+
+                    <tbody style="text-align: center;">
+                    {% for obj in content %}
+                        <tr>
+                            <td>{{ obj.pk }}</td>
+                            <td>{{ obj.hostname }}</td>
+                            <td>{{ obj.private_ip }}</td>
+                            <td>{{ obj.public_ip }}</td>
+                            <td style="text-align: center;">
+                                <button class="btn btn-primary btn-xs">详情</button>
+                                <button class="btn btn-info btn-xs btnAssetEdit" data-toggle="modal" data-target="#editModal" data="{{ obj.pk }}">编辑</button>
+                                <button class="btn btn-danger btn-xs btnDelete" data="{{ obj.pk }}">删除</button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
     </div>
 </div>
+
+
+<!--修改资产-->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">修改资产</h4>
+      </div>
+      <div class="modal-body">
+
+		  <form class="form-horizontal" id="editAssetForm">
+			  <div class="form-group" style="display: none">
+					<label class="col-sm-2 control-label">pk</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="hostname" disabled="disabled" id="edit_pk">
+					</div>
+			  	</div>
+
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">主机名</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="hostname" disabled="disabled" id="edit_hostname">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">内网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="private_ip" id="edit_private_ip">
+					</div>
+			  	</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">外网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="public_ip" id="edit_public_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">状态</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="status" id="edit_status">
+							<option>---请选择---</option>
+						  	<option value="0">关机</option>
+						  	<option value="1">运行</option>
+						</select>
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">备注</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" name="remark" id="edit_remark"></textarea>
+					</div>
+				</div>
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnEditAsset">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 添加资产 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加资产</h4>
+      </div>
+      <div class="modal-body">
+
+		  <form class="form-horizontal" id="formAdd">
+		  		<div class="form-group">
+					<label class="col-sm-2 control-label">主机名</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" name="hostname">
+					</div>
+			  	</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">内网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="private_ip">
+					</div>
+			  	</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">外网ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="public_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_num</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_num">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_model</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="cpu_model">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">cpu_model</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="mem_total">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">disk</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="disk">
+					</div>
+			</div>
+
+
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">remote_ip</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="remote_ip">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">op</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="op">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">os_system</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="os_system">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">service_line</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="service_line">
+					</div>
+			</div>
+
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">frame</label>
+						<div class="col-sm-9">
+						<input type="text" class="form-control" name="frame">
+					</div>
+			</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">状态</label>
+					<div class="col-sm-9">
+						<select class="form-control" name="status">
+							<option>---请选择---</option>
+						  	<option value="0">关机</option>
+						  	<option value="1">运行</option>
+						</select>
+					</div>
+				</div>
+			  <div class="form-group">
+					<label class="col-sm-2 control-label">备注</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" name="remark"></textarea>
+					</div>
+				</div>
+		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" id="btnAddAsset">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="/static/js/sweetalert.min.js"></script>
+<script>
+
+    // editAssetForm
+    $('.btnAssetEdit').click( function () {
+        var pk = $(this).attr('data');
+        var url = "/assets/detail/?pk=" + pk;
+        $.get(url, function (data) {
+            console.log(data);
+            $("#edit_pk").val(pk);
+            $("#edit_hostname").val(data.hostname);
+            $("#edit_public_ip").val(data.public_ip);
+            $("#edit_remark").val(data.remark);
+            $("#edit_private_ip").val(data.private_ip);
+            $("#edit_status").val(data.status);
+            $('#btnEditAsset').click( function () {
+                var data = $("#editAssetForm").serialize();
+                var url = "/assets/edit/"+pk + "/";
+                updateRecord(url, data);
+            })
+        })
+    });
+
+    function deleteRecord(url) {
+        $.ajax({
+            type:'DELETE',
+            data:'',
+            url:url,
+            success:function(data){
+                swal("删除！", "删除成功", "success");
+            },
+            dataType:'text',
+            error:function (){
+                swal("删除！", "删除失败。", "error");
+            }
+        })
+    }
+
+    function updateRecord(url, data) {
+        $.ajax({
+            type:'PUT',
+            data:data,
+            url:url,
+            contentType: "application/json",
+            success:function(data){
+                swal("更新！", "更新成功", "success");
+            },
+            dataType:'text',
+            error:function (){
+                swal("更新！", "更新失败。", "error");
+            }
+        })
+    }
+
+    $('.btnDelete').click( function () {
+        var pk = $(this).attr('data');
+        var url = "/assets/delete/"+pk + "/";
+        swal({
+          title: "确定删除吗？",
+          text: "你确定删除该条记录吗？",
+          type: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "确定删除！",
+          cancelButtonText: "取消删除！",
+          closeOnConfirm: false,
+          closeOnCancel: false
+        },
+        function(isConfirm){
+          if (isConfirm) {
+              deleteRecord(url);
+
+          } else {
+                swal("取消！", "取消成功", "error");
+          }
+        });
+    });
+
+
+
+    $('#btnAddAsset').click( function () {
+        var data = $("#formAdd").serialize();
+        alert(data);
+        var url = "/assets/add/";
+        console.log(url);
+        $.post(url, data, function (retdata) {
+            alert(retdata);
+        })
+    });
+
+
+
+</script>
 {% endblock %}
