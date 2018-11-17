@@ -1,0 +1,135 @@
+2018-11-14 17:11:25,811 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:11:25,811 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:11:25,846 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:11:25,848 DEBUG (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:11:39,306 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:11:39,306 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:11:39,308 DEBUG (0.000) SELECT `account_userinfo`.`id`, `account_userinfo`.`username`, `account_userinfo`.`password` FROM `account_userinfo` WHERE (`account_userinfo`.`username` = 'root' AND `account_userinfo`.`password` = '123456'); args=('root', '123456')
+2018-11-14 17:11:42,268 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:11:42,269 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:12:17,487 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:17,488 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:12:17,489 DEBUG (0.000) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 16; args=(16,)
+2018-11-14 17:12:22,548 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:22,549 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:12:22,550 DEBUG (0.000) UPDATE `users_users` SET `username` = 'wu', `sex` = '0', `age` = 8, `city` = 'guangzhou' WHERE `users_users`.`id` = 16; args=('wu', '0', 8, 'guangzhou', 16)
+2018-11-14 17:12:22,647 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:22,648 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:12:28,894 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:28,894 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:12:28,896 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 16; args=(16,)
+2018-11-14 17:12:29,912 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:29,912 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:12:29,913 DEBUG (0.000) UPDATE `users_users` SET `username` = 'wu', `sex` = '0', `age` = 8, `city` = 'guangzhou' WHERE `users_users`.`id` = 16; args=('wu', '0', 8, 'guangzhou', 16)
+2018-11-14 17:12:30,001 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:30,002 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:12:50,839 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:12:50,840 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:12:50,841 DEBUG (0.000) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 16; args=(16,)
+2018-11-14 17:15:39,113 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:15:39,113 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:15:39,150 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:15:39,152 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:18:16,651 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:18:16,652 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:18:16,689 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:18:16,691 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:18:41,900 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:18:41,900 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:18:41,902 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`username` = 'zhou' ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC LIMIT 21; args=('zhou',)
+2018-11-14 17:19:00,908 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:19:00,909 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC LIMIT 21; args=()
+2018-11-14 17:19:05,526 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:19:05,528 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC LIMIT 21; args=()
+2018-11-14 17:19:37,606 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:19:37,606 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:19:37,647 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:19:37,649 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:19:38,248 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:19:38,249 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:19:54,237 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:19:54,237 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:19:54,239 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`username` = 'zhou' ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC LIMIT 21; args=('zhou',)
+2018-11-14 17:20:14,337 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:20:14,338 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:20:14,372 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:20:14,375 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:20:32,828 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:20:32,829 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:20:32,864 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:20:32,866 DEBUG (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:20:32,987 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:20:32,987 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:20:32,989 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`username` = 'zhou' ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=('zhou',)
+2018-11-14 17:21:07,157 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:21:07,159 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:21:11,502 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:21:11,503 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:21:15,103 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:21:15,104 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:21:15,105 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`username` = 'zhou' ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=('zhou',)
+2018-11-14 17:21:57,820 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:21:57,820 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:21:57,855 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:21:57,857 DEBUG (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:22:06,822 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:22:06,823 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:22:22,798 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:22:22,798 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:22:22,800 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`username` = 'zhou' ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=('zhou',)
+2018-11-14 17:22:48,673 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:22:48,675 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-14 17:22:50,793 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:22:50,793 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:22:50,795 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 9; args=(9,)
+2018-11-14 17:23:03,102 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:23:03,103 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:23:03,105 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 7; args=(7,)
+2018-11-14 17:23:17,615 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:23:17,615 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:23:17,617 DEBUG (0.000) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 16; args=(16,)
+2018-11-14 17:39:45,164 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:39:45,165 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:39:45,166 DEBUG (0.000) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` WHERE `users_users`.`id` = 9; args=(9,)
+2018-11-14 17:39:56,791 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:39:56,792 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:39:56,826 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:39:56,828 DEBUG (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:39:59,521 DEBUG (0.001) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:39:59,522 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo`; args=()
+2018-11-14 17:40:04,054 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:40:04,055 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:40:04,057 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo` WHERE `assets_assetsinfo`.`id` = 31; args=(31,)
+2018-11-14 17:41:13,053 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:41:13,054 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:41:13,090 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-14 17:41:13,092 DEBUG (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-14 17:41:15,759 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:41:15,760 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo`; args=()
+2018-11-14 17:41:30,380 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:41:30,381 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo`; args=()
+2018-11-14 17:41:31,559 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:41:31,559 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:41:31,561 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo` WHERE `assets_assetsinfo`.`id` = 31; args=(31,)
+2018-11-14 17:41:33,672 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-14 17:41:33,673 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-14 17:41:33,674 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo` WHERE `assets_assetsinfo`.`id` = 47; args=(47,)
+2018-11-15 10:15:50,065 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:15:50,065 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-15 10:15:50,100 DEBUG (0.001) SHOW FULL TABLES; args=None
+2018-11-15 10:15:50,102 DEBUG (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-11-15 10:16:06,098 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:16:06,099 DEBUG (0.000) SELECT VERSION(); args=None
+2018-11-15 10:16:06,100 DEBUG (0.000) SELECT `account_userinfo`.`id`, `account_userinfo`.`username`, `account_userinfo`.`password` FROM `account_userinfo` WHERE (`account_userinfo`.`username` = 'root' AND `account_userinfo`.`password` = '123456'); args=('root', '123456')
+2018-11-15 10:16:08,027 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:16:08,029 DEBUG (0.001) SELECT `assets_assetsinfo`.`id`, `assets_assetsinfo`.`hostname`, `assets_assetsinfo`.`cpu_num`, `assets_assetsinfo`.`cpu_model`, `assets_assetsinfo`.`mem_total`, `assets_assetsinfo`.`disk`, `assets_assetsinfo`.`public_ip`, `assets_assetsinfo`.`private_ip`, `assets_assetsinfo`.`status`, `assets_assetsinfo`.`os_system`, `assets_assetsinfo`.`service_line`, `assets_assetsinfo`.`op`, `assets_assetsinfo`.`remark`, `assets_assetsinfo`.`create_time`, `assets_assetsinfo`.`update_time` FROM `assets_assetsinfo`; args=()
+2018-11-15 10:16:12,601 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:16:12,603 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-15 10:21:18,004 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:21:18,006 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-15 10:21:18,701 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:21:18,702 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-15 10:21:18,985 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:21:18,987 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()
+2018-11-15 10:21:19,108 DEBUG (0.000) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-11-15 10:21:19,109 DEBUG (0.001) SELECT `users_users`.`id`, `users_users`.`username`, `users_users`.`sex`, `users_users`.`city`, `users_users`.`age`, `users_users`.`create_time`, `users_users`.`update_time` FROM `users_users` ORDER BY `users_users`.`id` ASC, `users_users`.`username` ASC; args=()

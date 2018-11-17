@@ -1,0 +1,54 @@
+2018-11-14 17:11:35 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-14 17:18:41 [django.request:135] [ERROR] - Internal Server Error: /user/list/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/WorkSpace/Study/Reboot/12/webapp/users/views.py", line 20, in UserListView
+    logging.debug()
+TypeError: debug() missing 1 required positional argument: 'msg'
+2018-11-14 17:19:00 [django.request:135] [ERROR] - Internal Server Error: /user/list/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/WorkSpace/Study/Reboot/12/webapp/users/views.py", line 23, in UserListView
+    logging.debug()
+TypeError: debug() missing 1 required positional argument: 'msg'
+2018-11-14 17:19:05 [django.request:135] [ERROR] - Internal Server Error: /user/list/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/WorkSpace/Study/Reboot/12/webapp/users/views.py", line 23, in UserListView
+    logging.debug()
+TypeError: debug() missing 1 required positional argument: 'msg'
+2018-11-14 17:19:54 [django.request:135] [ERROR] - Internal Server Error: /user/list/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/WorkSpace/Study/Reboot/12/webapp/users/views.py", line 20, in UserListView
+    logging.debug()
+TypeError: debug() missing 1 required positional argument: 'msg'
+2018-11-15 10:15:56 [django.request:152] [WARNING] - Not Found: /favicon.ico
