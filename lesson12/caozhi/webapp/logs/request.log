@@ -1,0 +1,58 @@
+2018-11-17 14:48:38 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:17:16 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:17:18 [django.request:135] [ERROR] - Internal Server Error: /users/detail/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/webapp/users/views.py", line 79, in UserDetailView
+    logger.debug("jsondata {}".format(jsondata))
+UnboundLocalError: local variable 'jsondata' referenced before assignment
+2018-11-17 15:17:21 [django.request:135] [ERROR] - Internal Server Error: /users/detail/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/webapp/users/views.py", line 79, in UserDetailView
+    logger.debug("jsondata {}".format(jsondata))
+UnboundLocalError: local variable 'jsondata' referenced before assignment
+2018-11-17 15:19:23 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:19:38 [django.request:135] [ERROR] - Internal Server Error: /users/detail/
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/views/decorators/http.py", line 40, in inner
+    return func(request, *args, **kwargs)
+  File "/root/python36env/lib/python3.6/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/root/webapp/users/views.py", line 79, in UserDetailView
+    logger.debug("jsondata {}".format(jsondata))
+UnboundLocalError: local variable 'jsondata' referenced before assignment
+2018-11-17 15:20:57 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:28:27 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:33:19 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:34:08 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:44:21 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:45:05 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:45:23 [django.request:152] [WARNING] - Not Found: /user/add/
+2018-11-17 15:46:15 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:46:58 [django.request:152] [WARNING] - Not Found: /favicon.ico
+2018-11-17 15:49:45 [django.request:152] [WARNING] - Not Found: /favicon.ico

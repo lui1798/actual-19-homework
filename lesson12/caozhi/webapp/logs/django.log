@@ -1,0 +1,794 @@
+2018-11-17 14:48:36 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56120
+2018-11-17 14:48:36 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 14:48:36 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 14:48:36 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 14:48:36 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 14:48:36 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 14:48:37 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 14:48:37 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 14:48:37 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 14:48:38 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 14:48:38 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3718
+2018-11-17 14:49:18 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56120
+2018-11-17 14:49:19 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 14:49:19 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 14:49:28 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56120
+2018-11-17 14:49:29 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 14:49:29 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 14:49:33 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56121
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:17:15 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:17:16 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:17:16 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:17:16 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:17:16 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:17:16 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3718
+2018-11-17 15:17:18 [django.server:124] [ERROR] - "GET /users/detail/?pk=3 HTTP/1.1" 500 15956
+2018-11-17 15:17:21 [django.server:124] [ERROR] - "GET /users/detail/?pk=4 HTTP/1.1" 500 15956
+2018-11-17 15:19:21 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56121
+2018-11-17 15:19:21 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:19:21 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:19:21 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:19:21 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:19:21 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:19:22 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:19:22 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:19:22 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:19:23 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:19:23 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:19:26 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56121
+2018-11-17 15:19:26 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:19:26 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:19:38 [django.server:124] [ERROR] - "GET /users/detail/?pk=3 HTTP/1.1" 500 15956
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56121
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:20:55 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:20:55 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:20:56 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:20:56 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:20:57 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:20:57 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:21:01 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:21:39 [django.server:124] [INFO] - "POST /users/add HTTP/1.1" 200 7
+2018-11-17 15:21:49 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 56734
+2018-11-17 15:21:50 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:21:50 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:28:24 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 61130
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:28:25 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:28:25 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:28:26 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:28:26 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:28:27 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:28:27 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:28:43 [django.server:124] [INFO] - "POST /users/add HTTP/1.1" 200 7
+2018-11-17 15:28:49 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 61748
+2018-11-17 15:28:49 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:28:50 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:29:10 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 64025
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:33:17 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:33:18 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:33:18 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:33:18 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:33:18 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:33:18 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:33:18 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:33:18 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:33:19 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:33:19 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:33:26 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 64017
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:34:06 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:34:07 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:34:07 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:34:07 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:34:07 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:34:07 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:34:07 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:34:07 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:34:08 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:34:08 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:34:17 [django.server:124] [INFO] - "POST /users/add HTTP/1.1" 200 7
+2018-11-17 15:34:20 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 64627
+2018-11-17 15:34:21 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:34:21 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:34:30 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 50250
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:44:19 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:44:20 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:44:20 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:44:20 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:44:21 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:44:21 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:45:03 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48210
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:45:04 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:45:04 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:45:04 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:45:05 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:45:05 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:45:23 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'user/add/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:45:23 [django.server:124] [WARNING] - "POST /user/add/ HTTP/1.1" 404 3714
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48215
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:46:13 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:46:14 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:46:14 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:46:14 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:46:14 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:46:14 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:46:14 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:46:14 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:46:15 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:46:15 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:46:27 [django.server:124] [INFO] - "POST /users/add/ HTTP/1.1" 200 7
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48741
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:46:56 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:46:57 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:46:57 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:46:57 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:46:57 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:46:57 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:46:57 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:46:57 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:46:58 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:46:58 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:47:32 [django.server:124] [INFO] - "POST /users/add/ HTTP/1.1" 200 7
+2018-11-17 15:47:49 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 49262
+2018-11-17 15:47:50 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:47:50 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:47:58 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:48:02 [django.server:124] [INFO] - "PUT /users/edit/3/ HTTP/1.1" 200 2
+2018-11-17 15:48:05 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 49265
+2018-11-17 15:48:06 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:48:06 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:48:10 [django.server:124] [INFO] - "DELETE /users/delete/3/ HTTP/1.1" 200 37
+2018-11-17 15:48:16 [django.server:124] [INFO] - "GET /users/detail/?pk=3 HTTP/1.1" 200 87
+2018-11-17 15:48:19 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48744
+2018-11-17 15:48:20 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:48:20 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:48:23 [django.server:124] [INFO] - "GET /users/detail/?pk=8 HTTP/1.1" 200 88
+2018-11-17 15:48:27 [django.server:124] [INFO] - "PUT /users/edit/8/ HTTP/1.1" 200 2
+2018-11-17 15:48:30 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48747
+2018-11-17 15:48:31 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:48:31 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:49:42 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48770
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/font-awesome.min.css HTTP/1.1" 200 31000
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/morris.css HTTP/1.1" 200 433
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/ionicons.min.css HTTP/1.1" 200 51284
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/_all-skins.min.css HTTP/1.1" 200 41583
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 91480
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/jquery-jvectormap.css HTTP/1.1" 200 6635
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/bootstrap-datepicker.min.css HTTP/1.1" 200 15731
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/daterangepicker.css HTTP/1.1" 200 8163
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/css/sweetalert.css HTTP/1.1" 200 18130
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 200 86927
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/js/adminlte.min.js HTTP/1.1" 200 14478
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/js/sweetalert.min.js HTTP/1.1" 200 16145
+2018-11-17 15:49:43 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:49:43 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:49:43 [django.server:124] [INFO] - "GET /static/fonts/fontawesome-webfont.woff?v=4.7.0 HTTP/1.1" 200 98024
+2018-11-17 15:49:45 [django.template:925] [DEBUG] - Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/root/python36env/lib/python3.6/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/python36env/lib/python3.6/site-packages/django/urls/resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^dashboard>], [<RegexURLPattern None ^assets$>], [<RegexURLPattern None ^assets/list$>], [<RegexURLPattern None ^assets/add>], [<RegexURLPattern None ^assets/export>], [<RegexURLPattern None ^assets/detail>], [<RegexURLPattern None ^assets/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^index>], [<RegexURLPattern None ^account/login>], [<RegexURLPattern None ^account/logout>], [<RegexURLPattern None ^users/list>], [<RegexURLPattern None ^users/add>], [<RegexURLPattern None ^users/delete/(?P<pk>[0-9]+)/$>], [<RegexURLPattern None ^users/detail/>], [<RegexURLPattern None ^users/edit/(?P<pk>[0-9]+)/$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/python36env/lib/python3.6/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2018-11-17 15:49:45 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 3719
+2018-11-17 15:49:46 [django.security.DisallowedHost:80] [ERROR] - Invalid HTTP_HOST header: '125.74.21.84:8000'. You may need to add '125.74.21.84' to ALLOWED_HOSTS.
+2018-11-17 15:49:46 [django.server:124] [WARNING] - "GET /favicon.ico HTTP/1.1" 400 64946
+2018-11-17 15:49:48 [django.server:124] [INFO] - "GET /users/detail/?pk=8 HTTP/1.1" 200 91
+2018-11-17 15:49:52 [django.server:124] [INFO] - "PUT /users/edit/8/ HTTP/1.1" 200 2
+2018-11-17 15:49:55 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48769
+2018-11-17 15:49:56 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:49:56 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698
+2018-11-17 15:50:00 [django.server:124] [INFO] - "DELETE /users/delete/8/ HTTP/1.1" 200 37
+2018-11-17 15:50:03 [django.server:124] [INFO] - "GET /users/list HTTP/1.1" 200 48248
+2018-11-17 15:50:04 [django.server:124] [WARNING] - "GET /static/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 404 1724
+2018-11-17 15:50:04 [django.server:124] [WARNING] - "GET /static/css/bootstrap.min.css.map HTTP/1.1" 404 1698

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>AdminLTE 2 | Dashboard</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/static/css/ionicons.min.css">
+		<link rel="stylesheet" href="/static/css/AdminLTE.min.css">
+		<link rel="stylesheet" href="/static/css/_all-skins.min.css">
+		<link rel="stylesheet" href="/static/css/morris.css">
+		<link rel="stylesheet" href="/static/css/jquery-jvectormap.css">
+		<link rel="stylesheet" href="/static/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="/static/css/daterangepicker.css">
+		<link rel="stylesheet" href="/static/css/bootstrap3-wysihtml5.min.css">
+		<link rel="stylesheet" href="/static/css/sweetalert.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+	</head>
+
+
+	<body class="hold-transition skin-blue sidebar-mini">
+
+		<!--头部信息-->
+		<div class="wrapper">
+			<header class="main-header">
+				<a href="index2.html" class="logo">
+					<span class="logo-mini"><b>A</b>LT</span>
+					<span class="logo-lg"><b>Admin</b>LTE</span>
+				</a>
+				<nav class="navbar navbar-static-top">
+					<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+						<span class="sr-only">Toggle navigation</span>
+					</a>
+
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li class="dropdown user user-menu">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<img src="/static/img/user2-160x160.jpg" class="user-image" alt="User Image">
+									<span class="hidden-xs">Monkey</span>
+								</a>
+								<ul class="dropdown-menu">
+									<li class="user-header">
+										<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+									</li>
+
+									<li class="user-footer">
+										<div class="pull-left">
+											<a href="#" class="btn btn-default btn-flat">个人信息</a>
+										</div>
+										<div class="pull-right">
+											<a href="/account/logout/" class="btn btn-default btn-flat">退出</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+
+
+			<aside class="main-sidebar">
+				<section class="sidebar">
+
+					<!--菜单栏-->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="/static/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+						</div>
+						<div class="pull-left info">
+							<p>Alexander Pierce</p>
+							<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+						</div>
+					</div>
+
+					<ul class="sidebar-menu" data-widget="tree">
+						<li class="header">MAIN NAVIGATION</li>
+
+						<li class="active treeview">
+							<a href="#">
+								<i class="fa fa-dashboard"></i> <span>资源管理</span>
+								<span class="pull-right-container">
+									<i class="fa fa-angle-left pull-right"></i>
+								</span>
+							</a>
+
+							<ul class="treeview-menu">
+								<li class="active"><a href="/assets/list/"><i class="fa fa-circle-o"></i> 资产管理</a></li>
+								<li><a href="#"><i class="fa fa-circle-o"></i> 负载均衡</a></li>
+							</ul>
+						</li>
+
+						<li class="treeview">
+							<a href="#">
+								<i class="fa fa-files-o"></i>
+								<span>批量管理</span>
+								<span class="pull-right-container">
+									<span class="label label-primary pull-right">4</span>
+								</span>
+							</a>
+							<ul class="treeview-menu">
+								<li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> 简单命令执行</a></li>
+								<li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 上传文件</a></li>
+							</ul>
+						</li>
+
+						<li class="treeview">
+							<a href="#">
+								<i class="fa fa-edit"></i> <span>用户管理</span>
+								<span class="pull-right-container">
+									<i class="fa fa-angle-left pull-right"></i>
+								</span>
+							</a>
+							<ul class="treeview-menu">
+								<li><a href="/users/list/"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+								<li><a href="#"><i class="fa fa-circle-o"></i> 用户组管理</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</aside>
+
+
+
+			<div class="content-wrapper">
+				<section class="content-header">
+					<h1>Dashboard<small>Control panel</small></h1>
+
+					<ol class="breadcrumb">
+						<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+						<li class="active">Dashboard</li>
+					</ol>
+				</section>
+
+				<section class="content">
+
+
+
+					<div class="box">
+						<div class="box-header" style="float: left">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+							<button class="btn btn-info"><a href="/assets/export/">导出</a></button>
+						</div>
+						<div class="box-header" style="float: right">
+							<form class="form-inline" method="GET" action="" id="formSearch">
+								<input type="text" class="form-control" style="width: 300px" name="search_value">
+								<button class="btn btn-info">搜索</button>
+							</form>
+						</div>
+						<div class="box-body">
+							<table class="table table-hover table-bordered table-striped " id="myTable">
+								<thead style="text-align: center;">
+									<tr>
+										<td>#</td>
+										<td>用户名</td>
+										<td>性别</td>
+										<td>年龄</td>
+										<td>城市</td>
+										<td>操作</td>
+									</tr>
+								</thead>
+
+								<tbody style="text-align: center;">
+									{% for obj in content %}
+									<tr>
+										<td>{{ obj.pk }}</td>
+										<td>{{ obj.name }}</td>
+										{% if obj.sex == 0 %}
+										<td>男</td>
+										{% else %}
+										<td>女</td>
+										{% endif %}
+										<td>{{ obj.age }}</td>
+										<td>{{ obj.city }}</td>
+										<td style="text-align: center;">
+											<button class="btn btn-primary btn-xs">详情</button>
+											<button class="btn btn-info btn-xs btnAssetEdit" data-toggle="modal" data-target="#editModal" data="{{ obj.pk }}">编辑</button>
+											<button class="btn btn-danger btn-xs btnDelete" data="{{ obj.pk }}">删除</button>
+										</td>
+									</tr>
+									{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+			</div>
+
+
+			<!--修改用户-->
+			<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title">修改用户</h4>
+						</div>
+						<div class="modal-body">
+
+							<form class="form-horizontal" id="editAssetForm">
+								<div class="form-group" style="display: none">
+									<label class="col-sm-2 control-label">pk</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="pk" disabled="disabled" id="edit_pk">
+									</div>
+								</div>
+
+
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">用户名</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="name" id="edit_name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">年龄</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="age" id="edit_age">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">性别</label>
+									<div class="col-sm-9">
+										<select class="form-control" name="sex" id="edit_sex">
+											<option>---请选择---</option>
+											<option value="0">男</option>
+											<option value="1">女</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">城市</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="city" id="edit_city">
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary" id="btnEditAsset">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- 添加资产 -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">添加用户</h4>
+						</div>
+						<div class="modal-body">
+
+							<form class="form-horizontal" id="formAdd">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">用户名</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="name">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label">性别</label>
+									<div class="col-sm-9">
+										<select class="form-control" name="sex">
+											<option>---请选择---</option>
+											<option value="0">男</option>
+											<option value="1">女</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">年龄</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="age">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">城市</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" name="city">
+									</div>
+								</div>
+							</form>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary" id="btnAddAsset">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+		<script src="/static/js/adminlte.min.js"></script>
+		<script src="/static/js/sweetalert.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+		<script>
+			// editAssetForm
+			$('.btnAssetEdit').click(function() {
+				var pk = $(this).attr('data');
+				var url = "/users/detail/?pk=" + pk;
+				$.get(url, function(data) {
+					console.log(data);
+					console.log(data.code);
+					console.log(data.data);
+					var data = data.data;
+					$("#edit_pk").val(pk);
+					$("#edit_name").val(data.name);
+					$("#edit_age").val(data.age);
+					$("#edit_sex").val(data.sex);
+					$("#edit_city").val(data.city);
+					$('#btnEditAsset').click(function() {
+						var data = $("#editAssetForm").serialize();
+						var url = "/users/edit/" + pk + "/";
+						updateRecord(url, data);
+					})
+				});
+				$('#editModal').modal('hide');
+			});
+
+			function readloDocument() {
+				setTimeout(function() {
+					window.location.reload();
+				}, 3000);
+			}
+
+			function deleteRecord(url) {
+				$.ajax({
+					type: 'DELETE',
+					data: '',
+					url: url,
+					success: function(data) {
+						swal("删除！", "删除成功", "success");
+					},
+					dataType: 'text',
+					error: function() {
+						swal("删除！", "删除失败。", "error");
+					}
+				});
+				readloDocument();
+			}
+
+			function updateRecord(url, data) {
+				$.ajax({
+					type: 'PUT',
+					data: data,
+					url: url,
+					contentType: "application/json",
+					success: function(data) {
+						swal("更新！", "更新成功", "success");
+					},
+					dataType: 'text',
+					error: function() {
+						swal("更新！", "更新失败。", "error");
+					}
+				});
+				readloDocument();
+			}
+			$('.btnDelete').click(function() {
+				var pk = $(this).attr('data');
+				var url = "/users/delete/" + pk + "/";
+				swal({
+						title: "确定删除吗？",
+						text: "你确定删除该条记录吗？",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#DD6B55",
+						confirmButtonText: "确定删除！",
+						cancelButtonText: "取消删除！",
+						closeOnConfirm: false,
+						closeOnCancel: false
+					},
+					function(isConfirm) {
+						if (isConfirm) {
+							deleteRecord(url);
+						} else {
+							swal("取消！", "取消成功", "error");
+						}
+					});
+			});
+			$('#btnAddAsset').click(function() {
+				var data = $("#formAdd").serialize();
+				var url = "/users/add/";
+				$.post(url, data, function(retdata) {
+					console.log(retdata);
+				})
+			});
+			$(document).ready(function() {
+				$('#myTable').DataTable();
+			});
+		</script>
+
+	</body>
+</html>
+
