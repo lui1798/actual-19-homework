@@ -24,7 +24,7 @@ def getFilePos():
 def writeFilePos(FILE_POS):
     with open(seek_file, 'w+')  as fd:
         fd.write(str(FILE_POS))
-        fd.closed
+        fd.close()
 
 
 def readFile(LOGFILE, FILE_POS):
