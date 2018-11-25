@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uk(87wuid$kuvn@nga!csq*4ewccs3_d1&2u98j*hk!095-p6f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
 ALLOWED_HOSTS = ['*'] # 白名单
 # ALLOWED_HOSTS.append("192.168.1.2")
@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'webapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'python191',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
+        'NAME': 'python19',
+        'USER': 'monkey',
+        'PASSWORD': '123456',
+        'HOST': '192.168.1.2',
         'PORT': '3306',
     }
 }
@@ -225,3 +225,15 @@ LOGGING = {
         'handlers': ['root_handler']
     }
 }
+
+# email
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = '13260071987@163.com'
+EMAIL_HOST_PASSWORD = 'zhengyscn123'
+EMAIL_USE_TLS = False
+
+
+# data
+MEDIA_ROOT = os.path.join(BASE_DIR, "data")
+MEDIA_URL = "/data/"

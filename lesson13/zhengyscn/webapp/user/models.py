@@ -24,3 +24,17 @@ class Users(models.Model):
         db_table = "users"
         ordering = ['pk', 'username']
 
+
+
+class Photo(models.Model):
+    name            =   models.CharField(max_length=30)
+    image           =   models.ImageField(upload_to="images/")
+
+    def __str__(self):
+        return self.name
+
+    def thumbnail(self):
+        image_path = '''<img src="{}" height="40px">'''.format(self.image.url)
+        return image_path
+
+
